@@ -1,0 +1,18 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: airflow-official
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://airflow.apache.org
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: airflow-community
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://airflow-helm.github.io/charts

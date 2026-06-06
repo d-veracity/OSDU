@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "${AZURE_LOCATION}"
+    },
+    "applicationClientId": {
+      "value": "${AZURE_CLIENT_ID}"
+    },
+    "applicationClientPrincipalOid": {
+      "value": "${AZURE_CLIENT_PRINCIPAL_OID}"
+    },
+    "emailAddress": {
+      "value": "${EMAIL_ADDRESS}"
+    },
+    "ingressType": {
+      "value": "${CLUSTER_INGRESS}"
+    },
+    "enableManage": {
+      "value": "${ENABLE_MANAGE}"
+    },
+    "enablePodSubnet": {
+      "value": "${ENABLE_POD_SUBNET}"
+    },
+    "clusterConfiguration": {
+      "value": {
+        "enableNodeAutoProvisioning": "${ENABLE_NODE_AUTO_PROVISIONING}",
+        "enablePrivateCluster": "${ENABLE_PRIVATE_CLUSTER}",
+        "enableLockDown": "${ENABLE_LOCK_DOWN}"
+      }
+    },
+    "serverConfiguration": {
+      "value": {
+        "systemPool": "${VMSIZE_SYSTEM_POOL}",
+        "zonePool": "${VMSIZE_ZONE_POOL}",
+        "userPool": "${VMSIZE_USER_POOL}"
+      }
+    },
+    "vnetConfiguration": {
+      "value": {
+        "group": "${VIRTUAL_NETWORK_GROUP}",
+        "name": "${VIRTUAL_NETWORK_NAME}",
+        "prefix": "${VIRTUAL_NETWORK_PREFIX}",
+        "aksSubnet": {
+          "name": "${AKS_SUBNET_NAME}",
+          "prefix": "${AKS_SUBNET_PREFIX}"
+        },
+        "podSubnet": {
+          "name": "${POD_SUBNET_NAME}",
+          "prefix": "${POD_SUBNET_PREFIX}"
+        },
+        "vmSubnet": {
+          "name": "${VM_SUBNET_NAME}",
+          "prefix": "${VM_SUBNET_PREFIX}"
+        },
+        "bastionSubnet": {
+          "name": "${BASTION_SUBNET_NAME}",
+          "prefix": "${BASTION_SUBNET_PREFIX}"
+        },
+        "identityId": "${VIRTUAL_NETWORK_IDENTITY}"
+      }
+    },
+    "clusterSoftware": {
+      "value": {
+        "enable": "${ENABLE_SOFTWARE}",
+        "private": "${ENABLE_PRIVATE_SOFTWARE}",
+        "osduVersion": "${SOFTWARE_VERSION}",
+        "osduCore": "${ENABLE_OSDU_CORE}",
+        "osduReference": "${ENABLE_OSDU_REFERENCE}",
+        "repository": "${SOFTWARE_REPOSITORY}",
+        "branch": "${SOFTWARE_BRANCH}",
+        "tag": "${SOFTWARE_TAG}"
+      }
+    },
+    "experimentalSoftware": {
+      "value": {
+        "enable": "${ENABLE_EXPERIMENTAL}",
+        "adminUI": "${ENABLE_ADMIN_UI}"
+      }
+    }
+  }
+}

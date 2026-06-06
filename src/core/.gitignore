@@ -1,0 +1,10 @@
+partition
+entitlements
+legal
+schema-service
+indexer-service
+indexer-queue
+storage
+search-service
+file
+ingestion-workflow

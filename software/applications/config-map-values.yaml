@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-values
+  namespace: default
+data:
+  values.yaml: |
+    azure:
+      enabled: true
+      tenantId: "efb96e55-9062-49f0-9f4a-2265c8fe55a1"
+      clientId: "e6d4286e-7412-4842-b9ee-4bff752cc54f"
+      keyvaultName: "mainyknhzfftchosk"
+    
+    resourceLimits:
+      defaultCpuRequests: "0.1"
+      defaultMemoryRequests: "500Mi"
+      defaultCpuLimits: "1"
+      defaultMemoryLimits: "2Gi"

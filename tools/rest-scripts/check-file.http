@@ -1,0 +1,224 @@
+# -------HTTP REST CLIENT -------
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+#
+# Purpose: Scenario Validation - CSV Ingestion
+
+# -----------------------
+# OAUTH (Variables)
+# -----------------------
+###
+@login_base = login.microsoftonline.com/{{TENANT_ID}}
+@oauth_token_host = {{login_base}}/oauth2/v2.0/token
+@scopes = {{CLIENT_ID}}/.default openid profile offline_access
+
+
+# -----------------------
+# OAUTH  refresh_token
+# -----------------------
+###
+# @name refresh
+POST https://{{oauth_token_host}} HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token
+&client_id={{CLIENT_ID}}
+&client_secret={{CLIENT_SECRET}}
+&refresh_token={{REFRESH_TOKEN}}
+&scope={{scopes}}
+
+
+# -----------------------
+# API (Variables)
+# -----------------------
+###
+@access_token = {{refresh.response.body.access_token}}
+@ENTITLEMENTS_HOST = {{HOST}}/api/entitlements/v2
+@LEGAL_HOST = {{HOST}}/api/legal/v1
+@SCHEMA_HOST = {{HOST}}/api/schema-service/v1
+@STORAGE_HOST = {{HOST}}/api/storage/v2
+@FILE_HOST = {{HOST}}/api/file/v2
+@WORKFLOW_HOST = {{HOST}}/api/workflow/v1
+@SEARCH_HOST = {{HOST}}/api/search/v2
+@tag =  {{DATA_PARTITION}}-public-usa-check-1
+@kind = {{DATA_PARTITION}}:qatest:wellbore:0.0.1
+@workflow_name = csv-parser
+
+
+# -----------------------
+# API: Version
+# -----------------------
+###
+# @name info
+GET {{FILE_HOST}}/info
+Authorization: Bearer {{access_token}}
+Accept: application/json
+
+# -----------------------
+# API legal
+# -----------------------
+###
+# @name createTag
+POST {{LEGAL_HOST}}/legaltags
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+{
+  "name": "{{tag}}",
+  "description": "This tag is used by Check Scripts",
+  "properties": {
+    "countryOfOrigin": [
+      "US"
+    ],
+    "contractId": "A1234",
+    "expirationDate": "2025-12-31",
+    "originator": "MyCompany",
+    "dataType": "Transferred Data",
+    "securityClassification": "Public",
+    "personalData": "No Personal Data",
+    "exportClassification": "EAR99"
+  }
+}
+
+
+###
+# @name getTag
+GET {{LEGAL_HOST}}/legaltags/{{tag}}
+Authorization: Bearer {{access_token}}
+Accept: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+
+# -----------------------
+# API: schema
+# -----------------------
+###
+# @name getSchema
+GET {{SCHEMA_HOST}}/schema/osdu:wks:dataset--File.Generic:1.0.0
+Authorization: Bearer {{access_token}}
+Accept: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+
+
+# -----------------------
+# API: file
+# -----------------------
+###
+# @name uploadURL
+GET {{FILE_HOST}}/files/uploadURL
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+
+###
+# @name getFileList
+POST {{FILE_HOST}}/getFileList
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+{
+  "Items": 5,
+  "PageNum": 0,
+  "TimeFrom": "{{$datetime iso8601 -1 h}}",
+  "TimeTo": "{{$datetime iso8601}}",
+  "UserID": "osdu-user"
+}
+
+
+
+###
+# @name uploadFile
+PUT {{uploadURL.response.body.Location.SignedURL}}
+x-ms-blob-type: BlockBlob
+
+< ./sample.las
+
+
+###
+# @name metaData
+POST {{FILE_HOST}}/files/metadata
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+{
+  "id": "opendes:dataset--File.Generic:372035cd-e426-4628-a604-a09dcbedf58c",
+  "version": 1613026613300180,
+  "kind": "{{DATA_PARTITION}}:wks:dataset--File.Generic:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@{{DATA_PARTITION}}.dataservices.energy"
+    ],
+    "owners": [
+      "data.default.viewers@{{DATA_PARTITION}}.dataservices.energy"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "{{tag}}"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "tags": {
+    "dataflowId": "test-dataflowid-proxy"
+  },
+  "data": {
+        "Endian": "BIG",
+        "ResourceSecurityClassification": "osdu:reference-data--ResourceSecurityClassification:RESTRICTED:",
+        "SchemaFormatTypeID": "osdu:reference-data--SchemaFormatType:LAS2:",
+        "DatasetProperties": {
+            "FileSourceInfo": {
+                "FileSource": "{{uploadURL.response.body.Location.FileSource}}",
+                "Name": "sample.las"
+            }
+        },
+        "Name": "sample.las"
+    },
+  "meta": []
+}
+
+@ID = {{metaData.response.body.id}}
+
+
+###
+# @name getMetaData
+GET {{FILE_HOST}}/files/{{ID}}/metadata
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+
+
+
+###
+# @name getDownloadUrl
+GET {{FILE_HOST}}/files/{{ID}}/downloadURL
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+data-partition-id: {{DATA_PARTITION}}
+
+
+###
+# @name Download
+GET {{getDownloadUrl.response.body.SignedUrl}}
+
+
+
+###
+# @name deleteTag
+DELETE {{LEGAL_HOST}}/legaltags/{{tag}}
+Authorization: Bearer {{access_token}}
+Accept: application/json
+data-partition-id: {{DATA_PARTITION}}
+

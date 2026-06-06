@@ -1,0 +1,171 @@
+{{- $enabled := eq (include "osdu-developer-init.isEnabled" .) "1" -}}
+{{- $namespace := .Release.Namespace -}}
+{{- if and $enabled .Values.jobs.schemaInit }}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: schema-init
+  namespace: {{ $namespace }}
+spec:
+  ttlSecondsAfterFinished: 120
+  activeDeadlineSeconds: 600
+  template:
+    metadata:
+      labels:
+        azure.workload.identity/use: "true"
+    spec:
+      serviceAccountName: workload-identity-sa
+      volumes:
+      - name: script
+        configMap:
+          name: schema-init-script
+          defaultMode: 0777
+      - name: token
+        configMap:
+          name: schema-init-script
+          defaultMode: 0777
+      initContainers:
+      - name: data-seed
+        image: community.opengroup.org:5555/osdu/platform/system/schema-service/schema-service-schema-load-release-0-27:beb6f65c1d9c303e86a6047adc93b2192d0c62ba
+        volumeMounts:
+          - name: script
+            mountPath: "/home/osdu/deployments/scripts/azure/bootstrap.sh"
+            subPath: init.sh
+          - name: token
+            mountPath: "/home/osdu/deployments/scripts/azure/Token.py"
+            subPath: token.py
+        env:
+          - name: DATA_PARTITION
+            value: {{ .Values.partition | quote }}
+          - name: AZURE_AD_APP_RESOURCE_ID
+            value: {{ .Values.clientId | quote }}
+          - name: AZURE_TENANT_ID
+            value: {{ .Values.tenantId | quote }}
+      containers:
+      - name: sleep
+        image: istio/base
+        command: ["/bin/sleep", "10"]
+      restartPolicy: Never
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: schema-init-script
+  namespace: {{ $namespace }}
+data:
+  init.sh: |
+    #!/usr/bin/env sh
+    # Cleanup function
+    cleanup() {
+        echo "Terminating istio sidecar"
+        curl -X POST "http://localhost:15020/quitquitquit"
+        exit
+    }
+
+    trap cleanup EXIT
+
+    if [[ -z "${NAMESPACE}" ]]; then
+        NAMESPACE="osdu-core"
+    fi
+
+
+    export AZURE_SCHEMA_URL="http://schema.osdu-core.svc.cluster.local/api/schema-service/v1/schemas/system"
+    currentStatus="success"
+    currentMessage="All schemas uploaded successfully"
+    BEARER_TOKEN=`python $AZURE_DEPLOYMENTS_SUBDIR/Token.py`
+    export BEARER_TOKEN=$BEARER_TOKEN
+    python $AZURE_DEPLOYMENTS_SCRIPTS_SUBDIR/DeploySharedSchemas.py -u $AZURE_SCHEMA_URL
+    ret=$?
+    echo "Return value is $ret"
+
+    if [[ $ret -ne 0 ]]; then
+        currentStatus="failure"
+        currentMessage="Schema loading failed. Please check error logs for more details."
+    fi
+    if [ ! -z "$CONFIG_MAP_NAME" -a "$CONFIG_MAP_NAME" != " " ]; then
+
+        echo "=================================================================="
+        echo "  Logging in using Workload Identity"
+        echo "=================================================================="
+
+        # Login using the federated token from the environment variable
+        az login --federated-token "$(cat ${AZURE_FEDERATED_TOKEN_FILE})" \
+          --service-principal \
+          -u ${AZURE_CLIENT_ID} \
+          -t ${AZURE_TENANT_ID}
+
+        ENV_AKS=$(az aks list --resource-group $RESOURCE_GROUP_NAME --query [].name -otsv)
+        az aks get-credentials --resource-group $RESOURCE_GROUP_NAME --name $ENV_AKS
+        kubectl config set-context $RESOURCE_GROUP_NAME --cluster $ENV_AKS
+
+        Status=$(kubectl get configmap $CONFIG_MAP_NAME -o jsonpath='{.data.status}')
+        Message=$(kubectl get configmap $CONFIG_MAP_NAME -o jsonpath='{.data.message}')
+
+        Message="${Message}Schema load Message: ${currentMessage}. "
+
+        ## Update ConfigMap
+        kubectl create configmap $CONFIG_MAP_NAME \
+            --from-literal=status="$currentStatus" \
+            --from-literal=message="$Message" \
+            -o yaml --dry-run=client | kubectl replace -f -
+    fi
+
+    if [[ ${currentStatus} == "success" ]]; then
+        exit 0
+    else
+        exit 1
+    fi
+  token.py: |
+    import os
+    import msal
+
+    class AzureToken(object):
+        def get_azure_id_token(self):
+            tenant_id = os.getenv('AZURE_TENANT_ID')
+            client_id = os.getenv('AZURE_CLIENT_ID')
+
+            # Read the federated token provided by workload identity
+            token_path = os.getenv('AZURE_FEDERATED_TOKEN_FILE', '/var/run/secrets/azure/tokens/azure-identity-token')
+
+            if not all([tenant_id, client_id]):
+                print('Missing required environment variables: AZURE_TENANT_ID and AZURE_CLIENT_ID are required')
+                exit(1)
+
+            try:
+                # Read the federated token
+                with open(token_path, 'r') as f:
+                    federated_token = f.read().strip()
+
+                authority_host_uri = 'https://login.microsoftonline.com'
+                authority_uri = authority_host_uri + '/' + tenant_id
+
+                # Configure MSAL for federated token exchange
+                app = msal.ConfidentialClientApplication(
+                    client_id=client_id,
+                    authority=authority_uri,
+                    client_credential={
+                        "client_assertion_type": "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
+                        "client_assertion": federated_token
+                    }
+                )
+
+                # Use the same scope as az cli would use
+                scopes = ["https://management.azure.com/.default"]
+                result = app.acquire_token_for_client(scopes=scopes)
+
+                if 'access_token' in result:
+                    token = 'Bearer ' + result['access_token']
+                    print(token)
+                    return token
+                else:
+                    print(f"Error getting token: {result.get('error_description', 'Unknown error')}")
+                    exit(1)
+
+            except Exception as e:
+                print(f"Error: {str(e)}")
+                exit(1)
+
+    if __name__ == '__main__':
+        AzureToken().get_azure_id_token()
+{{- end }}

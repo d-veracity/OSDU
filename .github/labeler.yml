@@ -1,0 +1,18 @@
+documentation:
+- changed-files:
+  - any-glob-to-any-file:
+    - "docs/*"
+    - "**/*.md"
+
+software:
+- changed-files:
+  - any-glob-to-any-file:  
+    - "software/**/*"
+    - "stamp/**/*"
+    - "charts/**/*"
+
+infrastructure:
+- changed-files:
+  - any-glob-to-any-file:
+    - "bicep/**/*"
+    - "infrastructure/**/*"

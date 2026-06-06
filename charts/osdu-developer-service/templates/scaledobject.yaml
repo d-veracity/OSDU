@@ -1,0 +1,24 @@
+{{- $enabled := eq (include "osdu-developer-service.isEnabled" .) "1" -}}
+{{- range .Values.configuration }}
+{{- if and $enabled .scaledObject }}
+---
+apiVersion: keda.k8s.io/v1alpha1
+kind: ScaledObject
+metadata:
+  name: {{ .scaledObject }}
+  labels:
+    deploymentName: {{ .scaledObject }}
+spec:
+  scaleTargetRef:
+    deploymentName: {{ .scaledObject }}
+  triggers:
+  - type: azure-servicebus
+    metadata:
+      subscriptionName: {{ .servicebusSubscription }}
+      topicName: {{ .servicebusTopic }}
+      type: serviceBusTrigger
+      direction: in
+      name: message
+      connection: SERVICE_BUS
+{{- end }}
+{{- end }}

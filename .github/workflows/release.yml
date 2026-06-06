@@ -1,0 +1,81 @@
+# Required GitHub Variables:
+# - AZURE_CLIENT_ID: The client ID for Azure authentication
+# - AZURE_TENANT_ID: The tenant ID for Azure authentication
+# - AZURE_SUBSCRIPTION_ID: The subscription ID for Azure authentication
+#
+
+name: Infra - Release
+
+on:
+  workflow_dispatch:
+
+env:
+  AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+  AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+  AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+  AZCLIVERSION: latest
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - name: Github Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: Azure/login@v2
+        with:
+          client-id: ${{ env.AZURE_CLIENT_ID }}
+          tenant-id: ${{ env.AZURE_TENANT_ID }}
+          subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
+          enable-AzPSSession: true
+          environment: azurecloud
+          allow-no-subscriptions: false
+
+      - name: Bump Version and Get Next Tag
+        id: bump_version
+        uses: anothrNick/github-tag-action@1.73.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+
+      - name: Update Version JSON
+        run: |
+          echo '{"release": "${{ steps.bump_version.outputs.new_tag }}"}' > version.json
+
+      - name: Install Bicep
+        shell: pwsh
+        run: |
+          az config set bicep.use_binary_from_path=False
+          az bicep install
+
+      - name: Bicep build
+        shell: pwsh
+        run: |
+          /home/runner/.azure/bin/bicep build bicep/main.bicep --outfile azuredeploy.json
+
+      - name: Commit Changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Performing Release ${{ steps.bump_version.outputs.new_tag }}"
+          add: |
+            version.json
+            azuredeploy.json
+
+      - name: Generate Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          configuration: ".github/changelog_config.json"
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.bump_version.outputs.new_tag }}  # Use directly the tag from bump_version
+          artifacts: "azuredeploy.json"
+          body: ${{steps.github_release.outputs.changelog}}

@@ -1,0 +1,204 @@
+######################
+## Global Components (CRDs and base resources)
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: components-global
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/components/global
+  prune: true
+  wait: true
+
+######################
+## OSDU System Components  
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: components-osdu-system
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/components/osdu-system
+  prune: true
+  wait: true
+  dependsOn:
+    - name: components-global
+
+######################
+## Mesh Ingress Components
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: components-mesh-ingress
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/components/mesh-ingress
+  prune: true
+  wait: true
+  dependsOn:
+    - name: components-global
+  healthChecks:
+    - kind: Deployment
+      name: podinfo
+      namespace: podinfo
+
+
+######################
+## OSDU Auth
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: application-osdu-auth
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/applications/osdu-auth
+  prune: true
+  wait: true
+  dependsOn:
+    - name: components-osdu-system
+  healthChecks:
+    - kind: Deployment
+      name: osdu-auth
+      namespace: osdu-auth
+
+
+######################
+## OSDU Core
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: application-osdu-core
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 8m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/applications/osdu-core
+  prune: true
+  wait: true
+  dependsOn:
+    - name: components-osdu-system
+  # healthChecks:
+  #   - kind: Deployment
+  #     name: partition
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: entitlements
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: legal
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: schema
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: storage
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: indexer
+  #   - kind: Deployment
+  #     name: indexer-queue
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: file
+  #     namespace: osdu-core
+  #   - kind: Deployment
+  #     name: search
+  #     namespace: osdu-core
+
+
+######################
+## OSDU Rerference
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: application-osdu-reference
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 2m
+  timeout: 15m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/applications/osdu-reference
+  prune: true
+  wait: true
+  dependsOn:
+    - name: components-osdu-system
+  healthChecks:
+    - kind: Deployment
+      name: unit
+      namespace: osdu-reference
+    - kind: Deployment
+      name: crs-catalog
+      namespace: osdu-reference
+    - kind: Deployment
+      name: crs-conversion
+      namespace: osdu-reference
+
+
+######################
+## Web Site
+######################
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: application-website
+  namespace: flux-system
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./software/applications/web-site
+  prune: true
+  wait: true
+  dependsOn:
+    - name: components-mesh-ingress
+  healthChecks:
+    - kind: Deployment
+      name: osdu-developer-web
+      namespace: web-site

@@ -1,0 +1,25 @@
+
+name: osdu-developer
+metadata:
+  template: osdu-developer@0.0.1
+infra:
+  provider: bicep
+  path: bicep
+hooks:
+  preprovision:
+    interactive: true
+    continueOnError: false
+    shell: pwsh
+    run: ./scripts/pre-provision.ps1
+
+  postprovision:
+    interactive: true
+    continueOnError: false
+    shell: pwsh
+    run: ./scripts/post-provision.ps1
+
+  settings:
+    interactive: false
+    continueOnError: false
+    shell: pwsh
+    run: ./scripts/settings.ps1

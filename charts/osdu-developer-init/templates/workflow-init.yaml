@@ -1,0 +1,126 @@
+{{- $enabled := eq (include "osdu-developer-init.isEnabled" .) "1" -}}
+{{- $namespace := .Release.Namespace -}}
+{{- if and $enabled .Values.jobs.workflowInit }}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: workflow-init
+  namespace: {{ $namespace }}
+spec:
+  ttlSecondsAfterFinished: 120
+  template:
+    metadata:
+      labels:
+        azure.workload.identity/use: "true"
+    spec:
+      serviceAccountName: workload-identity-sa
+      volumes:
+      - name: script
+        configMap:
+          name: workflow-init-script
+          defaultMode: 0500
+      initContainers:
+      - name: data-seed
+        image: mcr.microsoft.com/azure-cli:cbl-mariner2.0
+        command:
+        - script/init.sh
+        volumeMounts:
+          - name: script
+            mountPath: "/script"
+        env:
+          - name: NAMESPACE
+            value: {{ $namespace }}
+          - name: PARTITION
+            value: {{ .Values.partition | quote }}
+          - name: WORKFLOWS
+            value: {{ .Values.workflows | toJson | quote }}
+      containers:
+      - name: sleep
+        image: istio/base
+        command: ["/bin/sleep", "30"]
+        volumeMounts:  # Ensure this container also mounts the volume if needed
+          - name: script
+            mountPath: "/script"
+      restartPolicy: Never
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: workflow-init-script
+  namespace: {{ $namespace }}
+data:
+  init.sh: |
+   #!/usr/bin/env sh
+    set -euo pipefail
+    set -o nounset
+
+    tdnf install -y curl jq
+
+    echo "=================================================================="
+    echo "  Logging in using Workload Identity"
+    echo "=================================================================="
+
+    # Login using the federated token from the environment variable
+    az login --federated-token "$(cat ${AZURE_FEDERATED_TOKEN_FILE})" \
+        --service-principal \
+        -u ${AZURE_CLIENT_ID} \
+        -t ${AZURE_TENANT_ID}
+
+    # Get token with the correct application ID as resource
+    TOKEN=$(az account get-access-token --resource "https://management.azure.com/" --query accessToken -o tsv)
+
+    # Log the WORKFLOWS variable to check its format
+    echo "WORKFLOWS: $WORKFLOWS"
+
+    # Ensure WORKFLOWS is properly formatted JSON
+    if ! echo "$WORKFLOWS" | jq empty; then
+      echo "Error: WORKFLOWS is not valid JSON"
+      exit 1
+    fi
+
+    # Iterate over each workflow in the WORKFLOWS array
+    echo "$WORKFLOWS" | jq -c '.[]' | while read -r WORKFLOW; do
+      # Debugging: Log the current workflow being processed
+      echo "Processing workflow: $WORKFLOW"
+
+      WORKFLOW_NAME=$(echo $WORKFLOW | jq -r '.name')
+      WORKFLOW_DESCRIPTION=$(echo $WORKFLOW | jq -r '.description')
+
+      echo "Registering workflow: $WORKFLOW_NAME"
+      OUTPUT=$(curl -s -w "%{http_code}" --request POST \
+        --url http://workflow.osdu-core/api/workflow/v1/workflow/system \
+        --header "Host: workflow.osdu-core" \
+        --header "accept: application/json" \
+        --header "content-type: application/json" \
+        --header "authorization: Bearer $TOKEN" \
+        --data "{
+          \"workflowName\": \"$WORKFLOW_NAME\",
+          \"description\": \"$WORKFLOW_DESCRIPTION\",
+          \"registrationInstructions\": {
+            \"active\": true,
+            \"dagName\": \"$WORKFLOW_NAME\",
+            \"concurrentWorkflowRun\": 5,
+            \"concurrentTaskRun\": 5,
+            \"workflowDetailContent\": \"\",
+            \"etc\": \"autotest\"
+          }
+        }")
+
+      HTTP_STATUS_CODE=$(echo $OUTPUT | grep -oE '[0-9]{3}$')
+      BODY=${OUTPUT%???}
+
+      if [ "$HTTP_STATUS_CODE" = "200" ]; then
+        echo "Info: Workflow created. HTTP status code $HTTP_STATUS_CODE"
+      elif [ "$HTTP_STATUS_CODE" = "409" ]; then
+        echo "Info: Workflow already exists. HTTP status code $HTTP_STATUS_CODE"
+        echo "Response body: $BODY"
+      else
+        echo "Error: Unexpected HTTP status code $HTTP_STATUS_CODE"
+        echo "Response body: $BODY"
+        exit 1
+      fi
+    done
+
+    exit 0
+{{- end }}

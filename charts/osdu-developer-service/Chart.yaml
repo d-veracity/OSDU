@@ -1,0 +1,9 @@
+apiVersion: v2
+name: osdu-developer-service
+type: application
+description: Installs OSDU Services
+version: 0.0.3
+appVersion: 0.0.1
+maintainers:
+  - name: danielscholl
+    url: https://github.com/azure/osdu-developer

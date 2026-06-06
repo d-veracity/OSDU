@@ -1,0 +1,127 @@
+{{- $enabled := eq (include "osdu-developer-init.isEnabled" .) "1" -}}
+{{- $namespace := .Release.Namespace -}}
+{{- $releaseName := .Release.Name -}}
+{{- if and $enabled .Values.jobs.userInit }}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ $releaseName }}
+  namespace: {{ $namespace }}
+spec:
+  ttlSecondsAfterFinished: 120
+  template:
+    metadata:
+      labels:
+        azure.workload.identity/use: "true"
+    spec:
+      serviceAccountName: workload-identity-sa
+      volumes:
+      - name: script
+        configMap:
+          name: configmap-{{ $releaseName }}-script
+          defaultMode: 0500
+      initContainers:
+      - name: data-seed
+        image: mcr.microsoft.com/azure-cli:cbl-mariner2.0
+        command:
+        - /script/init.sh
+        volumeMounts:
+          - name: script
+            mountPath: "/script"
+        env:
+          - name: EMAIL_ADDRESS
+            value: {{ .Values.emailAddress | quote }}
+      containers:
+      - name: sleep
+        image: istio/base
+        command: ["/bin/sleep", "30"]
+        volumeMounts:
+          - name: script
+            mountPath: "/script"
+      restartPolicy: Never
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-{{ $releaseName }}-script
+  namespace: {{ $namespace }}
+data:
+  init.sh: |
+    #!/usr/bin/env sh
+    set -euo pipefail
+    set -o nounset
+
+    tdnf install -y curl jq
+
+    echo "=================================================================="
+    echo "  Logging in using Workload Identity"
+    echo "=================================================================="
+
+    # Login using the federated token from the environment variable
+    az login --federated-token "$(cat ${AZURE_FEDERATED_TOKEN_FILE})" \
+        --service-principal \
+        -u ${AZURE_CLIENT_ID} \
+        -t ${AZURE_TENANT_ID}
+
+    # Get token (no resource needed)
+    TOKEN=$(az account get-access-token --resource "https://management.azure.com/" --query accessToken -o tsv)
+
+    echo "=================================================================="
+    echo "  Adding the first user...                                        "
+    echo "=================================================================="
+
+    json_payload=$(jq -n --arg email "$EMAIL_ADDRESS" '{"email": $email, "role": "MEMBER"}')
+
+    OUTPUT=$(curl -s -k -w "%{http_code}" -X POST "http://entitlements.{{ $namespace }}/api/entitlements/v2/groups/users@opendes.dataservices.energy/members" \
+        --insecure \
+        -H "Authorization: Bearer ${TOKEN}" \
+        -H "Accept: application/json" \
+        -H "data-partition-id: opendes" \
+        -H "Content-Type: application/json" \
+        -d "$json_payload")
+
+    HTTP_STATUS_CODE=$(echo $OUTPUT | grep -oE '[0-9]{3}$')
+    BODY=${OUTPUT%???}
+
+    if [[ "$HTTP_STATUS_CODE" != "200" && "$HTTP_STATUS_CODE" != "409" ]]; then
+      echo "Error: Unexpected HTTP status code $HTTP_STATUS_CODE"
+      echo "Response body: $BODY"
+      exit 1
+    fi
+
+    if [[ "$HTTP_STATUS_CODE" == "409" ]]; then
+      echo "Info: User already exists. \n$(echo "$BODY" | jq .)"
+    else
+      echo "Success: $(echo "$BODY" | jq .)"
+    fi
+
+    echo "=================================================================="
+    echo "  Assigning the Ops role to the user...                           "
+    echo "=================================================================="
+
+    OUTPUT=$(curl -s -k -w "%{http_code}" -X POST "http://entitlements.{{ $namespace }}/api/entitlements/v2/groups/users.datalake.ops@opendes.dataservices.energy/members" \
+      --insecure \
+      -H "accept: application/json" \
+      -H "content-type: application/json" \
+      -H "authorization: Bearer ${TOKEN}" \
+      -H "data-partition-id: opendes" \
+      -d "$json_payload")
+
+    HTTP_STATUS_CODE=$(echo $OUTPUT | grep -oE '[0-9]{3}$')
+    BODY=${OUTPUT%???}
+
+    if [[ "$HTTP_STATUS_CODE" != "200" && "$HTTP_STATUS_CODE" != "409" ]]; then
+      echo "Error: Unexpected HTTP status code $HTTP_STATUS_CODE"
+      echo "Response body: $BODY"
+      exit 1
+    fi
+
+    if [[ "$HTTP_STATUS_CODE" == "409" ]]; then
+      echo "Info: User already exists. \n$(echo "$BODY" | jq .)"
+    else
+      echo "Success: $(echo "$BODY" | jq .)"
+    fi
+
+    exit 0
+{{- end }}

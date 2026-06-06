@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "applicationClientId": {
+      "value": "e6d4286e-7412-4842-b9ee-4bff752cc54f"
+    },
+    "applicationClientPrincipalOid": {
+      "value": "500a9363-385b-412a-91b3-78538ca2f900"
+    },
+    "enableTelemetry": {
+      "value": true
+    }
+  }
+}

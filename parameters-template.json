@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "emailAddress": {
+            "value": "YOUR_EMAIL@domain.com"
+        },
+        "applicationClientId": {
+            "value": "YOUR_CLIENT_ID_HERE"
+        },
+        "applicationClientPrincipalOid": {
+            "value": "YOUR_PRINCIPAL_OBJECT_ID_HERE"
+        },
+        "location": {
+            "value": "eastus2"
+        }
+    }
+}

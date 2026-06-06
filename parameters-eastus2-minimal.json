@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "emailAddress": {
+            "value": "ajvdvoort_dveracity.com#EXT#@ajvdvoortdveracity.onmicrosoft.com"
+        },
+        "applicationClientId": {
+            "value": "e6d4286e-7412-4842-b9ee-4bff752cc54f"
+        },
+        "applicationClientPrincipalOid": {
+            "value": "500a9363-385b-412a-91b3-78538ca2f900"
+        },
+        "location": {
+            "value": "eastus2"
+        },
+        "serverConfiguration": {
+            "value": {
+                "systemPool": "Standard_B2s",
+                "userPool": "Standard_B2s"
+            }
+        },
+        "clusterConfiguration": {
+            "value": {
+                "enableNodeAutoProvisioning": false,
+                "enablePrivateCluster": false,
+                "enableLockDown": false
+            }
+        },
+        "clusterSoftware": {
+            "value": {
+                "enable": true,
+                "private": false,
+                "osduCore": true,
+                "osduReference": true,
+                "osduVersion": "",
+                "repository": "",
+                "branch": "",
+                "tag": ""
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+nameOverride: ""
+fullnameOverride: ""
+
+ingress:
+  internalGateway:
+    enabled: true
+    requireSSL: true
+    hosts:
+      - "*"
+    tls:
+      mode: SIMPLE
+      credentialName: istio-ingressgateway-certs  # Match the secret created by istio-certs chart
+  externalGateway:
+    enabled: true
+    tls:
+      mode: SIMPLE
+      credentialName: istio-ingressgateway-certs  # Match the secret created by istio-certs chart

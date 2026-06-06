@@ -1,0 +1,24 @@
+
+# Default values for dns-configuration
+
+################################################################################
+# Chart name overrides
+#
+nameOverride: ""
+fullnameOverride: ""
+
+
+################################################################################
+# Azure environment specific values
+#
+azure:
+  region: <your_azure_region>          # Azure region, e.g. eastus
+  dnsName: ""                          # DNS name to be used for the LoadBalancer IP
+
+################################################################################
+# Gateway API configuration values
+#
+gatewayServiceName: "external-gateway-istio" # Name of the Gateway API service (LoadBalancer)
+gatewayNamespace: "istio-system"             # Namespace of the Gateway API service  
+maxRetries: 30                              # Max retries for waiting on LoadBalancer IP
+retryInterval: 10                           # Seconds between retries

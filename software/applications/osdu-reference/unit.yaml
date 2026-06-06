@@ -1,0 +1,109 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: osdu-unit
+  namespace: osdu-reference
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
+spec:
+  dependsOn:
+    - name: osdu-developer-base-reference
+      namespace: default
+  targetNamespace: osdu-reference
+  chart:
+    spec:
+      chart: ./charts/osdu-developer-service
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+        namespace: flux-system
+  interval: 5m0s
+  timeout: 6m
+  install:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: configmap-software
+      valuesKey: value.yaml
+  values:
+    nameOverride: unit
+    installationType: osduReference
+    subset: m24
+    replicaCount: 1
+    service:
+      type: ClusterIP
+      port: 80
+    configuration:
+    - service: unit
+      path: /api/unit/
+      hosts:
+        - "*"
+      gateways:
+        - name: internal-gateway
+          namespace: istio-system
+        - name: external-gateway
+          namespace: istio-system
+      repository: community.opengroup.org:5555/osdu/platform/system/reference/unit-service/unit-service-release-0-27
+      tag: latest
+      probe:
+        path: /api/unit/_ah/readiness_check
+        port: http
+        liveness:
+          delay: 250
+          seconds: 10
+      keyvault: true
+      auth:
+        disable:
+          - "*/actuator/health"
+          - "*/health"
+          - "*/_ah/**"
+          - "*/configuration/ui"
+          - "*/configuration/security"
+          - "/api/unit/v3/info"
+          - "/api/unit/swagger*"
+          - "/api/unit/api-docs*"
+          - "/api/unit/webjars/*"
+      pvc:
+      - name: share-unit
+        existing: true
+        volume: shared-data
+      mount:
+      - name: shared-data
+        path: /mnt/unit_catalogs
+      env:
+      - name: KEYVAULT_URI
+        secret:
+          name: azure-resources
+          key: keyvault-uri
+      - name: AAD_CLIENT_ID
+        secret:
+          name: active-directory
+          key: principal-clientid
+      - name: APPINSIGHTS_KEY
+        secret:
+          name: azure-resources
+          key: insights-key
+      - name: APPLICATIONINSIGHTS_CONNECTION_STRING
+        secret:
+          name: azure-resources
+          key: insights-connection
+      - name: AZURE_ISTIOAUTH_ENABLED
+        value: "true"
+      - name: AZURE_PAAS_PODIDENTITY_ISENABLED
+        value: "true"
+      - name: SERVER_PORT
+        value: "80"
+      - name: ACCEPT_HTTP
+        value: "true"
+      - name: SPRING_APPLICATION_NAME
+        value: "unit"
+      - name: SERVER_SERVLET_CONTEXTPATH
+        value: "/api/unit/"
+      - name: unit_service_spring_logging_level
+        value: "INFO"
+      - name: PARTITION_SERVICE_ENDPOINT
+        value: "http://partition.osdu-core.svc.cluster.local/api/partition/v1"
+      - name: ENTITLEMENT_URL
+        value: "http://entitlements.osdu-core.svc.cluster.local/api/entitlements/v2"

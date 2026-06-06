@@ -1,0 +1,36 @@
+# Configuration for generating changelog
+changelog:
+  # Define categories to group changes
+  categories:
+    - title: "Infrastructure Changes 🛠"
+      labels:
+        - "infrastructure"
+    - title: "Softwaree Features 🎉"
+      labels:
+        - "software"
+    - title: "Other Changes"
+      labels:
+        - "*"  # Matches all other labels
+
+  # Specify elements to exclude from the changelog
+  exclude:
+    labels:
+      - "ignore-for-release"  # Exclude all issues/PRs with this label
+
+
+  # Configuration options for the changelog generator
+  # Change log file settings
+  configure:
+    ignorePreReleases: false  # Consider prereleases (alpha, beta, etc.)
+    tagPrefix: ""  # Customize if your tags have a specific prefix
+
+  # Format settings for how the changelog should be styled
+  format:
+    issue:
+      - "**{{name}}** {{description}}"
+    commit:
+      - "**{{sha}}** {{description}}"
+    group:
+      - "### {{heading}}"
+    change:
+      - "- {{.}}"

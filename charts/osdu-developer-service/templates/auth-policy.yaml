@@ -1,0 +1,28 @@
+{{- $enabled := eq (include "osdu-developer-service.isEnabled" .) "1" -}}
+{{- $labels := include "osdu-developer-service.labels" . | nindent 4 }}
+{{- range .Values.configuration }}
+{{- if and $enabled .auth }}
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: {{ .service }}
+  labels: {{ $labels }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .service }}
+  action: DENY
+  rules:
+    - from:
+        - source:
+            notRequestPrincipals: ["*"]
+      to:
+        - operation:
+            notPaths: [
+              {{- range .auth.disable }}
+              {{ . | quote }},
+              {{- end }}
+            ]
+{{- end }}
+{{- end }}
