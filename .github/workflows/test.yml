@@ -187,7 +187,7 @@ jobs:
         env:
           RESOURCE_GROUP: ${{ steps.params.outputs.RESOURCEGROUP }}
           LOCATION: ${{ steps.params.outputs.REGION }}
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         with:
           azcliversion: ${{ env.AZCLIVERSION }}
           inlineScript: |
@@ -207,7 +207,7 @@ jobs:
         if: github.event.inputs.doVerifySteps == 'true'
         env:
           RESOURCE_GROUP: ${{ steps.params.outputs.RESOURCEGROUP }}
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         with:
           azcliversion: ${{ env.AZCLIVERSION }}
           inlineScript: |
@@ -249,7 +249,7 @@ jobs:
           }
 
       - name: Create Parameter file imperative override string
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         id: imperitiveparams
         env:
           RESOURCE_GROUP: ${{ steps.params.outputs.RESOURCEGROUP }}
@@ -261,7 +261,7 @@ jobs:
             echo "PARAMOVERRIDES=$PARAMOVERRIDES" >> $GITHUB_OUTPUT
 
       - name: Validate Infrastructure deployment
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         env:
           RESOURCE_GROUP: ${{ steps.params.outputs.RESOURCEGROUP }}
           AZURE_CLIENT_PRINCIPAL_OID: ${{ vars.AZURE_PRINCIPAL_ID }}
@@ -275,7 +275,7 @@ jobs:
             az deployment group validate -f bicep/main.bicep -g $RESOURCE_GROUP -p ${{ env.ParamFilePath }} -p $PARAMS --verbose
 
       - name: What If
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         id: whatif
         env:
           RESOURCE_GROUP: ${{ steps.params.outputs.RESOURCEGROUP }}
@@ -457,7 +457,7 @@ jobs:
           allow-no-subscriptions: false
 
       - name: Delete Resource Group
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         continue-on-error: true
         with:
           azcliversion: ${{ env.AZCLIVERSION }}
@@ -471,7 +471,7 @@ jobs:
             fi
 
       - name: Purge Deleted Key Vaults
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         with:
           azcliversion: ${{ env.AZCLIVERSION }}
           inlineScript: |
@@ -483,7 +483,7 @@ jobs:
             done
 
       - name: Purge Deleted App Configurations
-        uses: azure/CLI@v2
+        uses: azure/CLI@v3
         with:
           azcliversion: ${{ env.AZCLIVERSION }}
           inlineScript: |
