@@ -1,0 +1,146 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--Standard",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--Standard:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--Standard.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--Standard:3.0.0",
+    "title": "Standard",
+    "description": "Something considered by an authority or by general consent as a basis of comparison; an approved\nmodel.\n\nIt is a technical document designed to be used as a rule, guideline, or definition. It is a consensus-built,\nrepeatable way of doing something.\n\nStandards are created by bringing together all interested parties such as manufacturers, consumers, and regulators of a particular material, product, process, or service.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "A description of the Standard."
+          },
+          "organization_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Organization that governs the standard."
+          },
+          "standard_id": {
+            "type": "string",
+            "description": "The Primary Key of the Standard."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name which identifies the Standard."
+          },
+          "url": {
+            "type": "string",
+            "description": "A URL identifying a source of the Standard."
+          },
+          "compliance_requirement": {
+            "type": "boolean",
+            "description": "Optional boolean used to flag the Standard as a Compliance Requirement, such as a Facility based disclosure requirement, a carbon tax, or an ETS."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

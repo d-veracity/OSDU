@@ -1,0 +1,151 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--Facility",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--Facility:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--Facility.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--Facility:3.0.0",
+    "title": "Facility",
+    "description": "A Facility is a designated logical entity representing a specific business function or service capability.\nWhile often associated with physical sites, the Facility definition itself represents the functional\nrequirement, independent of the specific Equipment and Materials installed. This distinction allows\nthe Facility\u2019s function to endure even as physical Equipment is maintained, upgraded, or replaced over\ntime.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "facility_id": {
+            "type": "string",
+            "description": "The Primary Key of the Facility."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Facility."
+          },
+          "description": {
+            "type": "string",
+            "description": "A long-form description of the Facility and its various functions and capabilities."
+          },
+          "facility_type_id": {
+            "type": "string",
+            "description": "Foreign Key of the type used to classify the Facility."
+          },
+          "organizational_boundary_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Organizational Boundary that defines the ownership structure of the Facility."
+          },
+          "organization_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Organization that currently controls this Facility."
+          },
+          "geopolitical_contexts": {
+            "type": "array",
+            "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "organizational_boundary_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

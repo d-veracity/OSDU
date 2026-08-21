@@ -1,0 +1,135 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "reference-data--CentralProductClassificationCode",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:reference-data--CentralProductClassificationCode:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/reference-data--CentralProductClassificationCode.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:reference-data--CentralProductClassificationCode:3.0.0",
+    "title": "Central Product Classification Code",
+    "description": "The list of valid codes as per the CPC.\n\nThe CPC consists of a coherent and consistent classification structure for products (goods and services)\nbased on a set of internationally agreed concepts, definitions, principles, and classification rules. It\nserves as an international standard for assembling and tabulating all kinds of data requiring product\ndetail, including statistics on industrial production, domestic and foreign commodity trade,\ninternational trade in services, balance of payments, consumption and price statistics, and other data\nused within the national accounts.\n\nIt provides a comprehensive framework within which data on products can be collected and presented\nin a format that allows for economic analysis supporting decision-taking and policy-making.\n\nRefer to: United Nations (UN) Statistical Commission:\nwww.unstats.un.org/unsd/classifications/Econ/CPC.cshtml",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "cpc_id": {
+            "type": "string",
+            "description": "The Primary Key of the CPC Code."
+          },
+          "cpc_code": {
+            "type": "string",
+            "description": "The code assigned to CPC Code."
+          },
+          "cpc_name": {
+            "type": "string",
+            "description": "The name assigned to the CPC Code."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cpc_code",
+          "cpc_name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

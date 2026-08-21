@@ -1,0 +1,138 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "reference-data--SystemOfUnits",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:reference-data--SystemOfUnits:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/reference-data--SystemOfUnits.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:reference-data--SystemOfUnits:3.0.0",
+    "title": "System Of Units",
+    "description": "A System of Units is a set of Unit Of Measures which can be used to specify anything which can be measured and were historically important, regulated, and defined because of trade and internal commerce.\n\nIn a modern System of Unit, some quantities are designated as a fundamental System of Unit, meaning\nall other needed Unit Of Measures can be derived from them, whereas in the early and most historic\neras (e.g., Imperial, United States (US) Customary), the units were given by statutory law by the ruling\nentities and were not necessarily well inter-related or self-consistent.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "system_of_units_id": {
+            "type": "string",
+            "description": "The Primary Key of the System Of Units."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description assigned to the System Of Units."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the System Of Units."
+          },
+          "unit_of_measure_source_reference_id": {
+            "type": "string",
+            "description": "The Foreign Key assigned to the Source Reference of the System of Units."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

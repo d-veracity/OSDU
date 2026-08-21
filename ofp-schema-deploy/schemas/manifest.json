@@ -1,0 +1,211 @@
+{
+  "reference-data": [
+    {
+      "id": "ofp:wks:reference-data--CentralProductClassificationCode:3.0.0",
+      "file": "ofp_wks_reference-data--CentralProductClassificationCode_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+      "file": "ofp_wks_reference-data--EmissionActivityCategory_4.0.0.json",
+      "properties": 7
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+      "file": "ofp_wks_reference-data--EmissionActivityType_3.0.0.json",
+      "properties": 8
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionCalculationMethodType:3.0.0",
+      "file": "ofp_wks_reference-data--EmissionCalculationMethodType_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionCategoryType:4.0.0",
+      "file": "ofp_wks_reference-data--EmissionCategoryType_4.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionComponent:3.0.0",
+      "file": "ofp_wks_reference-data--EmissionComponent_3.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionFactorType:4.0.0",
+      "file": "ofp_wks_reference-data--EmissionFactorType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionInventoryType:4.0.0",
+      "file": "ofp_wks_reference-data--EmissionInventoryType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionRecordingMethodType:3.0.0",
+      "file": "ofp_wks_reference-data--EmissionRecordingMethodType_3.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionScopeType:3.0.0",
+      "file": "ofp_wks_reference-data--EmissionScopeType_3.0.0.json",
+      "properties": 5
+    },
+    {
+      "id": "ofp:wks:reference-data--FacilityLocationType:3.0.0",
+      "file": "ofp_wks_reference-data--FacilityLocationType_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--FacilityType:3.0.0",
+      "file": "ofp_wks_reference-data--FacilityType_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--GeopoliticalEntityType:3.0.0",
+      "file": "ofp_wks_reference-data--GeopoliticalEntityType_3.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--IndustrySectorType:3.0.0",
+      "file": "ofp_wks_reference-data--IndustrySectorType_3.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--OrganizationType:3.0.0",
+      "file": "ofp_wks_reference-data--OrganizationType_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--PersonOrganizationRoleType:3.0.0",
+      "file": "ofp_wks_reference-data--PersonOrganizationRoleType_3.0.0.json",
+      "properties": 2
+    },
+    {
+      "id": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+      "file": "ofp_wks_reference-data--PhysicalQuantityType_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--SystemOfUnits:3.0.0",
+      "file": "ofp_wks_reference-data--SystemOfUnits_3.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+      "file": "ofp_wks_reference-data--UnitOfMeasure_3.0.0.json",
+      "properties": 13
+    },
+    {
+      "id": "ofp:wks:reference-data--UntOfMsrSrcRfrnc:3.0.0",
+      "file": "ofp_wks_reference-data--UntOfMsrSrcRfrnc_3.0.0.json",
+      "properties": 2
+    }
+  ],
+  "master-data": [
+    {
+      "id": "ofp:wks:master-data--ContactPerson:3.0.0",
+      "file": "ofp_wks_master-data--ContactPerson_3.0.0.json",
+      "properties": 13
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionActivity:4.0.0",
+      "file": "ofp_wks_master-data--EmissionActivity_4.0.0.json",
+      "properties": 16
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+      "file": "ofp_wks_master-data--EmissionActivityParameter_4.0.0.json",
+      "properties": 9
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionActivityParameterRecordingTemplate:3.0.0",
+      "file": "ofp_wks_master-data--EmissionActivityParameterRecordingTemplate_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionActivityTypeParameterTypeAssignment:3.0.0",
+      "file": "ofp_wks_master-data--EmissionActivityTypeParameterTypeAssignment_3.0.0.json",
+      "properties": 7
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionCalculationFormula:4.0.0",
+      "file": "ofp_wks_master-data--EmissionCalculationFormula_4.0.0.json",
+      "properties": 11
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+      "file": "ofp_wks_master-data--EmissionCalculationModel_4.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionFactor:4.0.0",
+      "file": "ofp_wks_master-data--EmissionFactor_4.0.0.json",
+      "properties": 13
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionFactorSource:4.0.0",
+      "file": "ofp_wks_master-data--EmissionFactorSource_4.0.0.json",
+      "properties": 7
+    },
+    {
+      "id": "ofp:wks:master-data--EmissionInventory:4.0.0",
+      "file": "ofp_wks_master-data--EmissionInventory_4.0.0.json",
+      "properties": 5
+    },
+    {
+      "id": "ofp:wks:master-data--Equipment:3.4.0",
+      "file": "ofp_wks_master-data--Equipment_3.4.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:master-data--Facility:3.0.0",
+      "file": "ofp_wks_master-data--Facility_3.0.0.json",
+      "properties": 7
+    },
+    {
+      "id": "ofp:wks:master-data--GeopoliticalEntity:3.0.0",
+      "file": "ofp_wks_master-data--GeopoliticalEntity_3.0.0.json",
+      "properties": 8
+    },
+    {
+      "id": "ofp:wks:master-data--GeospatialLocation:3.0.0",
+      "file": "ofp_wks_master-data--GeospatialLocation_3.0.0.json",
+      "properties": 11
+    },
+    {
+      "id": "ofp:wks:master-data--Organization:3.0.0",
+      "file": "ofp_wks_master-data--Organization_3.0.0.json",
+      "properties": 8
+    },
+    {
+      "id": "ofp:wks:master-data--OrganizationalBoundary:4.0.0",
+      "file": "ofp_wks_master-data--OrganizationalBoundary_4.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:master-data--OrganizationalBoundaryShare:4.0.0",
+      "file": "ofp_wks_master-data--OrganizationalBoundaryShare_4.0.0.json",
+      "properties": 7
+    },
+    {
+      "id": "ofp:wks:master-data--Product:3.0.0",
+      "file": "ofp_wks_master-data--Product_3.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:master-data--ProductLifeCycle:3.0.0",
+      "file": "ofp_wks_master-data--ProductLifeCycle_3.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:master-data--ProductLifeCycleStage:3.0.0",
+      "file": "ofp_wks_master-data--ProductLifeCycleStage_3.0.0.json",
+      "properties": 2
+    },
+    {
+      "id": "ofp:wks:master-data--Standard:3.0.0",
+      "file": "ofp_wks_master-data--Standard_3.0.0.json",
+      "properties": 6
+    }
+  ]
+}

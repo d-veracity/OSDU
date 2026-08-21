@@ -1,0 +1,171 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--GeospatialLocation",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--GeospatialLocation:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--GeospatialLocation.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--GeospatialLocation:3.0.0",
+    "title": "Geospatial Location",
+    "description": "A spatial representation (e.g., a point, an outline) of a Location which can be linked to an Organization\nor Facility",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifies this resource object."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time from which a given Geospatial Location is valid."
+          },
+          "epsg_code": {
+            "type": "string",
+            "description": "The EPSG Geodetic Parameter Dataset code assigned to the Geospatial Location."
+          },
+          "location_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Location to which this Geospatial Location is assigned."
+          },
+          "normalized_x": {
+            "type": "string",
+            "description": "The normalized x coordinate of the Geospatial Location."
+          },
+          "normalized_y": {
+            "type": "string",
+            "description": "The normalized y coordinate of the Geospatial Location."
+          },
+          "original_x": {
+            "type": "string",
+            "description": "The original x coordinate of the Geospatial Location."
+          },
+          "original_y": {
+            "type": "string",
+            "description": "The original y coordinate of the Geospatial Location."
+          },
+          "parent_location_id": {
+            "type": "string",
+            "description": "The Foreign Key of the parent Location to which this Geospatial Location is assigned."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time to which a given Geospatial Location is valid."
+          },
+          "spatial_location": {
+            "type": "string",
+            "description": "A geographic object which can be described by a set of points."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "normalized_x",
+          "normalized_y",
+          "original_x",
+          "original_y"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

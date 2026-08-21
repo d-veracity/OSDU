@@ -1,0 +1,150 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--EmissionActivityTypeParameterTypeAssignment",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--EmissionActivityTypeParameterTypeAssignment:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--EmissionActivityTypeParameterTypeAssignment.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--EmissionActivityTypeParameterTypeAssignment:3.0.0",
+    "title": "Emission Activity Type Parameter Type Assignment",
+    "description": "An assignment that specifies applicable parameter types to a type of Emission Activity. Parameter\nassignments may be combined into Emission Activity Recording Templates.\nNote: The Emission Activity may be characterized by Emission Activity Type (industry specific) or\nEmission Activity Category (non-industry specific).",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "emission_parameter_assignment_id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Emission Activity Type Parameter Type Assignment."
+          },
+          "emission_activity_parameter_recording_template_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Activity Parameter Recording Template."
+          },
+          "emission_activity_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Activity Type."
+          },
+          "emission_parameter_type_id": {
+            "type": "string",
+            "description": "DEPRECATED, replace by Physical Quantity Type ID. Assigns a reference parameter type to an emission argument"
+          },
+          "facility_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the optional Facility Type of the Emission Activity Type Parameter Type Assignment."
+          },
+          "physical_quantity_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Physical Quantity Type of the Emission Activity Type Parameter Type Assignment."
+          },
+          "emission_activity_category_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Activity Category."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "physical_quantity_type_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

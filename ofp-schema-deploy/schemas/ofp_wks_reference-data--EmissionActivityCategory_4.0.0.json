@@ -1,0 +1,152 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "reference-data--EmissionActivityCategory",
+      "schemaVersionMajor": 4,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/reference-data--EmissionActivityCategory.4.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+    "title": "Emission Activity Category",
+    "description": "A category to be used for reporting emissions specified for each Emission Scope Type within each Inventory Type and Category Type classification, based on existing standards:\n\n* Source: For example, direct/indirect categories from ISO 14064-1, Greenhouse Gas (GHG) Protocol\nCategories, Application Programming Interface (API) Compendium, \u2026\n\n* Sink: Specific technology and nature-based solutions (Direct Air Capture (DAC), Carbon Capture and\nStorage (CCS), Forestry, Marine, Soil, \u2026)\n\n* Credit: Allowance programs (e.g., Emissions Trading Systems (ETS)), technology and nature-based\ncredits, Low Carbon Fuel Standard (LCFS) categories",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "emission_activity_category_id": {
+            "type": "string",
+            "description": "Primary key for the Emission Activity Category."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name assigned to the Activity Category."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the Activity Category."
+          },
+          "parent_emission_activity_category_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Inventory Type."
+          },
+          "emission_scope_type_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Scope Type assigned to the Emission Activity Category."
+          },
+          "emission_inventory_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite Foreign Key identifying the Emission Scope Type. The Emission Inventory Type."
+          },
+          "emission_category_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite Foreign Key of the Emission Scope Type:\nThe Emission Category Type."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_activity_category_id",
+          "emission_scope_type_id",
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

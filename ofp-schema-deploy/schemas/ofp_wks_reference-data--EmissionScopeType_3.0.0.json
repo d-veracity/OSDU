@@ -1,0 +1,144 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "reference-data--EmissionScopeType",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:reference-data--EmissionScopeType:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/reference-data--EmissionScopeType.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:reference-data--EmissionScopeType:3.0.0",
+    "title": "Emission Scope Type",
+    "description": "Classification of different Emission Scope Types for each Emission Category Type.\n\n* Source: The three categories by which the GHG Protocol classifies emissions in order to better\nunderstand the source\n\n  \u25e6 Direct: Scope 1\n\n  \u25e6 Indirect \u2014 Energy: Scope 2\n\n  \u25e6 Indirect \u2014 Value Chain: Scope 3\n\n* Sink:\n\n  \u25e6 Operations (analogous to Scopes 1-2 for sources)\n\n     \u25aa Method: Technology or Nature-based\n  \n  \u25e6 Value Chain (analogous to Scope 3 for sources)\n\n    \u25aa Method: Technology or Nature-based\n* Credit:\n\n  \u25e6 Reduction: Technology, Nature, Hybrid\n \n  \u25e6 Removal: Technology, Nature, Hybrid\n\n  \u25e6 Avoidance: Technology, Nature, Hybrid",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "emission_scope_type_id": {
+            "type": "string",
+            "description": "The Primary Key of the scope type."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Emission Scope Type."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the Emission Scope Type."
+          },
+          "emission_category_type_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Inventory Type."
+          },
+          "emission_inventory_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite key of the Emission Category Type. The Emission Inventory Type."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_category_type_id",
+          "emission_scope_type_id",
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}
