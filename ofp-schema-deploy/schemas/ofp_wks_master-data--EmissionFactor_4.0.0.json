@@ -1,0 +1,178 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--EmissionFactor",
+      "schemaVersionMajor": 4,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--EmissionFactor:4.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--EmissionFactor.4.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--EmissionFactor:4.0.0",
+    "title": "Emission Factor",
+    "description": "A factor that is used to calculate emissions for a certain Emission Activity Type.\n\nCan define the parameter type (Physical Quantity) used in the calculation of an emissions.\n\nDifferent factors may be used for the same activity depending on available data, the Emission\nDisclosure Framework, as well as the location (Geopolitical Entity) or market-based methods used.\n\nExample: The Carbon Intensity of the Emission Inventory Category: Grid Power Supply. The actual Carbon Intensity at a moment in time might be derived from the fraction of supply of all providers on a grid (coal-fired power plants, gas-fired power plants, solar and wind power supply, etc.). If the actual Carbon Intensity of Grid Power Supply is not known, a yearly average intensity (given at country level) can be used.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "emission_factor_id": {
+            "type": "string",
+            "description": "The Primary Key of the Emission Factor."
+          },
+          "emission_activity_type_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Activity Type and part of an optional composite key of the Emission Factor."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Emission Factor."
+          },
+          "emission_factor_source_id": {
+            "type": "string",
+            "description": "The Foreign Key of the official documented source for the Emission Factor."
+          },
+          "emission_factor_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the type of Emission Factor; e.g., market or location- based, and optional part of a composite Foreign Key of the Factor."
+          },
+          "emission_parameter_type_id": {
+            "type": "string",
+            "description": "DEPRECATED, to be replaced by Physical Quantity Type Id identified by the parent Unit Of Measure Id. The foreign key of a reference parameter type assigned to the emission factor."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Point in time from which this Emission Factor is valid."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Point in time until this Emission Factor is considered valid."
+          },
+          "unit_of_measure_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Unit Of Measure assigned to this attribute."
+          },
+          "physical_quantity_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite Foreign Key of the parent Unit Of Measure.\nIdentifies the Physical Quantity Type of the Emission Factor; e.g., density (mass per volume) or equivalent GWP of a gas (mass per mass)."
+          },
+          "equipment_id": {
+            "type": "string",
+            "description": "The Foreign Key of the piece of Equipment to which this factor is assigned."
+          },
+          "facility_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Facility to which this Factor is assigned."
+          },
+          "geopolitical_contexts": {
+            "type": "array",
+            "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_factor_id",
+          "name",
+          "unit_of_measure_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

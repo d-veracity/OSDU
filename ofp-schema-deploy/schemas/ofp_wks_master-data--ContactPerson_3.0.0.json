@@ -1,0 +1,177 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--ContactPerson",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--ContactPerson:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--ContactPerson.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--ContactPerson:3.0.0",
+    "title": "Contact Person",
+    "description": "An individual acting as a organizational contact typically due to specific role/job responsibilities of the\nperson within their organization. Organizations may have multiple contacts depending on\norganizational needs.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "address_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Address to which this Contact Person belongs."
+          },
+          "first_name": {
+            "type": "string",
+            "description": "The first or given name of the Contact Person."
+          },
+          "full_name": {
+            "type": "string",
+            "description": "The complete name of the individual Contact Person, typically combining given, middle, and family names in the order used for business communication."
+          },
+          "contact_person_id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Contact Person."
+          },
+          "last_name": {
+            "type": "string",
+            "description": "The family name or surname of the Contact Person."
+          },
+          "middle_name": {
+            "type": "string",
+            "description": "The optional middle or additional given name of the Contact Person, used when needed to distinguish individuals with similar first and last names."
+          },
+          "title_name": {
+            "type": "string",
+            "description": "The title assigned to the Contact Person; e.g., Mr., Mrs., Ms., Dr., \u2026"
+          },
+          "email": {
+            "type": "string",
+            "description": "The email address of the Contact Person. Property may be left empty where it is inappropriate to provide Personally Identifiable Information (PII)."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the individual Contact Person. Property may be left empty where it is inappropriate to provide PII."
+          },
+          "organization_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Organization the contact is associated with."
+          },
+          "comment": {
+            "type": "string",
+            "description": "Additional information about the Contact Person."
+          },
+          "person_organization_role_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Person Organization Role Type identifying the role of the contact within the associated organization, such as Account Owner, Sales Representative, Technical Support, Project Manager, Party Chief, Client Representative, Senior Observer."
+          },
+          "phone_number": {
+            "type": "string",
+            "description": "The phone number of the Contact Person. Property may be left empty where it is inappropriate to provide PII."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "first_name",
+          "full_name",
+          "last_name",
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

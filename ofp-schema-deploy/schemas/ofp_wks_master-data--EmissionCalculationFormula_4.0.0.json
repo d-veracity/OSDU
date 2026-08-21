@@ -1,0 +1,169 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--EmissionCalculationFormula",
+      "schemaVersionMajor": 4,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--EmissionCalculationFormula:4.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--EmissionCalculationFormula.4.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--EmissionCalculationFormula:4.0.0",
+    "title": "Emission Calculation Formula",
+    "description": "A formula that describes how emissions are calculated for a given Emission Inventory Category and a given Emission Calculation Method.\n\nThe formula provides the template for performing calculations for a given Emission Parameter Assignment.\n\nThe activities involved in the calculation are reflected in the components of the Formula; i.e., the Emission Calculation Formula Component.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "emission_activity_category_id": {
+            "type": "string",
+            "description": "The Foreign Key for Emission Activity Category assigned to the Emission Calculation Model."
+          },
+          "emission_parameter_assignment_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Activity Type Parameter Type Assignment used by this formula."
+          },
+          "emission_activity_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite Foreign Key of the Emission Activity Type Parameter Type Assignment to which this Emission Calculation Formula belongs (the Emission Activity Type)."
+          },
+          "physical_quantity_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite Foreign Key of the Emission Activity Type Parameter Type Assignment (the Physical Quantity Type)."
+          },
+          "emission_calculation_method_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Calculation Method Type."
+          },
+          "emission_calculation_formula_id": {
+            "type": "string",
+            "description": "The Primary Key of the Emission Calculation Model."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Emission Calculation Formula."
+          },
+          "description": {
+            "type": "string",
+            "description": "Long description assigned to the Emission Calculation Formula."
+          },
+          "standard_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Standard to which the Emission Calculation Formula conforms."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time from which the Emission Calculation Formula is valid."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time to which the Emission Calculation Formula is valid."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_calculation_method_type_id",
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

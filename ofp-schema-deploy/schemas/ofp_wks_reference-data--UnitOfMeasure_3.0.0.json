@@ -1,0 +1,177 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "reference-data--UnitOfMeasure",
+      "schemaVersionMajor": 3,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:reference-data--UnitOfMeasure:3.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/reference-data--UnitOfMeasure.3.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+    "title": "Unit Of Measure",
+    "description": "A definite property by which an object can be compared as larger or smaller than other objects of the same physical quantity. \n\nIt is defined and adopted by convention or by law, that is used as a standard for measurement of the same physical quantity.\n\nAny other value of the physical quantity can be expressed as a simple multiple of the Unit of Measure.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "base_unit_of_measure_id": {
+            "type": "string",
+            "description": "The base Unit Of Measure of this Unit Of Measure."
+          },
+          "is_base_unit_indicator": {
+            "type": "boolean",
+            "description": "Identifies if this Unit Of Measure is used as a base unit of Measure."
+          },
+          "physical_quantity_type_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Physical Quantity Type assigned to the Unit Of Measure."
+          },
+          "system_of_units_id": {
+            "type": "string",
+            "description": "The Foreign Key of the System of Units assigned to the Unit Of Measure."
+          },
+          "conversion_factor_a": {
+            "type": "number",
+            "description": "Conversion Factor A from the formula for mapping a unit dictionary to the Energistics\u00ae Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf."
+          },
+          "conversion_factor_b": {
+            "type": "number",
+            "description": "Conversion Factor B from the formula for mapping a unit dictionary to the Energistics Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf."
+          },
+          "conversion_factor_c": {
+            "type": "number",
+            "description": "Conversion Factor C from the formula for mapping a unit dictionary to the Energistics Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf."
+          },
+          "code": {
+            "type": "string",
+            "description": "A code assigned to the Unit of Measure."
+          },
+          "conversion_factor_d": {
+            "type": "number",
+            "description": "Conversion Factor D from the formula for mapping a unit dictionary to the Energistics Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf."
+          },
+          "unit_of_measure_id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Unit Of Measure."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Unit Of Measure."
+          },
+          "unit_of_measure_source_reference_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Source Reference assigned to the Unit Of Measure."
+          },
+          "symbol_code": {
+            "type": "string",
+            "description": "A symbol code assigned to the Unit Of Measure."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "name",
+          "symbol_code",
+          "unit_of_measure_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

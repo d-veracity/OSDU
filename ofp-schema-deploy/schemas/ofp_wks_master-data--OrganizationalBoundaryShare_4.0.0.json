@@ -1,0 +1,156 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "master-data--OrganizationalBoundaryShare",
+      "schemaVersionMajor": 4,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:master-data--OrganizationalBoundaryShare:4.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/master-data--OrganizationalBoundaryShare.4.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:master-data--OrganizationalBoundaryShare:4.0.0",
+    "title": "Organizational Boundary Share",
+    "description": "Specifies the percentage of control that an organization has over an Organizational Boundary.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "organizational_boundary_share_id": {
+            "type": "string",
+            "description": "The identifying Primary Key of the Organizational Boundary Share."
+          },
+          "percentage": {
+            "type": "number",
+            "description": "The value of the Organizational Boundary Share; should be expressed as a decimal value between 0 and 1."
+          },
+          "share_type": {
+            "type": "string",
+            "description": "The type of financing the share applies to."
+          },
+          "organization_id": {
+            "type": "string",
+            "description": "The Organization with a share in the Boundary."
+          },
+          "organizational_boundary_id": {
+            "type": "string",
+            "description": "The Organizational Boundary to which the share is assigned."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "A date and optional time from which the boundary share is valid;\nshould follow the ISO 8601 date time standardized format."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "A date and optional time to which the boundary share is valid; should follow the ISO 8601 date time standardized format."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "organization_id",
+          "organizational_boundary_id",
+          "percentage",
+          "share_type",
+          "valid_from_datetime"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}
