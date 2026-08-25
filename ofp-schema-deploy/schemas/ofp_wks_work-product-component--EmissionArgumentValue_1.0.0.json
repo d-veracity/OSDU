@@ -1,0 +1,192 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--EmissionArgumentValue",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionArgumentValue.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+    "title": "Emission Argument Value",
+    "description": "The value of an Emission Activity Parameter or Factor at a given moment in time. Table 188 should\ndefine the argument type (Emission Activity Parameter or Emission Factor).\n\nWhen recording a value for Emission Factor, the Emission Activity Parameter ID can be used to define\nthe foreign activity, and through this association a specific piece of Equipment to which the factor\napplies.\n\nSimilarly, when recording a value for Emission Activity Parameter, the Emission Factor ID can be\nused to define a specific factor that can be applied to the activity to calculate an Emission Statement.\nThis would be the same Emission Factor ID identified in a Emission Calculation Formula template.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "emission_argument_value_id": {
+            "type": "string",
+            "description": "The Primary Key of the Emission Argument Value."
+          },
+          "value": {
+            "type": "number",
+            "description": "The value assigned to the Emission Argument Value."
+          },
+          "datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time the Emission Argument Value was recorded."
+          },
+          "equipment_id": {
+            "type": "string",
+            "description": "DEPRECATED, the equipment should be defined by the Emission Argument Type, i.e.,  Emission Activity Parameter or Emission Factor. An optional Equipment Id that this argument is assigned to."
+          },
+          "emission_factor_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Factor associated with the Emission Argument Value."
+          },
+          "emission_factor_type_id": {
+            "type": "string",
+            "description": "Optional part of a composite Foreign Key of the Emission Factor (the Emission Factor Type)."
+          },
+          "emission_parameter_type_id": {
+            "type": "string",
+            "description": "DEPRECATED, Emission Parameter Type has been replaced by Physical Quantity Type and is Defined by the Emission Factor Unit Of Measure. Optional part of composite key for the Emission Factor foreign table. Emission Parameter Type."
+          },
+          "emission_activity_type_id": {
+            "type": "string",
+            "description": "Optional part of the composite Foreign Key of the Emission Factor (the Emission Activity Type)."
+          },
+          "emission_activity_parameter_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Activity Parameter associated with the Emission Argument Value."
+          },
+          "emission_activity_id": {
+            "type": "string",
+            "description": "Optional part of the composite Foreign Key of the Emission Activity Parameter (the Emission Activity)."
+          },
+          "emission_activity_parameter_type_id": {
+            "type": "string",
+            "description": "DEPRECATED, Parameter Type is replaced by Physical Quantity Type defined by the Unit Of Measure assigned to the Emissson Activity Parameter. Optional Parameter Type composite key of the Emission Activity Parameter foreign entity."
+          },
+          "emission_argument_type": {
+            "type": "string",
+            "description": "The argument type the for this reference: Emission Activity Parameter or Emission Factor."
+          },
+          "emission_argument_id": {
+            "type": "string",
+            "description": "The Foreign Key of either an Emission Activity Parameter or Emission Factor to which the Emission Argument Value is assigned."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time from which the Emission Argument Value is valid."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time to which the Emission Argument Value is valid."
+          },
+          "spatial_location": {
+            "type": "object",
+            "description": "A geographic object which can be described by a set of points."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_argument_type",
+          "valid_from_datetime",
+          "valid_to_datetime",
+          "value"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

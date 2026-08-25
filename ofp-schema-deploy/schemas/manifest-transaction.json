@@ -1,0 +1,94 @@
+{
+  "work-product-component": [
+    {
+      "id": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionStatement_1.0.0.json",
+      "properties": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionStatementPerStandard_1.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionStatementArgumentValue_1.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionStatementParameterValue:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionStatementParameterValue_1.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionArgumentValue_1.0.0.json",
+      "properties": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+      "file": "ofp_wks_work-product-component--RecordingUncertaintyAssessment_1.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionReport:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionReport_1.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionReportCollection:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionReportCollection_1.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionReportPeriod_1.0.0.json",
+      "properties": 11
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionReportPerStandard:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionReportPerStandard_1.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionStatementPerReport_1.0.0.json",
+      "properties": 11
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionStatementAggregator_1.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionReportingBoundary:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionReportingBoundary_1.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:work-product-component--ReportingAssurance:1.0.0",
+      "file": "ofp_wks_work-product-component--ReportingAssurance_1.0.0.json",
+      "properties": 13
+    },
+    {
+      "id": "ofp:wks:work-product-component--OrganizationalBoundaryAssurance:1.0.0",
+      "file": "ofp_wks_work-product-component--OrganizationalBoundaryAssurance_1.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:work-product-component--ActivityEmissionAllocation:1.0.0",
+      "file": "ofp_wks_work-product-component--ActivityEmissionAllocation_1.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:work-product-component--OrganizationEmissionAllocation:1.0.0",
+      "file": "ofp_wks_work-product-component--OrganizationEmissionAllocation_1.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionIntensityRatio:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionIntensityRatio_1.0.0.json",
+      "properties": 9
+    }
+  ]
+}

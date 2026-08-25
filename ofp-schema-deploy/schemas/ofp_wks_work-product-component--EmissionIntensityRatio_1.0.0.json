@@ -1,0 +1,165 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--EmissionIntensityRatio",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--EmissionIntensityRatio:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionIntensityRatio.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionIntensityRatio:1.0.0",
+    "title": "Emission Intensity Ratio",
+    "description": "A ratio recorded by an organization that converts an absolute emissions to an emissions intensity\nmetric. The ratio can be based on a physical (e.g., volumetric) or financial basis.\n\nThe intensity ratio is derived from an existing Emission Statement (the numerator) and is defined for a\ngiven denominator value and unit. The denominator is defined by the Emission Intensity Ratio Unit, a\nBusiness Metric selected by the user. It can be an official SI unit, or it can be context-based like\nnumbers of products, sales revenue, or units performed over lifetime of sold products.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Emission Intensity Ratio."
+          },
+          "emission_statement_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Statement."
+          },
+          "denominator_value": {
+            "type": "number",
+            "description": "The value assigned to the denominator used to compute the Emission Intensity Ratio."
+          },
+          "is_financial_ratio": {
+            "type": "boolean",
+            "description": "Identifies if this is a financial ratio. If true the referenced Financial Intensity Ratio Unit should point to a Currency."
+          },
+          "denominator_unit_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Intensity Ratio Unit used."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and optional time from which the Emission Intensity Ratio is valid, in ISO 8601 date time standardized format."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and optional time to which the Emission Intensity Ratio is valid, in ISO 8601 date time standardized format."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Intensity Ratio."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description assigned to the Intensity Ratio."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "denominator_unit_id",
+          "denominator_value",
+          "description",
+          "emission_statement_id",
+          "id",
+          "name"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

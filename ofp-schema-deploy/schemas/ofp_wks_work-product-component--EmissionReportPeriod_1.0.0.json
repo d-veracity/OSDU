@@ -1,0 +1,171 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--EmissionReportPeriod",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionReportPeriod.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+    "title": "Emission Report Period",
+    "description": "A period of time that constrains which records are combined into a report of Emission Statements.\n\nMust specify a valid from and valid to date time attribute that can be used to infer the optional year,\nmonth, quarter, and/or other periodic attributes.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "begin_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "DEPRECATED, This can be replace by Valid From."
+          },
+          "description": {
+            "type": "string",
+            "description": "Long description of the Emission Report Period."
+          },
+          "end_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "DEPRECATED, This can be replace by Valid To."
+          },
+          "frequency": {
+            "type": "string",
+            "description": "The frequency of the Emission Report Period; e.g., annually, quarterly, or monthly."
+          },
+          "emission_report_period_id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Emission Report Period."
+          },
+          "month": {
+            "type": "number",
+            "description": "The month of the Emission Report Period defined as an integer."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name assigned to the Emission Report Period."
+          },
+          "quarter": {
+            "type": "number",
+            "description": "The quarter used by the Emission Report Period."
+          },
+          "year": {
+            "type": "number",
+            "description": "The year assigned to the Emission Report Period."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and optional time from which the emission reporting period is valid, in ISO 8601 date time standardized format."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and optional time to which the emission reporting period is valid, in ISO 8601 date time standardized format."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "valid_from_datetime",
+          "valid_to_datetime"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

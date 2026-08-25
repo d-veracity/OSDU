@@ -1,0 +1,167 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--EmissionStatementPerReport",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-08-21T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionStatementPerReport.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+    "title": "Emission Statement Per Report",
+    "description": "Describes the statements used in a report.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Primary Key of the Emission Statement Per Report."
+          },
+          "emission_statement_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Statement."
+          },
+          "emission_report_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Report."
+          },
+          "emission_allocation_kind": {
+            "type": "string",
+            "description": "The optional type of emission allocation assigned to the Emission Statement used in a Report: Activity Emission Allocation, Facility Emission Allocation, Organization Emission Allocation, Organizational Boundary Share."
+          },
+          "organizational_boundary_share_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Organizational Boundary Share defining an optional emission allocation percentage assigned to the Emission Statement used in the Report."
+          },
+          "activity_emission_allocation_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Activity Emission Allocation defining an optional allocation percentage assigned to the Emission Statement used in the Report."
+          },
+          "organization_emission_allocation_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Organization Emission Allocation defining an optional percentage assigned to the Emission Statement used in the Report."
+          },
+          "facility_emission_allocation_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Facility Emission Allocation defining an optional percentage assigned to the Emission Statement used in the Report."
+          },
+          "emission_activity_category_id": {
+            "type": "string",
+            "description": "Foreign Key for Emission Activity Category, assuming the statement has been reused under a different context from the original source activity data. For example, Scope 1 Emission Statement transferred to an investor or Joint Venture (JV) partner that interprets the statement as Scope 3, Category 15.\n\nFor example, an investor of JV partner requests Scope 1 and Scope 2 Emission Statement data from the asset controller and recasts this as Scope 3, Category 15 Investments based on some Emission Allocation percentage."
+          },
+          "emission_scope_type_id": {
+            "type": "string",
+            "description": "Optional Scope Type assigned to the Emission Statement. An optional part of a composite key for the Emission Activity Category.\n\nThis can be used when an Emission Statement is applied with a different scope context by another organization; see Emission Activity Category ID attribute."
+          },
+          "emission_reporting_boundary_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Reporting Boundary assigned to the Report."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_report_id",
+          "emission_statement_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}
