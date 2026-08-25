@@ -122,6 +122,9 @@
           },
           "reviewers": {
             "type": "array",
+            "items": {
+              "type": "string"
+            },
             "description": "The individuals, or roles, which reviewed and determined the Reporting Assurance value.\n\nThe reviewer details are left to the user to implement, but can be implemented using the master data Contact Person entity."
           },
           "effective_date": {

@@ -67,6 +67,8 @@ def prop_schema(p):
     nm=p.get('name','')
     if (t in ('date','datetime','timestamp') or re.search(r'datetime|date$|timestamp',nm.lower())) and js['type']=='string':
         js['format']='date-time'
+    if js['type']=='array':  # OSDU indexer requires 'items' on arrays
+        js['items']={'type':'string'}
     if p.get('description'): js['description']=p['description']
     return js
 

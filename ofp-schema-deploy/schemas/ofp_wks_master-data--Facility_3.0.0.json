@@ -130,6 +130,9 @@
           },
           "geopolitical_contexts": {
             "type": "array",
+            "items": {
+              "type": "string"
+            },
             "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies."
           }
         },
