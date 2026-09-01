@@ -1,0 +1,1 @@
+Root Bicep assembly that composes an OSDU stamp by wiring reusable AKS, storage, Key Vault, Cosmos DB, App Configuration, Flux, and private endpoint modules under bicep/modules/ into a single resource-group deployment.

@@ -1,0 +1,38 @@
+schema_version: 1
+module_path: ""
+title: OSDU Developer Platform Root
+scope:
+    - README.md
+    - CONTRIBUTING.md
+    - SECURITY.md
+    - SUPPORT.md
+    - CLAUDE.md
+    - azure.yaml
+    - bicepconfig.json
+    - docker-compose.yaml
+    - .devcontainer/
+    - .github/
+    - .gitignore
+    - AUTH_CODE_GUIDE.md
+    - CODE_OF_CONDUCT.md
+    - COMPLIANCE_FIX_SUMMARY.md
+    - DEPLOYMENT_SUMMARY.md
+    - LICENSE
+    - Legal_COO.json
+    - azuredeploy-eastus2-fixed.json
+    - azuredeploy-eastus2-minimal.json
+    - azuredeploy-eastus2.json
+    - azuredeploy.json
+    - fix-compliance.sh
+    - monitor-eastus-deployment.sh
+    - monitor-flux.sh
+    - parameters-eastus2-deploy.json
+    - parameters-eastus2-minimal.json
+    - parameters-eastus2.json
+    - parameters-template.json
+    - parameters.json
+    - ps-rule.yaml
+    - version.json
+source_files: []
+depends_on: []
+related_to: []

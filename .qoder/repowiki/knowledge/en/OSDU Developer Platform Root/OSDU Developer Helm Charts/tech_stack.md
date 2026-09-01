@@ -1,0 +1,1 @@
+Helm v2 charts targeting Kubernetes on AKS with Azure Workload Identity; Azure KeyVault via `secrets-store.csi.x-k8s.io` SecretProviderClass; Istio Gateway API (Gateways, HTTPRoutes, ReferenceGrants, PeerAuthentication, RequestAuthentication); optional KEDA ScaledObject for autoscaling; Azure CLI container image for blob upload Jobs.

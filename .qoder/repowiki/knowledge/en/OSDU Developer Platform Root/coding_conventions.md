@@ -1,0 +1,4 @@
+- Infrastructure is authored as reusable Bicep modules under `bicep/modules/` and composed by a root assembly rather than monolithic templates.
+- Kubernetes resources are delivered through both Helm charts and Kustomize overlays so they can be consumed by FluxCD or direct kubectl.
+- Provisioning and post-provisioning logic is encapsulated in PowerShell scripts invoked from `azure.yaml` hooks instead of ad-hoc shell commands.
+- Parameterization of Azure resources is centralized in `parameters*.json` files referenced by both azd and ARM/Bicep deployments.

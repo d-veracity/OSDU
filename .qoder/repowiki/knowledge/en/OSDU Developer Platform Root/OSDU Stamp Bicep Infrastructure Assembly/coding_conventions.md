@@ -1,0 +1,5 @@
+- Each infrastructure capability lives under `modules/<service>/main.bicep` with a sibling `version.json` and optional `test/` or `tests/` directory for unit/e2e Bicep tests.
+- Modules are consumed from the root `main.bicep` via `module <name> 'modules/<path>' = { ... }` with explicit `name`, `params`, and `dependsOn` blocks rather than inline resource declarations.
+- Cross-module references flow exclusively through module outputs passed as parameter values (e.g., `clusterBlade.outputs.clusterName`, `keyvault.outputs.name`), never via global variables.
+- Every AVM-based resource declares `enableTelemetry`, `tags` (with `layer` and `id` derived from `rg_unique_id`), and diagnostic settings pointing to the shared Log Analytics workspace.
+- Conditional resource creation uses Bicep `if (condition)` module blocks gated by feature flags like `enableVnetInjection` instead of separate deployments.

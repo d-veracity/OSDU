@@ -1,0 +1,6 @@
+- Optional capabilities are exposed as boolean or sentinel-valued parameters (e.g. `disableLocalAuth`, `systemAssignedIdentity`, `lock = 'NotSpecified'`, `privateLinkSettings` sentinel vnet/subnet ids) and guarded by conditional resource declarations using `if (...)`.
+- Arrays of repeatable resources (key-values, role assignments) are instantiated via Bicep array-of-modules loops (`[for (item, index) in param: { name: '${deployment().name}-...-${index}', params: ... }]`) so each deployment gets a unique module instance name.
+- Resource naming derives from a generated variable combining `replace(resourceName, '-', '')` with `uniqueString(resourceGroup().id, resourceName)` and is truncated to 50 characters to satisfy Azure naming constraints.
+- Built-in Azure RBAC roles are resolved through a local dictionary mapping role display names to their `subscriptionResourceId('Microsoft.Authorization/roleDefinitions', <guid>)`, falling back to a raw ID when not found.
+- Diagnostic settings are constructed from parallel arrays (`logsToEnable`, `metricsToEnable`) transformed into category objects via `for` comprehensions, then attached to a single `diagnosticSettings` resource.
+- Each sub-module under `.bicep/` defines its own explicit `param` block with `@description` annotations and exposes stable `name` / `resourceId` outputs for consumers.

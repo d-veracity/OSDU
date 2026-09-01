@@ -1,0 +1,1 @@
+Bicep modules targeting Azure Resource Manager; each child targets a specific Azure.Storage service API version via `Microsoft.Storage/storageAccounts/services` or `Microsoft.Storage/storageAccounts/blobServices|fileServices|queueServices|tableServices` resources.

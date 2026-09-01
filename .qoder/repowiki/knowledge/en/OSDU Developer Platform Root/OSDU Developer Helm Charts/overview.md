@@ -1,0 +1,1 @@
+Collection of Helm charts that deploy OSDU developer services, Istio ingress/certs, Azure KeyVault-backed secrets, config maps, blob upload jobs, and auxiliary components onto an AKS cluster.

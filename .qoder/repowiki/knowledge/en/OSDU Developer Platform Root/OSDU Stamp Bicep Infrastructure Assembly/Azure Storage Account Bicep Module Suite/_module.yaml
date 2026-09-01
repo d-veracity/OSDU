@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: bicep_infrastructure/storage_account
+title: Azure Storage Account Bicep Module Suite
+scope:
+    - bicep/modules/storage-account/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/root_bicep_assembly

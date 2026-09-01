@@ -1,0 +1,1 @@
+Bicep modules targeting Azure Resource Manager; relies on Azure Verified Modules (AVM) for managed identity, Log Analytics, Application Insights, Redis, Container Registry, Key Vault, and Deployment Script resources; uses Azure CLI deployment scripts (`kind: 'AzureCLI'`) to bridge gaps where AVMs cannot expose outputs such as extension principal IDs.

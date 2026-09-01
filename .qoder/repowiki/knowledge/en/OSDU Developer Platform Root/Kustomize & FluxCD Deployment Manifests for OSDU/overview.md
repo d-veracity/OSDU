@@ -1,0 +1,1 @@
+Kustomize overlays and FluxCD Kustomization resources that declaratively install the OSDU platform, its middleware components, and applications onto a Kubernetes cluster.

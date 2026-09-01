@@ -1,0 +1,5 @@
+- Resources are declared as `existing` references to the parent storage account rather than created inline, keeping this module focused on child resources only.
+- Optional arrays (`diagnosticSettings`, `tables`, `roleAssignments`) default to `[]` and are consumed via `for` loops so deployments remain valid when parameters are omitted.
+- Diagnostic settings and role assignments use computed `name` values derived from `guid(...)` or template expressions to ensure uniqueness across iterations.
+- Built-in Azure RBAC roles are resolved through a local name-to-GUID map (`builtInRoleNames`) before being passed to `Microsoft.Authorization/roleAssignments`, allowing callers to supply either display names or full role definition IDs.
+- Each module exposes a uniform output surface of `name`, `resourceId`, and `resourceGroupName` for consistent consumption by parent templates.

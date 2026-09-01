@@ -1,0 +1,6 @@
+- Each chart follows the standard Helm layout with a top-level Chart.yaml, a `templates/` directory containing rendered manifests, and a `values.yaml` exposing all configurable knobs.
+- Shared template logic is factored into a `_helpers.tpl` file inside each chart's `templates/` directory and reused across multiple manifest files.
+- Azure integration is gated behind an `azure.enabled` or feature-flag block in values (e.g., `blobUpload.enabled`, `share.enabled`) so optional Azure-dependent resources are conditionally rendered.
+- Secrets from Azure KeyVault are provisioned through `secrets-store.csi.x-k8s.io/v1` SecretProviderClass resources whose `objects` arrays enumerate vault secret names mapped to Kubernetes secret keys.
+- Jobs that need Azure credentials are annotated with `azure.workload.identity/use: "true"` and reference a dedicated ServiceAccount (`workload-identity-sa`) instead of using pod identity.
+- Per-service runtime configuration is expressed as a YAML list in values (e.g., `configuration` in osdu-developer-service) and iterated over in templates to generate Deployment, Service, and Route resources.

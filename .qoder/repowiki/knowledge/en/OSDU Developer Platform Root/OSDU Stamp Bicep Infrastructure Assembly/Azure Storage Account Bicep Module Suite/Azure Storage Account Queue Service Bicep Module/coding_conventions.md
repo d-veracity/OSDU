@@ -1,0 +1,6 @@
+- Each module begins with `metadata name`, `metadata description`, and `metadata owner = 'Azure/module-maintainers'` blocks for standardized module cataloging.
+- Parent resources are referenced as `existing` resources (e.g., `Microsoft.Storage/storageAccounts@2023-04-01`) rather than created inline, allowing reuse across deployments.
+- Optional collection parameters use the nullable-array pattern (`param ... array?`) and default to `[]` via the `?? []` null-coalescing operator in loops.
+- Diagnostic settings and role assignments are declared as Bicep resource arrays using `for` comprehensions over their respective typed parameter arrays, producing one resource per item.
+- Outputs consistently expose `name`, `resourceId`, and `resourceGroupName` on both the parent and sub-modules for uniform consumption by callers.
+- Built-in Azure roles are resolved through a local `builtInRoleNames` map keyed by display name and falling back to fully qualified `/providers/Microsoft.Authorization/roleDefinitions/<id>` when a raw ID is supplied.

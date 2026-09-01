@@ -1,0 +1,1 @@
+Azure Bicep modules that provision Azure CLI deployment scripts to download, transform, and upload files into storage file shares and blob containers using managed identities.

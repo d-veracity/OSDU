@@ -1,0 +1,4 @@
+- Each service is split into a top-level `main.bicep` enabling the service plus a nested `<service>/<resource>` sub-module per deployable entity (container, share, queue, table).
+- Every service module exposes optional diagnostic settings through a shared diagnostics parameter shape and applies them via `Microsoft.Insights/diagnosticSettings`.
+- RBAC on child resources is expressed as role assignment blocks keyed by principalId/principalType, allowing callers to pass multiple assignments uniformly across blob/file/queue/table children.
+- E2E test scenarios are organized per feature under `tests/e2e/<scenario>/` with paired `main.test.bicep` and optional `dependencies.bicep` files.

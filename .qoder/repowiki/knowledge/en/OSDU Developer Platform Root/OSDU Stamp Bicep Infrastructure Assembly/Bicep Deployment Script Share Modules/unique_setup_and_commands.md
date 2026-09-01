@@ -1,0 +1,1 @@
+Modules expect an existing storage account and user-assigned managed identity to be passed in as parameters; the script relies on Azure RBAC role assignment propagation, so `initialScriptDelay` defaults to `30s` to avoid premature execution failures.

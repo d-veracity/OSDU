@@ -1,0 +1,5 @@
+- Each documentation topic is a single Markdown file placed directly under `docs/src/`, named with a descriptive kebab-case slug (e.g., `services_core_partition.md`, `debugging_istio.md`).
+- Navigation structure is declared centrally in `mkdocs.yml` under the `nav:` key rather than inferred from filesystem order, grouping related pages into hierarchical menu sections.
+- Images and screenshots are stored under `src/images/` and referenced from Markdown using relative paths without embedding base64 data.
+- Branding assets are kept in `src/images/branding/` organized by use case (`For Web/png|svg|Favicons`, `For Print/eps|pdf`) and color variant (Black, Color, White).
+- Custom styling and scripts are added via the `extra_css` and `extra_javascript` entries in `mkdocs.yml`, pointing to `stylesheets/extra.css` and `javascripts/tablesort.js` respectively.

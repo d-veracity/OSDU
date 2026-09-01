@@ -1,0 +1,1 @@
+Plain HTTP request files consumed by the Visual Studio Code extension `humao.rest-client`; authentication uses Azure Active Directory OAuth 2.0 client-credentials flow against `login.microsoftonline.com`.

@@ -1,0 +1,1 @@
+Bicep modules targeting Azure Resource Manager; AKS API version `2024-09-02-preview`; Deployment Scripts using Azure CLI (`kind: AzureCLI`, versions pinned in each module); external reusable extension `br/public:avm/res/kubernetes-configuration/extension:0.3.5` for Flux configuration.

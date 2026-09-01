@@ -1,0 +1,5 @@
+- Each module exposes an `enableTelemetry` boolean parameter and conditionally emits an `avmTelemetry` deployment resource whose name encodes the module identity and deployment hash for usage tracking.
+- Resources are scoped to an existing AKS cluster by declaring `resource managedCluster 'Microsoft.ContainerService/managedClusters@...' existing = { name: clusterName }` and setting `scope: managedCluster` on child resources.
+- Sensitive configuration values are passed through `configurationProtectedSettings` parameters annotated with `@secure()` to mark them as secrets at deployment time.
+- Module versions are declared in a `version.json` file that pins the published path to `./main.json`, keeping the compiled ARM template as the single source of truth for the registry.
+- E2E test scenarios are organized under `tests/e2e/{defaults,max,waf-aligned}` with paired `dependencies.bicep` + `main.test.bicep` files, each deploying the module twice via a `['init', 'idem']` iteration to assert idempotency.

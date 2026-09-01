@@ -1,0 +1,1 @@
+Tests are run against the module via the Bicep test harness in `test/main.test.bicep` with parameters supplied by `test/parameters.json`; the module publishes versioned artifacts referenced as `br:osdubicep.azurecr.io/public/app-configuration:<version>`.

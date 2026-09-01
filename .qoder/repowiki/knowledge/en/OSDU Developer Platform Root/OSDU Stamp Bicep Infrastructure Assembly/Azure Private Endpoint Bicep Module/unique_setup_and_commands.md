@@ -1,0 +1,1 @@
+Module versioning and registry metadata are declared in `version.json` (`v1.0`, pathFilters `./main.json`, `./metadata.json`) and `metadata.json` (owner `azure-global-energy`). The test harness under `test/` composes this module alongside sibling `storage-account` and `virtual-network` modules to validate deployment.

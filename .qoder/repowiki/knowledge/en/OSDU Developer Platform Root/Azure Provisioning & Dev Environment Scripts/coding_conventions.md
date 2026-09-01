@@ -1,0 +1,6 @@
+- Each script declares parameters with `[ValidateNotNullOrEmpty()]` and defaults them from `env:` variables such as `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP`, `AZURE_CLIENT_ID`.
+- User-facing output is wrapped in banner-style blocks delimited by lines of `=` characters printed via `Write-Host`.
+- External tool calls (`az`, `azd`, `az rest`) are enclosed in `try { ... } catch { Write-Host "Error..."; exit 1 }` blocks for uniform error handling.
+- Environment variable placeholders in templates use the `%VAR%` pattern and are resolved at render time via `[regex]::Replace` against `[Environment]::GetEnvironmentVariable`.
+- JSON payloads sent to Microsoft Graph are built as here-strings with single quotes then converted to double quotes when not running on Windows (`if (-not $IsWindows) { ... -replace "'", '"' }`).
+- Ingress discovery follows a consistent pattern: query the AKS node resource group, prefer a DNS FQDN over a raw IP for the public endpoint, and fall back to the internal load balancer private IP.

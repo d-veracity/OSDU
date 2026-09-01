@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: bicep_infrastructure/flux
+title: Flux Configuration & Extension Bicep Modules
+scope:
+    - bicep/modules/flux-configuration/
+    - bicep/modules/flux-extension/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/root_bicep_assembly

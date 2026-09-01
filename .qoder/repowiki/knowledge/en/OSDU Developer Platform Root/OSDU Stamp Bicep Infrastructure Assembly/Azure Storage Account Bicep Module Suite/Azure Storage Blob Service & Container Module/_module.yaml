@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: bicep_infrastructure/storage_account/blob_service
+title: Azure Storage Blob Service & Container Module
+scope:
+    - bicep/modules/storage-account/blob-service/
+source_files: []
+depends_on: []
+related_to: []

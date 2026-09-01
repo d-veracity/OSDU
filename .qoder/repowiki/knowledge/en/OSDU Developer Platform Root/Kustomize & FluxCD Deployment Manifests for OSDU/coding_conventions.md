@@ -1,0 +1,5 @@
+- Each deployable unit under `software/` is a self-contained Kustomize package with its own `kustomization.yaml` listing `resources:` of its constituent manifest files.
+- FluxCD `Kustomization` resources in `stamp/` are grouped by section comments (`## Global Components`, `## Middleware Components`, etc.) and declare explicit `dependsOn` chains to enforce installation order.
+- Health monitoring is expressed per Flux `Kustomization` via `healthChecks` referencing the specific Deployment/StatefulSet/Service/Secret names and namespaces created by the target package.
+- Every application and component package creates its own isolated namespace via a dedicated `namespace.yaml` included in its Kustomize resources.
+- Secrets and sensitive configuration are externalized through `vault-secrets.yaml` files rather than inline values in deployment manifests.

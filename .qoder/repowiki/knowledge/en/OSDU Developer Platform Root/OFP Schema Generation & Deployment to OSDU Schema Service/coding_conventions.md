@@ -1,0 +1,6 @@
+- Each generated schema is a full Schema Service POST body containing both `schemaInfo` (authority=`ofp`, source=`wks`, scope=`INTERNAL`, status=`DEVELOPMENT`) and a self-contained `schema` object with system props inlined and no external `$ref`.
+- Kind IDs follow the `ofp:wks:<group>--<Entity>:<major>.<minor>.<patch>` convention, with `<group>` being `reference-data`, `master-data`, or `work-product-component--<Entity>` for transactional records.
+- Data property keys are derived from Hackolade collection names using either snake_case (default) or pascal_case based on the `KEY_STYLE` environment variable, preserving required flags from the source model.
+- Date/time fields are detected either by Hackolade type (`date`, `datetime`, `timestamp`) or by name suffix matching `datetime|date$|timestamp`, and emitted with JSON-Schema `format: date-time`.
+- Array properties always include an explicit `items: {type: string}` sub-schema because the OSDU indexer requires it to map record data correctly.
+- Manifest files (`manifest.json`, `manifest-transaction.json`) drive registration order and are deduplicated by file path during both generation and deployment.

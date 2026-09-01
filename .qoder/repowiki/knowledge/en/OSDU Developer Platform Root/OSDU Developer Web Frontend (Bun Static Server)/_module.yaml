@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: web_frontend
+title: OSDU Developer Web Frontend (Bun Static Server)
+scope:
+    - web/
+source_files: []
+depends_on: []
+related_to: []

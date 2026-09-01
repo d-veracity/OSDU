@@ -1,0 +1,1 @@
+Bicep modules that attach lifecycle management policies and create SFTP-capable local users on an existing Azure Storage Account.

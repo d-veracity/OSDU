@@ -1,0 +1,1 @@
+Bicep module that configures an Azure Storage Account's blob service (versioning, soft delete, change feed, restore policy, diagnostics) and optionally creates containers with role assignments and immutability policies.

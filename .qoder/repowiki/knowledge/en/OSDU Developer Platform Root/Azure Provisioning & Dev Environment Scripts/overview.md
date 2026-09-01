@@ -1,0 +1,1 @@
+PowerShell scripts that bootstrap an OSDU Azure environment by provisioning an AD application, waiting for AKS/Flux compliance, updating app redirect URIs, and generating local dev env files.

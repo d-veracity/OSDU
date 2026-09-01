@@ -1,0 +1,1 @@
+Root of the OSDU Developer project that orchestrates Azure infrastructure, Kubernetes manifests, Helm charts, schema generation, documentation, and scripts into a single deployable personal OSDU stamp via Azure Developer CLI.

@@ -1,0 +1,1 @@
+End-to-end tests are deployed per scenario under `tests/e2e/<scenario>/`; each test file targets subscription scope and runs two iterations (`init`, `idem`) via `@batchSize(1)` to assert idempotent deployments. Some scenarios depend on nested modules in `dependencies.bicep` that provision Key Vaults, VNets, or managed identities before invoking the storage module.

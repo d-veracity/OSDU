@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: bicep_infrastructure/app_configuration
+title: Azure App Configuration Bicep Module
+scope:
+    - bicep/modules/app-configuration/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/root_bicep_assembly

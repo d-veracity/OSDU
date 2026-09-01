@@ -1,0 +1,6 @@
+- Resources are composed as Bicep `module` blocks referencing either public AVM registry paths (`br/public:avm/...`) or local `modules/<path>` entries, never inline resource declarations for shared capabilities.
+- Each module folder ships a `main.bicep` paired with a compiled `main.json`, a `version.json` manifest, and a `README.md`, providing a stable publishable interface.
+- Naming uses a deterministic scheme built from `replace(configuration.name, '-', '') + uniqueString(resourceGroup().id, configuration.name, location)` to guarantee uniqueness across deployments.
+- Tags consistently include `layer` (from a `bladeConfig.displayName` or `configuration.displayName`) and `id` set to the computed `rg_unique_id`, applied uniformly across all deployed resources.
+- Feature-gated composition is expressed via conditional module assignments using boolean variables (e.g., `if (enableVnetInjection) { ... }`) and `dependsOn` arrays that expand based on those flags.
+- Secrets and sensitive values are persisted to Key Vault through dedicated helper modules (`modules/keyvault_secrets.bicep`, per-service secret export configs) rather than inline `Microsoft.KeyVault/vaults/secrets` resources in the root assembly.

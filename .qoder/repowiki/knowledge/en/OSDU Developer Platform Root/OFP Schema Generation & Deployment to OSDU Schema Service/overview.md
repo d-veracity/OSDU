@@ -1,0 +1,1 @@
+Generates self-contained OSDU draft-07 schema bodies from the Open Footprint Hackolade model and registers them as `ofp:wks:*` kinds into an OSDU Schema Service.

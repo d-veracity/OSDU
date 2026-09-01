@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: helm_charts
+title: OSDU Developer Helm Charts
+scope:
+    - charts/
+source_files: []
+depends_on: []
+related_to:
+    - path: kustomize_deployments
+    - path: osdu_schema_registry
+    - path: rest_scripts

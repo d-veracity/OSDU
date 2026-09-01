@@ -1,0 +1,1 @@
+Reusable Bicep module that deploys an Azure App Configuration store with optional key-values, RBAC role assignments, diagnostics, private link, and customer-managed encryption.

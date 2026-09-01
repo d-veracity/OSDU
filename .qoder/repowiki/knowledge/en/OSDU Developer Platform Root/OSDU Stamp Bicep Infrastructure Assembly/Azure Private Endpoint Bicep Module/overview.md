@@ -1,0 +1,1 @@
+Reusable Bicep module that deploys an Azure Private Endpoint with optional private DNS zone groups, RBAC role assignments, and resource locks scoped to a resource group.

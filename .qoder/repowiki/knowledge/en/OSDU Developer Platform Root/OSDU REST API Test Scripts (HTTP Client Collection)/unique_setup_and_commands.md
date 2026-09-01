@@ -1,0 +1,1 @@
+Requires the VS Code Rest Client extension and a `.vscode/settings.json` defining `rest-client.environmentVariables` with `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET`, `AUTH_INGRESS`, `AUTH_REFRESH`, and `DATA_PARTITION`; requests are executed from VS Code by clicking the `Run Request` button next to each `###` block rather than via CLI.

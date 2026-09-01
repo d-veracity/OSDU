@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: bicep_infrastructure/storage_account/queue_service
+title: Azure Storage Account Queue Service Bicep Module
+scope:
+    - bicep/modules/storage-account/queue-service/
+source_files: []
+depends_on: []
+related_to: []

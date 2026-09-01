@@ -1,0 +1,1 @@
+Bicep modules that provision an AKS managed cluster with agent pools and maintenance schedules, plus deployment-script helpers to create Kubernetes config maps and run arbitrary commands against the cluster.

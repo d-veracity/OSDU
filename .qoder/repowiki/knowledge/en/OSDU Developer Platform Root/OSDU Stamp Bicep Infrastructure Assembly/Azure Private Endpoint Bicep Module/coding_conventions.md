@@ -1,0 +1,5 @@
+- Resource names are generated deterministically by combining `resourceName` with `uniqueString(resourceGroup().id, resourceName)` and truncating to 24 characters to satisfy Azure naming limits.
+- Optional nested capabilities (DNS zone groups, RBAC) are implemented as separate Bicep modules under `.bicep/` and instantiated conditionally or via `for` loops from the parent module's parameters.
+- All public inputs are declared as strongly-typed Bicep `param` declarations with `@description` annotations, and all outputs use `@description` for documentation.
+- RBAC role assignments accept either built-in role names or role definition IDs, resolved via a local `builtInRoleNames` map before creating `roleAssignments`.
+- Cross-tenant support is modeled through a shared `crossTenant` boolean parameter that toggles inclusion of `delegatedManagedIdentityResourceId` on role assignments.

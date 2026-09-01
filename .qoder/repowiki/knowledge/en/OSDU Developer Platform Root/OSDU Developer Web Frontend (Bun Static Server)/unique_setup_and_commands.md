@@ -1,0 +1,1 @@
+Run locally with `bun run index.ts` (listens on port 8080). Build and run via Docker using the provided `Dockerfile` or `docker-compose.yaml`; dependencies are installed with `bun install --frozen-lockfile` during image build.

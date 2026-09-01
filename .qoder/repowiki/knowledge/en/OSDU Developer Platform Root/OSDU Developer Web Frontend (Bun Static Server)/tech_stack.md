@@ -1,0 +1,1 @@
+Bun runtime (`bun serve` + `bun file`) with TypeScript running natively; Bootstrap 5.3 loaded from CDN for styling; Docker image based on `oven/bun:1`.

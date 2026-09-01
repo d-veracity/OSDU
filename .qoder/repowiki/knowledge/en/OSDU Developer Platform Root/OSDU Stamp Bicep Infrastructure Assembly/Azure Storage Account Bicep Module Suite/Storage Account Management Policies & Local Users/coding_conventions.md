@@ -1,0 +1,5 @@
+- Each module declares metadata (`name`, `description`, `owner`) at the top of the `.bicep` file to document the module's purpose and maintainers.
+- Parent resources are referenced as `existing` resources using only the storage account name, keeping modules decoupled from deployment scope.
+- Parameters use `@description` (and `@maxLength` where applicable) annotations to drive generated schema/documentation for consumers.
+- Modules expose a uniform set of outputs — `name`, `resourceId`, and `resourceGroupName` — so calling templates can reference deployed resources consistently.
+- Sensitive input parameters such as SSH keys are wrapped in a locally defined type annotated with `@secure()` to mark secrets in the generated template.

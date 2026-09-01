@@ -1,0 +1,1 @@
+Reusable Azure Bicep module that deploys a configurable Storage Account with blob/file/queue/table services, private endpoints, encryption, diagnostics, and optional Key Vault secret export, plus end-to-end test scenarios.

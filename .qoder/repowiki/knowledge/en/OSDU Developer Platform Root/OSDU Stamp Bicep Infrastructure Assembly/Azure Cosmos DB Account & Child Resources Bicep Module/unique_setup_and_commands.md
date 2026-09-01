@@ -1,0 +1,1 @@
+Tests live in `test/main.test.bicep` with `test/parameters.json`; deployment targets a resource group (`targetScope = 'resourceGroup'`) and can be published to the Bicep registry as `osdubicep.azurecr.io/public/cosmos-db` per the README examples.

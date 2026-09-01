@@ -1,0 +1,5 @@
+- Each module pairs a `main.bicep` with a co-located `script.sh` loaded via `loadTextContent('script.sh')` and parameterized through environment variables such as `AZURE_STORAGE_ACCOUNT`, `FILE`, `URL`, `SHARE`, `CONTAINER`, and `initialDelay`.
+- RBAC permissions are granted by creating a conditional `Microsoft.Authorization/roleAssignments` resource scoped to the storage account, using a GUID derived from the storage id, role definition id, and identity principal id.
+- Scripts begin with `set -e`, install dependencies via `apk add --no-cache`, sleep for `initialDelay` to allow RBAC propagation, and authenticate all `az` commands with `--auth-mode login` to use the assigned managed identity.
+- Deployment script names are generated deterministically from storage account and filename via `script-${storageAccount.name}-${replace(replace(filename, ':', ''), '/', '-')}` to ensure uniqueness across deployments.
+- Secrets are passed into deployment scripts through `environmentVariables` using `@secure()` parameters (e.g., `clientSecret`) rather than inline values.

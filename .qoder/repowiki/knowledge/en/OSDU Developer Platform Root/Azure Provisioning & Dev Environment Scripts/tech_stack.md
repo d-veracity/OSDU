@@ -1,0 +1,1 @@
+PowerShell 7.4+ (`#Requires -Version 7.4`), Azure CLI with `k8s-configuration` extension, Azure Developer CLI (`azd env set/get-values`), Microsoft Graph REST API (`applications` endpoint), and YAML/ENV template rendering driven by regex placeholder substitution.

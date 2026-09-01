@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: bicep_infrastructure/cosmos_db
+title: Azure Cosmos DB Account & Child Resources Bicep Module
+scope:
+    - bicep/modules/cosmos-db/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/root_bicep_assembly

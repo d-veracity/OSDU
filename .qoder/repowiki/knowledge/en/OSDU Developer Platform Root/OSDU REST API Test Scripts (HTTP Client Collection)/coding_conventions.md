@@ -1,0 +1,5 @@
+- Each logical operation is preceded by a `###` comment block containing a `# @name <operation>` label that names the request for the Rest Client UI.
+- Authentication is performed once per file via a `POST` to the Microsoft login endpoint with `grant_type=client_credentials`, and the resulting `access_token` is captured into a variable and reused as `Authorization: Bearer {{access_token}}` on all subsequent calls.
+- Service base URLs are defined as `@*_HOST` variables (e.g. `@ENTITLEMENTS_HOST`, `@LEGAL_HOST`, `@SCHEMA_HOST`, `@STORAGE_HOST`, `@WORKFLOW_HOST`, `@PARTITION_HOST`) and referenced in request paths instead of being inline.
+- Partition-scoped requests consistently include the `data-partition-id: {{DATA_PARTITION}}` header, and group/user identifiers are built from `{{DATA_PARTITION}}` combined with a fixed domain suffix like `dataservices.energy`.
+- Requests chain state across steps by assigning response values to variables (e.g. `@access_token = {{login.response.body.access_token}}`, `@partition = {{getPartitions.response.body.$[0]}}`) that are consumed by later requests.

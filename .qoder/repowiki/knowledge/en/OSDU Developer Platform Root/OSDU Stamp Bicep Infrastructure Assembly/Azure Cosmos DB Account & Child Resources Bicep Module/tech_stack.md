@@ -1,0 +1,1 @@
+Bicep targeting `Microsoft.DocumentDB/databaseAccounts@2025-04-15` API version; uses ARM constructs for diagnostics (`Microsoft.Insights/diagnosticSettings`), private endpoints (`Microsoft.Network/privateEndpoints`), and role assignments (`Microsoft.Authorization/roleAssignments`).

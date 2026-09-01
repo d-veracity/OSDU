@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: kustomize_deployments
+title: Kustomize & FluxCD Deployment Manifests for OSDU
+scope:
+    - software/
+    - stamp/
+source_files: []
+depends_on: []
+related_to:
+    - path: helm_charts

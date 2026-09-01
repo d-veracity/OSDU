@@ -1,0 +1,1 @@
+Deployment is driven from this directory via `bicep build main.bicep` followed by `az deployment group create` against a target resource group using `main.parameters.json`; a minimal variant exists at `main-minimal.bicep` for reduced stacks.

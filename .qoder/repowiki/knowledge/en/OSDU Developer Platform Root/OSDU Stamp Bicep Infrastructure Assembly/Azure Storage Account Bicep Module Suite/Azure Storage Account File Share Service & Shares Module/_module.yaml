@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: bicep_infrastructure/storage_account/file_service
+title: Azure Storage Account File Share Service & Shares Module
+scope:
+    - bicep/modules/storage-account/file-service/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,1 @@
+Local preview can be run either via Docker (`docker run --rm -v $(pwd):$(pwd) -w $(pwd) -p 8000:8000 minidocks/mkdocs mkdocs serve -a 0.0.0.0:8000`) or directly with `mkdocs serve` from the `docs/` folder; both serve the site at `http://127.0.0.1:8000/`. A spell checker is required before submitting PRs.

@@ -1,0 +1,1 @@
+MkDocs-based documentation site for the OSDU Developer project, providing installation guides, service references, design docs, tutorials, and debugging walkthroughs built from Markdown sources.

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: bicep_infrastructure/aks_cluster
+title: AKS Cluster Infrastructure Modules (Managed Cluster, Config Map & Run Command)
+scope:
+    - bicep/modules/managed-cluster/
+    - bicep/modules/aks-config-map/
+    - bicep/modules/aks-run-command/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/root_bicep_assembly

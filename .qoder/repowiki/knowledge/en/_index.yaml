@@ -1,0 +1,298 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: feat/ofp-schema-deploy
+nodes_managed: true
+exported_at: "2026-09-01T09:40:44Z"
+modules:
+    "":
+        dir_name: OSDU Developer Platform Root
+        title: OSDU Developer Platform Root
+        scope:
+            - README.md
+            - CONTRIBUTING.md
+            - SECURITY.md
+            - SUPPORT.md
+            - CLAUDE.md
+            - azure.yaml
+            - bicepconfig.json
+            - docker-compose.yaml
+            - .devcontainer/
+            - .github/
+            - .gitignore
+            - AUTH_CODE_GUIDE.md
+            - CODE_OF_CONDUCT.md
+            - COMPLIANCE_FIX_SUMMARY.md
+            - DEPLOYMENT_SUMMARY.md
+            - LICENSE
+            - Legal_COO.json
+            - azuredeploy-eastus2-fixed.json
+            - azuredeploy-eastus2-minimal.json
+            - azuredeploy-eastus2.json
+            - azuredeploy.json
+            - fix-compliance.sh
+            - monitor-eastus-deployment.sh
+            - monitor-flux.sh
+            - parameters-eastus2-deploy.json
+            - parameters-eastus2-minimal.json
+            - parameters-eastus2.json
+            - parameters-template.json
+            - parameters.json
+            - ps-rule.yaml
+            - version.json
+        source_files: []
+        children:
+            - bicep_infrastructure
+            - documentation
+            - helm_charts
+            - kustomize_deployments
+            - osdu_schema_registry
+            - provisioning_scripts
+            - rest_scripts
+            - web_frontend
+        depends_on: []
+        related_to: []
+    bicep_infrastructure:
+        dir_name: OSDU Stamp Bicep Infrastructure Assembly
+        title: OSDU Stamp Bicep Infrastructure Assembly
+        scope:
+            - bicep/
+        source_files: []
+        children:
+            - bicep_infrastructure/aks_cluster
+            - bicep_infrastructure/app_configuration
+            - bicep_infrastructure/cosmos_db
+            - bicep_infrastructure/flux
+            - bicep_infrastructure/private_endpoint
+            - bicep_infrastructure/root_bicep_assembly
+            - bicep_infrastructure/script_shares
+            - bicep_infrastructure/storage_account
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/aks_cluster:
+        dir_name: AKS Cluster Infrastructure Modules (Managed Cluster, Config Map & Run Command)
+        title: AKS Cluster Infrastructure Modules (Managed Cluster, Config Map & Run Command)
+        scope:
+            - bicep/modules/managed-cluster/
+            - bicep/modules/aks-config-map/
+            - bicep/modules/aks-run-command/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    bicep_infrastructure/app_configuration:
+        dir_name: Azure App Configuration Bicep Module
+        title: Azure App Configuration Bicep Module
+        scope:
+            - bicep/modules/app-configuration/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    bicep_infrastructure/cosmos_db:
+        dir_name: Azure Cosmos DB Account & Child Resources Bicep Module
+        title: Azure Cosmos DB Account & Child Resources Bicep Module
+        scope:
+            - bicep/modules/cosmos-db/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    bicep_infrastructure/flux:
+        dir_name: Flux Configuration & Extension Bicep Modules
+        title: Flux Configuration & Extension Bicep Modules
+        scope:
+            - bicep/modules/flux-configuration/
+            - bicep/modules/flux-extension/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    bicep_infrastructure/private_endpoint:
+        dir_name: Azure Private Endpoint Bicep Module
+        title: Azure Private Endpoint Bicep Module
+        scope:
+            - bicep/modules/private-endpoint/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    bicep_infrastructure/root_bicep_assembly:
+        dir_name: OSDU Root Bicep Assembly & Shared Modules
+        title: OSDU Root Bicep Assembly & Shared Modules
+        scope:
+            - bicep/main.bicep
+            - bicep/main-minimal.bicep
+            - bicep/modules/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/aks_cluster
+            - path: bicep_infrastructure/app_configuration
+            - path: bicep_infrastructure/cosmos_db
+            - path: bicep_infrastructure/flux
+            - path: bicep_infrastructure/private_endpoint
+            - path: bicep_infrastructure/storage_account
+            - path: provisioning_scripts
+    bicep_infrastructure/script_shares:
+        dir_name: Bicep Deployment Script Share Modules
+        title: Bicep Deployment Script Share Modules
+        scope:
+            - bicep/modules/deploy-scripts/
+            - bicep/modules/script-share-csvdag/
+            - bicep/modules/script-share-upload/
+            - bicep/modules/software-upload/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/storage_account:
+        dir_name: Azure Storage Account Bicep Module Suite
+        title: Azure Storage Account Bicep Module Suite
+        scope:
+            - bicep/modules/storage-account/
+        source_files: []
+        children:
+            - bicep_infrastructure/storage_account/blob_service
+            - bicep_infrastructure/storage_account/file_service
+            - bicep_infrastructure/storage_account/management_and_local_user
+            - bicep_infrastructure/storage_account/queue_service
+            - bicep_infrastructure/storage_account/root_module_and_tests
+            - bicep_infrastructure/storage_account/table_service
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    bicep_infrastructure/storage_account/blob_service:
+        dir_name: Azure Storage Blob Service & Container Module
+        title: Azure Storage Blob Service & Container Module
+        scope:
+            - bicep/modules/storage-account/blob-service/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/storage_account/file_service:
+        dir_name: Azure Storage Account File Share Service & Shares Module
+        title: Azure Storage Account File Share Service & Shares Module
+        scope:
+            - bicep/modules/storage-account/file-service/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/storage_account/management_and_local_user:
+        dir_name: Storage Account Management Policies & Local Users
+        title: Storage Account Management Policies & Local Users
+        scope:
+            - bicep/modules/storage-account/management-policy/
+            - bicep/modules/storage-account/local-user/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/storage_account/queue_service:
+        dir_name: Azure Storage Account Queue Service Bicep Module
+        title: Azure Storage Account Queue Service Bicep Module
+        scope:
+            - bicep/modules/storage-account/queue-service/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/storage_account/root_module_and_tests:
+        dir_name: Azure Storage Account Bicep Module & E2E Tests
+        title: Azure Storage Account Bicep Module & E2E Tests
+        scope:
+            - bicep/modules/storage-account/main.bicep
+            - bicep/modules/storage-account/modules/
+            - bicep/modules/storage-account/tests/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    bicep_infrastructure/storage_account/table_service:
+        dir_name: Azure Storage Account Table Service & Tables Module
+        title: Azure Storage Account Table Service & Tables Module
+        scope:
+            - bicep/modules/storage-account/table-service/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    documentation:
+        dir_name: OSDU Developer Documentation Site (MkDocs)
+        title: OSDU Developer Documentation Site (MkDocs)
+        scope:
+            - docs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    helm_charts:
+        dir_name: OSDU Developer Helm Charts
+        title: OSDU Developer Helm Charts
+        scope:
+            - charts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: kustomize_deployments
+            - path: osdu_schema_registry
+            - path: rest_scripts
+    kustomize_deployments:
+        dir_name: Kustomize & FluxCD Deployment Manifests for OSDU
+        title: Kustomize & FluxCD Deployment Manifests for OSDU
+        scope:
+            - software/
+            - stamp/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: helm_charts
+    osdu_schema_registry:
+        dir_name: OFP Schema Generation & Deployment to OSDU Schema Service
+        title: OFP Schema Generation & Deployment to OSDU Schema Service
+        scope:
+            - ofp-schema-deploy/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: helm_charts
+    provisioning_scripts:
+        dir_name: Azure Provisioning & Dev Environment Scripts
+        title: Azure Provisioning & Dev Environment Scripts
+        scope:
+            - scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: bicep_infrastructure/root_bicep_assembly
+    rest_scripts:
+        dir_name: OSDU REST API Test Scripts (HTTP Client Collection)
+        title: OSDU REST API Test Scripts (HTTP Client Collection)
+        scope:
+            - tools/rest-scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: helm_charts
+    web_frontend:
+        dir_name: OSDU Developer Web Frontend (Bun Static Server)
+        title: OSDU Developer Web Frontend (Bun Static Server)
+        scope:
+            - web/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

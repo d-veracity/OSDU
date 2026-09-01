@@ -1,0 +1,3 @@
+- Static assets are served by explicit pathname checks inside a single `fetch` handler rather than through a middleware or framework router.
+- Images are read from disk via Bun's `file()` helper and returned as `Response` objects with an explicit `Content-Type` header.
+- The entrypoint keeps all routing logic in one place, returning a plain text 404 for unmatched paths instead of delegating to a separate error handler.

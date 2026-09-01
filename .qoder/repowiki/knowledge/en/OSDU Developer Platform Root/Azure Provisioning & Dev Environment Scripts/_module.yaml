@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: provisioning_scripts
+title: Azure Provisioning & Dev Environment Scripts
+scope:
+    - scripts/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/root_bicep_assembly

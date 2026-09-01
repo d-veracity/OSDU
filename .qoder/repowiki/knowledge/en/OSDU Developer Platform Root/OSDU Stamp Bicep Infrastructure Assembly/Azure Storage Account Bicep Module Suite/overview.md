@@ -1,0 +1,1 @@
+Composable Bicep module suite that deploys an Azure Storage Account with its blob, file, queue, and table services plus lifecycle policies, local users, diagnostics, encryption, and private endpoints.

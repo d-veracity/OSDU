@@ -1,0 +1,1 @@
+Bicep modules targeting Azure Resource Manager, invoking the public `deployment-script` Bicep module v0.5.1 which provisions Azure CLI deployment scripts running Alpine Linux with `az cli` 2.73.0, authenticated via user-assigned managed identities.

@@ -1,0 +1,1 @@
+Bicep targeting Azure Resource Manager; uses `Microsoft.Network/privateEndpoints@2024-07-01`, `Microsoft.Network/privateDnsZones@2020-06-01`, `Microsoft.Authorization/roleAssignments@2022-04-01`, and `Microsoft.Authorization/locks@2020-05-01` APIs.

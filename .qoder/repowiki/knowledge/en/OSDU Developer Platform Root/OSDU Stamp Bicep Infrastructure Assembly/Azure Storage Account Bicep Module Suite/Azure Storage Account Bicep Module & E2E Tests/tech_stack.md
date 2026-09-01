@@ -1,0 +1,1 @@
+Bicep ARM template language targeting Azure Resource Manager; reuses Azure Verified Modules (AVM) types from `br/public:avm/utl/types/avm-common-types:0.2.1` and the private endpoint AVM module `br/public:avm/res/network/private-endpoint:0.7.1`.

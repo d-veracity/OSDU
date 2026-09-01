@@ -1,0 +1,1 @@
+Visual Studio Code Rest Client collection of .http files that exercise OSDU's entitlements, legal, schema, storage, workflow, partition, and admin APIs against local or remote endpoints using Azure AD client-credentials OAuth.

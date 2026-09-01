@@ -1,0 +1,1 @@
+Python 3 generators producing JSON-Schema draft-07 bodies consumed by the OSDU Schema Service REST API; Bash + `curl` for HTTP posting; Hackolade `.hck.json` models as the canonical source of property metadata.

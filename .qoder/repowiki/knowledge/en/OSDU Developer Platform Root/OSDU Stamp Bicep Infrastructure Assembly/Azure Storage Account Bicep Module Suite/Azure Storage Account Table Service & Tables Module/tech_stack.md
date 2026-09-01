@@ -1,0 +1,1 @@
+Bicep targeting Azure Resource Manager API versions 2023-04-01 for Storage and 2022-04-01 for Authorization, plus 2021-05-01-preview for Diagnostic Settings; reusable types imported from the public AVM registry (`br/public:avm/utl/types/avm-common-types:0.2.1`).

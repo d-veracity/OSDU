@@ -1,0 +1,1 @@
+Bicep targeting Azure Resource Manager API versions `Microsoft.Storage/storageAccounts/blobServices@2022-09-01`, `Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01`, `Microsoft.Insights/diagnosticSettings@2021-05-01-preview`, and `Microsoft.Authorization/roleAssignments@2022-04-01`; consumes shared types from `br/public:avm/utl/types/avm-common-types:0.2.1`.

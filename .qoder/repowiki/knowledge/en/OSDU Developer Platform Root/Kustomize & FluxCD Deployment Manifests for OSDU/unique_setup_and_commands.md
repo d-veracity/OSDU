@@ -1,0 +1,1 @@
+Deployment ordering is driven by applying the `stamp/` manifests into the `flux-system` namespace; each `Kustomization` resource references `sourceRef.name: flux-system` and `path: ./software/<components|applications|experimental>/<package>` so Flux reconciles the matching Kustomize overlay from the repository root.

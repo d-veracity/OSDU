@@ -1,0 +1,1 @@
+Bicep targeting Azure Resource Manager; uses `Microsoft.KubernetesConfiguration/fluxConfigurations@2025-04-01` and `Microsoft.KubernetesConfiguration/extensions@2024-11-01` APIs against an existing AKS managed cluster; packaged as Azure Verified Modules following the AVM registry schema (`aka.ms/bicep-registry-module-version-file-schema#`).

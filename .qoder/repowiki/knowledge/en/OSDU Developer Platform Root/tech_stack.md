@@ -1,0 +1,1 @@
+Azure Developer CLI (azd) with Bicep as the IaC provider; PowerShell for provisioning hooks; Helm + Kustomize + FluxCD for Kubernetes delivery; MkDocs for documentation; Bun for the static web frontend; Visual Studio Code Rest Client for API testing.

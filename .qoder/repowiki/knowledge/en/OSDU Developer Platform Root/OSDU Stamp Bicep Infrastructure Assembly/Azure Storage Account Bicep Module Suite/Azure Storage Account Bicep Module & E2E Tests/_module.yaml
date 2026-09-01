@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: bicep_infrastructure/storage_account/root_module_and_tests
+title: Azure Storage Account Bicep Module & E2E Tests
+scope:
+    - bicep/modules/storage-account/main.bicep
+    - bicep/modules/storage-account/modules/
+    - bicep/modules/storage-account/tests/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,1 @@
+MkDocs with the Material theme, pymdownx extensions (highlighting, tabs, tasklists, superfences with Mermaid), admonition plugin, search and minify plugins, and tablesort.js for interactive tables.

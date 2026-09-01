@@ -1,0 +1,1 @@
+Reusable Bicep module that provisions an Azure Cosmos DB account with optional SQL databases, Gremlin graphs, MongoDB support, RBAC, diagnostics, private link, and Key Vault secret storage.

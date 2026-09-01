@@ -1,0 +1,1 @@
+Bicep module that enables a storage account's queue service, creates named queues with optional metadata and role assignments, and configures diagnostic settings.

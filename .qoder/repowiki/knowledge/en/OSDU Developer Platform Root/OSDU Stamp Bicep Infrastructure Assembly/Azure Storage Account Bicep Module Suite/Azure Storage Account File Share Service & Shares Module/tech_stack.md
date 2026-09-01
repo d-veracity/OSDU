@@ -1,0 +1,1 @@
+Bicep targeting Azure Resource Manager; uses Bicep module composition (`module ... = [for ...]`), `loadJsonContent` for inner ARM templates, and remote registry types (`br/public:avm/utl/types/avm-common-types:0.2.1`). Deploys Azure Files resources at API versions 2023-04-01 (file services) and 2023-01-01 (shares).

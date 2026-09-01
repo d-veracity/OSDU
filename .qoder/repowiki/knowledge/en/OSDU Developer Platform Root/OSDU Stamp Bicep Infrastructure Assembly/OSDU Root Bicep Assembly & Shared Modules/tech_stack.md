@@ -1,0 +1,1 @@
+Bicep IaC targeting Azure Resource Manager; relies on Azure Verified Modules (AVM) for managed identity, Log Analytics, App Insights, Redis, Key Vault, Container Registry, Storage, Static Site, and Deployment Script; uses Azure CLI deployment scripts (`kind: 'AzureCLI'`) to bridge gaps where AVMs cannot expose outputs like Flux extension principal IDs.

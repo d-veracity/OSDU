@@ -1,0 +1,1 @@
+Kustomize v1beta1 overlays layered on top of Kubernetes manifests; FluxCD `kustomize.toolkit.fluxcd.io/v1beta2` `Kustomization` resources driving GitOps reconciliation from a `GitRepository` named `flux-system`; Istio service mesh, cert-manager, CloudNativePG, Redis Cluster, Elasticsearch, and Stakater Reloader as managed components.

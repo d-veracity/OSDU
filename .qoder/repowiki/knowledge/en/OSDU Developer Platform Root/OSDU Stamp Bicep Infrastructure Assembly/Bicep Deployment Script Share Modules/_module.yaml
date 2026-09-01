@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: bicep_infrastructure/script_shares
+title: Bicep Deployment Script Share Modules
+scope:
+    - bicep/modules/deploy-scripts/
+    - bicep/modules/script-share-csvdag/
+    - bicep/modules/script-share-upload/
+    - bicep/modules/software-upload/
+source_files: []
+depends_on: []
+related_to: []

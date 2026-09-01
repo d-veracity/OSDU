@@ -1,0 +1,1 @@
+No build script — this is a Bicep module consumed by higher-level deployments. Deploy via `az bicep build` to produce `main.json` (also present in scope) or directly via `az deployment` referencing `main.bicep` with a `storageAccountName` parameter.

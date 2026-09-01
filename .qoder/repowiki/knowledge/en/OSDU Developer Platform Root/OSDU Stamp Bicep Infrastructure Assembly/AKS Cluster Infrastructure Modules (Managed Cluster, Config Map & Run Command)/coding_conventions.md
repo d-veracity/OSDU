@@ -1,0 +1,6 @@
+- Each module exposes its capabilities through a `metadata name/description/owner` block at the top of `main.bicep`.
+- All public inputs are declared as `param` entries annotated with `@description` and, where applicable, `@allowed` / `@minValue` / `@maxValue` constraints.
+- Optional features are gated with conditional expressions that set nested profile blocks to `null` when disabled (e.g., `addonProfiles.*.config`, `azureMonitorProfile`, `securityProfile`).
+- Child resources that depend on the cluster use an `existing` resource declaration referencing the parent by name, then create a scoped child resource with `parent:` or `scope:`.
+- Deployment-script modules follow a fixed shape: optional new/existing user-assigned managed identity, role assignments to that identity, then one or more `deploymentScripts` resources whose `scriptContent` is pulled in via `loadTextContent('*.sh')` and configured with `forceUpdateTag`, `timeout`, `retentionInterval`, and environment variables.
+- Tests are co-located with their module under a `test/` or `tests/e2e/` directory and driven by a `test.sh` shell script that performs What-If validation before deploying via `az deployment group create`.

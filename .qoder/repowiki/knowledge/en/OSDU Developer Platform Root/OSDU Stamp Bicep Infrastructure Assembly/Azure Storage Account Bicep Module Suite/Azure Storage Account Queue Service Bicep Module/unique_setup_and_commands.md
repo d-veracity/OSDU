@@ -1,0 +1,1 @@
+No build script — deployment is done by compiling the Bicep files to ARM JSON (produced as `main.json`) and deploying via `az bicep deploy` or ARM template deployment against a target subscription/resource group.

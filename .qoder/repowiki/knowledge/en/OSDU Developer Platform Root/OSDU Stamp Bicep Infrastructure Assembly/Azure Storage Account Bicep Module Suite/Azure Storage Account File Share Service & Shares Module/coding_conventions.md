@@ -1,0 +1,6 @@
+- Each module exposes a consistent triple of outputs — `name`, `resourceId`, `resourceGroupName` — using `@description` annotations for documentation generation.
+- Parent resources are referenced as `existing` resources (e.g., storage account, file service) so the module only owns its own child resources rather than recreating parents.
+- Optional arrays of resources (diagnostic settings, shares, role assignments) are deployed via Bicep collection syntax with `?? []` fallbacks so empty inputs produce no child resources.
+- Parameter validation uses Bicep decorators such as `@maxLength`, `@allowed`, and `@description` to constrain and document inputs.
+- Role assignments accept either built-in role display names or fully qualified role definition IDs, resolved through a local `builtInRoleNames` map before being passed into a nested deployment template.
+- Nested role assignments are implemented as conditional `Microsoft.Resources/deployments` with `expressionEvaluationOptions.scope: 'Outer'` loading a JSON template via `loadJsonContent`, isolating RBAC creation behind a workaround for a known provider bug.

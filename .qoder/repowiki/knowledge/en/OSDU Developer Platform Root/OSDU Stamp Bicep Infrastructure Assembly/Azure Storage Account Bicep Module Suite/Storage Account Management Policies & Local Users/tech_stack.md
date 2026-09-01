@@ -1,0 +1,1 @@
+Azure Bicep targeting ARM API versions `Microsoft.Storage/storageAccounts@2023-01-01` / `2023-04-01` for management policies and local users respectively.

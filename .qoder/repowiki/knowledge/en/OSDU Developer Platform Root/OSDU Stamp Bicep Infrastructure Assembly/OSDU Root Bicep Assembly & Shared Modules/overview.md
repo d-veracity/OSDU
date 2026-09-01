@@ -1,0 +1,1 @@
+Root Bicep assembly that composes Azure resources for an OSDU stamp (AKS, storage, Key Vault, Cosmos DB, Flux) by orchestrating reusable blade and infrastructure modules under bicep/modules/.

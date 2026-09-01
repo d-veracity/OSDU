@@ -1,0 +1,1 @@
+Bicep module that provisions an Azure Storage Account table service, optional diagnostic settings, and a configurable set of child tables with role-based access assignments.

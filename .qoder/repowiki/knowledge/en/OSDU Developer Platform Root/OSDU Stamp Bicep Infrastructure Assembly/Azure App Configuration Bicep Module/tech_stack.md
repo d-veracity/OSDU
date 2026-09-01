@@ -1,0 +1,1 @@
+Bicep targeting `resourceGroup` scope; uses Azure Resource Manager API versions up to `2024-07-01` for App Configuration, Private Endpoint, and Private DNS; follows the Azure Bicep Registry module schema (`metadata.json`, `version.json`).

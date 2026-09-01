@@ -1,0 +1,1 @@
+Bicep module that deploys an Azure Storage Account file service with optional diagnostic settings and one or more configurable file shares, including nested RBAC role assignments.

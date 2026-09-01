@@ -1,0 +1,1 @@
+A minimal Bun-based HTTP server that serves the OSDU Developer landing page, static images, and a favicon on port 8080.

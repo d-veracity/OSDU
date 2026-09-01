@@ -1,0 +1,1 @@
+E2E tests are subscription-scoped Bicep deployments run in two phases (`init`, `idem`) using `@batchSize(1)` to validate idempotent re-deployment; unit test hooks live in `tests/unit/custom.tests.ps1` for additional static validation.

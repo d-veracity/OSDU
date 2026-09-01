@@ -1,0 +1,1 @@
+End-to-end lifecycle is driven by `azd`: `az login` + `azd auth login`, `azd init -e dev`, optional `azd env set <feature_flag> <value>`, `azd provision`, `azd env set AUTH_CODE <auth_code>` followed by `azd hooks run settings`, and `azd down --force --purge` for teardown. Portal deployments are also supported via the `azuredeploy.json` template link.

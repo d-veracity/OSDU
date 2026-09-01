@@ -1,0 +1,17 @@
+schema_version: 1
+module_path: bicep_infrastructure/root_bicep_assembly
+title: OSDU Root Bicep Assembly & Shared Modules
+scope:
+    - bicep/main.bicep
+    - bicep/main-minimal.bicep
+    - bicep/modules/
+source_files: []
+depends_on: []
+related_to:
+    - path: bicep_infrastructure/aks_cluster
+    - path: bicep_infrastructure/app_configuration
+    - path: bicep_infrastructure/cosmos_db
+    - path: bicep_infrastructure/flux
+    - path: bicep_infrastructure/private_endpoint
+    - path: bicep_infrastructure/storage_account
+    - path: provisioning_scripts

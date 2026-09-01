@@ -1,0 +1,5 @@
+- Optional or conditional properties are expressed as ternary expressions that resolve to `null` when disabled, ensuring they are omitted from the ARM template rather than set to false/empty values.
+- Each module exposes a consistent set of outputs — `name`, `resourceId`, and `resourceGroupName` — annotated with `@description` metadata for downstream consumers.
+- Parent resources are referenced as `existing` declarations so the module can be composed standalone or within a larger deployment without re-provisioning the storage account.
+- Arrays of repeatable resources (containers, diagnostic settings, role assignments) are declared using Bicep collection syntax (`[for (...) in (...)]`) with deterministic naming derived from indices or GUIDs.
+- User-facing role definitions accept either display names or fully qualified IDs and are normalized via a local lookup map (`builtInRoleNames`) before being emitted as role assignments.
