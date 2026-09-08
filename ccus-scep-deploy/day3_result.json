@@ -1,0 +1,9 @@
+{
+  "attestationId": "osdu:work-product-component--SCEPAttestation:f603ba2df9e64f8083db8d0c01287f16",
+  "breachPlumeId": "osdu:work-product-component--CO2PlumeObservation:f734c5248a694a319a1895aa5c59206d",
+  "mmvId": "osdu:work-product-component--MMVEventRecord:de0edac9b88e4b8cb0b7ee1473c88b9a",
+  "claimAdjustId": "osdu:work-product-component--CarbonClaimAdjustmentRecord:861399cef6e94e89ad661e1a56a0e302",
+  "failedConstraints": [
+    "PlumeMigrationBoundary (Class VI AoR)"
+  ]
+}
