@@ -1,0 +1,43 @@
+{
+  "scepId": "osdu:work-product-component--SCEPVersionSnapshot:acada82214ea44209150c762754edb14",
+  "evidenceIds": {
+    "baseline": "osdu:work-product-component--PreInjectionBaselineRecord:097c00a0fe434587a3791936e5d4ca66",
+    "structmap": "osdu:work-product-component--StructureMapRecord:77b53f29edea44ba8fcb2fba5a422c19",
+    "integrity": "osdu:work-product-component--ContainmentIntegrityAssessment:784d9d2ae95d4486946784adf640222f",
+    "injection": "osdu:work-product-component--CO2InjectionRecord:fc4b2581632c4aba85a99612f03e4b3e",
+    "plume": "osdu:work-product-component--CO2PlumeObservation:97b81bcc7b5449868d0022f8182a3b5b",
+    "storage": "osdu:work-product-component--CO2StorageRecord:bc54627b8b1243af9d8d1065acd324c6",
+    "massbal": "osdu:work-product-component--CO2MassBalanceRecord:3e09d0d398404032ab404a5be38b92c7",
+    "monitor": "osdu:work-product-component--ContainmentAssessment:4533db8b9cf7435f9b62babde4155368"
+  },
+  "gate": [
+    [
+      "InjectionPressureLimit (Class VI)",
+      true
+    ],
+    [
+      "PlumeMigrationBoundary (Class VI AoR)",
+      true
+    ],
+    [
+      "WellIntegrityThreshold (Class VI)",
+      true
+    ],
+    [
+      "CO2StoragePermanence (ISO 27914)",
+      true
+    ],
+    [
+      "MassBalanceConservation",
+      true
+    ],
+    [
+      "SealIntegrityConstraint",
+      true
+    ],
+    [
+      "CarbonClaimReconciliation",
+      true
+    ]
+  ]
+}
