@@ -1,0 +1,66 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp", "source": "wks",
+      "entityType": "work-product-component--MethaneAttestation",
+      "schemaVersionMajor": 1, "schemaVersionMinor": 0, "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--MethaneAttestation:1.0.0"
+    },
+    "status": "DEVELOPMENT", "scope": "INTERNAL",
+    "createdBy": "dVeracity", "dateCreated": "2026-09-08T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/osdu/methane/MethaneAttestation.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:work-product-component--MethaneAttestation:1.0.0",
+    "x-dve-domain": "methane",
+    "x-dve-standard": "ISO 25624-1:2026",
+    "x-dve-note": "dVeracity bridge: binds a VerifiableCredential to a verified MethaneMonitoringPlan by SHA256 hash, carrying the ISO 9.5.3 expanded uncertainty (U = k·u) as the credential's confidence basis.",
+    "title": "MethaneAttestation",
+    "description": "dVeracity attestation over an ISO 25624-1 methane MRV verification, bound to the Monitoring Plan hash.",
+    "type": "object",
+    "properties": {
+      "id": {"type": "string"}, "kind": {"type": "string"}, "version": {"type": "integer"},
+      "acl": {"type": "object", "properties": {
+        "owners": {"type": "array", "items": {"type": "string"}},
+        "viewers": {"type": "array", "items": {"type": "string"}}},
+        "required": ["owners", "viewers"]},
+      "legal": {"type": "object", "properties": {
+        "legaltags": {"type": "array", "items": {"type": "string"}},
+        "otherRelevantDataCountries": {"type": "array", "items": {"type": "string"}},
+        "status": {"type": "string"}},
+        "required": ["legaltags", "otherRelevantDataCountries"]},
+      "tags": {"type": "object", "additionalProperties": {"type": "string"}},
+      "createTime": {"type": "string", "format": "date-time"}, "createUser": {"type": "string"},
+      "modifyTime": {"type": "string", "format": "date-time"}, "modifyUser": {"type": "string"},
+      "data": {
+        "type": "object", "additionalProperties": false,
+        "properties": {
+          "activityType": {"type": "string"},
+          "attestationId": {"type": "string"},
+          "planId": {"type": "string"},
+          "planRecordId": {"type": "string"},
+          "planHash": {"type": "string"},
+          "reconciliationResultId": {"type": "string"},
+          "attestationStatus": {"type": "string", "enum": ["issued", "suspended", "revoked", "reissued"]},
+          "confidenceScore": {"type": "number"},
+          "expandedUncertaintyPercent": {"type": "number"},
+          "coverageFactorK": {"type": "number"},
+          "verifiableCredential": {
+            "type": "object", "additionalProperties": true,
+            "properties": {
+              "type": {"type": "string"}, "issuer": {"type": "string"}, "subject": {"type": "string"},
+              "issuanceDate": {"type": "string", "format": "date-time"},
+              "proofType": {"type": "string"}, "proofValue": {"type": "string"},
+              "credentialStatus": {"type": "string"}
+            }
+          },
+          "attestationRef": {"type": "string"}, "issuedBy": {"type": "string"},
+          "issuedAt": {"type": "string", "format": "date-time"}, "reason": {"type": "string"}
+        }
+      }
+    },
+    "required": ["kind", "acl", "legal", "data"],
+    "additionalProperties": false
+  }
+}
