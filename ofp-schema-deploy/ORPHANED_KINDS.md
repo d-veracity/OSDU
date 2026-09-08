@@ -21,3 +21,9 @@ the correct ids.
 | work-product-component--{FacilityEmissionAllocation, FacilityLocationAssociation, FacilitySpecification}:3.0.0 | same name at **1.0.0** |
 
 41 kinds total. Stack count after cleanup of bodies: 158 = 89 (prior) + 28 (domain, correct) + 41 (orphans).
+
+Records: before the pipeline kinds existed, the methane-proof grounding (`methane-mrv-deploy/ofp-domains/ofp_grounding.py`)
+wrote one copy of its graph (239 records, ids `osdu:<group>--<Entity>:mrv01-*`) on the 3.0.0/4.0.0 orphan kinds above.
+The same record ids were then re-PUT on the correct kinds (Storage accepts a kind change across versions), so the
+live graph — the one the MethaneMonitoringPlan links to — is on the correct kinds; the orphan-kind copies remain as
+earlier versions / stray records with no references. Do not write to orphan kinds again.

@@ -1,0 +1,31 @@
+{
+ "data": {
+  "name": "MRV-01 methane source inventory 2025",
+  "facility_id": "osdu:master-data--Facility:mrv01-site",
+  "description": "Bottom-up source inventory (ISO 25624-1 Cl.6)"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--EmissionInventory:mrv01-ch4-2025",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--EmissionInventory:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

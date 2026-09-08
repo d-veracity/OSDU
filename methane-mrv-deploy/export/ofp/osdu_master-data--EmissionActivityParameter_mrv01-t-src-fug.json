@@ -1,0 +1,33 @@
+{
+ "data": {
+  "emission_activity_parameter_id": "t-src-fug",
+  "name": "t \u2014 operating hours (SRC-FUG)",
+  "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-h",
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-fug",
+  "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-time"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-fug",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

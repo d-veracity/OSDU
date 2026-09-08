@@ -67,7 +67,8 @@ async function state() {
     const h = await getRecord(planId); const d = h.json?.data || {};
     out.plan = { id: planId, status: d.verificationStatus, hash: d.planHash, trigger: d.versionTrigger, version: h.json?.version,
       divergenceLimit: d.reconciliationDivergenceLimitPercent, coverageTarget: d.goldStandardCoveragePercent,
-      materiality: d.materialityThresholdPercent, k: d.uncertaintyCoverageFactorK, reconciliationResultId: d.reconciliationResultId };
+      materiality: d.materialityThresholdPercent, k: d.uncertaintyCoverageFactorK, reconciliationResultId: d.reconciliationResultId,
+      ofp: d.ofpFacilityId ? { facility: d.ofpFacilityId, organization: d.ofpOrganizationId, report: d.ofpEmissionReportId, ruleset: d.ofpDataQualityRuleSetId, assurance: d.ofpReportingAssuranceId } : null };
     const vr = await osdu('GET', `/api/storage/v2/records/versions/${encodeURIComponent(planId)}`);
     out.timeline = [];
     for (const v of (vr.json?.versions || [])) { const rv = await osdu('GET', `/api/storage/v2/records/${encodeURIComponent(planId)}/${v}`);
@@ -117,6 +118,24 @@ async function setTopdown(rate) {
   return { applied: true, rate, divergence: div, target, transitioned: cur !== target, log };
 }
 
+// The OFP data-domain graph behind the proof (ofp-domains/ofp_grounding.py): key entities read live
+// from Storage, the gate runs read live from Search. Kind ids come from the export's `kinds` map
+// (which the grounding script takes from ofp-schema-deploy/schemas/manifest-domains.json).
+async function ofpGraph() {
+  const O = summary().ofp; if (!O) return { available: false };
+  const KX = O.kinds || {}; const DQ = KX.DataQuality;
+  const out = { available: true, kinds: KX, domains: O.domains, totals: O.totals, traversal: O.traversal, planTrail: O.plan_trail, rules: O.rules, entities: {}, gateRuns: [], failing: [] };
+  for (const [k, id] of Object.entries(O.ids)) { const r = await getRecord(id); out.entities[k] = { id, kind: r.json?.kind, version: r.json?.version, data: r.json?.data }; }
+  const lei = await search(KX.OrganizationExternalIdentifier, `data.organization_id:"${O.ids.org}"`, 1);
+  out.lei = lei.json?.results?.[0]?.data?.value || null;
+  const runs = await search(DQ, `data.data_quality_rule_set_id:"${O.ids.ruleset}" AND data.dimension_metrics:"run=*"`, 20);
+  out.gateRuns = (runs.json?.results || []).map(r => ({ id: r.id, run: (r.data.dimension_metrics[0] || '').split('=')[1], score: r.data.total_score,
+    passed: (r.data.dimension_metrics[1] || '').split('=')[1], when: r.data.start_date_time, evaluated: r.data.evaluated_record_id })).sort((a, b) => a.when < b.when ? -1 : 1);
+  const fails = await search(DQ, `data.data_quality_rule_set_id:"${O.ids.ruleset}" AND data.total_score:0`, 20);
+  out.failing = (fails.json?.results || []).map(r => ({ id: r.id, metric: r.data.dimension_metrics[0], rule: r.data.data_rules[0], evaluated: r.data.evaluated_record_id }));
+  return out;
+}
+
 const send = (res, code, obj) => { res.writeHead(code, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(obj)); };
 const body = (req) => new Promise(ok => { const c = []; req.on('data', d => c.push(d)); req.on('end', () => ok(Buffer.concat(c).toString())); });
 http.createServer(async (req, res) => {
@@ -125,6 +144,7 @@ http.createServer(async (req, res) => {
     if (u.pathname === '/' || u.pathname === '/index.html') { res.writeHead(200, { 'Content-Type': 'text/html' }); return res.end(fs.readFileSync(path.join(__dirname, 'public', 'index.html'))); }
     if (u.pathname === '/api/health') { await token(); return send(res, 200, { ok: true, base: BASE, partition: PARTITION }); }
     if (u.pathname === '/api/state') return send(res, 200, await state());
+    if (u.pathname === '/api/ofp/graph') return send(res, 200, await ofpGraph());
     if (u.pathname === '/api/search' && req.method === 'POST') { const q = JSON.parse(await body(req) || '{}'); const r = await search(q.kind, q.query, q.limit || 10); return send(res, r.status, r.json); }
     if (u.pathname === '/api/methane/set-topdown' && req.method === 'POST') { const q = JSON.parse(await body(req) || '{}'); const v = parseFloat(q.rate);
       if (isNaN(v) || v <= 0) return send(res, 400, { error: 'rate (kg/h) > 0 required' }); return send(res, 200, await setTopdown(v)); }

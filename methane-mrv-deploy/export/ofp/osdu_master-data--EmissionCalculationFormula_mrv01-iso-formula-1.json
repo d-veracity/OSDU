@@ -1,0 +1,33 @@
+{
+ "data": {
+  "name": "ISO 25624-1 Formula (1)",
+  "emission_calculation_method_type_id": "osdu:reference-data--EmissionCalculationMethodType:mrv01-ef-x-af",
+  "standard_id": "osdu:master-data--Standard:mrv01-iso-25624-1",
+  "description": "E = \u03a3_i EF_i \u00d7 AF_i with AF_i = N_i \u00d7 t_i  (source-level bottom-up inventory)",
+  "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-mass"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--EmissionCalculationFormula:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}
