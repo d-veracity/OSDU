@@ -1,0 +1,154 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--FacilityLocationAssociation",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--FacilityLocationAssociation:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-09-08T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--FacilityLocationAssociation.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:transactional-data--FacilityLocationAssociation:4.0.0",
+    "title": "Facility Location Association",
+    "description": "The assignment of a Facility to a Location at a point in time.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "facility_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Facility."
+          },
+          "location_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Location of the Facility Location Association."
+          },
+          "valid_from_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and optional time from which the Facility Location Association is valid."
+          },
+          "valid_to_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and optional time to which the Facility Location Association is valid."
+          },
+          "id": {
+            "type": "string",
+            "description": "The Primary Key of the Facility Specification."
+          },
+          "geopolitical_contexts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "facility_id",
+          "id",
+          "location_id",
+          "valid_from_datetime"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

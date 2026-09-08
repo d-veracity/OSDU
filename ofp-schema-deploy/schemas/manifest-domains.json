@@ -1,0 +1,204 @@
+{
+  "reference-data": [
+    {
+      "id": "ofp:wks:reference-data--DataVerificationType:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataVerificationType:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataVerificationType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--DataVerificationSource:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataVerificationSource:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataVerificationSource_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--DataRuleDimensionType:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataRuleDimensionType:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataRuleDimensionType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--DataRulePurposeType:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataRulePurposeType:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataRulePurposeType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--DataQualityRuleStatus:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataQualityRuleStatus:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataQualityRuleStatus_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--QualityAssessmentState:4.0.0",
+      "model_id": "ofp:wks:reference-data--QualityAssessmentState:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--QualityAssessmentState_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--QualityAssessmentMethod:4.0.0",
+      "model_id": "ofp:wks:reference-data--QualityAssessmentMethod:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--QualityAssessmentMethod_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataQualityRule_4.0.0.json",
+      "properties": 12
+    },
+    {
+      "id": "ofp:wks:reference-data--DataQualityRuleSet:4.0.0",
+      "model_id": "ofp:wks:reference-data--DataQualityRuleSet:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_reference-data--DataQualityRuleSet_4.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:reference-data--OrganizationExternalIdentifierType:4.0.0",
+      "model_id": "ofp:wks:reference-data--OrganizationExternalIdentifierType:4.0.0",
+      "domain": "Organizational Structure",
+      "file": "ofp_wks_reference-data--OrganizationExternalIdentifierType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--Country:4.0.0",
+      "model_id": "ofp:wks:reference-data--Country:4.0.0",
+      "domain": "Organizational Structure",
+      "file": "ofp_wks_reference-data--Country_4.0.0.json",
+      "properties": 8
+    },
+    {
+      "id": "ofp:wks:reference-data--EmissionParameterType:4.0.0",
+      "model_id": "ofp:wks:reference-data--EmissionParameterType:4.0.0",
+      "domain": "Recording",
+      "file": "ofp_wks_reference-data--EmissionParameterType_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+      "model_id": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+      "domain": "Reporting",
+      "file": "ofp_wks_reference-data--ReportingAssuranceType_4.0.0.json",
+      "properties": 2
+    }
+  ],
+  "master-data": [
+    {
+      "id": "ofp:wks:master-data--OrganizationExternalIdentifier:4.0.0",
+      "model_id": "ofp:wks:master-data--OrganizationExternalIdentifier:4.0.0",
+      "domain": "Organizational Structure",
+      "file": "ofp_wks_master-data--OrganizationExternalIdentifier_4.0.0.json",
+      "properties": 4
+    },
+    {
+      "id": "ofp:wks:master-data--OrganizationControl:4.0.0",
+      "model_id": "ofp:wks:master-data--OrganizationControl:4.0.0",
+      "domain": "Organizational Boundary",
+      "file": "ofp_wks_master-data--OrganizationControl_4.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:master-data--FacilityStructure:4.0.0",
+      "model_id": "ofp:wks:master-data--FacilityStructure:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_master-data--FacilityStructure_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:master-data--Location:4.0.0",
+      "model_id": "ofp:wks:master-data--Location:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_master-data--Location_4.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+      "model_id": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_master-data--FacilityActivityParticipation_4.0.0.json",
+      "properties": 3
+    },
+    {
+      "id": "ofp:wks:master-data--ComplianceRequirement:4.0.0",
+      "model_id": "ofp:wks:master-data--ComplianceRequirement:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_master-data--ComplianceRequirement_4.0.0.json",
+      "properties": 6
+    }
+  ],
+  "work-product-component": [
+    {
+      "id": "ofp:wks:work-product-component--DataQuality:1.0.0",
+      "model_id": "ofp:wks:transactional-data--DataQuality:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_work-product-component--DataQuality_1.0.0.json",
+      "properties": 10
+    },
+    {
+      "id": "ofp:wks:work-product-component--VerifiableCredential:1.0.0",
+      "model_id": "ofp:wks:transactional-data--VerifiableCredential:4.0.0",
+      "domain": "Data Verification",
+      "file": "ofp_wks_work-product-component--VerifiableCredential_1.0.0.json",
+      "properties": 10
+    },
+    {
+      "id": "ofp:wks:work-product-component--FacilityLocationAssociation:1.0.0",
+      "model_id": "ofp:wks:transactional-data--FacilityLocationAssociation:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_work-product-component--FacilityLocationAssociation_1.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+      "model_id": "ofp:wks:transactional-data--EquipmentInstallation:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_work-product-component--EquipmentInstallation_1.0.0.json",
+      "properties": 8
+    },
+    {
+      "id": "ofp:wks:work-product-component--FacilitySpecification:1.0.0",
+      "model_id": "ofp:wks:transactional-data--FacilitySpecification:4.0.0",
+      "domain": "Facility Structure",
+      "file": "ofp_wks_work-product-component--FacilitySpecification_1.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionCalculationFormulaComponent:1.0.0",
+      "model_id": "ofp:wks:transactional-data--EmissionCalculationFormulaComponent:4.0.0",
+      "domain": "Recording",
+      "file": "ofp_wks_work-product-component--EmissionCalculationFormulaComponent_1.0.0.json",
+      "properties": 13
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+      "model_id": "ofp:wks:transactional-data--EmissionCalculationModelArgument:4.0.0",
+      "domain": "Recording",
+      "file": "ofp_wks_work-product-component--EmissionCalculationModelArgument_1.0.0.json",
+      "properties": 14
+    },
+    {
+      "id": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+      "model_id": "ofp:wks:transactional-data--EmissionActivityFactor:4.0.0",
+      "domain": "Recording",
+      "file": "ofp_wks_work-product-component--EmissionActivityFactor_1.0.0.json",
+      "properties": 6
+    },
+    {
+      "id": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+      "model_id": "ofp:wks:transactional-data--FacilityEmissionAllocation:4.0.0",
+      "domain": "Reporting",
+      "file": "ofp_wks_work-product-component--FacilityEmissionAllocation_1.0.0.json",
+      "properties": 4
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--EmissionCalculationModelArgument",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-09-08T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionCalculationModelArgument.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:transactional-data--EmissionCalculationModelArgument:4.0.0",
+    "title": "Emission Calculation Model Argument",
+    "description": "The assignment of an Emission Argument (Emission Activity Parameter or Emission Factor) as input or\noutput of a Calculation Model. An argument type is required to determine if the argument is an\nEmission Activity Parameter or Emission Factor.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Emission Calculation Model Argument."
+          },
+          "emission_calculation_model_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Calculation Model."
+          },
+          "emission_calculation_component_line_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Calculation Formula Component."
+          },
+          "emission_calculation_formula_id": {
+            "type": "string",
+            "description": "The optional part of a composite Foreign Key identifying the Emission Calculation Formula Component (the Emission Calculation Formula)."
+          },
+          "emission_factor_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Factor used by a Emission Calculation Model."
+          },
+          "emission_factor_type_id": {
+            "type": "string",
+            "description": "The optional part of a composite foreign identifying the Emission Factor (the Emission Factor Type)."
+          },
+          "physical_quantity_type_id": {
+            "type": "string",
+            "description": "The optional part of a composite Foreign Key identifying the Emission Factor (the Physical Quantity Type)."
+          },
+          "emission_parameter_type_id": {
+            "type": "string",
+            "description": "DEPRECATED, replace by Physical Quantity Type. Optional part of a composite foreign key for the Emission Factor. The Emission Parameter Type."
+          },
+          "emission_activity_parameter_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Activity Parameter used by the Emission Calculation Model."
+          },
+          "emission_activity_id": {
+            "type": "string",
+            "description": "The optional part of a composite Foreign Key used to identify the Emission Activity Parameter (the Emission Activity)."
+          },
+          "parameter_physical_quantity_type_id": {
+            "type": "string",
+            "description": "The optional part of a composite Foreign Key identifying the Emission Activity Parameter (the Physical Quantity Type)."
+          },
+          "emission_activity_parameter_type_id": {
+            "type": "string",
+            "description": "DEPRECATED, Replace by Physical Quantity Type. Optional part of a composite foreign key used to identify the Emission Activity Parameter. The Emission Activity Parameter Type"
+          },
+          "emission_argument_id": {
+            "type": "string",
+            "description": "The Foreign Key identifying the Emission Calculation Argument as either an Emission Activity Parameter or Emission Factor."
+          },
+          "emission_argument_type": {
+            "type": "string",
+            "description": "The Emission Calculation Argument Type: Emission Activity Parameter or Emission Factor."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_argument_type",
+          "emission_calculation_component_line_id",
+          "emission_calculation_model_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

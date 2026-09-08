@@ -75,3 +75,17 @@ a PUBLISHED schema is frozen permanently and can only be superseded by a higher 
 - `data-partition-id` header (default `osdu`).
 - For loading records afterward: a legal tag (e.g. `osdu-demo-legaltag`) and ACL groups
   (`data.default.owners` / `data.default.viewers`).
+
+## Domain kinds for the methane MRV proof (claim #3)
+
+`generate_domain_schemas.py` adds the Data Verification, Organizational Structure/Boundary,
+Facility Structure, Recording and Reporting entities the methane proof needs (28 kinds,
+`schemas/manifest-domains.json`). Kind ids come from the Hackolade collection's own `id`
+(the same field `ofp-schema-mapping.json` was built from), so reference/master kinds keep
+the model's version (4.0.0); `transactional-data` entities become
+`work-product-component--<Name>:1.0.0` like the Emission Statement family.
+
+    python3 generate_domain_schemas.py
+    OSDU_TOKEN_FILE=... ./register_schemas.sh domains
+
+See ORPHANED_KINDS.md for superseded kinds that remain registered on the dev stack.

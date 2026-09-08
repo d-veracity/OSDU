@@ -1,0 +1,171 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--DataQuality",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--DataQuality:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-09-08T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--DataQuality.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:transactional-data--DataQuality:4.0.0",
+    "title": "Data Quality",
+    "description": "This is used to store the result from a run of a Data Quality Metric Evaluation engine. Captures\nsummary information, such as which rule set(s) and rule(s) have been used, when this was run, and by\nwhom. Detailed results may be associated with a dataset.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "description": "Identifies this resource object."
+          },
+          "evaluated_record_id": {
+            "type": "string",
+            "description": "The reference to the evaluated data record. The record version number is required."
+          },
+          "evaluated_ddms_datasets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "If the quality assessment dealt with dataset content, then this array of URIs will contain the references to the optimized DDMS content used in the assessment. The reference is expected to be a member of the Evaluated Record ID's list of URIs."
+          },
+          "evaluated_kind": {
+            "type": "string",
+            "description": "The Evaluated Record ID\u2019s kind."
+          },
+          "data_quality_rule_set_id": {
+            "type": "string",
+            "description": "The Data Quality Rule Set aggregating other rule sets and/or individual Data Quality Rule instances, individually weighted in the context of the Data Quality Rule Set."
+          },
+          "start_date_time": {
+            "type": "string",
+            "description": "The date and time at which the quality assessment started."
+          },
+          "data_rules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The data rules part of this assessment."
+          },
+          "method_id": {
+            "type": "string",
+            "description": "The reference to the assessment calculation method."
+          },
+          "total_score": {
+            "type": "number",
+            "description": "The assessment score in % aggregated for all dimension types."
+          },
+          "dimension_metrics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The individual scores per dimension."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "data_rules"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}
