@@ -1,0 +1,48 @@
+{
+  "data": {
+    "activityType": "scep_attestation",
+    "attestationId": "IBDP-Decatur-ATT-01",
+    "scepId": "IBDP-Decatur-SCEP-01",
+    "scepSnapshotId": "osdu:work-product-component--SCEPVersionSnapshot:acada82214ea44209150c762754edb14",
+    "scepSnapshotHash": "1240d738dce22de593f38c88db4a397c9021c9df1cad8fd4fea5cc6c194c14f0",
+    "attestationStatus": "suspended",
+    "confidenceScore": 0.9,
+    "verifiableCredential": {
+      "type": "SCEPCertificationCredential",
+      "issuer": "did:web:dveracity.com",
+      "subject": "IBDP-Decatur-SCEP-01",
+      "issuanceDate": "2026-09-07T12:00:00Z",
+      "proofType": "Ed25519Signature2020",
+      "proofValue": "sha256:1240d738dce22de593f38c88db4a397c",
+      "credentialStatus": "suspended"
+    },
+    "attestationRef": "attref:1240d738dce22de593f38c88",
+    "issuedBy": "dVeracity Verifier",
+    "issuedAt": "2026-09-07T12:00:00Z",
+    "reason": "SCEP suspended on plume breach; certification no longer valid"
+  },
+  "modifyUser": "aj@dveracity.com",
+  "modifyTime": "2026-09-08T01:38:46.751Z",
+  "id": "osdu:work-product-component--SCEPAttestation:f603ba2df9e64f8083db8d0c01287f16",
+  "version": 1788831526741563,
+  "kind": "ofp:wks:work-product-component--SCEPAttestation:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:38:44.749Z"
+}

@@ -1,0 +1,40 @@
+{
+  "data": {
+    "activityType": "structure_map_interpretation",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "mapId": "IBDP-Decatur-SM-01",
+    "mapType": "depth_structure",
+    "seismicSurveyId": "3D-2010-Decatur",
+    "horizonName": "Top Mount Simon",
+    "depthConversionMethod": "checkshot-calibrated",
+    "spatialResolutionM": 25.0,
+    "interpretationConfidence": 0.9
+  },
+  "id": "osdu:work-product-component--StructureMapRecord:77b53f29edea44ba8fcb2fba5a422c19",
+  "version": 1788831273904871,
+  "kind": "ofp:wks:work-product-component--StructureMapRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:33.907Z"
+}

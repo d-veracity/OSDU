@@ -1,0 +1,38 @@
+{
+  "data": {
+    "activityType": "co2_injection",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "wellId": "CCS1-Decatur-ClassVI",
+    "injectionRateTPA": 333000,
+    "wellheadPressureMPa": 9.6,
+    "bottomholePressureMPa": 31.5,
+    "cumulativeInjectedTonnes": 999000
+  },
+  "id": "osdu:work-product-component--CO2InjectionRecord:fc4b2581632c4aba85a99612f03e4b3e",
+  "version": 1788831274627575,
+  "kind": "ofp:wks:work-product-component--CO2InjectionRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:34.631Z"
+}

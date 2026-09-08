@@ -1,0 +1,38 @@
+{
+  "data": {
+    "activityType": "mmv_event",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "eventType": "reassessment_trigger",
+    "triggeringAssessmentId": "f734c5248a694a319a1895aa5c59206d",
+    "deviationFromBaseline": 336.0,
+    "correctiveActionRequired": true,
+    "scepVersionAffected": "1.0.0"
+  },
+  "id": "osdu:work-product-component--MMVEventRecord:de0edac9b88e4b8cb0b7ee1473c88b9a",
+  "version": 1788831525825446,
+  "kind": "ofp:wks:work-product-component--MMVEventRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:38:45.828Z"
+}

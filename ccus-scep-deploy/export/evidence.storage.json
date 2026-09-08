@@ -1,0 +1,38 @@
+{
+  "data": {
+    "activityType": "co2_storage",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "reservoirId": "MountSimon-SS",
+    "storedMassTonnes": 985000,
+    "leakageRateKgPerYear": 4.0,
+    "plumeExtentKm2": 7.8,
+    "containmentStatus": "stabilized"
+  },
+  "id": "osdu:work-product-component--CO2StorageRecord:bc54627b8b1243af9d8d1065acd324c6",
+  "version": 1788831275346565,
+  "kind": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:35.349Z"
+}

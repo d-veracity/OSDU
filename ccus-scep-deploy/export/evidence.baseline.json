@@ -1,0 +1,41 @@
+{
+  "data": {
+    "activityType": "pre_injection_baseline",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "baselineId": "IBDP-Decatur-BL-01",
+    "reservoirPressureMPa": 21.8,
+    "groundwaterChemistry": "TDS 200k ppm brine",
+    "seismicBaselineSurveyId": "3D-2010-Decatur",
+    "insarBaselineMmPerYear": 1.2,
+    "soilGasBaselinePPM": 410,
+    "ecosystemBaseline": "row-crop agriculture",
+    "surveyCompletionDate": "2011-08-15T00:00:00Z"
+  },
+  "id": "osdu:work-product-component--PreInjectionBaselineRecord:097c00a0fe434587a3791936e5d4ca66",
+  "version": 1788831272832594,
+  "kind": "ofp:wks:work-product-component--PreInjectionBaselineRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:33.007Z"
+}

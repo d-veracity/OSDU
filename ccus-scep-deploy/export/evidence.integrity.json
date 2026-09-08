@@ -1,0 +1,40 @@
+{
+  "data": {
+    "activityType": "containment_integrity",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "caprockSealingEffectiveness": "effective",
+    "faultSealingBehavior": "sealing",
+    "caprockEntryPressureMPa": 12.5,
+    "co2BuoyancyPressureMPa": 3.1,
+    "sealIntegrityIndex": 0.94,
+    "reactivationRiskScore": 0.12,
+    "assessmentConfidence": 0.88
+  },
+  "id": "osdu:work-product-component--ContainmentIntegrityAssessment:784d9d2ae95d4486946784adf640222f",
+  "version": 1788831274259950,
+  "kind": "ofp:wks:work-product-component--ContainmentIntegrityAssessment:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:34.262Z"
+}
