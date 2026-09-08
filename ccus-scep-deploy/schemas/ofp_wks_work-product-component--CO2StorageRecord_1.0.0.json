@@ -1,0 +1,171 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--CO2StorageRecord",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-09-07T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/osdu/ccus/CO2StorageRecord.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0",
+    "x-dve-sysml-source": "sysml/osdu-data-platform/03_types_items.sysml#CO2StorageRecord",
+    "x-dve-domain": "ccus",
+    "title": "CO2StorageRecord",
+    "description": "OSDU CCUS activity record (CO2StorageRecord), grounded on OFPActivityRecord. Generated from the dVeracity SysML v2 model.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "version": {
+        "type": "integer"
+      },
+      "acl": {
+        "type": "object",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "type": "string"
+          },
+          "activityType": {
+            "type": "string"
+          },
+          "reportingPeriodStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reportingPeriodEnd": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dataSource": {
+            "type": "string"
+          },
+          "recordingType": {
+            "type": "string"
+          },
+          "sensitivity": {
+            "type": "string"
+          },
+          "facilityId": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "predecessorVersionId": {
+            "type": "string"
+          },
+          "modelVersion": {
+            "type": "string"
+          },
+          "reservoirId": {
+            "type": "string"
+          },
+          "storedMassTonnes": {
+            "type": "number"
+          },
+          "leakageRateKgPerYear": {
+            "type": "number"
+          },
+          "plumeExtentKm2": {
+            "type": "number"
+          },
+          "containmentStatus": {
+            "type": "string",
+            "enum": [
+              "migrating",
+              "stabilized",
+              "breached"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}
