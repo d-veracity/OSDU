@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Methane MRV Live Console</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root{
+    --bg:#0f1117; --surface:#171a22; --surface-2:#13161d; --surface-3:#1d2130;
+    --ink:#e4e7ee; --strong:#f4f6fa; --muted:#a3aab8; --faint:#6f7686;
+    --line:#252a35; --line-strong:#343a48;
+    --accent:#8b97ff; --accent-ink:#a5aeff; --accent-soft:#1d2140;
+    --pass:#5fa87b; --pass-soft:#152620; --pass-line:#2c4a3a; --warn:#cf9a45; --warn-soft:#282014; --warn-line:#4a3c1f; --fail:#d67b70; --fail-soft:#291613; --fail-line:#4d2a24;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 36px -18px rgba(0,0,0,.7);
+  }
+  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+    --bg:#eef0f3; --surface:#fff; --surface-2:#f5f6f9; --surface-3:#eceef4; --ink:#1c2028; --strong:#0f1218; --muted:#5f6674; --faint:#8f96a3;
+    --line:#dde1e8; --line-strong:#c9cfd9; --accent:#3f4fb8; --accent-ink:#2f3d99; --accent-soft:#e4e7f7;
+    --pass:#2f7d52; --pass-soft:#e3efe7; --pass-line:#9fcbb1; --warn:#976713; --warn-soft:#f3e9d3; --warn-line:#dcc084; --fail:#a8382f; --fail-soft:#f2ded9; --fail-line:#e0a89f;
+    --shadow:0 1px 2px rgba(15,18,24,.05),0 12px 30px -16px rgba(15,18,24,.2);
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:15px;line-height:1.55}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  h1,h2{font-family:"Archivo",sans-serif;color:var(--strong);margin:0;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+  .bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;padding:20px 0;border-bottom:1px solid var(--line);margin-bottom:22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .dot{width:34px;height:34px;border-radius:9px;background:var(--accent-soft);border:1px solid var(--accent);display:grid;place-items:center;font-size:17px}
+  .brand h1{font-size:1.1rem;font-weight:700} .brand .sub{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint)}
+  .spacer{flex:1}
+  .live{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:7px 11px}
+  .live .led{width:8px;height:8px;border-radius:50%;background:var(--pass);animation:pulse 2s infinite} .live.off .led{background:var(--fail);animation:none}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(95,168,123,.5)}70%{box-shadow:0 0 0 7px rgba(95,168,123,0)}100%{box-shadow:0 0 0 0 rgba(95,168,123,0)}}
+  .btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;padding:8px 13px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+  .btn:hover{border-color:var(--accent);color:var(--accent-ink)} .btn.accent{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)} .btn:disabled{opacity:.5;cursor:wait}
+  .statuspill{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;letter-spacing:.07em;padding:8px 13px;border-radius:8px;border:1.5px solid;text-transform:uppercase}
+  .statuspill .led{width:9px;height:9px;border-radius:50%}
+  .st-verified{background:var(--pass-soft);color:var(--pass);border-color:var(--pass-line)} .st-verified .led{background:var(--pass)}
+  .st-restated{background:var(--warn-soft);color:var(--warn);border-color:var(--warn-line)} .st-restated .led{background:var(--warn)}
+  .st-suspended{background:var(--fail-soft);color:var(--fail);border-color:var(--fail-line)} .st-suspended .led{background:var(--fail)}
+  .st-unknown{background:var(--surface-2);color:var(--muted);border-color:var(--line)} .st-unknown .led{background:var(--faint)}
+  .grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .card .kick{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:12px}
+  .card h2{font-size:1.05rem;font-weight:700;margin-bottom:4px} .full{grid-column:1/-1}
+  .kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dotted var(--line);font-size:13px} .kv:last-child{border-bottom:none}
+  .kv .k{color:var(--muted)} .kv .v{font-family:"IBM Plex Mono",monospace;color:var(--strong);text-align:right;word-break:break-word}
+  .hash{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--faint);word-break:break-all;line-height:1.5}
+  .tl{display:flex;gap:5px;margin-top:20px;flex-wrap:wrap}
+  .tl .step{flex:1;min-width:92px;text-align:center;padding:12px 6px;border-radius:9px;border:1px solid var(--line);background:var(--surface-2);position:relative}
+  .tl .step .s{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600} .tl .step .v{font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--faint);margin-top:3px}
+  .tl .step.verified{border-color:var(--pass-line);background:var(--pass-soft)} .tl .step.verified .s{color:var(--pass)}
+  .tl .step.suspended{border-color:var(--fail-line);background:var(--fail-soft)} .tl .step.suspended .s{color:var(--fail)}
+  .tl .step.restated{border-color:var(--warn-line);background:var(--warn-soft)} .tl .step.restated .s{color:var(--warn)}
+  .tl .step.head::after{content:"◀ head";position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--accent-ink)}
+  .checks{display:grid;gap:7px;margin-top:6px}
+  .chk{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface-2)}
+  .chk.live{border-left:3px solid var(--accent)} .chk .name{font-weight:600;font-size:13px;color:var(--strong)} .chk .name small{color:var(--faint);font-weight:500}
+  .badge{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:5px}
+  .badge.p{background:var(--pass-soft);color:var(--pass)} .badge.f{background:var(--fail-soft);color:var(--fail)} .badge.w{background:var(--warn-soft);color:var(--warn)} .badge.n{background:var(--surface-3);color:var(--muted)}
+  .bignum{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.7rem;color:var(--strong);font-variant-numeric:tabular-nums;line-height:1}
+  .ctl{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:14px}
+  .ctl .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px} .ctl .lab{font-size:12px;color:var(--muted)} .ctl .val{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--strong);font-size:1.1rem}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--fail) 0 12%,var(--pass) 12% 22%,var(--fail) 22% 100%);outline:none;margin:6px 0}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);cursor:pointer}
+  .presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px} .preview{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--warn);margin-left:8px}
+  .msg{font-size:12.5px;color:var(--faint);margin-top:8px}
+  .ledger{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:14px}
+  .ev{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:13px 15px;cursor:pointer} .ev:hover{border-color:var(--accent)}
+  .ev .t{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;color:var(--faint);letter-spacing:.05em} .ev .n{font-weight:600;color:var(--strong);font-size:13.5px;margin-top:4px}
+  .ev .i{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--accent-ink);margin-top:6px;word-break:break-all}
+  .ev .body{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)} .ev.open .body{display:block}
+  .ev .f{display:flex;justify-content:space-between;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:11px;padding:2px 0} .ev .f .fk{color:var(--muted)} .ev .f .fv{color:var(--ink);text-align:right;word-break:break-word}
+  .searchbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  select,input[type=text]{font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:8px 11px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink)} input[type=text]{flex:1;min-width:180px}
+  .results{margin-top:14px;display:grid;gap:8px} .res{background:var(--surface-2);border:1px solid var(--line);border-radius:9px;padding:10px 13px;font-family:"IBM Plex Mono",monospace;font-size:11.5px} .res .rid{color:var(--accent-ink);word-break:break-all} .res .rd{color:var(--muted);margin-top:4px}
+  footer{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint)}
+  @media (max-width:820px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <div class="brand"><div class="dot">🔥</div><div><h1>Methane MRV Live Console</h1><div class="sub" id="target">connecting…</div></div></div>
+    <div class="spacer"></div>
+    <div class="live off" id="livepill"><span class="led"></span><span id="livetext">offline</span></div>
+    <div class="statuspill st-unknown" id="statuspill"><span class="led"></span><span id="statustext">—</span></div>
+    <button class="btn" id="refresh">↻ Refresh</button>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="kick">Monitoring Plan · ISO 25624-1 · live from OSDU Storage</div>
+      <h2>Verification state</h2>
+      <div id="plankv" style="margin-top:12px"></div>
+      <div class="tl" id="timeline"></div>
+    </div>
+    <div class="card">
+      <div class="kick">Reconciliation gate · writes to OSDU</div>
+      <h2>Bottom-up vs top-down <span class="preview" id="previewtag" hidden>preview — not applied</span></h2>
+      <div class="ctl">
+        <div class="top"><span class="lab">Top-down site rate (re-survey) → OSDU</span><span class="val"><span id="rateval">—</span> kg/h</span></div>
+        <input type="range" id="rate" min="1" max="200" step="0.5" value="22.7">
+        <div class="presets">
+          <button class="btn" data-v="22.7">Re-verify · 22.7 kg/h</button>
+          <button class="btn" data-v="120">Super-emitter · 120 kg/h</button>
+          <button class="btn accent" id="apply">⤴ Apply to OSDU</button>
+        </div>
+        <div class="msg" id="applymsg"></div>
+      </div>
+      <div class="checks" id="checks"></div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:18px">
+    <div class="card">
+      <div class="kick">Reconciled inventory · live</div>
+      <h2>Best estimate</h2>
+      <div style="margin:12px 0 4px"><span class="bignum" id="bestkg">—</span> <span class="mono" style="color:var(--faint);font-size:.85rem">kg CH₄ / yr</span></div>
+      <div id="reconkv" style="margin-top:12px"></div>
+    </div>
+    <div class="card">
+      <div class="kick">dVeracity attestation · live</div>
+      <h2>Verifiable credential <span id="attbadge" class="badge n" style="margin-left:6px">—</span></h2>
+      <div id="attkv" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <div class="card full" style="margin-top:18px">
+    <div class="kick">Live OSDU search · POST /api/search/v2/query</div>
+    <h2>Query the platform</h2>
+    <div class="searchbar"><select id="kind"></select><input type="text" id="query" placeholder='optional Lucene, e.g. data.alertType:"superEmitter"'><button class="btn" id="run">Search</button></div>
+    <div class="results" id="results"></div><div class="msg" id="searchmsg"></div>
+  </div>
+
+  <div class="card full" style="margin-top:18px">
+    <div class="kick">Methane evidence · live GET · click to expand</div>
+    <h2>Evidence ledger</h2>
+    <div class="ledger" id="ledger"></div>
+  </div>
+  <footer id="footer">Methane MRV Live Console — talking to the real OSDU platform via a local proxy.</footer>
+</div>
+
+<script>
+const KINDS=["MethaneMonitoringPlan","ReconciliationResult","EmissionQuantification","MethaneSourceInventory","MethaneDetectionEvent","MethaneAlertEvent","OGMPReport","LDARSurveyRecord","MethaneAttestation","OFPAdjustmentRecord"];
+const K=n=>`ofp:wks:work-product-component--${n}:1.0.0`; const el=id=>document.getElementById(id); const HOURS=8760;
+const fmt=n=>(n==null?'—':Number(n).toLocaleString('en-US'));
+let ST=null;
+function setLive(ok,b,p){el('livepill').className='live'+(ok?'':' off');el('livetext').textContent=ok?'live':'offline';el('target').textContent=ok?`${b} · [${p}]`:'backend unreachable';}
+function statusPill(s){const p=el('statuspill');const k=['verified','restated','suspended'].includes(s)?s:'unknown';p.className='statuspill st-'+k;el('statustext').textContent=s||'—';}
+function kv(k,v){return `<div class="kv"><span class="k">${k}</span><span class="v">${v}</span></div>`;}
+
+function constraintsFor(rate){
+  const bu=ST&&ST.bottomUpKg?ST.bottomUpKg/HOURS:null; const lim=(ST&&ST.plan&&ST.plan.divergenceLimit)||20;
+  const div=(bu!=null&&rate!=null)?Math.abs(bu-rate)/rate*100:null;
+  return [
+    ["SiteLevelReconciliation","ISO 11 · live", div==null?null:div<=lim, div==null?'':`|BU−TD|/TD ${div.toFixed(1)}% ${div<=lim?'≤':'>'} ${lim}%`, true],
+    ["GoldStandardCoverage","OGMP 2.0", true, "97.8% ≥ 95%", false],
+    ["MaterialityRigor","ISO 8", true, "material sources at L4+", false],
+    ["MethaneLeakDetectionThreshold","LoQ", rate==null?null:rate>=0.5, "", false],
+    ["EmissionRateAccuracy","ISO 9", true, "flare 3.3% ≤ 10%", false],
+    ["ReportingFrequency","EU 2024/1787", true, "4 LDAR / yr", false],
+  ];
+}
+function renderChecks(rate,preview){
+  el('checks').innerHTML=constraintsFor(rate).map(c=>{const ok=c[2];const cls=ok===true?'p':ok===false?'f':'n';const lab=ok===true?'PASS':ok===false?'FAIL':'—';
+    return `<div class="chk ${c[4]?'live':''}"><span class="name">${c[0]} ${c[1]?`<small>· ${c[1]}</small>`:''} ${c[3]?`<small>· ${c[3]}</small>`:''}</span><span class="badge ${cls}">${lab}</span></div>`;}).join('');
+  el('previewtag').hidden=!preview;
+}
+
+async function load(){
+  let st; try{const r=await fetch('/api/state');st=await r.json();if(st.error)throw new Error(st.error);}catch(e){setLive(false);el('footer').textContent='Backend error: '+e.message;return;}
+  ST=st; setLive(true,st.base,st.partition);
+  const p=st.plan||{}; statusPill(p.status);
+  el('plankv').innerHTML=kv('Plan',(p.id||'').split(':').pop().slice(0,16)+'…')+kv('Status',p.status||'—')+kv('Trigger',p.trigger||'—')+
+    kv('Gate',`div ≤ ${p.divergenceLimit}% · cov ≥ ${p.coverageTarget}% · mat ${p.materiality}% · k=${p.k}`)+kv('Plan hash',p.hash?p.hash.slice(0,28)+'…':'—');
+  const tl=st.timeline||[]; el('timeline').innerHTML=tl.map((t,i)=>`<div class="step ${t.status||''} ${i===tl.length-1?'head':''}"><div class="s">${t.status||'?'}</div><div class="v">${t.trigger||''}</div></div>`).join('')||'<div class="msg">no history</div>';
+  // reconciliation
+  const rd=(st.reconciliation||{}).data||{}; el('bestkg').textContent=fmt(rd.reconciledTotalKg);
+  el('reconkv').innerHTML=kv('Bottom-up',fmt(rd.bottomUpTotalKg)+' kg')+kv('Top-down',fmt(rd.topDownTotalKg)+' kg')+kv('Divergence',rd.divergencePercent!=null?rd.divergencePercent+'%':'—')+kv('Verdict',rd.reconciliationVerdict||'—')+
+    kv('OGMP report',((st.ogmp||{}).data||{}).goldStandardCompliant?'Gold Standard ✓':'—');
+  // attestation
+  const ad=(st.attestation||{}).data||{}; const as=ad.attestationStatus||'—'; const ab=el('attbadge'); ab.textContent=as.toUpperCase();
+  ab.className='badge '+(as==='issued'||as==='reissued'?'p':as==='suspended'||as==='revoked'?'f':'n');
+  el('attkv').innerHTML=kv('Issuer',ad.verifiableCredential?.issuer||'—')+kv('Proof',ad.verifiableCredential?.proofType||'—')+kv('Expanded uncertainty',ad.expandedUncertaintyPercent!=null?`U = ${ad.expandedUncertaintyPercent}% (k=${ad.coverageFactorK})`:'—')+
+    `<div class="kv"><span class="k">Bound to</span></div><div class="hash">${ad.planHash||'—'}</div>`;
+  // slider baseline = current bottom-up instantaneous
+  const bu=st.bottomUpKg?st.bottomUpKg/HOURS:null; const last=(rd.topDownTotalKg?rd.topDownTotalKg/HOURS:bu);
+  if(last!=null){el('rate').value=Math.min(200,Math.max(1,last)).toFixed(1);el('rateval').textContent=(+el('rate').value).toFixed(1);}
+  renderChecks(last,false);
+  el('ledger').innerHTML=(st.evidence||[]).map(e=>`<div class="ev"><div class="t">${e.kind||''}</div><div class="n">${e.label}</div><div class="i">${(e.id||'').split(':').pop().slice(0,16)}…</div>
+    <div class="body">${Object.entries(e.data||{}).filter(([k])=>!['dataSource','recordingType','sensitivity','reportingPeriodStart','reportingPeriodEnd','activityType','facilityId'].includes(k)).map(([k,v])=>`<div class="f"><span class="fk">${k}</span><span class="fv">${typeof v==='object'?JSON.stringify(v):v}</span></div>`).join('')}</div></div>`).join('');
+}
+el('kind').innerHTML=KINDS.map(k=>`<option value="${k}">${k}</option>`).join('');
+el('run').addEventListener('click',async()=>{el('searchmsg').textContent='searching…';el('results').innerHTML='';
+  try{const r=await fetch('/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind:K(el('kind').value),query:el('query').value||undefined,limit:10})});const j=await r.json();
+    el('searchmsg').textContent=`totalCount: ${j.totalCount??0}`;el('results').innerHTML=(j.results||[]).map(x=>`<div class="res"><div class="rid">${x.id}</div><div class="rd">${Object.entries(x.data||{}).slice(0,4).map(([k,v])=>`${k}=${typeof v==='object'?JSON.stringify(v):v}`).join(' · ')}</div></div>`).join('')||'<div class="msg">no results (index is async)</div>';}
+  catch(e){el('searchmsg').textContent='error: '+e.message;}});
+el('ledger').addEventListener('click',e=>{const c=e.target.closest('.ev');if(c)c.classList.toggle('open');});
+el('refresh').addEventListener('click',load);
+const slider=el('rate'); slider.addEventListener('input',()=>{const v=parseFloat(slider.value);el('rateval').textContent=v.toFixed(1);renderChecks(v,true);});
+async function applyRate(v){el('apply').disabled=true;el('applymsg').textContent='writing to OSDU…';
+  try{const r=await fetch('/api/methane/set-topdown',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({rate:v})});const j=await r.json();if(j.error)throw new Error(j.error);
+    el('applymsg').textContent='✓ '+j.log.join(' · ');await load();}catch(e){el('applymsg').textContent='error: '+e.message;} el('apply').disabled=false;}
+el('apply').addEventListener('click',()=>applyRate(parseFloat(slider.value)));
+document.querySelectorAll('.presets .btn[data-v]').forEach(b=>b.addEventListener('click',()=>{slider.value=b.dataset.v;el('rateval').textContent=(+b.dataset.v).toFixed(1);applyRate(parseFloat(b.dataset.v));}));
+load();
+</script>
+</body>
+</html>
