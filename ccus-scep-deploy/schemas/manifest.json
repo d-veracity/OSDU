@@ -1,0 +1,108 @@
+{
+  "ccus": [
+    {
+      "id": "ofp:wks:work-product-component--CO2CaptureRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--CO2CaptureRecord_1.0.0.json",
+      "record": "CO2CaptureRecord",
+      "dataProps": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--CO2TransportRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--CO2TransportRecord_1.0.0.json",
+      "record": "CO2TransportRecord",
+      "dataProps": 17
+    },
+    {
+      "id": "ofp:wks:work-product-component--CO2InjectionRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--CO2InjectionRecord_1.0.0.json",
+      "record": "CO2InjectionRecord",
+      "dataProps": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--CO2StorageRecord_1.0.0.json",
+      "record": "CO2StorageRecord",
+      "dataProps": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--ContainmentAssessment:1.0.0",
+      "file": "ofp_wks_work-product-component--ContainmentAssessment_1.0.0.json",
+      "record": "ContainmentAssessment",
+      "dataProps": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0",
+      "file": "ofp_wks_work-product-component--CO2PlumeObservation_1.0.0.json",
+      "record": "CO2PlumeObservation",
+      "dataProps": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--SiteClosureRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--SiteClosureRecord_1.0.0.json",
+      "record": "SiteClosureRecord",
+      "dataProps": 15
+    }
+  ],
+  "scep": [
+    {
+      "id": "ofp:wks:work-product-component--StructureMapRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--StructureMapRecord_1.0.0.json",
+      "record": "StructureMapRecord",
+      "dataProps": 18
+    },
+    {
+      "id": "ofp:wks:work-product-component--ContainmentIntegrityAssessment:1.0.0",
+      "file": "ofp_wks_work-product-component--ContainmentIntegrityAssessment_1.0.0.json",
+      "record": "ContainmentIntegrityAssessment",
+      "dataProps": 18
+    },
+    {
+      "id": "ofp:wks:work-product-component--ActivityLineageRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--ActivityLineageRecord_1.0.0.json",
+      "record": "ActivityLineageRecord",
+      "dataProps": 17
+    },
+    {
+      "id": "ofp:wks:work-product-component--InterpretationActivity:1.0.0",
+      "file": "ofp_wks_work-product-component--InterpretationActivity_1.0.0.json",
+      "record": "InterpretationActivity",
+      "dataProps": 17
+    },
+    {
+      "id": "ofp:wks:work-product-component--CO2MassBalanceRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--CO2MassBalanceRecord_1.0.0.json",
+      "record": "CO2MassBalanceRecord",
+      "dataProps": 21
+    },
+    {
+      "id": "ofp:wks:work-product-component--MMVEventRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--MMVEventRecord_1.0.0.json",
+      "record": "MMVEventRecord",
+      "dataProps": 16
+    },
+    {
+      "id": "ofp:wks:work-product-component--PreInjectionBaselineRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--PreInjectionBaselineRecord_1.0.0.json",
+      "record": "PreInjectionBaselineRecord",
+      "dataProps": 19
+    },
+    {
+      "id": "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--OFPAdjustmentRecord_1.0.0.json",
+      "record": "OFPAdjustmentRecord",
+      "dataProps": 18
+    },
+    {
+      "id": "ofp:wks:work-product-component--CarbonClaimAdjustmentRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--CarbonClaimAdjustmentRecord_1.0.0.json",
+      "record": "CarbonClaimAdjustmentRecord",
+      "dataProps": 19
+    },
+    {
+      "id": "ofp:wks:work-product-component--SCEPVersionSnapshot:1.0.0",
+      "file": "ofp_wks_work-product-component--SCEPVersionSnapshot_1.0.0.json",
+      "record": "SCEPVersionSnapshot",
+      "dataProps": 18
+    }
+  ]
+}

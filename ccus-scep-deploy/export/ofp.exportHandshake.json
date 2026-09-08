@@ -1,0 +1,40 @@
+{
+  "data": {
+    "activityType": "ofp_adjustment",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "ofpActivityReferenceId": "IBDP-Decatur-OFP-REMOVAL-01",
+    "adjustmentType": "carbon_removal_reversal",
+    "adjustmentReason": "SCEP suspended on AoR breach; stored-CO2 claim reduced 985kt -> 950kt",
+    "originalValue": 985000.0,
+    "adjustedValue": 950000.0,
+    "adjustmentConfidence": 0.9,
+    "reconciledBy": "dVeracity bridge"
+  },
+  "id": "osdu:work-product-component--OFPAdjustmentRecord:c3329a54c3604711a8e2a76ab1c33008",
+  "version": 1788831793048224,
+  "kind": "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:43:13.067Z"
+}

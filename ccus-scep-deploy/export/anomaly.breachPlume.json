@@ -1,0 +1,38 @@
+{
+  "data": {
+    "activityType": "plume_observation",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "observationMethod": "seismic",
+    "lateralExtentKm2": 34.0,
+    "migrationRateMPerYear": 640.0,
+    "depthM": 2130.0,
+    "modelComparisonScore": 0.41
+  },
+  "id": "osdu:work-product-component--CO2PlumeObservation:f734c5248a694a319a1895aa5c59206d",
+  "version": 1788831525109552,
+  "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:38:45.112Z"
+}

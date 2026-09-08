@@ -1,0 +1,41 @@
+{
+  "data": {
+    "activityType": "carbon_claim_adjustment",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "claimId": "IBDP-Decatur-CLAIM-01",
+    "originalClaimTonnes": 985000,
+    "adjustedClaimTonnes": 950000,
+    "claimStatus": "adjusted",
+    "adjustmentReason": "AoR exceedance / containment breach \u2014 plume 34 km\u00b2 > 30 km\u00b2 permitted",
+    "leakageEvidenceId": "f734c5248a694a319a1895aa5c59206d",
+    "scepVersionAffected": "1.0.1",
+    "registryEntryId": "IBDP-Decatur-REG-01"
+  },
+  "id": "osdu:work-product-component--CarbonClaimAdjustmentRecord:861399cef6e94e89ad661e1a56a0e302",
+  "version": 1788831526457327,
+  "kind": "ofp:wks:work-product-component--CarbonClaimAdjustmentRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:38:46.460Z"
+}

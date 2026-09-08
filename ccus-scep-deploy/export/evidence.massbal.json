@@ -1,0 +1,43 @@
+{
+  "data": {
+    "activityType": "co2_mass_balance",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "injectedMassTonnes": 999000,
+    "storedMassTonnes": 985000,
+    "leakedMassTonnes": 0.004,
+    "dissolvedMassTonnes": 11200,
+    "mineralizedMassTonnes": 2799.996,
+    "surfaceDensityKgPerM3": 1.98,
+    "reservoirDensityKgPerM3": 700.0,
+    "reservoirVolumeM3": 1410000.0,
+    "allocationMethod": "mass",
+    "balanceUncertaintyPercent": 2.0
+  },
+  "id": "osdu:work-product-component--CO2MassBalanceRecord:3e09d0d398404032ab404a5be38b92c7",
+  "version": 1788831275709608,
+  "kind": "ofp:wks:work-product-component--CO2MassBalanceRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:35.713Z"
+}

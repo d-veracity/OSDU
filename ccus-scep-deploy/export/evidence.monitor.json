@@ -1,0 +1,38 @@
+{
+  "data": {
+    "activityType": "containment_assessment",
+    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "reportingPeriodStart": "2011-11-01T00:00:00Z",
+    "reportingPeriodEnd": "2014-11-30T23:59:59Z",
+    "facilityId": "CCS1-Decatur-ClassVI",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "assessmentType": "pressure",
+    "baselineValue": 21.8,
+    "measuredValue": 31.5,
+    "deviationPercent": 44.5,
+    "verdict": "pass"
+  },
+  "id": "osdu:work-product-component--ContainmentAssessment:4533db8b9cf7435f9b62babde4155368",
+  "version": 1788831276092682,
+  "kind": "ofp:wks:work-product-component--ContainmentAssessment:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T01:34:36.095Z"
+}
