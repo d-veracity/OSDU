@@ -79,6 +79,17 @@
   .badge{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:5px}
   .badge.p{background:var(--pass-soft);color:var(--pass)} .badge.f{background:var(--fail-soft);color:var(--fail)} .badge.n{background:var(--surface-3);color:var(--muted)}
   .claimnum{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.8rem;color:var(--strong);font-variant-numeric:tabular-nums;line-height:1}
+  .ctl{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:14px}
+  .ctl .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .ctl .lab{font-size:12px;color:var(--muted)} .ctl .val{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--strong);font-size:1.1rem}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:3px;
+    background:linear-gradient(90deg,var(--pass) 0 75%,var(--fail) 75% 100%);outline:none;margin:6px 0}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);cursor:pointer}
+  .presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .btn.accent{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+  .btn:disabled{opacity:.5;cursor:wait}
+  .preview{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--warn);margin-left:8px}
 
   .ledger{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:14px}
   .ev{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:13px 15px;cursor:pointer}
@@ -124,8 +135,18 @@
     </div>
     <div style="display:grid;gap:18px">
       <div class="card">
-        <div class="kick">EPA UIC Class VI · current records</div>
-        <h2>Certification gate</h2>
+        <div class="kick">EPA UIC Class VI · writes to OSDU</div>
+        <h2>Certification gate <span class="preview" id="previewtag" hidden>preview — not applied</span></h2>
+        <div class="ctl">
+          <div class="top"><span class="lab">Monitored plume extent → OSDU</span><span class="val"><span id="plumeval">—</span> km²</span></div>
+          <input type="range" id="plume" min="0" max="40" step="0.1" value="7.8">
+          <div class="presets">
+            <button class="btn" data-v="7.8">Re-certify · 7.8 km²</button>
+            <button class="btn" data-v="34">Trigger breach · 34 km²</button>
+            <button class="btn accent" id="apply">⤴ Apply to OSDU</button>
+          </div>
+          <div class="msg" id="applymsg"></div>
+        </div>
         <div class="checks" id="checks"></div>
       </div>
     </div>
@@ -185,20 +206,29 @@ function statusPill(s){
   el('statustext').textContent = s || '—';
 }
 
-// Class VI gate computed from the CURRENT plume record on OSDU
-const AOR=30, FRAC90=34.2;
-function gate(ev){
-  const plume = ev.filter(e=>e.kind==='CO2PlumeObservation').map(e=>e.data?.lateralExtentKm2).filter(x=>x!=null);
-  const cur = plume.length ? Math.max(...plume) : null; // latest/worst monitored extent
+// Class VI gate — PlumeMigrationBoundary is the reactive one; others fixed from the record set
+const AOR=30;
+function constraintsFor(ext){
   return [
     ["InjectionPressureLimit","Class VI", true],
-    ["PlumeMigrationBoundary","Class VI · AoR", cur==null?null:(cur<=AOR), cur==null?'':`${cur} km² ≤ ${AOR}`],
+    ["PlumeMigrationBoundary","Class VI · AoR", ext==null?null:(ext<=AOR), ext==null?'':`${(+ext).toFixed(1)} km² ${ext<=AOR?'≤':'>'} ${AOR}`],
     ["WellIntegrityThreshold","Class VI", true],
     ["CO2StoragePermanence","ISO 27914", true],
     ["MassBalanceConservation","", true],
     ["SealIntegrityConstraint","", true],
     ["CarbonClaimReconciliation","", true],
   ];
+}
+function renderChecks(ext, preview){
+  el('checks').innerHTML = constraintsFor(ext).map(c=>{
+    const ok=c[2]; const cls=ok===true?'p':ok===false?'f':'n'; const lab=ok===true?'PASS':ok===false?'FAIL':'—';
+    return `<div class="chk"><span class="name">${c[0]} ${c[1]?`<small>· ${c[1]}</small>`:''} ${c[3]?`<small>· ${c[3]}</small>`:''}</span><span class="badge ${cls}">${lab}</span></div>`;
+  }).join('');
+  el('previewtag').hidden = !preview;
+}
+function currentExtent(ev){
+  const st=(ev||[]).find(e=>e.kind==='CO2StorageRecord');
+  return st&&st.data&&st.data.plumeExtentKm2!=null ? st.data.plumeExtentKm2 : null;
 }
 
 async function load(){
@@ -222,11 +252,10 @@ async function load(){
       <div class="s">${t.status||'?'}</div><div class="v">${t.trigger||''}</div></div>`).join('')
     || '<div class="msg">no version history</div>';
 
-  // gate
-  el('checks').innerHTML = gate(st.evidence||[]).map(c=>{
-    const ok=c[2]; const cls=ok===true?'p':ok===false?'f':'n'; const lab=ok===true?'PASS':ok===false?'FAIL':'—';
-    return `<div class="chk"><span class="name">${c[0]} ${c[1]?`<small>· ${c[1]}</small>`:''} ${c[3]?`<small>· ${c[3]}</small>`:''}</span><span class="badge ${cls}">${lab}</span></div>`;
-  }).join('');
+  // gate — from the current OSDU storage record; sync the slider to it
+  const ext = currentExtent(st.evidence);
+  if(ext!=null){ el('plume').value=ext; el('plumeval').textContent=(+ext).toFixed(1); }
+  renderChecks(ext, false);
 
   // claim
   const cd = (st.claim||{}).data||{};
@@ -270,6 +299,24 @@ el('run').addEventListener('click', async ()=>{
 });
 document.getElementById('ledger').addEventListener('click',e=>{const c=e.target.closest('.ev'); if(c) c.classList.toggle('open');});
 el('refresh').addEventListener('click', load);
+
+// plume slider — client-side preview, then WRITE to OSDU on Apply
+const slider=el('plume');
+slider.addEventListener('input',()=>{ const v=parseFloat(slider.value); el('plumeval').textContent=v.toFixed(1); renderChecks(v,true); });
+async function applyPlume(v){
+  el('apply').disabled=true; el('applymsg').textContent='writing to OSDU…';
+  try{
+    const r=await fetch('/api/scep/set-plume',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({extent:v})});
+    const j=await r.json(); if(j.error) throw new Error(j.error);
+    el('applymsg').textContent = '✓ '+(j.transitioned? j.log.join(' · ') : (j.log&&j.log[0])||'applied');
+    await load();
+  }catch(e){ el('applymsg').textContent='error: '+e.message; }
+  el('apply').disabled=false;
+}
+el('apply').addEventListener('click',()=>applyPlume(parseFloat(slider.value)));
+document.querySelectorAll('.presets .btn[data-v]').forEach(b=>b.addEventListener('click',()=>{
+  slider.value=b.dataset.v; el('plumeval').textContent=(+b.dataset.v).toFixed(1); applyPlume(parseFloat(b.dataset.v));
+}));
 load();
 </script>
 </body>
