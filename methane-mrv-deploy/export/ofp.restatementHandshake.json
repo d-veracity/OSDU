@@ -1,0 +1,40 @@
+{
+  "data": {
+    "activityType": "ofp_adjustment",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "ofpActivityReferenceId": "MRV-01-OFP-CH4-2025",
+    "adjustmentType": "methane_inventory_restatement",
+    "adjustmentReason": "ISO 25624-1 12.3 restatement: unlit-flare episode annualized (+42,336 kg CH4, 27.1% > 5% materiality)",
+    "originalValue": 4376.4,
+    "adjustedValue": 5561.8,
+    "adjustmentConfidence": 0.9,
+    "reconciledBy": "dVeracity bridge"
+  },
+  "id": "osdu:work-product-component--OFPAdjustmentRecord:018a029677534ab1af950e1a809c3b88",
+  "version": 1788896893989003,
+  "kind": "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:48:14.008Z"
+}

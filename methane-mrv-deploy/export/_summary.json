@@ -1,0 +1,169 @@
+{
+  "site": "MRV-01",
+  "year": 2025,
+  "records": {
+    "inventory.0": {
+      "id": "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+      "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "version": 1788895646469832
+    },
+    "inventory.1": {
+      "id": "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+      "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "version": 1788895647301864
+    },
+    "inventory.2": {
+      "id": "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+      "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "version": 1788895647639437
+    },
+    "inventory.3": {
+      "id": "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+      "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "version": 1788895647984474
+    },
+    "inventory.4": {
+      "id": "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+      "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "version": 1788895648330467
+    },
+    "site.0": {
+      "id": "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+      "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+      "version": 1788895651937239
+    },
+    "site.1": {
+      "id": "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+      "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+      "version": 1788895652213193
+    },
+    "refdata.0": {
+      "id": "osdu:reference-data--MethaneSourceCategory:d7d4340de2f5450d82eeba47e5a9a46b",
+      "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+      "version": 1788895650376894
+    },
+    "refdata.1": {
+      "id": "osdu:reference-data--MethaneSourceCategory:798261ebc8f34de79302f63a76a286bb",
+      "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+      "version": 1788895650720171
+    },
+    "refdata.2": {
+      "id": "osdu:reference-data--MethaneSourceCategory:7b547ea51c144d6b83f7f62d6834dddd",
+      "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+      "version": 1788895651050301
+    },
+    "refdata.3": {
+      "id": "osdu:reference-data--MethaneSourceCategory:faec2ca22d224681a8a31ba12ff1e836",
+      "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+      "version": 1788895651384563
+    },
+    "refdata.4": {
+      "id": "osdu:reference-data--MethaneSourceCategory:a4138cbed0bf40f0ab4e7b11fb3213a5",
+      "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+      "version": 1788895651666986
+    },
+    "plan": {
+      "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+      "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+      "version": 1788896590424593
+    },
+    "reconciliation.v1": {
+      "id": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+      "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+      "version": 1788895652807700
+    },
+    "ogmp.v1": {
+      "id": "osdu:work-product-component--OGMPReport:fea2645aad5d4a3b8fb08a42aaa9acfc",
+      "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+      "version": 1788895653085267
+    },
+    "attestation": {
+      "id": "osdu:work-product-component--MethaneAttestation:58a521308e994120a426a22b714c7595",
+      "kind": "ofp:wks:work-product-component--MethaneAttestation:1.0.0",
+      "version": 1788896590698077
+    },
+    "anomaly.alert": {
+      "id": "osdu:work-product-component--MethaneAlertEvent:0657a24bed8546e59bb37ab8b3e2b89c",
+      "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+      "version": 1788896587003716
+    },
+    "anomaly.resurvey": {
+      "id": "osdu:work-product-component--MethaneDetectionEvent:8a9772f3d33444ac9e1e8c5bdc0134e3",
+      "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+      "version": 1788896587346448
+    },
+    "anomaly.topdown": {
+      "id": "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9",
+      "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+      "version": 1788896587686978
+    },
+    "restate.unlitInventory": {
+      "id": "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7",
+      "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "version": 1788896588728639
+    },
+    "restate.unlitQuant": {
+      "id": "osdu:work-product-component--EmissionQuantification:1372b6baba794e9f8063a3ff2495b7b6",
+      "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+      "version": 1788896589007225
+    },
+    "reconciliation.v2": {
+      "id": "osdu:work-product-component--ReconciliationResult:9c53dc3d841e44ed9e1ac6ba815ed113",
+      "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+      "version": 1788896589710146
+    },
+    "ogmp.v2": {
+      "id": "osdu:work-product-component--OGMPReport:2ec71f4f231f40efa566926bbf3b78de",
+      "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+      "version": 1788896590055693
+    },
+    "ofp.restatementHandshake": {
+      "id": "osdu:work-product-component--OFPAdjustmentRecord:018a029677534ab1af950e1a809c3b88",
+      "kind": "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0",
+      "version": 1788896893989003
+    }
+  },
+  "metrics": {
+    "bottom_up": 156300.0,
+    "top_down": 170820.0,
+    "divergence": 8.500175623463296,
+    "coverage": 97.19769673704415,
+    "U_expanded_pct": 24.0
+  },
+  "restated": {
+    "bottomUp": 198636.0,
+    "topDown": 213156.0,
+    "divergencePct": 6.811912402184316,
+    "restatementPct": 27.08637236084453,
+    "instantDivergencePct": 97.06296860025931
+  },
+  "gate": [
+    [
+      "SiteLevelReconciliation (ISO 11)",
+      true
+    ],
+    [
+      "GoldStandardCoverage (OGMP 2.0)",
+      true
+    ],
+    [
+      "MaterialityRigor (ISO 8, F.25)",
+      true
+    ],
+    [
+      "MethaneLeakDetectionThreshold",
+      true
+    ],
+    [
+      "EmissionRateAccuracy (ISO 9)",
+      true
+    ],
+    [
+      "ReportingFrequency (EU 2024/1787)",
+      true
+    ]
+  ],
+  "counts": {
+    "total": 24
+  }
+}
