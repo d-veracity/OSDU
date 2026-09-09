@@ -1,0 +1,181 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--EmissionFactor",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--EmissionFactor:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:56:20.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--EmissionFactor:4.0.0",
+  "description": "A factor that is used to calculate emissions for a certain Emission Activity Type.\n\nCan define the parameter type (Physical Quantity) used in the calculation of an emissions.\n\nDifferent factors may be used for the same activity depending on available data, the Emission\nDisclosure Framework, as well as the location (Geopolitical Entity) or market-based methods used.\n\nExample: The Carbon Intensity of the Emission Inventory Category: Grid Power Supply. The actual Carbon Intensity at a moment in time might be derived from the fraction of supply of all providers on a grid (coal-fired power plants, gas-fired power plants, solar and wind power supply, etc.). If the actual Carbon Intensity of Grid Power Supply is not known, a yearly average intensity (given at country level) can be used.",
+  "additionalProperties": false,
+  "title": "Emission Factor",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "Point in time until this Emission Factor is considered valid.",
+      "type": "string"
+     },
+     "emission_factor_id": {
+      "description": "The Primary Key of the Emission Factor.",
+      "type": "string"
+     },
+     "unit_of_measure_id": {
+      "description": "The Foreign Key of the Unit Of Measure assigned to this attribute.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "Point in time from which this Emission Factor is valid.",
+      "type": "string"
+     },
+     "physical_quantity_type_id": {
+      "description": "Optional part of a composite Foreign Key of the parent Unit Of Measure.\nIdentifies the Physical Quantity Type of the Emission Factor; e.g., density (mass per volume) or equivalent GWP of a gas (mass per mass).",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Emission Factor.",
+      "type": "string"
+     },
+     "geopolitical_contexts": {
+      "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility to which this Factor is assigned.",
+      "type": "string"
+     },
+     "emission_factor_type_id": {
+      "description": "The Foreign Key of the type of Emission Factor; e.g., market or location- based, and optional part of a composite Foreign Key of the Factor.",
+      "type": "string"
+     },
+     "emission_factor_source_id": {
+      "description": "The Foreign Key of the official documented source for the Emission Factor.",
+      "type": "string"
+     },
+     "emission_activity_type_id": {
+      "description": "Foreign Key of the Emission Activity Type and part of an optional composite key of the Emission Factor.",
+      "type": "string"
+     },
+     "emission_parameter_type_id": {
+      "description": "DEPRECATED, to be replaced by Physical Quantity Type Id identified by the parent Unit Of Measure Id. The foreign key of a reference parameter type assigned to the emission factor.",
+      "type": "string"
+     },
+     "equipment_id": {
+      "description": "The Foreign Key of the piece of Equipment to which this factor is assigned.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_factor_id",
+     "name",
+     "unit_of_measure_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--EmissionFactor.4.0.0.json"
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--Facility",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--Facility:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:56:19.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--Facility:3.0.0",
+  "description": "A Facility is a designated logical entity representing a specific business function or service capability.\nWhile often associated with physical sites, the Facility definition itself represents the functional\nrequirement, independent of the specific Equipment and Materials installed. This distinction allows\nthe Facility\u2019s function to endure even as physical Equipment is maintained, upgraded, or replaced over\ntime.",
+  "additionalProperties": false,
+  "title": "Facility",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "organization_id": {
+      "description": "The Foreign Key of the Organization that currently controls this Facility.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Facility.",
+      "type": "string"
+     },
+     "geopolitical_contexts": {
+      "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "facility_id": {
+      "description": "The Primary Key of the Facility.",
+      "type": "string"
+     },
+     "description": {
+      "description": "A long-form description of the Facility and its various functions and capabilities.",
+      "type": "string"
+     },
+     "organizational_boundary_id": {
+      "description": "The Foreign Key of the Organizational Boundary that defines the ownership structure of the Facility.",
+      "type": "string"
+     },
+     "facility_type_id": {
+      "description": "Foreign Key of the type used to classify the Facility.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "organizational_boundary_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--Facility.3.0.0.json"
+ }
+}

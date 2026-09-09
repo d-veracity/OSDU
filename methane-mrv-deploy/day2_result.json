@@ -1,0 +1,58 @@
+{
+  "planId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+  "reconciliationId": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+  "ogmpReportId": "osdu:work-product-component--OGMPReport:fea2645aad5d4a3b8fb08a42aaa9acfc",
+  "evidenceIds": {
+    "inventory": [
+      "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+      "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+      "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+      "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+      "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987"
+    ],
+    "site": [
+      "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+      "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b"
+    ],
+    "refdata": [
+      "osdu:reference-data--MethaneSourceCategory:d7d4340de2f5450d82eeba47e5a9a46b",
+      "osdu:reference-data--MethaneSourceCategory:798261ebc8f34de79302f63a76a286bb",
+      "osdu:reference-data--MethaneSourceCategory:7b547ea51c144d6b83f7f62d6834dddd",
+      "osdu:reference-data--MethaneSourceCategory:faec2ca22d224681a8a31ba12ff1e836",
+      "osdu:reference-data--MethaneSourceCategory:a4138cbed0bf40f0ab4e7b11fb3213a5"
+    ]
+  },
+  "metrics": {
+    "bottom_up": 156300.0,
+    "top_down": 170820.0,
+    "divergence": 8.500175623463296,
+    "coverage": 97.19769673704415,
+    "U_expanded_pct": 24.0
+  },
+  "gate": [
+    [
+      "SiteLevelReconciliation (ISO 11)",
+      true
+    ],
+    [
+      "GoldStandardCoverage (OGMP 2.0)",
+      true
+    ],
+    [
+      "MaterialityRigor (ISO 8, F.25)",
+      true
+    ],
+    [
+      "MethaneLeakDetectionThreshold",
+      true
+    ],
+    [
+      "EmissionRateAccuracy (ISO 9)",
+      true
+    ],
+    [
+      "ReportingFrequency (EU 2024/1787)",
+      true
+    ]
+  ]
+}

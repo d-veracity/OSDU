@@ -1,0 +1,36 @@
+{
+ "data": {
+  "name": "SRC-FUG leaking connectors (generic)",
+  "emission_activity_type_id": "osdu:reference-data--EmissionActivityType:mrv01-type-src-fug",
+  "emission_activity_category_id": "osdu:reference-data--EmissionActivityCategory:mrv01-fugitive",
+  "emission_component_id": "osdu:reference-data--EmissionComponent:mrv01-ch4",
+  "emission_scope_type_id": "osdu:reference-data--EmissionScopeType:mrv01-scope1",
+  "organizational_boundary_id": "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025",
+  "emission_inventory_id": "osdu:master-data--EmissionInventory:mrv01-ch4-2025",
+  "description": "Methane source SRC-FUG; grounds osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:master-data--EmissionActivity:mrv01-act-src-fug",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

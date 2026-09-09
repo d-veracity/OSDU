@@ -1,0 +1,2694 @@
+{
+ "exportedAt": "2026-09-09T00:13:27Z",
+ "platform": {
+  "base": "https://172.171.6.4.nip.io",
+  "partition": "osdu"
+ },
+ "proof": "claim #3 \u2014 Methane MRV (ISO 25624-1) + OFP data-domain grounding",
+ "counts": {
+  "schemas": 158,
+  "records": 342,
+  "versionedRecords": 240,
+  "versionBodies": 515,
+  "foreignRecordsOnPlatform": 39
+ },
+ "recordsPerKind": {
+  "ofp:wks:master-data--ComplianceRequirement:4.0.0": 2,
+  "ofp:wks:master-data--ContactPerson:3.0.0": 1,
+  "ofp:wks:master-data--EmissionActivity:4.0.0": 6,
+  "ofp:wks:master-data--EmissionActivityParameter:4.0.0": 10,
+  "ofp:wks:master-data--EmissionCalculationFormula:4.0.0": 1,
+  "ofp:wks:master-data--EmissionCalculationModel:4.0.0": 5,
+  "ofp:wks:master-data--EmissionFactor:4.0.0": 5,
+  "ofp:wks:master-data--EmissionFactorSource:4.0.0": 1,
+  "ofp:wks:master-data--EmissionInventory:4.0.0": 1,
+  "ofp:wks:master-data--EmissionParameterType:3.0.0": 1,
+  "ofp:wks:master-data--Equipment:3.4.0": 5,
+  "ofp:wks:master-data--Facility:3.0.0": 3,
+  "ofp:wks:master-data--FacilityActivityParticipation:4.0.0": 6,
+  "ofp:wks:master-data--FacilityStructure:4.0.0": 2,
+  "ofp:wks:master-data--Location:4.0.0": 1,
+  "ofp:wks:master-data--Organization:3.0.0": 2,
+  "ofp:wks:master-data--OrganizationControl:4.0.0": 1,
+  "ofp:wks:master-data--OrganizationExternalIdentifier:4.0.0": 1,
+  "ofp:wks:master-data--OrganizationalBoundary:4.0.0": 1,
+  "ofp:wks:master-data--Standard:3.0.0": 3,
+  "ofp:wks:reference-data--Country:4.0.0": 1,
+  "ofp:wks:reference-data--DataQualityRule:4.0.0": 6,
+  "ofp:wks:reference-data--DataQualityRuleSet:4.0.0": 1,
+  "ofp:wks:reference-data--DataQualityRuleStatus:4.0.0": 1,
+  "ofp:wks:reference-data--DataRuleDimensionType:4.0.0": 4,
+  "ofp:wks:reference-data--DataRulePurposeType:4.0.0": 1,
+  "ofp:wks:reference-data--DataVerificationSource:4.0.0": 2,
+  "ofp:wks:reference-data--DataVerificationType:4.0.0": 2,
+  "ofp:wks:reference-data--EmissionActivityCategory:4.0.0": 4,
+  "ofp:wks:reference-data--EmissionActivityType:3.0.0": 6,
+  "ofp:wks:reference-data--EmissionCalculationMethodType:3.0.0": 1,
+  "ofp:wks:reference-data--EmissionCategoryType:4.0.0": 1,
+  "ofp:wks:reference-data--EmissionComponent:3.0.0": 1,
+  "ofp:wks:reference-data--EmissionFactorType:4.0.0": 2,
+  "ofp:wks:reference-data--EmissionParameterType:4.0.0": 1,
+  "ofp:wks:reference-data--EmissionRecordingMethodType:3.0.0": 3,
+  "ofp:wks:reference-data--EmissionScopeType:3.0.0": 1,
+  "ofp:wks:reference-data--FacilityLocationType:3.0.0": 1,
+  "ofp:wks:reference-data--FacilityType:3.0.0": 2,
+  "ofp:wks:reference-data--MethaneSourceCategory:1.0.0": 5,
+  "ofp:wks:reference-data--OrganizationExternalIdentifierType:4.0.0": 1,
+  "ofp:wks:reference-data--OrganizationType:3.0.0": 2,
+  "ofp:wks:reference-data--PersonOrganizationRoleType:3.0.0": 1,
+  "ofp:wks:reference-data--PhysicalQuantityType:3.0.0": 5,
+  "ofp:wks:reference-data--QualityAssessmentMethod:4.0.0": 1,
+  "ofp:wks:reference-data--QualityAssessmentState:4.0.0": 2,
+  "ofp:wks:reference-data--ReportingAssuranceType:4.0.0": 2,
+  "ofp:wks:reference-data--UnitOfMeasure:3.0.0": 4,
+  "ofp:wks:work-product-component--DataQuality:1.0.0": 21,
+  "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0": 5,
+  "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0": 15,
+  "ofp:wks:work-product-component--EmissionCalculationFormulaComponent:1.0.0": 3,
+  "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0": 15,
+  "ofp:wks:work-product-component--EmissionQuantification:1.0.0": 27,
+  "ofp:wks:work-product-component--EmissionReport:1.0.0": 1,
+  "ofp:wks:work-product-component--EmissionReportPerStandard:1.0.0": 3,
+  "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0": 1,
+  "ofp:wks:work-product-component--EmissionReportingBoundary:1.0.0": 1,
+  "ofp:wks:work-product-component--EmissionStatement:1.0.0": 7,
+  "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0": 5,
+  "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0": 15,
+  "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0": 7,
+  "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0": 5,
+  "ofp:wks:work-product-component--EquipmentInstallation:1.0.0": 5,
+  "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0": 5,
+  "ofp:wks:work-product-component--FacilityLocationAssociation:1.0.0": 1,
+  "ofp:wks:work-product-component--FacilitySpecification:1.0.0": 1,
+  "ofp:wks:work-product-component--LDARSurveyRecord:1.0.0": 1,
+  "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0": 15,
+  "ofp:wks:work-product-component--MethaneAttestation:1.0.0": 1,
+  "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0": 21,
+  "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0": 1,
+  "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0": 6,
+  "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0": 1,
+  "ofp:wks:work-product-component--OGMPReport:1.0.0": 2,
+  "ofp:wks:work-product-component--ReconciliationResult:1.0.0": 21,
+  "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0": 6,
+  "ofp:wks:work-product-component--ReportingAssurance:1.0.0": 1,
+  "ofp:wks:work-product-component--VerifiableCredential:1.0.0": 1
+ },
+ "versioned": {
+  "osdu:master-data--ComplianceRequirement:mrv01-ldar-eu": 2,
+  "osdu:master-data--ComplianceRequirement:mrv01-ogmp-l5": 2,
+  "osdu:master-data--ContactPerson:mrv01-lead-verifier": 2,
+  "osdu:master-data--EmissionActivity:mrv01-act-site": 2,
+  "osdu:master-data--EmissionActivity:mrv01-act-src-compr": 2,
+  "osdu:master-data--EmissionActivity:mrv01-act-src-engine": 2,
+  "osdu:master-data--EmissionActivity:mrv01-act-src-flare": 2,
+  "osdu:master-data--EmissionActivity:mrv01-act-src-fug": 2,
+  "osdu:master-data--EmissionActivity:mrv01-act-src-pneu": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-engine": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-flare": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-fug": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-pneu": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-compr": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-engine": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-flare": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-fug": 2,
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-pneu": 2,
+  "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1": 2,
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-compr": 2,
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine": 2,
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-flare": 2,
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-fug": 2,
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-pneu": 2,
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-compr": 2,
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-engine": 2,
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-flare": 2,
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-fug": 2,
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-pneu": 2,
+  "osdu:master-data--EmissionFactorSource:mrv01-iso-worked-site": 2,
+  "osdu:master-data--EmissionInventory:mrv01-ch4-2025": 2,
+  "osdu:master-data--Equipment:mrv01-eq-src-compr": 2,
+  "osdu:master-data--Equipment:mrv01-eq-src-engine": 2,
+  "osdu:master-data--Equipment:mrv01-eq-src-flare": 2,
+  "osdu:master-data--Equipment:mrv01-eq-src-fug": 2,
+  "osdu:master-data--Equipment:mrv01-eq-src-pneu": 2,
+  "osdu:master-data--Facility:mrv01-site": 2,
+  "osdu:master-data--Facility:mrv01-unit-compression": 2,
+  "osdu:master-data--Facility:mrv01-unit-processing": 2,
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-site": 2,
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-compr": 2,
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-engine": 2,
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-flare": 2,
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-fug": 2,
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-pneu": 2,
+  "osdu:master-data--FacilityStructure:mrv01-struct-compression": 2,
+  "osdu:master-data--FacilityStructure:mrv01-struct-processing": 2,
+  "osdu:master-data--Location:mrv01-site": 2,
+  "osdu:master-data--Organization:mrv01-dveracity-verification": 2,
+  "osdu:master-data--Organization:mrv01-northfield": 2,
+  "osdu:master-data--OrganizationControl:mrv01-northfield-opctl": 2,
+  "osdu:master-data--OrganizationExternalIdentifier:mrv01-northfield-lei": 2,
+  "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025": 2,
+  "osdu:master-data--Standard:mrv01-eu-2024-1787": 2,
+  "osdu:master-data--Standard:mrv01-iso-25624-1": 2,
+  "osdu:master-data--Standard:mrv01-ogmp-2": 2,
+  "osdu:reference-data--Country:mrv01-usa": 2,
+  "osdu:reference-data--DataQualityRule:mrv01-emission-rate-accuracy": 2,
+  "osdu:reference-data--DataQualityRule:mrv01-gold-standard-coverage": 2,
+  "osdu:reference-data--DataQualityRule:mrv01-ldar-frequency": 2,
+  "osdu:reference-data--DataQualityRule:mrv01-leak-detection-threshold": 2,
+  "osdu:reference-data--DataQualityRule:mrv01-materiality-rigor": 2,
+  "osdu:reference-data--DataQualityRule:mrv01-site-level-reconciliation": 2,
+  "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate": 2,
+  "osdu:reference-data--DataQualityRuleStatus:mrv01-published": 2,
+  "osdu:reference-data--DataRuleDimensionType:mrv01-accuracy": 2,
+  "osdu:reference-data--DataRuleDimensionType:mrv01-completeness": 2,
+  "osdu:reference-data--DataRuleDimensionType:mrv01-consistency": 2,
+  "osdu:reference-data--DataRuleDimensionType:mrv01-validity": 2,
+  "osdu:reference-data--DataRulePurposeType:mrv01-regulatory-gate": 2,
+  "osdu:reference-data--DataVerificationSource:mrv01-drone-flux": 2,
+  "osdu:reference-data--DataVerificationSource:mrv01-source-inventory": 2,
+  "osdu:reference-data--DataVerificationType:mrv01-site-reconciliation": 2,
+  "osdu:reference-data--DataVerificationType:mrv01-third-party": 2,
+  "osdu:reference-data--EmissionActivityCategory:mrv01-combustion": 2,
+  "osdu:reference-data--EmissionActivityCategory:mrv01-flaring": 2,
+  "osdu:reference-data--EmissionActivityCategory:mrv01-fugitive": 2,
+  "osdu:reference-data--EmissionActivityCategory:mrv01-venting": 2,
+  "osdu:reference-data--EmissionActivityType:mrv01-type-site": 2,
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-compr": 2,
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-engine": 2,
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-flare": 2,
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-fug": 2,
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-pneu": 2,
+  "osdu:reference-data--EmissionCalculationMethodType:mrv01-ef-x-af": 2,
+  "osdu:reference-data--EmissionCategoryType:mrv01-direct": 2,
+  "osdu:reference-data--EmissionComponent:mrv01-ch4": 2,
+  "osdu:reference-data--EmissionFactorType:mrv01-generic": 2,
+  "osdu:reference-data--EmissionFactorType:mrv01-site-specific-measured": 2,
+  "osdu:reference-data--EmissionRecordingMethodType:mrv01-emission-factor": 2,
+  "osdu:reference-data--EmissionRecordingMethodType:mrv01-measured": 2,
+  "osdu:reference-data--EmissionRecordingMethodType:mrv01-site-measurement": 2,
+  "osdu:reference-data--EmissionScopeType:mrv01-scope1": 2,
+  "osdu:reference-data--FacilityLocationType:mrv01-site-location": 2,
+  "osdu:reference-data--FacilityType:mrv01-gas-processing": 2,
+  "osdu:reference-data--FacilityType:mrv01-process-unit": 2,
+  "osdu:reference-data--OrganizationExternalIdentifierType:mrv01-lei": 2,
+  "osdu:reference-data--OrganizationType:mrv01-operator": 2,
+  "osdu:reference-data--OrganizationType:mrv01-verifier": 2,
+  "osdu:reference-data--PersonOrganizationRoleType:mrv01-lead-verifier": 2,
+  "osdu:reference-data--PhysicalQuantityType:mrv01-count": 2,
+  "osdu:reference-data--PhysicalQuantityType:mrv01-mass": 2,
+  "osdu:reference-data--PhysicalQuantityType:mrv01-mass-flow-rate": 2,
+  "osdu:reference-data--PhysicalQuantityType:mrv01-time": 2,
+  "osdu:reference-data--PhysicalQuantityType:mrv01-vol-flow-rate": 2,
+  "osdu:reference-data--QualityAssessmentMethod:mrv01-deterministic-constraint": 2,
+  "osdu:reference-data--QualityAssessmentState:mrv01-failed": 2,
+  "osdu:reference-data--QualityAssessmentState:mrv01-passed": 2,
+  "osdu:reference-data--ReportingAssuranceType:mrv01-limited": 2,
+  "osdu:reference-data--ReportingAssuranceType:mrv01-reasonable": 2,
+  "osdu:reference-data--UnitOfMeasure:mrv01-count": 2,
+  "osdu:reference-data--UnitOfMeasure:mrv01-h": 2,
+  "osdu:reference-data--UnitOfMeasure:mrv01-kg": 2,
+  "osdu:reference-data--UnitOfMeasure:mrv01-kg-h-unit": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-emissionrateaccuracy": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-goldstandardcoverage": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-ldarsurveyfrequency": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-materialityrigor": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-methaneleakdetectionthreshold": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-sitelevelreconciliation": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-emissionrateaccuracy": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-goldstandardcoverage": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-ldarsurveyfrequency": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-materialityrigor": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-methaneleakdetectionthreshold": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-sitelevelreconciliation": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-emissionrateaccuracy": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-goldstandardcoverage": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-ldarsurveyfrequency": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-materialityrigor": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-methaneleakdetectionthreshold": 2,
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-sitelevelreconciliation": 2,
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-compr": 2,
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-engine": 2,
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-flare": 2,
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-fug": 2,
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-pneu": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-compr-ef": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-compr-n": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-compr-t": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-ef": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-n": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-t": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-ef": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-n": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-t": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-fug-ef": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-fug-n": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-fug-t": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-pneu-ef": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-pneu-n": 2,
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-pneu-t": 2,
+  "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-ef": 2,
+  "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-n": 2,
+  "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-t": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-ef": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-n": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-t": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-ef": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-n": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-t": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-flare-ef": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-flare-n": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-flare-t": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-ef": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-n": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-t": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-pneu-ef": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-pneu-n": 2,
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-pneu-t": 2,
+  "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025": 2,
+  "osdu:work-product-component--EmissionReportPerStandard:mrv01-rps-eu": 2,
+  "osdu:work-product-component--EmissionReportPerStandard:mrv01-rps-iso": 2,
+  "osdu:work-product-component--EmissionReportPerStandard:mrv01-rps-ogmp": 2,
+  "osdu:work-product-component--EmissionReportPeriod:mrv01-2025": 2,
+  "osdu:work-product-component--EmissionReportingBoundary:mrv01-opctl-2025": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-bottomup-total": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-compr": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-engine": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-flare": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-fug": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-pneu": 2,
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-topdown": 2,
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-compr": 2,
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-engine": 2,
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-flare": 2,
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-fug": 2,
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-pneu": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-compr-ef": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-compr-n": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-compr-t": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-ef": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-n": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-t": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-flare-ef": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-flare-n": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-flare-t": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-fug-ef": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-fug-n": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-fug-t": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-pneu-ef": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-pneu-n": 2,
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-pneu-t": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-bottomup": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-compr": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-engine": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-flare": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-fug": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-pneu": 2,
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-topdown": 2,
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-compr": 2,
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-engine": 2,
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-flare": 2,
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-fug": 2,
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-pneu": 2,
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-compr": 2,
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-engine": 2,
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-flare": 2,
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-fug": 2,
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-pneu": 2,
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-compr": 2,
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-engine": 2,
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-flare": 2,
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-fug": 2,
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-pneu": 2,
+  "osdu:work-product-component--FacilityLocationAssociation:mrv01-site": 2,
+  "osdu:work-product-component--FacilitySpecification:mrv01-throughput": 2,
+  "osdu:work-product-component--MethaneAttestation:58a521308e994120a426a22b714c7595": 14,
+  "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724": 25,
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-compr": 2,
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-engine": 2,
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-flare": 2,
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-fug": 2,
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-pneu": 2,
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-topdown": 2,
+  "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025": 2
+ },
+ "index": {
+  "osdu:master-data--ComplianceRequirement:mrv01-ldar-eu": {
+   "kind": "ofp:wks:master-data--ComplianceRequirement:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--ComplianceRequirement_mrv01-ldar-eu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--ComplianceRequirement_mrv01-ldar-eu.versions.json"
+  },
+  "osdu:master-data--ComplianceRequirement:mrv01-ogmp-l5": {
+   "kind": "ofp:wks:master-data--ComplianceRequirement:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--ComplianceRequirement_mrv01-ogmp-l5.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--ComplianceRequirement_mrv01-ogmp-l5.versions.json"
+  },
+  "osdu:master-data--ContactPerson:mrv01-lead-verifier": {
+   "kind": "ofp:wks:master-data--ContactPerson:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--ContactPerson_mrv01-lead-verifier.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--ContactPerson_mrv01-lead-verifier.versions.json"
+  },
+  "osdu:master-data--EmissionActivity:mrv01-act-site": {
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivity_mrv01-act-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivity_mrv01-act-site.versions.json"
+  },
+  "osdu:master-data--EmissionActivity:mrv01-act-src-compr": {
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivity_mrv01-act-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivity_mrv01-act-src-compr.versions.json"
+  },
+  "osdu:master-data--EmissionActivity:mrv01-act-src-engine": {
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivity_mrv01-act-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivity_mrv01-act-src-engine.versions.json"
+  },
+  "osdu:master-data--EmissionActivity:mrv01-act-src-flare": {
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionActivity_mrv01-act-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivity_mrv01-act-src-flare.versions.json"
+  },
+  "osdu:master-data--EmissionActivity:mrv01-act-src-fug": {
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivity_mrv01-act-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivity_mrv01-act-src-fug.versions.json"
+  },
+  "osdu:master-data--EmissionActivity:mrv01-act-src-pneu": {
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionActivity_mrv01-act-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivity_mrv01-act-src-pneu.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-n-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-n-src-compr.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-engine": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-n-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-n-src-engine.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-flare": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-n-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-n-src-flare.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-fug": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-n-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-n-src-fug.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-n-src-pneu": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-n-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-n-src-pneu.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-compr": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-t-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-t-src-compr.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-engine": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-t-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-t-src-engine.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-flare": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-t-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-t-src-flare.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-fug": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-t-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-t-src-fug.versions.json"
+  },
+  "osdu:master-data--EmissionActivityParameter:mrv01-t-src-pneu": {
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionActivityParameter_mrv01-t-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionActivityParameter_mrv01-t-src-pneu.versions.json"
+  },
+  "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1": {
+   "kind": "ofp:wks:master-data--EmissionCalculationFormula:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionCalculationFormula_mrv01-iso-formula-1.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionCalculationFormula_mrv01-iso-formula-1.versions.json"
+  },
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-compr": {
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionCalculationModel_mrv01-model-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionCalculationModel_mrv01-model-src-compr.versions.json"
+  },
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine": {
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionCalculationModel_mrv01-model-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionCalculationModel_mrv01-model-src-engine.versions.json"
+  },
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-flare": {
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionCalculationModel_mrv01-model-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionCalculationModel_mrv01-model-src-flare.versions.json"
+  },
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-fug": {
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionCalculationModel_mrv01-model-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionCalculationModel_mrv01-model-src-fug.versions.json"
+  },
+  "osdu:master-data--EmissionCalculationModel:mrv01-model-src-pneu": {
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionCalculationModel_mrv01-model-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionCalculationModel_mrv01-model-src-pneu.versions.json"
+  },
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-compr": {
+   "kind": "ofp:wks:master-data--EmissionFactor:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionFactor_mrv01-ef-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionFactor_mrv01-ef-src-compr.versions.json"
+  },
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-engine": {
+   "kind": "ofp:wks:master-data--EmissionFactor:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionFactor_mrv01-ef-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionFactor_mrv01-ef-src-engine.versions.json"
+  },
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-flare": {
+   "kind": "ofp:wks:master-data--EmissionFactor:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionFactor_mrv01-ef-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionFactor_mrv01-ef-src-flare.versions.json"
+  },
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-fug": {
+   "kind": "ofp:wks:master-data--EmissionFactor:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--EmissionFactor_mrv01-ef-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionFactor_mrv01-ef-src-fug.versions.json"
+  },
+  "osdu:master-data--EmissionFactor:mrv01-ef-src-pneu": {
+   "kind": "ofp:wks:master-data--EmissionFactor:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionFactor_mrv01-ef-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionFactor_mrv01-ef-src-pneu.versions.json"
+  },
+  "osdu:master-data--EmissionFactorSource:mrv01-iso-worked-site": {
+   "kind": "ofp:wks:master-data--EmissionFactorSource:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionFactorSource_mrv01-iso-worked-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionFactorSource_mrv01-iso-worked-site.versions.json"
+  },
+  "osdu:master-data--EmissionInventory:mrv01-ch4-2025": {
+   "kind": "ofp:wks:master-data--EmissionInventory:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--EmissionInventory_mrv01-ch4-2025.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--EmissionInventory_mrv01-ch4-2025.versions.json"
+  },
+  "osdu:master-data--EmissionParameterType:mrv01-throughput": {
+   "kind": "ofp:wks:master-data--EmissionParameterType:3.0.0",
+   "version": 1788908918758516,
+   "file": "records/osdu_master-data--EmissionParameterType_mrv01-throughput.json"
+  },
+  "osdu:master-data--Equipment:mrv01-eq-src-compr": {
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--Equipment_mrv01-eq-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Equipment_mrv01-eq-src-compr.versions.json"
+  },
+  "osdu:master-data--Equipment:mrv01-eq-src-engine": {
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--Equipment_mrv01-eq-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Equipment_mrv01-eq-src-engine.versions.json"
+  },
+  "osdu:master-data--Equipment:mrv01-eq-src-flare": {
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Equipment_mrv01-eq-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Equipment_mrv01-eq-src-flare.versions.json"
+  },
+  "osdu:master-data--Equipment:mrv01-eq-src-fug": {
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--Equipment_mrv01-eq-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Equipment_mrv01-eq-src-fug.versions.json"
+  },
+  "osdu:master-data--Equipment:mrv01-eq-src-pneu": {
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Equipment_mrv01-eq-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Equipment_mrv01-eq-src-pneu.versions.json"
+  },
+  "osdu:master-data--Facility:mrv01-site": {
+   "kind": "ofp:wks:master-data--Facility:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Facility_mrv01-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Facility_mrv01-site.versions.json"
+  },
+  "osdu:master-data--Facility:mrv01-unit-compression": {
+   "kind": "ofp:wks:master-data--Facility:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Facility_mrv01-unit-compression.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Facility_mrv01-unit-compression.versions.json"
+  },
+  "osdu:master-data--Facility:mrv01-unit-processing": {
+   "kind": "ofp:wks:master-data--Facility:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Facility_mrv01-unit-processing.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Facility_mrv01-unit-processing.versions.json"
+  },
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-site": {
+   "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--FacilityActivityParticipation_mrv01-part-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityActivityParticipation_mrv01-part-site.versions.json"
+  },
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-compr": {
+   "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-compr.versions.json"
+  },
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-engine": {
+   "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-engine.versions.json"
+  },
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-flare": {
+   "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-flare.versions.json"
+  },
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-fug": {
+   "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-fug.versions.json"
+  },
+  "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-pneu": {
+   "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityActivityParticipation_mrv01-part-src-pneu.versions.json"
+  },
+  "osdu:master-data--FacilityStructure:mrv01-struct-compression": {
+   "kind": "ofp:wks:master-data--FacilityStructure:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--FacilityStructure_mrv01-struct-compression.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityStructure_mrv01-struct-compression.versions.json"
+  },
+  "osdu:master-data--FacilityStructure:mrv01-struct-processing": {
+   "kind": "ofp:wks:master-data--FacilityStructure:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--FacilityStructure_mrv01-struct-processing.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--FacilityStructure_mrv01-struct-processing.versions.json"
+  },
+  "osdu:master-data--Location:mrv01-site": {
+   "kind": "ofp:wks:master-data--Location:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Location_mrv01-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Location_mrv01-site.versions.json"
+  },
+  "osdu:master-data--Organization:mrv01-dveracity-verification": {
+   "kind": "ofp:wks:master-data--Organization:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Organization_mrv01-dveracity-verification.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Organization_mrv01-dveracity-verification.versions.json"
+  },
+  "osdu:master-data--Organization:mrv01-northfield": {
+   "kind": "ofp:wks:master-data--Organization:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Organization_mrv01-northfield.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Organization_mrv01-northfield.versions.json"
+  },
+  "osdu:master-data--OrganizationControl:mrv01-northfield-opctl": {
+   "kind": "ofp:wks:master-data--OrganizationControl:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--OrganizationControl_mrv01-northfield-opctl.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--OrganizationControl_mrv01-northfield-opctl.versions.json"
+  },
+  "osdu:master-data--OrganizationExternalIdentifier:mrv01-northfield-lei": {
+   "kind": "ofp:wks:master-data--OrganizationExternalIdentifier:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--OrganizationExternalIdentifier_mrv01-northfield-lei.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--OrganizationExternalIdentifier_mrv01-northfield-lei.versions.json"
+  },
+  "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025": {
+   "kind": "ofp:wks:master-data--OrganizationalBoundary:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--OrganizationalBoundary_mrv01-opctl-2025.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--OrganizationalBoundary_mrv01-opctl-2025.versions.json"
+  },
+  "osdu:master-data--Standard:mrv01-eu-2024-1787": {
+   "kind": "ofp:wks:master-data--Standard:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Standard_mrv01-eu-2024-1787.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Standard_mrv01-eu-2024-1787.versions.json"
+  },
+  "osdu:master-data--Standard:mrv01-iso-25624-1": {
+   "kind": "ofp:wks:master-data--Standard:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Standard_mrv01-iso-25624-1.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Standard_mrv01-iso-25624-1.versions.json"
+  },
+  "osdu:master-data--Standard:mrv01-ogmp-2": {
+   "kind": "ofp:wks:master-data--Standard:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_master-data--Standard_mrv01-ogmp-2.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_master-data--Standard_mrv01-ogmp-2.versions.json"
+  },
+  "osdu:reference-data--Country:mrv01-usa": {
+   "kind": "ofp:wks:reference-data--Country:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--Country_mrv01-usa.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--Country_mrv01-usa.versions.json"
+  },
+  "osdu:reference-data--DataQualityRule:mrv01-emission-rate-accuracy": {
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRule_mrv01-emission-rate-accuracy.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRule_mrv01-emission-rate-accuracy.versions.json"
+  },
+  "osdu:reference-data--DataQualityRule:mrv01-gold-standard-coverage": {
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRule_mrv01-gold-standard-coverage.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRule_mrv01-gold-standard-coverage.versions.json"
+  },
+  "osdu:reference-data--DataQualityRule:mrv01-ldar-frequency": {
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRule_mrv01-ldar-frequency.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRule_mrv01-ldar-frequency.versions.json"
+  },
+  "osdu:reference-data--DataQualityRule:mrv01-leak-detection-threshold": {
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRule_mrv01-leak-detection-threshold.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRule_mrv01-leak-detection-threshold.versions.json"
+  },
+  "osdu:reference-data--DataQualityRule:mrv01-materiality-rigor": {
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRule_mrv01-materiality-rigor.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRule_mrv01-materiality-rigor.versions.json"
+  },
+  "osdu:reference-data--DataQualityRule:mrv01-site-level-reconciliation": {
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRule_mrv01-site-level-reconciliation.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRule_mrv01-site-level-reconciliation.versions.json"
+  },
+  "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate": {
+   "kind": "ofp:wks:reference-data--DataQualityRuleSet:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRuleSet_mrv01-iso-25624-1-gate.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRuleSet_mrv01-iso-25624-1-gate.versions.json"
+  },
+  "osdu:reference-data--DataQualityRuleStatus:mrv01-published": {
+   "kind": "ofp:wks:reference-data--DataQualityRuleStatus:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataQualityRuleStatus_mrv01-published.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataQualityRuleStatus_mrv01-published.versions.json"
+  },
+  "osdu:reference-data--DataRuleDimensionType:mrv01-accuracy": {
+   "kind": "ofp:wks:reference-data--DataRuleDimensionType:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataRuleDimensionType_mrv01-accuracy.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataRuleDimensionType_mrv01-accuracy.versions.json"
+  },
+  "osdu:reference-data--DataRuleDimensionType:mrv01-completeness": {
+   "kind": "ofp:wks:reference-data--DataRuleDimensionType:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataRuleDimensionType_mrv01-completeness.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataRuleDimensionType_mrv01-completeness.versions.json"
+  },
+  "osdu:reference-data--DataRuleDimensionType:mrv01-consistency": {
+   "kind": "ofp:wks:reference-data--DataRuleDimensionType:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataRuleDimensionType_mrv01-consistency.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataRuleDimensionType_mrv01-consistency.versions.json"
+  },
+  "osdu:reference-data--DataRuleDimensionType:mrv01-validity": {
+   "kind": "ofp:wks:reference-data--DataRuleDimensionType:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataRuleDimensionType_mrv01-validity.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataRuleDimensionType_mrv01-validity.versions.json"
+  },
+  "osdu:reference-data--DataRulePurposeType:mrv01-regulatory-gate": {
+   "kind": "ofp:wks:reference-data--DataRulePurposeType:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataRulePurposeType_mrv01-regulatory-gate.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataRulePurposeType_mrv01-regulatory-gate.versions.json"
+  },
+  "osdu:reference-data--DataVerificationSource:mrv01-drone-flux": {
+   "kind": "ofp:wks:reference-data--DataVerificationSource:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataVerificationSource_mrv01-drone-flux.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataVerificationSource_mrv01-drone-flux.versions.json"
+  },
+  "osdu:reference-data--DataVerificationSource:mrv01-source-inventory": {
+   "kind": "ofp:wks:reference-data--DataVerificationSource:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataVerificationSource_mrv01-source-inventory.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataVerificationSource_mrv01-source-inventory.versions.json"
+  },
+  "osdu:reference-data--DataVerificationType:mrv01-site-reconciliation": {
+   "kind": "ofp:wks:reference-data--DataVerificationType:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--DataVerificationType_mrv01-site-reconciliation.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataVerificationType_mrv01-site-reconciliation.versions.json"
+  },
+  "osdu:reference-data--DataVerificationType:mrv01-third-party": {
+   "kind": "ofp:wks:reference-data--DataVerificationType:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--DataVerificationType_mrv01-third-party.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--DataVerificationType_mrv01-third-party.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityCategory:mrv01-combustion": {
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionActivityCategory_mrv01-combustion.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityCategory_mrv01-combustion.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityCategory:mrv01-flaring": {
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionActivityCategory_mrv01-flaring.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityCategory_mrv01-flaring.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityCategory:mrv01-fugitive": {
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionActivityCategory_mrv01-fugitive.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityCategory_mrv01-fugitive.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityCategory:mrv01-venting": {
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionActivityCategory_mrv01-venting.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityCategory_mrv01-venting.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityType:mrv01-type-site": {
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--EmissionActivityType_mrv01-type-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityType_mrv01-type-site.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-compr": {
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--EmissionActivityType_mrv01-type-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityType_mrv01-type-src-compr.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-engine": {
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--EmissionActivityType_mrv01-type-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityType_mrv01-type-src-engine.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-flare": {
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionActivityType_mrv01-type-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityType_mrv01-type-src-flare.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-fug": {
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--EmissionActivityType_mrv01-type-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityType_mrv01-type-src-fug.versions.json"
+  },
+  "osdu:reference-data--EmissionActivityType:mrv01-type-src-pneu": {
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionActivityType_mrv01-type-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionActivityType_mrv01-type-src-pneu.versions.json"
+  },
+  "osdu:reference-data--EmissionCalculationMethodType:mrv01-ef-x-af": {
+   "kind": "ofp:wks:reference-data--EmissionCalculationMethodType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionCalculationMethodType_mrv01-ef-x-af.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionCalculationMethodType_mrv01-ef-x-af.versions.json"
+  },
+  "osdu:reference-data--EmissionCategoryType:mrv01-direct": {
+   "kind": "ofp:wks:reference-data--EmissionCategoryType:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionCategoryType_mrv01-direct.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionCategoryType_mrv01-direct.versions.json"
+  },
+  "osdu:reference-data--EmissionComponent:mrv01-ch4": {
+   "kind": "ofp:wks:reference-data--EmissionComponent:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionComponent_mrv01-ch4.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionComponent_mrv01-ch4.versions.json"
+  },
+  "osdu:reference-data--EmissionFactorType:mrv01-generic": {
+   "kind": "ofp:wks:reference-data--EmissionFactorType:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionFactorType_mrv01-generic.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionFactorType_mrv01-generic.versions.json"
+  },
+  "osdu:reference-data--EmissionFactorType:mrv01-site-specific-measured": {
+   "kind": "ofp:wks:reference-data--EmissionFactorType:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionFactorType_mrv01-site-specific-measured.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionFactorType_mrv01-site-specific-measured.versions.json"
+  },
+  "osdu:reference-data--EmissionParameterType:mrv01-throughput": {
+   "kind": "ofp:wks:reference-data--EmissionParameterType:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionParameterType_mrv01-throughput.json"
+  },
+  "osdu:reference-data--EmissionRecordingMethodType:mrv01-emission-factor": {
+   "kind": "ofp:wks:reference-data--EmissionRecordingMethodType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionRecordingMethodType_mrv01-emission-factor.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionRecordingMethodType_mrv01-emission-factor.versions.json"
+  },
+  "osdu:reference-data--EmissionRecordingMethodType:mrv01-measured": {
+   "kind": "ofp:wks:reference-data--EmissionRecordingMethodType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionRecordingMethodType_mrv01-measured.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionRecordingMethodType_mrv01-measured.versions.json"
+  },
+  "osdu:reference-data--EmissionRecordingMethodType:mrv01-site-measurement": {
+   "kind": "ofp:wks:reference-data--EmissionRecordingMethodType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionRecordingMethodType_mrv01-site-measurement.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionRecordingMethodType_mrv01-site-measurement.versions.json"
+  },
+  "osdu:reference-data--EmissionScopeType:mrv01-scope1": {
+   "kind": "ofp:wks:reference-data--EmissionScopeType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--EmissionScopeType_mrv01-scope1.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--EmissionScopeType_mrv01-scope1.versions.json"
+  },
+  "osdu:reference-data--FacilityLocationType:mrv01-site-location": {
+   "kind": "ofp:wks:reference-data--FacilityLocationType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--FacilityLocationType_mrv01-site-location.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--FacilityLocationType_mrv01-site-location.versions.json"
+  },
+  "osdu:reference-data--FacilityType:mrv01-gas-processing": {
+   "kind": "ofp:wks:reference-data--FacilityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--FacilityType_mrv01-gas-processing.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--FacilityType_mrv01-gas-processing.versions.json"
+  },
+  "osdu:reference-data--FacilityType:mrv01-process-unit": {
+   "kind": "ofp:wks:reference-data--FacilityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--FacilityType_mrv01-process-unit.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--FacilityType_mrv01-process-unit.versions.json"
+  },
+  "osdu:reference-data--MethaneSourceCategory:798261ebc8f34de79302f63a76a286bb": {
+   "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+   "version": 1788895650720171,
+   "file": "records/osdu_reference-data--MethaneSourceCategory_798261ebc8f34de79302f63a76a286bb.json"
+  },
+  "osdu:reference-data--MethaneSourceCategory:7b547ea51c144d6b83f7f62d6834dddd": {
+   "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+   "version": 1788895651050301,
+   "file": "records/osdu_reference-data--MethaneSourceCategory_7b547ea51c144d6b83f7f62d6834dddd.json"
+  },
+  "osdu:reference-data--MethaneSourceCategory:a4138cbed0bf40f0ab4e7b11fb3213a5": {
+   "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+   "version": 1788895651666986,
+   "file": "records/osdu_reference-data--MethaneSourceCategory_a4138cbed0bf40f0ab4e7b11fb3213a5.json"
+  },
+  "osdu:reference-data--MethaneSourceCategory:d7d4340de2f5450d82eeba47e5a9a46b": {
+   "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+   "version": 1788895650376894,
+   "file": "records/osdu_reference-data--MethaneSourceCategory_d7d4340de2f5450d82eeba47e5a9a46b.json"
+  },
+  "osdu:reference-data--MethaneSourceCategory:faec2ca22d224681a8a31ba12ff1e836": {
+   "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+   "version": 1788895651384563,
+   "file": "records/osdu_reference-data--MethaneSourceCategory_faec2ca22d224681a8a31ba12ff1e836.json"
+  },
+  "osdu:reference-data--OrganizationExternalIdentifierType:mrv01-lei": {
+   "kind": "ofp:wks:reference-data--OrganizationExternalIdentifierType:4.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--OrganizationExternalIdentifierType_mrv01-lei.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--OrganizationExternalIdentifierType_mrv01-lei.versions.json"
+  },
+  "osdu:reference-data--OrganizationType:mrv01-operator": {
+   "kind": "ofp:wks:reference-data--OrganizationType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--OrganizationType_mrv01-operator.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--OrganizationType_mrv01-operator.versions.json"
+  },
+  "osdu:reference-data--OrganizationType:mrv01-verifier": {
+   "kind": "ofp:wks:reference-data--OrganizationType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--OrganizationType_mrv01-verifier.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--OrganizationType_mrv01-verifier.versions.json"
+  },
+  "osdu:reference-data--PersonOrganizationRoleType:mrv01-lead-verifier": {
+   "kind": "ofp:wks:reference-data--PersonOrganizationRoleType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--PersonOrganizationRoleType_mrv01-lead-verifier.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--PersonOrganizationRoleType_mrv01-lead-verifier.versions.json"
+  },
+  "osdu:reference-data--PhysicalQuantityType:mrv01-count": {
+   "kind": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--PhysicalQuantityType_mrv01-count.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--PhysicalQuantityType_mrv01-count.versions.json"
+  },
+  "osdu:reference-data--PhysicalQuantityType:mrv01-mass": {
+   "kind": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--PhysicalQuantityType_mrv01-mass.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--PhysicalQuantityType_mrv01-mass.versions.json"
+  },
+  "osdu:reference-data--PhysicalQuantityType:mrv01-mass-flow-rate": {
+   "kind": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--PhysicalQuantityType_mrv01-mass-flow-rate.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--PhysicalQuantityType_mrv01-mass-flow-rate.versions.json"
+  },
+  "osdu:reference-data--PhysicalQuantityType:mrv01-time": {
+   "kind": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--PhysicalQuantityType_mrv01-time.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--PhysicalQuantityType_mrv01-time.versions.json"
+  },
+  "osdu:reference-data--PhysicalQuantityType:mrv01-vol-flow-rate": {
+   "kind": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--PhysicalQuantityType_mrv01-vol-flow-rate.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--PhysicalQuantityType_mrv01-vol-flow-rate.versions.json"
+  },
+  "osdu:reference-data--QualityAssessmentMethod:mrv01-deterministic-constraint": {
+   "kind": "ofp:wks:reference-data--QualityAssessmentMethod:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--QualityAssessmentMethod_mrv01-deterministic-constraint.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--QualityAssessmentMethod_mrv01-deterministic-constraint.versions.json"
+  },
+  "osdu:reference-data--QualityAssessmentState:mrv01-failed": {
+   "kind": "ofp:wks:reference-data--QualityAssessmentState:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--QualityAssessmentState_mrv01-failed.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--QualityAssessmentState_mrv01-failed.versions.json"
+  },
+  "osdu:reference-data--QualityAssessmentState:mrv01-passed": {
+   "kind": "ofp:wks:reference-data--QualityAssessmentState:4.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_reference-data--QualityAssessmentState_mrv01-passed.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--QualityAssessmentState_mrv01-passed.versions.json"
+  },
+  "osdu:reference-data--ReportingAssuranceType:mrv01-limited": {
+   "kind": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--ReportingAssuranceType_mrv01-limited.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--ReportingAssuranceType_mrv01-limited.versions.json"
+  },
+  "osdu:reference-data--ReportingAssuranceType:mrv01-reasonable": {
+   "kind": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_reference-data--ReportingAssuranceType_mrv01-reasonable.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--ReportingAssuranceType_mrv01-reasonable.versions.json"
+  },
+  "osdu:reference-data--UnitOfMeasure:mrv01-count": {
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--UnitOfMeasure_mrv01-count.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--UnitOfMeasure_mrv01-count.versions.json"
+  },
+  "osdu:reference-data--UnitOfMeasure:mrv01-h": {
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--UnitOfMeasure_mrv01-h.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--UnitOfMeasure_mrv01-h.versions.json"
+  },
+  "osdu:reference-data--UnitOfMeasure:mrv01-kg": {
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--UnitOfMeasure_mrv01-kg.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--UnitOfMeasure_mrv01-kg.versions.json"
+  },
+  "osdu:reference-data--UnitOfMeasure:mrv01-kg-h-unit": {
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_reference-data--UnitOfMeasure_mrv01-kg-h-unit.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_reference-data--UnitOfMeasure_mrv01-kg-h-unit.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-emissionrateaccuracy": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-emissionrateaccuracy.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-emissionrateaccuracy.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-goldstandardcoverage": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-goldstandardcoverage.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-goldstandardcoverage.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-ldarsurveyfrequency": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-ldarsurveyfrequency.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-ldarsurveyfrequency.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-materialityrigor": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-materialityrigor.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-materialityrigor.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-methaneleakdetectionthreshold": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-methaneleakdetectionthreshold.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-methaneleakdetectionthreshold.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-anomaly-sitelevelreconciliation": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-sitelevelreconciliation.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-anomaly-sitelevelreconciliation.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-emissionrateaccuracy": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated-emissionrateaccuracy.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated-emissionrateaccuracy.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-goldstandardcoverage": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated-goldstandardcoverage.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated-goldstandardcoverage.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-ldarsurveyfrequency": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated-ldarsurveyfrequency.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated-ldarsurveyfrequency.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-materialityrigor": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated-materialityrigor.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated-materialityrigor.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-methaneleakdetectionthreshold": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated-methaneleakdetectionthreshold.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated-methaneleakdetectionthreshold.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-restated-sitelevelreconciliation": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-restated-sitelevelreconciliation.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-restated-sitelevelreconciliation.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-emissionrateaccuracy": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify-emissionrateaccuracy.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify-emissionrateaccuracy.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-goldstandardcoverage": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify-goldstandardcoverage.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify-goldstandardcoverage.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-ldarsurveyfrequency": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify-ldarsurveyfrequency.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify-ldarsurveyfrequency.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-materialityrigor": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify-materialityrigor.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify-materialityrigor.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-methaneleakdetectionthreshold": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify-methaneleakdetectionthreshold.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify-methaneleakdetectionthreshold.versions.json"
+  },
+  "osdu:work-product-component--DataQuality:mrv01-dq-verify-sitelevelreconciliation": {
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "version": 1788909500638023,
+   "file": "records/osdu_work-product-component--DataQuality_mrv01-dq-verify-sitelevelreconciliation.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--DataQuality_mrv01-dq-verify-sitelevelreconciliation.versions.json"
+  },
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-compr": {
+   "kind": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-compr.versions.json"
+  },
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-engine": {
+   "kind": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-engine.versions.json"
+  },
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-flare": {
+   "kind": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-flare.versions.json"
+  },
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-fug": {
+   "kind": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-fug.versions.json"
+  },
+  "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-pneu": {
+   "kind": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionActivityFactor_mrv01-af-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-compr-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-compr-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-compr-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-compr-n": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-compr-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-compr-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-compr-t": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-compr-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-compr-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-engine-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-engine-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-n": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-engine-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-engine-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-t": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-engine-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-engine-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-flare-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-flare-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-n": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-flare-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-flare-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-t": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-flare-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-flare-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-fug-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-fug-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-fug-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-fug-n": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-fug-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-fug-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-fug-t": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-fug-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-fug-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-pneu-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-pneu-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-pneu-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-pneu-n": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-pneu-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-pneu-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-pneu-t": {
+   "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-pneu-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionArgumentValue_mrv01-val-src-pneu-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationFormulaComponent:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationFormulaComponent_mrv01-formula1-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationFormulaComponent_mrv01-formula1-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-n": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationFormulaComponent:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationFormulaComponent_mrv01-formula1-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationFormulaComponent_mrv01-formula1-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-t": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationFormulaComponent:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationFormulaComponent_mrv01-formula1-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationFormulaComponent_mrv01-formula1-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-compr-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-compr-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-n": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-compr-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-compr-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-t": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-compr-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-compr-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-engine-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-engine-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-n": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-engine-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-engine-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-t": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-engine-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-engine-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-flare-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-flare-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-flare-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-flare-n": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-flare-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-flare-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-flare-t": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-flare-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-flare-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-fug-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-fug-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-n": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-fug-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-fug-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-t": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-fug-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-fug-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-pneu-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-pneu-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-pneu-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-pneu-n": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-pneu-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-pneu-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-pneu-t": {
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-pneu-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionCalculationModelArgument_mrv01-arg-src-pneu-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:09a67758f2754450b7a4e92b44a38738": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901888467021,
+   "file": "records/osdu_work-product-component--EmissionQuantification_09a67758f2754450b7a4e92b44a38738.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:0aee994325d64a0fbd9165666c4c8fab": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901874724744,
+   "file": "records/osdu_work-product-component--EmissionQuantification_0aee994325d64a0fbd9165666c4c8fab.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788896587686978,
+   "file": "records/osdu_work-product-component--EmissionQuantification_0ee17a1bd43342d09075554a8df083d9.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:1372b6baba794e9f8063a3ff2495b7b6": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788896589007225,
+   "file": "records/osdu_work-product-component--EmissionQuantification_1372b6baba794e9f8063a3ff2495b7b6.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:23e9cf0dfe7747b39a6198f6e1360c36": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911090263654,
+   "file": "records/osdu_work-product-component--EmissionQuantification_23e9cf0dfe7747b39a6198f6e1360c36.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:37f0f13919664b07b2f6c7d2add4670c": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901903154921,
+   "file": "records/osdu_work-product-component--EmissionQuantification_37f0f13919664b07b2f6c7d2add4670c.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:417175a0c24243508d35a7eea9daf726": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788895650025625,
+   "file": "records/osdu_work-product-component--EmissionQuantification_417175a0c24243508d35a7eea9daf726.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:44c0c90b601f40298a2c6381c13182ed": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911610710161,
+   "file": "records/osdu_work-product-component--EmissionQuantification_44c0c90b601f40298a2c6381c13182ed.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:4ccf1f0bb7a1443f85f662de0ae4edb6": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788898099907547,
+   "file": "records/osdu_work-product-component--EmissionQuantification_4ccf1f0bb7a1443f85f662de0ae4edb6.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:553966b4bc044cd6859935ecac97f816": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911076667885,
+   "file": "records/osdu_work-product-component--EmissionQuantification_553966b4bc044cd6859935ecac97f816.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:59b2403a8b144bbdbf21c14ac27edd42": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788895649696146,
+   "file": "records/osdu_work-product-component--EmissionQuantification_59b2403a8b144bbdbf21c14ac27edd42.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:5aad6c3cb4584db3ae4d5d7cdf9053dd": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901858923514,
+   "file": "records/osdu_work-product-component--EmissionQuantification_5aad6c3cb4584db3ae4d5d7cdf9053dd.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:5ecb876d050b49d19585247b24116892": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901891247963,
+   "file": "records/osdu_work-product-component--EmissionQuantification_5ecb876d050b49d19585247b24116892.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:62a1135cde09423aac58c6d00a54d4cf": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788895648945723,
+   "file": "records/osdu_work-product-component--EmissionQuantification_62a1135cde09423aac58c6d00a54d4cf.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:78b86c754a4745249e37ede744a9b971": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901894399426,
+   "file": "records/osdu_work-product-component--EmissionQuantification_78b86c754a4745249e37ede744a9b971.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:838809b35a2c4e4c9e2648b7e6e506b8": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911031834834,
+   "file": "records/osdu_work-product-component--EmissionQuantification_838809b35a2c4e4c9e2648b7e6e506b8.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:9250b459edf54b5492d9401c1191d22b": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788898099072802,
+   "file": "records/osdu_work-product-component--EmissionQuantification_9250b459edf54b5492d9401c1191d22b.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:99bd34d7d57f47ce80a93aecbd818439": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911606974019,
+   "file": "records/osdu_work-product-component--EmissionQuantification_99bd34d7d57f47ce80a93aecbd818439.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:a7810b75bcb14cf2b47d5d47c18340ad": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911613840717,
+   "file": "records/osdu_work-product-component--EmissionQuantification_a7810b75bcb14cf2b47d5d47c18340ad.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:a8de531e740e45ef8718ee8badd7b12f": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901895998015,
+   "file": "records/osdu_work-product-component--EmissionQuantification_a8de531e740e45ef8718ee8badd7b12f.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:b2eb694ba1b044c5bd30087394e151ea": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788895648598358,
+   "file": "records/osdu_work-product-component--EmissionQuantification_b2eb694ba1b044c5bd30087394e151ea.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:c114a2dea7e443b6b1f0e056fa4a2cbc": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911604158684,
+   "file": "records/osdu_work-product-component--EmissionQuantification_c114a2dea7e443b6b1f0e056fa4a2cbc.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:c695c0a554ba49ca8953e199d080e7c9": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788895649349719,
+   "file": "records/osdu_work-product-component--EmissionQuantification_c695c0a554ba49ca8953e199d080e7c9.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:cdc577eeed06453e9868f95d27794400": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788911594076059,
+   "file": "records/osdu_work-product-component--EmissionQuantification_cdc577eeed06453e9868f95d27794400.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788895652213193,
+   "file": "records/osdu_work-product-component--EmissionQuantification_f180b221c74b4586ba2affafc1c2898b.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:fa1b5837d7fd4d01a11751daea02e7a5": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901776001159,
+   "file": "records/osdu_work-product-component--EmissionQuantification_fa1b5837d7fd4d01a11751daea02e7a5.json"
+  },
+  "osdu:work-product-component--EmissionQuantification:fa25f8ba3543448ab226e382fa6461f8": {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "version": 1788901833767468,
+   "file": "records/osdu_work-product-component--EmissionQuantification_fa25f8ba3543448ab226e382fa6461f8.json"
+  },
+  "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025": {
+   "kind": "ofp:wks:work-product-component--EmissionReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionReport_mrv01-ogmp-2025.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionReport_mrv01-ogmp-2025.versions.json"
+  },
+  "osdu:work-product-component--EmissionReportPerStandard:mrv01-rps-eu": {
+   "kind": "ofp:wks:work-product-component--EmissionReportPerStandard:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionReportPerStandard_mrv01-rps-eu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionReportPerStandard_mrv01-rps-eu.versions.json"
+  },
+  "osdu:work-product-component--EmissionReportPerStandard:mrv01-rps-iso": {
+   "kind": "ofp:wks:work-product-component--EmissionReportPerStandard:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionReportPerStandard_mrv01-rps-iso.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionReportPerStandard_mrv01-rps-iso.versions.json"
+  },
+  "osdu:work-product-component--EmissionReportPerStandard:mrv01-rps-ogmp": {
+   "kind": "ofp:wks:work-product-component--EmissionReportPerStandard:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionReportPerStandard_mrv01-rps-ogmp.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionReportPerStandard_mrv01-rps-ogmp.versions.json"
+  },
+  "osdu:work-product-component--EmissionReportPeriod:mrv01-2025": {
+   "kind": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionReportPeriod_mrv01-2025.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionReportPeriod_mrv01-2025.versions.json"
+  },
+  "osdu:work-product-component--EmissionReportingBoundary:mrv01-opctl-2025": {
+   "kind": "ofp:wks:work-product-component--EmissionReportingBoundary:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionReportingBoundary_mrv01-opctl-2025.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionReportingBoundary_mrv01-opctl-2025.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-bottomup-total": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-bottomup-total.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-bottomup-total.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-compr": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-compr.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-engine": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-engine.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-flare": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-flare.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-fug": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-fug.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-pneu": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatement:mrv01-stmt-topdown": {
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatement_mrv01-stmt-topdown.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatement_mrv01-stmt-topdown.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-compr": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-compr.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-engine": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-engine.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-flare": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-flare.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-fug": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-fug.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementAggregator:mrv01-agg-src-pneu": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementAggregator:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementAggregator_mrv01-agg-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-compr-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-compr-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-compr-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-compr-n": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-compr-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-compr-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-compr-t": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-compr-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-compr-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-engine-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-engine-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-n": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-engine-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-engine-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-t": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-engine-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-engine-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-flare-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-flare-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-flare-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-flare-n": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-flare-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-flare-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-flare-t": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-flare-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-flare-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-fug-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-fug-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-fug-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-fug-n": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-fug-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-fug-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-fug-t": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-fug-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-fug-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-pneu-ef": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-pneu-ef.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-pneu-ef.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-pneu-n": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-pneu-n.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-pneu-n.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-pneu-t": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-pneu-t.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementArgumentValue_mrv01-sav-src-pneu-t.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-bottomup": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-bottomup.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-bottomup.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-compr": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-compr.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-engine": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-engine.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-flare": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-flare.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-fug": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-fug.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-pneu": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-topdown": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-topdown.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerReport_mrv01-spr-topdown.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-compr": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-compr.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-engine": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-engine.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-flare": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-flare.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-fug": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-fug.versions.json"
+  },
+  "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-pneu": {
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EmissionStatementPerStandard_mrv01-std-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-compr": {
+   "kind": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-compr.versions.json"
+  },
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-engine": {
+   "kind": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-engine.versions.json"
+  },
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-flare": {
+   "kind": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-flare.versions.json"
+  },
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-fug": {
+   "kind": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-fug.versions.json"
+  },
+  "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-pneu": {
+   "kind": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--EquipmentInstallation_mrv01-inst-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-compr": {
+   "kind": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-compr.versions.json"
+  },
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-engine": {
+   "kind": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-engine.versions.json"
+  },
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-flare": {
+   "kind": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-flare.versions.json"
+  },
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-fug": {
+   "kind": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-fug.versions.json"
+  },
+  "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-pneu": {
+   "kind": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilityEmissionAllocation_mrv01-alloc-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--FacilityLocationAssociation:mrv01-site": {
+   "kind": "ofp:wks:work-product-component--FacilityLocationAssociation:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--FacilityLocationAssociation_mrv01-site.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilityLocationAssociation_mrv01-site.versions.json"
+  },
+  "osdu:work-product-component--FacilitySpecification:mrv01-throughput": {
+   "kind": "ofp:wks:work-product-component--FacilitySpecification:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--FacilitySpecification_mrv01-throughput.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--FacilitySpecification_mrv01-throughput.versions.json"
+  },
+  "osdu:work-product-component--LDARSurveyRecord:4cb3829e8fcd4078bbdb4ea81559f938": {
+   "kind": "ofp:wks:work-product-component--LDARSurveyRecord:1.0.0",
+   "version": 1788895652470455,
+   "file": "records/osdu_work-product-component--LDARSurveyRecord_4cb3829e8fcd4078bbdb4ea81559f938.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:0657a24bed8546e59bb37ab8b3e2b89c": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788896587003716,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_0657a24bed8546e59bb37ab8b3e2b89c.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:301ab46db3e64452b27193c79ba7999c": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788898099264858,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_301ab46db3e64452b27193c79ba7999c.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:3b233f0b19024230a1fd27ff73936e9c": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901891430274,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_3b233f0b19024230a1fd27ff73936e9c.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:3e9fb34313bf45ee8bcfb1377024f424": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901859116344,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_3e9fb34313bf45ee8bcfb1377024f424.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:3f130dded8424c42a5524bacdcc2ceee": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788911032007934,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_3f130dded8424c42a5524bacdcc2ceee.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:4b7551e3e3d24fa4ba28e9658c3de53f": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901894573385,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_4b7551e3e3d24fa4ba28e9658c3de53f.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:5134b210beaa4468b0258694d5039455": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901874910432,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_5134b210beaa4468b0258694d5039455.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:55604af26e38458aa2232f78e9e02c54": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901896179339,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_55604af26e38458aa2232f78e9e02c54.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:59d37414a5a546ccaf5bfdcb729754b1": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901776178403,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_59d37414a5a546ccaf5bfdcb729754b1.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:66fff59da6d948f3ad5d0564acbf208d": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788911607156732,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_66fff59da6d948f3ad5d0564acbf208d.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:71e8266d944c4ca29682dcba1db5aba5": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788901833954920,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_71e8266d944c4ca29682dcba1db5aba5.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:981424e0e1144dbc9fd030092c80ccaf": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788911610875554,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_981424e0e1144dbc9fd030092c80ccaf.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:b02238288dc245ad8878e178773d63ef": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788911594250676,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_b02238288dc245ad8878e178773d63ef.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:c23a1cecb66d456ca884e54c740e1be0": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788911614043074,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_c23a1cecb66d456ca884e54c740e1be0.json"
+  },
+  "osdu:work-product-component--MethaneAlertEvent:f2186edb0bc84c79930c5393810c1ec6": {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "version": 1788911076838363,
+   "file": "records/osdu_work-product-component--MethaneAlertEvent_f2186edb0bc84c79930c5393810c1ec6.json"
+  },
+  "osdu:work-product-component--MethaneAttestation:58a521308e994120a426a22b714c7595": {
+   "kind": "ofp:wks:work-product-component--MethaneAttestation:1.0.0",
+   "version": 1788911607419273,
+   "file": "records/osdu_work-product-component--MethaneAttestation_58a521308e994120a426a22b714c7595.json",
+   "versions": 14,
+   "versionFile": "versions/osdu_work-product-component--MethaneAttestation_58a521308e994120a426a22b714c7595.versions.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:01b698875a754a93ba3a20524fc3e388": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901888368143,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_01b698875a754a93ba3a20524fc3e388.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:0e7102845b4e4672bc7a4e4b20bcd354": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901895905635,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_0e7102845b4e4672bc7a4e4b20bcd354.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:111320bf2fcf44ebb50b7fa27670a927": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911076435948,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_111320bf2fcf44ebb50b7fa27670a927.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:3f987fea9fb249459a4254e354c84ed0": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911610621301,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_3f987fea9fb249459a4254e354c84ed0.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:402908db58af45ceb8174c737108989e": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911604047450,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_402908db58af45ceb8174c737108989e.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:4b480ead4533401381b6608824e0a44a": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911031745440,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_4b480ead4533401381b6608824e0a44a.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:51120cc435264107aa9f21099beb2caa": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788898098968710,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_51120cc435264107aa9f21099beb2caa.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:5229b5770d5b441083d6202012b04e8b": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901903062208,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_5229b5770d5b441083d6202012b04e8b.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:5914f4e762b94f6d8d659b8ca29eafcd": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911613748184,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_5914f4e762b94f6d8d659b8ca29eafcd.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:5c02b0abe2234050a38c2029b932841d": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911593982759,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_5c02b0abe2234050a38c2029b932841d.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:5d0f20f9d6da4f24a3a12fe9ffd03435": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901858830026,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_5d0f20f9d6da4f24a3a12fe9ffd03435.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788895651937239,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_75df445510fa42f3a39a2b3f24730a86.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:8a9772f3d33444ac9e1e8c5bdc0134e3": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788896587346448,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_8a9772f3d33444ac9e1e8c5bdc0134e3.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:942c7c9f74f74143a90a3b013400240f": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901833323644,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_942c7c9f74f74143a90a3b013400240f.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:9c32ca31990147f9a9d7a6b92f39e5e5": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911606887790,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_9c32ca31990147f9a9d7a6b92f39e5e5.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:b511f9d82635412b947f86b78bd5cc53": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788898099804498,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_b511f9d82635412b947f86b78bd5cc53.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:ba2cab867c0a459481dc18762f4037b5": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788911090174373,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_ba2cab867c0a459481dc18762f4037b5.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:bb5d312cda384f4ca6f68fd562264341": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901775678911,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_bb5d312cda384f4ca6f68fd562264341.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:c376b207c28d445684290f6e0914d778": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901891150552,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_c376b207c28d445684290f6e0914d778.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:e86196f2b62649e6acb6ebe1fb3e90de": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901874318153,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_e86196f2b62649e6acb6ebe1fb3e90de.json"
+  },
+  "osdu:work-product-component--MethaneDetectionEvent:f0ad594cdbb94ee5b05d92365d57f16e": {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "version": 1788901894316513,
+   "file": "records/osdu_work-product-component--MethaneDetectionEvent_f0ad594cdbb94ee5b05d92365d57f16e.json"
+  },
+  "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724": {
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "version": 1788911614144247,
+   "file": "records/osdu_work-product-component--MethaneMonitoringPlan_af656fcb539f49f38f22563e7200a724.json",
+   "versions": 25,
+   "versionFile": "versions/osdu_work-product-component--MethaneMonitoringPlan_af656fcb539f49f38f22563e7200a724.versions.json"
+  },
+  "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4": {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "version": 1788895647984474,
+   "file": "records/osdu_work-product-component--MethaneSourceInventory_49239a26f35548de8d743e27f4c44ad4.json"
+  },
+  "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe": {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "version": 1788895647301864,
+   "file": "records/osdu_work-product-component--MethaneSourceInventory_4e7c8600f6ee4e42b80ac8e2dd8eefbe.json"
+  },
+  "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2": {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "version": 1788895646469832,
+   "file": "records/osdu_work-product-component--MethaneSourceInventory_6dc88281902d49f19d3cb655d602d2b2.json"
+  },
+  "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987": {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "version": 1788895648330467,
+   "file": "records/osdu_work-product-component--MethaneSourceInventory_781d05f6c95a421db8b87ee91f589987.json"
+  },
+  "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34": {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "version": 1788895647639437,
+   "file": "records/osdu_work-product-component--MethaneSourceInventory_800089bafc5a47b89b1e9d7cb9460c34.json"
+  },
+  "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7": {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "version": 1788896588728639,
+   "file": "records/osdu_work-product-component--MethaneSourceInventory_d0fcd58b47ad47179272fa0bdf4d41f7.json"
+  },
+  "osdu:work-product-component--OFPAdjustmentRecord:018a029677534ab1af950e1a809c3b88": {
+   "kind": "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0",
+   "version": 1788896893989003,
+   "file": "records/osdu_work-product-component--OFPAdjustmentRecord_018a029677534ab1af950e1a809c3b88.json"
+  },
+  "osdu:work-product-component--OGMPReport:2ec71f4f231f40efa566926bbf3b78de": {
+   "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+   "version": 1788896590055693,
+   "file": "records/osdu_work-product-component--OGMPReport_2ec71f4f231f40efa566926bbf3b78de.json"
+  },
+  "osdu:work-product-component--OGMPReport:fea2645aad5d4a3b8fb08a42aaa9acfc": {
+   "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+   "version": 1788895653085267,
+   "file": "records/osdu_work-product-component--OGMPReport_fea2645aad5d4a3b8fb08a42aaa9acfc.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:331e02b7705749808e30f9da48374e88": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911076752861,
+   "file": "records/osdu_work-product-component--ReconciliationResult_331e02b7705749808e30f9da48374e88.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:3e66b5a218fd456d89a3015e14ec5e6e": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901896086727,
+   "file": "records/osdu_work-product-component--ReconciliationResult_3e66b5a218fd456d89a3015e14ec5e6e.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:46e046f0cc884c8cbddb1c7da9284043": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788898099168647,
+   "file": "records/osdu_work-product-component--ReconciliationResult_46e046f0cc884c8cbddb1c7da9284043.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:4fc89796c94c415a9b161c4b9854a68b": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901903252277,
+   "file": "records/osdu_work-product-component--ReconciliationResult_4fc89796c94c415a9b161c4b9854a68b.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:55233b32b3f84d5083574190aa09f043": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911607063602,
+   "file": "records/osdu_work-product-component--ReconciliationResult_55233b32b3f84d5083574190aa09f043.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:600a05afef434afeb5ffb893309347eb": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901859024001,
+   "file": "records/osdu_work-product-component--ReconciliationResult_600a05afef434afeb5ffb893309347eb.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:65d72bbfc9714eb19ed46a93761299da": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911613939015,
+   "file": "records/osdu_work-product-component--ReconciliationResult_65d72bbfc9714eb19ed46a93761299da.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:6e1520af34814243a60eab543cd866ae": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788898100011245,
+   "file": "records/osdu_work-product-component--ReconciliationResult_6e1520af34814243a60eab543cd866ae.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788895652807700,
+   "file": "records/osdu_work-product-component--ReconciliationResult_7cd38eef0ba340748900380eccbbb944.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:8b27333191b541d1919446c1657e3876": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911031916763,
+   "file": "records/osdu_work-product-component--ReconciliationResult_8b27333191b541d1919446c1657e3876.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:8ddda5a8aa50438fb5e316d84539b4bd": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911610793400,
+   "file": "records/osdu_work-product-component--ReconciliationResult_8ddda5a8aa50438fb5e316d84539b4bd.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:9c53dc3d841e44ed9e1ac6ba815ed113": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788896589710146,
+   "file": "records/osdu_work-product-component--ReconciliationResult_9c53dc3d841e44ed9e1ac6ba815ed113.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:a2ca92cccd6743bf9184a0cff10dd1f0": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901874823310,
+   "file": "records/osdu_work-product-component--ReconciliationResult_a2ca92cccd6743bf9184a0cff10dd1f0.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:c50dde4cb7c142ea8026d316ee1beca3": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901894486573,
+   "file": "records/osdu_work-product-component--ReconciliationResult_c50dde4cb7c142ea8026d316ee1beca3.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:cb88c46980554e9aba75834b492515a8": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901888570565,
+   "file": "records/osdu_work-product-component--ReconciliationResult_cb88c46980554e9aba75834b492515a8.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:ce56c9e163d846b69b100cb846a5a310": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911594165791,
+   "file": "records/osdu_work-product-component--ReconciliationResult_ce56c9e163d846b69b100cb846a5a310.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:d4c90f1de99b4453a9fc46dcc02222e5": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911090350573,
+   "file": "records/osdu_work-product-component--ReconciliationResult_d4c90f1de99b4453a9fc46dcc02222e5.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:e848939339be4b95be612e41a5475adb": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901776090623,
+   "file": "records/osdu_work-product-component--ReconciliationResult_e848939339be4b95be612e41a5475adb.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:f58bbc65aad14944bb7d3d2ef1363cb6": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901891333291,
+   "file": "records/osdu_work-product-component--ReconciliationResult_f58bbc65aad14944bb7d3d2ef1363cb6.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:f8b1225ad0a84355a503fd691ee45cca": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788911604239053,
+   "file": "records/osdu_work-product-component--ReconciliationResult_f8b1225ad0a84355a503fd691ee45cca.json"
+  },
+  "osdu:work-product-component--ReconciliationResult:fb63dc8043ae4acebff1eb408c6f9b9e": {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "version": 1788901833860638,
+   "file": "records/osdu_work-product-component--ReconciliationResult_fb63dc8043ae4acebff1eb408c6f9b9e.json"
+  },
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-compr": {
+   "kind": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-compr.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-compr.versions.json"
+  },
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-engine": {
+   "kind": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-engine.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-engine.versions.json"
+  },
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-flare": {
+   "kind": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-flare.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-flare.versions.json"
+  },
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-fug": {
+   "kind": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-fug.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-fug.versions.json"
+  },
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-src-pneu": {
+   "kind": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+   "version": 1788909497783960,
+   "file": "records/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-pneu.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-src-pneu.versions.json"
+  },
+  "osdu:work-product-component--RecordingUncertaintyAssessment:mrv01-unc-topdown": {
+   "kind": "ofp:wks:work-product-component--RecordingUncertaintyAssessment:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-topdown.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--RecordingUncertaintyAssessment_mrv01-unc-topdown.versions.json"
+  },
+  "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025": {
+   "kind": "ofp:wks:work-product-component--ReportingAssurance:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--ReportingAssurance_mrv01-ogmp-2025.json",
+   "versions": 2,
+   "versionFile": "versions/osdu_work-product-component--ReportingAssurance_mrv01-ogmp-2025.versions.json"
+  },
+  "osdu:work-product-component--VerifiableCredential:mrv01-ogmp-2025-attestation": {
+   "kind": "ofp:wks:work-product-component--VerifiableCredential:1.0.0",
+   "version": 1788909499426680,
+   "file": "records/osdu_work-product-component--VerifiableCredential_mrv01-ogmp-2025-attestation.json"
+  }
+ },
+ "integrity": {
+  "references": 145,
+  "unresolved": [],
+  "uncapturedVersions": []
+ },
+ "foreign": [
+  {
+   "id": "osdu:master-data--EmissionActivity:dfab1ce1da4a474ba2cb013328ba31ac",
+   "kind": "ofp:wks:master-data--EmissionActivity:4.0.0"
+  },
+  {
+   "id": "osdu:master-data--EmissionFactor:77dbe461e77249c8b34141808dcc92c8",
+   "kind": "ofp:wks:master-data--EmissionFactor:4.0.0"
+  },
+  {
+   "id": "osdu:master-data--Facility:0369b9bade9f478bbf1cc1081ba31db1",
+   "kind": "ofp:wks:master-data--Facility:3.0.0"
+  },
+  {
+   "id": "osdu:master-data--Organization:4d400952f8fa4c76b2e5418a82059b57",
+   "kind": "ofp:wks:master-data--Organization:3.0.0"
+  },
+  {
+   "id": "osdu:master-data--Organization:fc16bc7bd14a4a1993d0d317579832c4",
+   "kind": "ofp:wks:master-data--Organization:3.0.0"
+  },
+  {
+   "id": "osdu:master-data--OrganizationalBoundary:b865a24c51d04afc84c6e3d3de841f1e",
+   "kind": "ofp:wks:master-data--OrganizationalBoundary:4.0.0"
+  },
+  {
+   "id": "osdu:reference-data--EmissionActivityCategory:b13a5548dad14e28b4ccc696c419891e",
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0"
+  },
+  {
+   "id": "osdu:reference-data--EmissionActivityType:ca5cd09fa1d542c2bb1a16966986b2fa",
+   "kind": "ofp:wks:reference-data--EmissionActivityType:3.0.0"
+  },
+  {
+   "id": "osdu:reference-data--EmissionComponent:f0a55f07c0bc458b8142dc9adc9c7d20",
+   "kind": "ofp:wks:reference-data--EmissionComponent:3.0.0"
+  },
+  {
+   "id": "osdu:reference-data--EmissionRecordingMethodType:730345187c4c491ea62037a82ba0df33",
+   "kind": "ofp:wks:reference-data--EmissionRecordingMethodType:3.0.0"
+  },
+  {
+   "id": "osdu:reference-data--EmissionScopeType:684c17eb425c4d75b6dde58e2c49ac45",
+   "kind": "ofp:wks:reference-data--EmissionScopeType:3.0.0"
+  },
+  {
+   "id": "osdu:reference-data--MethaneSourceCategory:e37d75eabb0648af98081c893086d64d",
+   "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0"
+  },
+  {
+   "id": "osdu:reference-data--UnitOfMeasure:b7064de25572403990e51f661c164b64",
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2InjectionRecord:fc4b2581632c4aba85a99612f03e4b3e",
+   "kind": "ofp:wks:work-product-component--CO2InjectionRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2MassBalanceRecord:3e09d0d398404032ab404a5be38b92c7",
+   "kind": "ofp:wks:work-product-component--CO2MassBalanceRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2PlumeObservation:97b81bcc7b5449868d0022f8182a3b5b",
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2PlumeObservation:f734c5248a694a319a1895aa5c59206d",
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2PlumeObservation:81c694b8e3f64171957a24095b8fba0e",
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2PlumeObservation:c058ccfa5bfb4a05a74986c9e6428808",
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2PlumeObservation:6a282322c7ee460b87bfc7072621a6c5",
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2PlumeObservation:c9527522b14442cbacdfcfe0768462aa",
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2StorageRecord:2d6459cb0588472ab608bc641c9b687f",
+   "kind": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CO2StorageRecord:bc54627b8b1243af9d8d1065acd324c6",
+   "kind": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--CarbonClaimAdjustmentRecord:861399cef6e94e89ad661e1a56a0e302",
+   "kind": "ofp:wks:work-product-component--CarbonClaimAdjustmentRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--ContainmentAssessment:4533db8b9cf7435f9b62babde4155368",
+   "kind": "ofp:wks:work-product-component--ContainmentAssessment:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--ContainmentIntegrityAssessment:784d9d2ae95d4486946784adf640222f",
+   "kind": "ofp:wks:work-product-component--ContainmentIntegrityAssessment:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--EmissionStatement:00201defc1cd4e8784dc598b7a4b973e",
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--EmissionStatement:67a2f074403a447ab6645cad168e7776",
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--EmissionStatement:0e8caab239e4477d86e4b915f8195962",
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--MMVEventRecord:de0edac9b88e4b8cb0b7ee1473c88b9a",
+   "kind": "ofp:wks:work-product-component--MMVEventRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--MMVEventRecord:2469a83492f54e09be5c442ea565dab2",
+   "kind": "ofp:wks:work-product-component--MMVEventRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--MMVEventRecord:d7a3dd27a90a4d79b78dd825a4f51f3a",
+   "kind": "ofp:wks:work-product-component--MMVEventRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--MMVEventRecord:875e7d90d40148a3b772bd0e7ae0b9d7",
+   "kind": "ofp:wks:work-product-component--MMVEventRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--MMVEventRecord:8f1901891dd0404c92c5d0bc6d31f3a5",
+   "kind": "ofp:wks:work-product-component--MMVEventRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--OFPAdjustmentRecord:c3329a54c3604711a8e2a76ab1c33008",
+   "kind": "ofp:wks:work-product-component--OFPAdjustmentRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--PreInjectionBaselineRecord:097c00a0fe434587a3791936e5d4ca66",
+   "kind": "ofp:wks:work-product-component--PreInjectionBaselineRecord:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--SCEPAttestation:f603ba2df9e64f8083db8d0c01287f16",
+   "kind": "ofp:wks:work-product-component--SCEPAttestation:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--SCEPVersionSnapshot:acada82214ea44209150c762754edb14",
+   "kind": "ofp:wks:work-product-component--SCEPVersionSnapshot:1.0.0"
+  },
+  {
+   "id": "osdu:work-product-component--StructureMapRecord:77b53f29edea44ba8fcb2fba5a422c19",
+   "kind": "ofp:wks:work-product-component--StructureMapRecord:1.0.0"
+  }
+ ],
+ "restore": "Re-register schemas-live/*.json via Schema Service POST, then PUT claim3/records/*.json (strip id/version to let the platform assign, or keep ids to preserve them)."
+}

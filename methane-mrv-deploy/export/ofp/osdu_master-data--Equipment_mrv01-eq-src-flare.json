@@ -1,0 +1,30 @@
+{
+ "data": {
+  "name": "flare stack (98% DRE)",
+  "description": "Emitting equipment for SRC-FLARE"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--Equipment:mrv01-eq-src-flare",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--Equipment:3.4.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

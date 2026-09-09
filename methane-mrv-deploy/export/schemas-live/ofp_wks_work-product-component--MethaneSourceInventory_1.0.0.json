@@ -1,0 +1,169 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--MethaneSourceInventory",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T17:36:35.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-domain": "methane",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+  "x-dve-sysml-source": "sysml/osdu-data-platform/03_types_items.sysml#MethaneSourceInventory",
+  "description": "OSDU methane MRV activity record (MethaneSourceInventory), grounded on OFPActivityRecord; generated from the dVeracity SysML v2 model.",
+  "additionalProperties": false,
+  "title": "MethaneSourceInventory",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "componentType": {
+      "type": "string"
+     },
+     "facilityId": {
+      "type": "string"
+     },
+     "sourceCategory": {
+      "type": "string",
+      "enum": [
+       "flaring",
+       "fugitive",
+       "combustion"
+      ]
+     },
+     "modelVersion": {
+      "type": "string"
+     },
+     "emissionFactor": {
+      "type": "number"
+     },
+     "activityId": {
+      "type": "string"
+     },
+     "recordingType": {
+      "type": "string"
+     },
+     "lastInspectionDate": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "reportingPeriodStart": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "location": {
+      "type": "string"
+     },
+     "reportingPeriodEnd": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "sensitivity": {
+      "type": "string"
+     },
+     "activityType": {
+      "type": "string"
+     },
+     "dataSource": {
+      "type": "string"
+     },
+     "predecessorVersionId": {
+      "type": "string"
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/osdu/methane/MethaneSourceInventory.1.0.0.json"
+ }
+}

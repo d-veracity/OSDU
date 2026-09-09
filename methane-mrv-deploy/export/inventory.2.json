@@ -1,0 +1,37 @@
+{
+  "data": {
+    "activityType": "ch4_source_inventory",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "sourceCategory": "venting",
+    "componentType": "rod-packing vent",
+    "lastInspectionDate": "2025-10-15T00:00:00Z",
+    "emissionFactor": 1.2
+  },
+  "id": "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+  "version": 1788895647639437,
+  "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:27:27.642Z"
+}

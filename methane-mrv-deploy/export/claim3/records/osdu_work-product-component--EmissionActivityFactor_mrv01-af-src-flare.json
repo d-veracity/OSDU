@@ -1,0 +1,31 @@
+{
+ "data": {
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-flare",
+  "emission_factor_id": "osdu:master-data--EmissionFactor:mrv01-ef-src-flare",
+  "emission_factor_type_id": "osdu:reference-data--EmissionFactorType:mrv01-site-specific-measured"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:work-product-component--EmissionActivityFactor:mrv01-af-src-flare",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

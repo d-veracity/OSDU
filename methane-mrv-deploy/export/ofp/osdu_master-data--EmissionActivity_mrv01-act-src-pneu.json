@@ -1,0 +1,36 @@
+{
+ "data": {
+  "name": "SRC-PNEU intermittent pneumatic ctrl",
+  "emission_activity_type_id": "osdu:reference-data--EmissionActivityType:mrv01-type-src-pneu",
+  "emission_activity_category_id": "osdu:reference-data--EmissionActivityCategory:mrv01-venting",
+  "emission_component_id": "osdu:reference-data--EmissionComponent:mrv01-ch4",
+  "emission_scope_type_id": "osdu:reference-data--EmissionScopeType:mrv01-scope1",
+  "organizational_boundary_id": "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025",
+  "emission_inventory_id": "osdu:master-data--EmissionInventory:mrv01-ch4-2025",
+  "description": "Methane source SRC-PNEU; grounds osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--EmissionActivity:mrv01-act-src-pneu",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--EmissionActivity:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

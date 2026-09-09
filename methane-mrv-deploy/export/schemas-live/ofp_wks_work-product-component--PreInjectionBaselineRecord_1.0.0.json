@@ -1,0 +1,176 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--PreInjectionBaselineRecord",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--PreInjectionBaselineRecord:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T00:19:10.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-domain": "scep",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--PreInjectionBaselineRecord:1.0.0",
+  "x-dve-sysml-source": "sysml/osdu-data-platform/03_types_items.sysml#PreInjectionBaselineRecord",
+  "description": "OSDU SCEP activity record (PreInjectionBaselineRecord), grounded on OFPActivityRecord. Generated from the dVeracity SysML v2 model.",
+  "additionalProperties": false,
+  "title": "PreInjectionBaselineRecord",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "facilityId": {
+      "type": "string"
+     },
+     "reservoirPressureMPa": {
+      "type": "number"
+     },
+     "modelVersion": {
+      "type": "string"
+     },
+     "surveyCompletionDate": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "baselineId": {
+      "type": "string"
+     },
+     "activityId": {
+      "type": "string"
+     },
+     "groundwaterChemistry": {
+      "type": "string"
+     },
+     "ecosystemBaseline": {
+      "type": "string"
+     },
+     "recordingType": {
+      "type": "string"
+     },
+     "insarBaselineMmPerYear": {
+      "type": "number"
+     },
+     "seismicBaselineSurveyId": {
+      "type": "string"
+     },
+     "reportingPeriodStart": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "location": {
+      "type": "string"
+     },
+     "reportingPeriodEnd": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "sensitivity": {
+      "type": "string"
+     },
+     "activityType": {
+      "type": "string"
+     },
+     "dataSource": {
+      "type": "string"
+     },
+     "predecessorVersionId": {
+      "type": "string"
+     },
+     "soilGasBaselinePPM": {
+      "type": "number"
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/osdu/scep/PreInjectionBaselineRecord.1.0.0.json"
+ }
+}

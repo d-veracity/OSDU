@@ -1,0 +1,31 @@
+{
+ "data": {
+  "name": "Methane",
+  "symbol_code": "CH4",
+  "description": "Methane (GWP100 = 28, AR5)"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:reference-data--EmissionComponent:mrv01-ch4",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:reference-data--EmissionComponent:3.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

@@ -1,0 +1,127 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "reference-data--ReportingAssuranceType",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:reference-data--ReportingAssuranceType:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T22:58:02.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Reporting",
+  "x-osdu-schema-source": "ofp:wks:reference-data--ReportingAssuranceType:1.0.0",
+  "description": "The external assurance types assigned to the data provided by an organization for reporting purposes\nover a given period of time.\n\nAvailable values are: Limited, Reasonable, and None.\n\nIt provides a general characterization of the data collected by an Organization by an independent\nassurance provider that has evaluated a representative sample.",
+  "additionalProperties": false,
+  "title": "Reporting Assurance Type",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "name": {
+      "description": "Name assigned to the Reporting Assurance Type.",
+      "type": "string"
+     },
+     "reporting_assurance_type_id": {
+      "description": "The Primary Key assigned to the Reporting Assurance Type.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/reference-data--ReportingAssuranceType.1.0.0.json",
+  "x-dve-hackolade-source": "Reporting.hck.json"
+ }
+}

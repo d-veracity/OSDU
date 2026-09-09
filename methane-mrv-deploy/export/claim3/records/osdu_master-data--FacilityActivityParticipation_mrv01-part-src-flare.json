@@ -1,0 +1,30 @@
+{
+ "data": {
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-flare",
+  "facility_id": "osdu:master-data--Facility:mrv01-unit-compression"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--FacilityActivityParticipation:mrv01-part-src-flare",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--FacilityActivityParticipation:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

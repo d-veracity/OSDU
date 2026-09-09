@@ -1,0 +1,76 @@
+{
+ "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-ef",
+ "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-fug",
+    "emission_calculation_component_line_id": "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-ef",
+    "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+    "emission_argument_type": "Emission Factor",
+    "emission_argument_id": "osdu:master-data--EmissionFactor:mrv01-ef-src-fug",
+    "emission_factor_id": "osdu:master-data--EmissionFactor:mrv01-ef-src-fug"
+   },
+   "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-ef",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-fug",
+    "emission_calculation_component_line_id": "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-ef",
+    "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+    "emission_argument_type": "Emission Factor",
+    "emission_argument_id": "osdu:master-data--EmissionFactor:mrv01-ef-src-fug",
+    "emission_factor_id": "osdu:master-data--EmissionFactor:mrv01-ef-src-fug"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-fug-ef",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

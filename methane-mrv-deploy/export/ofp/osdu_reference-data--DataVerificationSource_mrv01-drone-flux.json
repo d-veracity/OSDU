@@ -1,0 +1,30 @@
+{
+ "data": {
+  "name": "Drone flux survey (DRONE-CRDS-07)",
+  "description": "Top-down site measurement, ISO Cl.7"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:20.825Z",
+ "id": "osdu:reference-data--DataVerificationSource:mrv01-drone-flux",
+ "version": 1788909500638023,
+ "kind": "ofp:wks:reference-data--DataVerificationSource:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:41.780Z"
+}

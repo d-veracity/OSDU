@@ -1,0 +1,38 @@
+{
+ "data": {
+  "activityType": "ch4_reconciliation",
+  "dataSource": "live-console",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "bottomUpTotalKg": 198636,
+  "topDownTotalKg": 1051200,
+  "divergencePercent": 81.1,
+  "reconciliationVerdict": "failed",
+  "reconciledTotalKg": 198636
+ },
+ "id": "osdu:work-product-component--ReconciliationResult:3e66b5a218fd456d89a3015e14ec5e6e",
+ "version": 1788901896086727,
+ "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T21:11:36.088Z"
+}

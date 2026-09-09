@@ -1,0 +1,233 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--MethaneMonitoringPlan",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:08:42.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-domain": "methane",
+  "x-dve-standard": "ISO 25624-1:2026",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+  "description": "ISO 25624-1 Monitoring Plan (5.1 + Annex B): the certifiable methane MRV wrapper carrying reconciliation-gate parameters and a verification state machine.",
+  "additionalProperties": false,
+  "x-dve-clause": "5.1, Annex B, 8, 9, 11",
+  "title": "MethaneMonitoringPlan",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "ofpFacilityId": {
+      "description": "OFP Facility (master-data) this plan monitors",
+      "type": "string"
+     },
+     "materialityThresholdPercent": {
+      "type": "number"
+     },
+     "planHash": {
+      "type": "string"
+     },
+     "ofpEmissionReportId": {
+      "description": "OFP EmissionReport the reconciled statements are reported in",
+      "type": "string"
+     },
+     "ofpOrganizationId": {
+      "description": "OFP operator Organization",
+      "type": "string"
+     },
+     "goldStandardCoveragePercent": {
+      "type": "number"
+     },
+     "siteMeasurementIds": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "recordingType": {
+      "type": "string"
+     },
+     "assetId": {
+      "type": "string"
+     },
+     "ofpDataQualityRuleSetId": {
+      "description": "OFP DataQualityRuleSet expressing the certification gate",
+      "type": "string"
+     },
+     "planId": {
+      "type": "string"
+     },
+     "versionTrigger": {
+      "type": "string",
+      "enum": [
+       "periodic",
+       "eventDriven",
+       "regulatory",
+       "corrective"
+      ]
+     },
+     "facilityId": {
+      "type": "string"
+     },
+     "reportingBoundary": {
+      "type": "string"
+     },
+     "verificationStatus": {
+      "type": "string",
+      "enum": [
+       "draft",
+       "underReview",
+       "verified",
+       "restated",
+       "suspended"
+      ]
+     },
+     "uncertaintyCoverageFactorK": {
+      "type": "number"
+     },
+     "ofpReportingAssuranceId": {
+      "description": "OFP ReportingAssurance issued on the report",
+      "type": "string"
+     },
+     "previousVersionId": {
+      "type": "string"
+     },
+     "reconciliationDivergenceLimitPercent": {
+      "type": "number"
+     },
+     "siteId": {
+      "type": "string"
+     },
+     "reportingPeriodStart": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "reportingPeriodEnd": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "reconciliationResultId": {
+      "type": "string"
+     },
+     "sensitivity": {
+      "type": "string"
+     },
+     "activityType": {
+      "type": "string"
+     },
+     "targetOgmpLevel": {
+      "type": "string",
+      "enum": [
+       "level2",
+       "level3",
+       "level4",
+       "level5"
+      ]
+     },
+     "dataSource": {
+      "type": "string"
+     },
+     "sourceInventoryIds": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/osdu/methane/MethaneMonitoringPlan.1.0.0.json"
+ }
+}

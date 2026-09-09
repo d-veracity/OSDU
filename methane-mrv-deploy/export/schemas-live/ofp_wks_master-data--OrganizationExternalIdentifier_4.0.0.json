@@ -1,0 +1,139 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--OrganizationExternalIdentifier",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--OrganizationExternalIdentifier:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:05:39.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--OrganizationExternalIdentifier:4.0.0",
+  "description": "A number or code that is used to publicly identify an organization. Examples can be a tax number, a\nchamber of commerce number, or Data Universal Numbering System (DUNS) number.",
+  "additionalProperties": false,
+  "title": "Organization External Identifier",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "organization_id": {
+      "description": "The Foreign Key of the Organization.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Organization External Identified.",
+      "type": "string"
+     },
+     "organization_external_identifier_type_id": {
+      "description": "The Foreign Key of the Organization External Identifier Type.",
+      "type": "string"
+     },
+     "value": {
+      "description": "A unique value assigned to Organization External Identifier Type; e.g., the tax code or company number.\n\nNote: For External Identifier Types shared by multiple organizations, such as a Standard Industrial Classification (SIC) codes define a child value of the Organization External Identifier Type parent (e.g., SIC) and reference it leaving the Organization External Identifier Value blank. Common Identifier Values should not be recorded here to avoid creating duplicate records for the same identifier.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "organization_external_identifier_type_id",
+     "organization_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--OrganizationExternalIdentifier.4.0.0.json"
+ }
+}

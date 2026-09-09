@@ -1,0 +1,31 @@
+{
+ "data": {
+  "id": "std-src-compr",
+  "emission_statement_id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-compr",
+  "standard_id": "osdu:master-data--Standard:mrv01-iso-25624-1"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:work-product-component--EmissionStatementPerStandard:mrv01-std-src-compr",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:work-product-component--EmissionStatementPerStandard:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

@@ -1,0 +1,151 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--FacilityLocationAssociation",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--FacilityLocationAssociation:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T22:58:05.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Facility Structure",
+  "x-osdu-schema-source": "ofp:wks:master-data--FacilityLocationAssociation:1.0.0",
+  "description": "The assignment of a Facility to a Location at a point in time.",
+  "additionalProperties": false,
+  "title": "Facility Location Association",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time to which the Facility Location Association is valid.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time from which the Facility Location Association is valid.",
+      "type": "string"
+     },
+     "geopolitical_contexts": {
+      "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Facility Specification.",
+      "type": "string"
+     },
+     "location_id": {
+      "description": "The Foreign Key of the Location of the Facility Location Association.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "facility_id",
+     "id",
+     "location_id",
+     "valid_from_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--FacilityLocationAssociation.1.0.0.json",
+  "x-dve-hackolade-source": "Facility Structure.hck.json"
+ }
+}

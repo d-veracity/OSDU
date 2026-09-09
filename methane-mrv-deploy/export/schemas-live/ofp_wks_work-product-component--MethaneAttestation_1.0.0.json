@@ -1,0 +1,194 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--MethaneAttestation",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--MethaneAttestation:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T19:42:54.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "x-dve-note": "dVeracity bridge: binds a VerifiableCredential to a verified MethaneMonitoringPlan by SHA256 hash, carrying the ISO 9.5.3 expanded uncertainty (U = k\u00b7u) as the credential's confidence basis.",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-domain": "methane",
+  "x-dve-standard": "ISO 25624-1:2026",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--MethaneAttestation:1.0.0",
+  "description": "dVeracity attestation over an ISO 25624-1 methane MRV verification, bound to the Monitoring Plan hash.",
+  "additionalProperties": false,
+  "title": "MethaneAttestation",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "attestationRef": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     },
+     "attestationStatus": {
+      "type": "string",
+      "enum": [
+       "issued",
+       "suspended",
+       "revoked",
+       "reissued"
+      ]
+     },
+     "attestationId": {
+      "type": "string"
+     },
+     "issuedBy": {
+      "type": "string"
+     },
+     "planHash": {
+      "type": "string"
+     },
+     "expandedUncertaintyPercent": {
+      "type": "number"
+     },
+     "confidenceScore": {
+      "type": "number"
+     },
+     "planRecordId": {
+      "type": "string"
+     },
+     "planId": {
+      "type": "string"
+     },
+     "coverageFactorK": {
+      "type": "number"
+     },
+     "reconciliationResultId": {
+      "type": "string"
+     },
+     "issuedAt": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "activityType": {
+      "type": "string"
+     },
+     "verifiableCredential": {
+      "additionalProperties": true,
+      "type": "object",
+      "properties": {
+       "proofValue": {
+        "type": "string"
+       },
+       "issuanceDate": {
+        "format": "date-time",
+        "type": "string"
+       },
+       "subject": {
+        "type": "string"
+       },
+       "proofType": {
+        "type": "string"
+       },
+       "type": {
+        "type": "string"
+       },
+       "issuer": {
+        "type": "string"
+       },
+       "credentialStatus": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/osdu/methane/MethaneAttestation.1.0.0.json"
+ }
+}

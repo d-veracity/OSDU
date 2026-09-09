@@ -1,0 +1,146 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--FacilitySpecification",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--FacilitySpecification:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:05:42.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:transactional-data--FacilitySpecification:4.0.0",
+  "description": "The assignment of a value for a Parameter Type to a Facility.",
+  "additionalProperties": false,
+  "title": "Facility Specification",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "physical_quantity_type_id": {
+      "description": "The Foreign Key of the Physical Quantity Type (e.g., length, temperature, energy)\nthe Facility Specification defines.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Facility Specification.",
+      "type": "string"
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Facility Specification.",
+      "type": "string"
+     },
+     "value": {
+      "description": "The value assigned to the Facility Specification.",
+      "type": "number"
+     },
+     "emission_parameter_type_id": {
+      "description": "DEPRECATED, use Physical quantity type instead. Assigns a reference parameter type to an emission argument",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_parameter_type_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--FacilitySpecification.1.0.0.json"
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "data": {
+  "activityType": "methane_attestation",
+  "attestationId": "MRV-01-ATT-2025",
+  "planId": "MRV-01-MP-2025",
+  "planRecordId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+  "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+  "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:55233b32b3f84d5083574190aa09f043",
+  "attestationStatus": "suspended",
+  "confidenceScore": 0.9,
+  "expandedUncertaintyPercent": 24,
+  "coverageFactorK": 2,
+  "verifiableCredential": {
+   "type": "MethaneMRVVerificationCredential",
+   "issuer": "did:web:dveracity.com",
+   "subject": "MRV-01-MP-2025",
+   "issuanceDate": "2026-09-08T12:00:00Z",
+   "proofType": "Ed25519Signature2020",
+   "proofValue": "sha256:1009f67a1018c4f33ad7ec1f72cb4aa8",
+   "credentialStatus": "suspended"
+  },
+  "attestationRef": "attref:1009f67a1018c4f33ad7ec1f",
+  "issuedBy": "dVeracity Verifier",
+  "issuedAt": "2026-09-08T12:00:00Z",
+  "reason": "Suspended: SiteLevelReconciliation failed on live re-survey"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:53:27.424Z",
+ "id": "osdu:work-product-component--MethaneAttestation:58a521308e994120a426a22b714c7595",
+ "version": 1788911607419273,
+ "kind": "ofp:wks:work-product-component--MethaneAttestation:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:43:06.713Z"
+}

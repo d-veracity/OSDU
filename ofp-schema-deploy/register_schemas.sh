@@ -5,6 +5,7 @@
 #   OSDU_TOKEN_FILE=/path/to/token ./register_schemas.sh test     # 1 entity, then stop
 #   OSDU_TOKEN_FILE=/path/to/token ./register_schemas.sh refdata  # 20 reference-data
 #   OSDU_TOKEN_FILE=/path/to/token ./register_schemas.sh all      # everything, deps first
+#   OSDU_TOKEN_FILE=/path/to/token ./register_schemas.sh domains  # methane-proof domain kinds (manifest-domains.json)
 #
 # Env overrides:
 #   OSDU_BASE        (default https://104.43.134.183.nip.io)
@@ -39,6 +40,8 @@ post_one() {
     -H "Content-Type: application/json" --data @"$file")
   if [[ "$code" =~ ^2 ]]; then
     printf "  OK   %s  %s\n" "$code" "$id"
+  elif [[ "$code" == "400" ]] && grep -q "already present" /tmp/reg_resp.$$; then
+    printf "  SKIP %s  %s (already registered)\n" "$code" "$id"
   else
     printf "  FAIL %s  %s\n" "$code" "$id"; echo "  --- response ---"; head -c 700 /tmp/reg_resp.$$; echo
     rm -f /tmp/reg_resp.$$; exit 1
@@ -54,6 +57,28 @@ for e in json.load(open('$DIR/manifest.json'))['$1']:
     seen.add(e['file']); print('$DIR/'+e['file'])"; }
 mapfile -t REF < <(dedup reference-data)
 mapfile -t MAS < <(dedup master-data)
+# transaction-data (OSDU-native work-product-component) has its own manifest
+dedup_tx() { python3 -c "
+import json,os
+p='$DIR/manifest-transaction.json'
+if not os.path.exists(p): raise SystemExit
+seen=set()
+for e in json.load(open(p))['work-product-component']:
+    if e['file'] in seen: continue
+    seen.add(e['file']); print('$DIR/'+e['file'])"; }
+mapfile -t TX < <(dedup_tx)
+
+# domain kinds (Data Verification / Org / Facility / Recording / Reporting) have their own manifest
+dedup_dom() { python3 -c "
+import json,os
+p='$DIR/manifest-domains.json'
+if not os.path.exists(p): raise SystemExit
+seen=set()
+for g in ('reference-data','master-data','work-product-component'):
+    for e in json.load(open(p)).get(g,[]):
+        if e['file'] in seen: continue
+        seen.add(e['file']); print('$DIR/'+e['file'])"; }
+mapfile -t DOM < <(dedup_dom)
 
 case "$MODE" in
   test)
@@ -64,10 +89,19 @@ case "$MODE" in
     echo "Registering ${#REF[@]} reference-data kinds…"
     for f in "${REF[@]}"; do post_one "$f"; done
     echo "Done -> next: $0 all" ;;
+  transaction)
+    echo "Registering ${#TX[@]} transaction-data (work-product-component) kinds…"
+    for f in "${TX[@]}"; do post_one "$f"; done
+    echo "Transaction-data done." ;;
   all)
-    echo "Registering ${#REF[@]} reference-data, then ${#MAS[@]} master-data…"
+    echo "Registering ${#REF[@]} reference-data, ${#MAS[@]} master-data, ${#TX[@]} transaction-data…"
     for f in "${REF[@]}"; do post_one "$f"; done
     for f in "${MAS[@]}"; do post_one "$f"; done
+    for f in "${TX[@]}"; do post_one "$f"; done
     echo "All done." ;;
-  *) echo "unknown mode: $MODE (test|refdata|all)"; exit 2 ;;
+  domains)
+    echo "Registering ${#DOM[@]} domain kinds (reference-data, master-data, work-product-component)…"
+    for f in "${DOM[@]}"; do post_one "$f"; done
+    echo "Domain kinds done." ;;
+  *) echo "unknown mode: $MODE (test|refdata|transaction|all|domains)"; exit 2 ;;
 esac

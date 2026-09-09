@@ -1,0 +1,190 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--ActivityLineageRecord",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--ActivityLineageRecord:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T00:19:05.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-domain": "scep",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--ActivityLineageRecord:1.0.0",
+  "x-dve-sysml-source": "sysml/osdu-data-platform/03_types_items.sysml#ActivityLineageRecord",
+  "description": "OSDU SCEP activity record (ActivityLineageRecord), grounded on OFPActivityRecord. Generated from the dVeracity SysML v2 model.",
+  "additionalProperties": false,
+  "title": "ActivityLineageRecord",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "facilityId": {
+      "type": "string"
+     },
+     "modelVersion": {
+      "type": "string"
+     },
+     "modelAssumptions": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "outputActivityIds": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "interpretationBias": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "availabilityBias",
+        "anchoringBias",
+        "modelAssumption",
+        "dataSelectionBias"
+       ]
+      }
+     },
+     "activityId": {
+      "type": "string"
+     },
+     "recordingType": {
+      "type": "string"
+     },
+     "reportingPeriodStart": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "location": {
+      "type": "string"
+     },
+     "lineageGraphHash": {
+      "type": "string"
+     },
+     "reportingPeriodEnd": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "sensitivity": {
+      "type": "string"
+     },
+     "activityType": {
+      "type": "string"
+     },
+     "dataSource": {
+      "type": "string"
+     },
+     "predecessorVersionId": {
+      "type": "string"
+     },
+     "dataSources": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "inputActivityIds": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/osdu/scep/ActivityLineageRecord.1.0.0.json"
+ }
+}

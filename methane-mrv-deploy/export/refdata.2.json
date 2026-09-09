@@ -1,0 +1,30 @@
+{
+  "data": {
+    "code": "ventingCompressorReciprocating",
+    "name": "rod-packing vent",
+    "description": "ISO 25624-1 Clause 6 source category 'ventingCompressorReciprocating'",
+    "isoClause": "6"
+  },
+  "id": "osdu:reference-data--MethaneSourceCategory:7b547ea51c144d6b83f7f62d6834dddd",
+  "version": 1788895651050301,
+  "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:27:31.053Z"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "osdu:work-product-component--EmissionReportPeriod:mrv01-2025",
+ "kind": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "emission_report_period_id": "2025",
+    "name": "Reporting year 2025",
+    "year": 2025,
+    "frequency": "annually",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z"
+   },
+   "id": "osdu:work-product-component--EmissionReportPeriod:mrv01-2025",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "emission_report_period_id": "2025",
+    "name": "Reporting year 2025",
+    "year": 2025,
+    "frequency": "annually",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:work-product-component--EmissionReportPeriod:mrv01-2025",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}
