@@ -1,0 +1,177 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "reference-data--UnitOfMeasure",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:reference-data--UnitOfMeasure:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:05:09.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+  "description": "A definite property by which an object can be compared as larger or smaller than other objects of the same physical quantity. \n\nIt is defined and adopted by convention or by law, that is used as a standard for measurement of the same physical quantity.\n\nAny other value of the physical quantity can be expressed as a simple multiple of the Unit of Measure.",
+  "additionalProperties": false,
+  "title": "Unit Of Measure",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "code": {
+      "description": "A code assigned to the Unit of Measure.",
+      "type": "string"
+     },
+     "unit_of_measure_source_reference_id": {
+      "description": "The Foreign Key of the Source Reference assigned to the Unit Of Measure.",
+      "type": "string"
+     },
+     "symbol_code": {
+      "description": "A symbol code assigned to the Unit Of Measure.",
+      "type": "string"
+     },
+     "unit_of_measure_id": {
+      "description": "The Primary Key assigned to the Unit Of Measure.",
+      "type": "string"
+     },
+     "system_of_units_id": {
+      "description": "The Foreign Key of the System of Units assigned to the Unit Of Measure.",
+      "type": "string"
+     },
+     "is_base_unit_indicator": {
+      "description": "Identifies if this Unit Of Measure is used as a base unit of Measure.",
+      "type": "boolean"
+     },
+     "physical_quantity_type_id": {
+      "description": "The Foreign Key of the Physical Quantity Type assigned to the Unit Of Measure.",
+      "type": "string"
+     },
+     "base_unit_of_measure_id": {
+      "description": "The base Unit Of Measure of this Unit Of Measure.",
+      "type": "string"
+     },
+     "conversion_factor_c": {
+      "description": "Conversion Factor C from the formula for mapping a unit dictionary to the Energistics Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf.",
+      "type": "number"
+     },
+     "name": {
+      "description": "The name assigned to the Unit Of Measure.",
+      "type": "string"
+     },
+     "conversion_factor_d": {
+      "description": "Conversion Factor D from the formula for mapping a unit dictionary to the Energistics Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf.",
+      "type": "number"
+     },
+     "conversion_factor_a": {
+      "description": "Conversion Factor A from the formula for mapping a unit dictionary to the Energistics\u00ae Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf.",
+      "type": "number"
+     },
+     "conversion_factor_b": {
+      "description": "Conversion Factor B from the formula for mapping a unit dictionary to the Energistics Unit Of Measure Dictionary.\n\ny=(A+Bx)/(C+Dx)\n\nSee Chapter 4, Mapping, in the Energistics Usage Guide:\nwww.energistics.org/sites/default/files/2023-03/Energistics_Unit_of_Measure_Usage_Guide_V1.pdf.",
+      "type": "number"
+     }
+    },
+    "required": [
+     "code",
+     "name",
+     "symbol_code",
+     "unit_of_measure_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/reference-data--UnitOfMeasure.3.0.0.json"
+ }
+}

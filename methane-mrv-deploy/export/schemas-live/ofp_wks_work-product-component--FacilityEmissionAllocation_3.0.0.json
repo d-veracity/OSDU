@@ -1,0 +1,138 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--FacilityEmissionAllocation",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--FacilityEmissionAllocation:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:03:18.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "x-dve-ofp-canonical-id": "ofp:wks:work-product-component--FacilityEmissionAllocation:3.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Reporting",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--FacilityEmissionAllocation:3.0.0",
+  "description": "The allocation of an emission to a Facility.",
+  "title": "Facility Emission Allocation",
+  "type": "object",
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "x-dve-ofp-id-source": "dVE/backend/assets/downloads/hackolade/ofp-postgres.hck.json",
+  "x-dve-hackolade-source": "Common Entities.hck.json",
+  "additionalProperties": false,
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "facility_allocation_percentage": {
+      "description": "The percentage amount of emission allocated to a Facility, expressed as a decimal value.",
+      "type": "number"
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility to which the Facility Emission Allocation is linked.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key assigned to the Facility Emission Allocation.",
+      "type": "string"
+     },
+     "emission_statement_id": {
+      "description": "The Foreign Key of the Emission Statement to which the Facility Emission Allocation is assigned.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_statement_id",
+     "facility_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--FacilityEmissionAllocation.3.0.0.json"
+ }
+}

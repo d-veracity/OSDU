@@ -1,0 +1,135 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "reference-data--CentralProductClassificationCode",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:reference-data--CentralProductClassificationCode:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:04:38.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:reference-data--CentralProductClassificationCode:3.0.0",
+  "description": "The list of valid codes as per the CPC.\n\nThe CPC consists of a coherent and consistent classification structure for products (goods and services)\nbased on a set of internationally agreed concepts, definitions, principles, and classification rules. It\nserves as an international standard for assembling and tabulating all kinds of data requiring product\ndetail, including statistics on industrial production, domestic and foreign commodity trade,\ninternational trade in services, balance of payments, consumption and price statistics, and other data\nused within the national accounts.\n\nIt provides a comprehensive framework within which data on products can be collected and presented\nin a format that allows for economic analysis supporting decision-taking and policy-making.\n\nRefer to: United Nations (UN) Statistical Commission:\nwww.unstats.un.org/unsd/classifications/Econ/CPC.cshtml",
+  "additionalProperties": false,
+  "title": "Central Product Classification Code",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "cpc_code": {
+      "description": "The code assigned to CPC Code.",
+      "type": "string"
+     },
+     "cpc_name": {
+      "description": "The name assigned to the CPC Code.",
+      "type": "string"
+     },
+     "cpc_id": {
+      "description": "The Primary Key of the CPC Code.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "cpc_code",
+     "cpc_name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/reference-data--CentralProductClassificationCode.3.0.0.json"
+ }
+}

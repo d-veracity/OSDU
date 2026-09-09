@@ -5,7 +5,8 @@
 #
 # Steps: generate+register schemas (from SysML + ISO reference data) -> reconciliation
 #        lifecycle (bottom-up vs top-down gate -> verified) -> attestation + unlit-flare
-#        anomaly -> ISO 12.3 restatement -> OFP handshake + evidence export.
+#        anomaly -> ISO 12.3 restatement -> OFP handshake + evidence export -> OFP data-domain
+#        kinds + grounding -> complete evidence export -> offline verification.
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 : "${OSDU_BASE:=https://172.171.6.4.nip.io}"; : "${OSDU_PARTITION:=osdu}"
@@ -35,4 +36,8 @@ echo "### 6/7  OFP data-domain kinds via the ofp-schema-deploy pipeline (idempot
 echo "### 7/7  ground the proof in the OFP domains (org/facility/recording/reporting/data-verification) + export"
 python3 "$DIR/ofp-domains/ofp_grounding.py"
 python3 "$DIR/ofp-domains/ofp_export.py"
-echo "### done — see $DIR/export/ (methane records) and $DIR/export/ofp/ (OFP domain graph)"
+echo "### 8/9  complete evidence export (all records, all versions, all schema bodies)"
+python3 "$DIR/export_claim3.py"
+echo "### 9/9  verify the export offline (no network)"
+python3 "$DIR/verify_export.py"
+echo "### done — see $DIR/export/README.md (bundle) and $DIR/export/claim3/_manifest.json"

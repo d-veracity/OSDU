@@ -1,0 +1,171 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--EmissionReportPeriod",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:45:08.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionReportPeriod:1.0.0",
+  "description": "A period of time that constrains which records are combined into a report of Emission Statements.\n\nMust specify a valid from and valid to date time attribute that can be used to infer the optional year,\nmonth, quarter, and/or other periodic attributes.",
+  "additionalProperties": false,
+  "title": "Emission Report Period",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time to which the emission reporting period is valid, in ISO 8601 date time standardized format.",
+      "type": "string"
+     },
+     "emission_report_period_id": {
+      "description": "The Primary Key assigned to the Emission Report Period.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time from which the emission reporting period is valid, in ISO 8601 date time standardized format.",
+      "type": "string"
+     },
+     "month": {
+      "description": "The month of the Emission Report Period defined as an integer.",
+      "type": "number"
+     },
+     "end_datetime": {
+      "format": "date-time",
+      "description": "DEPRECATED, This can be replace by Valid To.",
+      "type": "string"
+     },
+     "year": {
+      "description": "The year assigned to the Emission Report Period.",
+      "type": "number"
+     },
+     "name": {
+      "description": "The name assigned to the Emission Report Period.",
+      "type": "string"
+     },
+     "description": {
+      "description": "Long description of the Emission Report Period.",
+      "type": "string"
+     },
+     "begin_datetime": {
+      "format": "date-time",
+      "description": "DEPRECATED, This can be replace by Valid From.",
+      "type": "string"
+     },
+     "frequency": {
+      "description": "The frequency of the Emission Report Period; e.g., annually, quarterly, or monthly.",
+      "type": "string"
+     },
+     "quarter": {
+      "description": "The quarter used by the Emission Report Period.",
+      "type": "number"
+     }
+    },
+    "required": [
+     "valid_from_datetime",
+     "valid_to_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionReportPeriod.1.0.0.json"
+ }
+}

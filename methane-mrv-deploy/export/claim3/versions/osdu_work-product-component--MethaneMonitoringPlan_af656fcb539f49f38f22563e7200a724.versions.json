@@ -1,0 +1,1614 @@
+{
+ "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+ "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+ "versions": [
+  1788895653433550,
+  1788895653702915,
+  1788895653977801,
+  1788896588021672,
+  1788896590424593,
+  1788898099374121,
+  1788898100123237,
+  1788901776269820,
+  1788901834051141,
+  1788901859210153,
+  1788901875013183,
+  1788901888669630,
+  1788901891527164,
+  1788901894672968,
+  1788901896275174,
+  1788901903348128,
+  1788908923190388,
+  1788911032100304,
+  1788911076937163,
+  1788911090434338,
+  1788911594351033,
+  1788911604322559,
+  1788911607255602,
+  1788911610964781,
+  1788911614144247
+ ],
+ "bodies": [
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5.0,
+    "goldStandardCoveragePercent": 95.0,
+    "reconciliationDivergenceLimitPercent": 20.0,
+    "uncertaintyCoverageFactorK": 2.0,
+    "verificationStatus": "draft",
+    "versionTrigger": "periodic",
+    "planHash": "fb23cb062c640177f6ad2b752edd385a0688d4f6626ead8fbab13a52855914f7"
+   },
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788895653433550,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5.0,
+    "goldStandardCoveragePercent": 95.0,
+    "reconciliationDivergenceLimitPercent": 20.0,
+    "uncertaintyCoverageFactorK": 2.0,
+    "verificationStatus": "underReview",
+    "versionTrigger": "periodic",
+    "planHash": "fb23cb062c640177f6ad2b752edd385a0688d4f6626ead8fbab13a52855914f7"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T19:27:33.710Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788895653702915,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5.0,
+    "goldStandardCoveragePercent": 95.0,
+    "reconciliationDivergenceLimitPercent": 20.0,
+    "uncertaintyCoverageFactorK": 2.0,
+    "verificationStatus": "verified",
+    "versionTrigger": "periodic",
+    "planHash": "fb23cb062c640177f6ad2b752edd385a0688d4f6626ead8fbab13a52855914f7"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T19:27:33.986Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788895653977801,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5.0,
+    "goldStandardCoveragePercent": 95.0,
+    "reconciliationDivergenceLimitPercent": 20.0,
+    "uncertaintyCoverageFactorK": 2.0,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "fb23cb062c640177f6ad2b752edd385a0688d4f6626ead8fbab13a52855914f7"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T19:43:08.030Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788896588021672,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:9c53dc3d841e44ed9e1ac6ba815ed113",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5.0,
+    "goldStandardCoveragePercent": 95.0,
+    "reconciliationDivergenceLimitPercent": 20.0,
+    "uncertaintyCoverageFactorK": 2.0,
+    "verificationStatus": "restated",
+    "versionTrigger": "corrective",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T19:43:10.432Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788896590424593,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:46e046f0cc884c8cbddb1c7da9284043",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T20:08:19.383Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788898099374121,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:6e1520af34814243a60eab543cd866ae",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "verified",
+    "versionTrigger": "corrective",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T20:08:20.138Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788898100123237,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:e848939339be4b95be612e41a5475adb",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:09:36.277Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901776269820,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:fb63dc8043ae4acebff1eb408c6f9b9e",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:10:34.058Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901834051141,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:600a05afef434afeb5ffb893309347eb",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:10:59.220Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901859210153,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:a2ca92cccd6743bf9184a0cff10dd1f0",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:11:15.021Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901875013183,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:cb88c46980554e9aba75834b492515a8",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "verified",
+    "versionTrigger": "corrective",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:11:28.676Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901888669630,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:f58bbc65aad14944bb7d3d2ef1363cb6",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:11:31.534Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901891527164,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:c50dde4cb7c142ea8026d316ee1beca3",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:11:34.679Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901894672968,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:3e66b5a218fd456d89a3015e14ec5e6e",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:11:36.283Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901896275174,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:4fc89796c94c415a9b161c4b9854a68b",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "verified",
+    "versionTrigger": "corrective",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T21:11:43.356Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788901903348128,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:4fc89796c94c415a9b161c4b9854a68b",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "verified",
+    "versionTrigger": "ofpGrounding",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:08:43.199Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788908923190388,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:8b27333191b541d1919446c1657e3876",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:43:52.106Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911032100304,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:331e02b7705749808e30f9da48374e88",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:44:36.943Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911076937163,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:d4c90f1de99b4453a9fc46dcc02222e5",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "verified",
+    "versionTrigger": "corrective",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:44:50.441Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911090434338,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:ce56c9e163d846b69b100cb846a5a310",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:53:14.357Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911594351033,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:f8b1225ad0a84355a503fd691ee45cca",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "verified",
+    "versionTrigger": "corrective",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:53:24.328Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911604322559,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:55233b32b3f84d5083574190aa09f043",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:53:27.261Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911607255602,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:8ddda5a8aa50438fb5e316d84539b4bd",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:53:30.969Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911610964781,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  },
+  {
+   "data": {
+    "activityType": "methane_monitoring_plan",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "planId": "MRV-01-MP-2025",
+    "siteId": "MRV-01",
+    "assetId": "NorthField-GasProcessing",
+    "reportingBoundary": "operational control \u2014 gas processing site MRV-01",
+    "sourceInventoryIds": [
+     "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+     "osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe",
+     "osdu:work-product-component--MethaneSourceInventory:800089bafc5a47b89b1e9d7cb9460c34",
+     "osdu:work-product-component--MethaneSourceInventory:49239a26f35548de8d743e27f4c44ad4",
+     "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+     "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7"
+    ],
+    "siteMeasurementIds": [
+     "osdu:work-product-component--MethaneDetectionEvent:75df445510fa42f3a39a2b3f24730a86",
+     "osdu:work-product-component--EmissionQuantification:f180b221c74b4586ba2affafc1c2898b",
+     "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9"
+    ],
+    "reconciliationResultId": "osdu:work-product-component--ReconciliationResult:65d72bbfc9714eb19ed46a93761299da",
+    "targetOgmpLevel": "level4",
+    "materialityThresholdPercent": 5,
+    "goldStandardCoveragePercent": 95,
+    "reconciliationDivergenceLimitPercent": 20,
+    "uncertaintyCoverageFactorK": 2,
+    "verificationStatus": "suspended",
+    "versionTrigger": "eventDriven",
+    "planHash": "1009f67a1018c4f33ad7ec1f72cb4aa815e6359131d0662933876ed4336dc282",
+    "previousVersionId": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724:1788901903348128",
+    "ofpFacilityId": "osdu:master-data--Facility:mrv01-site",
+    "ofpOrganizationId": "osdu:master-data--Organization:mrv01-northfield",
+    "ofpEmissionReportId": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "ofpDataQualityRuleSetId": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "ofpReportingAssuranceId": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:53:34.150Z",
+   "id": "osdu:work-product-component--MethaneMonitoringPlan:af656fcb539f49f38f22563e7200a724",
+   "version": 1788911614144247,
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T19:27:33.436Z"
+  }
+ ]
+}

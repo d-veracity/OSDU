@@ -1,0 +1,78 @@
+{
+ "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-t",
+ "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine",
+    "emission_calculation_component_line_id": "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-t",
+    "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+    "emission_argument_type": "Emission Activity Parameter",
+    "emission_argument_id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-engine",
+    "emission_activity_parameter_id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-engine",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-engine"
+   },
+   "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-t",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine",
+    "emission_calculation_component_line_id": "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-t",
+    "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+    "emission_argument_type": "Emission Activity Parameter",
+    "emission_argument_id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-engine",
+    "emission_activity_parameter_id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-engine",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-engine"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-engine-t",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

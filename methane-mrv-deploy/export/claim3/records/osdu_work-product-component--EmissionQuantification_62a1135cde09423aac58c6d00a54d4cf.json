@@ -1,0 +1,39 @@
+{
+ "data": {
+  "activityType": "ch4_quantification",
+  "dataSource": "synthetic (ISO 25624-1 worked site)",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "sourceId": "SRC-PNEU",
+  "emissionRateKgPerHour": 2.0,
+  "quantificationMethod": "emissionFactor",
+  "uncertaintyPercent": 25.0,
+  "co2eKg": 490560.0,
+  "ogmpLevel": "level4"
+ },
+ "id": "osdu:work-product-component--EmissionQuantification:62a1135cde09423aac58c6d00a54d4cf",
+ "version": 1788895648945723,
+ "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:28.948Z"
+}

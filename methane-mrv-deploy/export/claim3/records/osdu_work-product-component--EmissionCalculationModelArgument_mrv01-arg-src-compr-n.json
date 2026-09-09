@@ -1,0 +1,35 @@
+{
+ "data": {
+  "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-compr",
+  "emission_calculation_component_line_id": "osdu:work-product-component--EmissionCalculationFormulaComponent:mrv01-formula1-n",
+  "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+  "emission_argument_type": "Emission Activity Parameter",
+  "emission_argument_id": "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr",
+  "emission_activity_parameter_id": "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr",
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-compr"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:work-product-component--EmissionCalculationModelArgument:mrv01-arg-src-compr-n",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

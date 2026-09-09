@@ -1,0 +1,66 @@
+{
+ "id": "osdu:reference-data--ReportingAssuranceType:mrv01-reasonable",
+ "kind": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "name": "Reasonable assurance"
+   },
+   "id": "osdu:reference-data--ReportingAssuranceType:mrv01-reasonable",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "name": "Reasonable assurance"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:reference-data--ReportingAssuranceType:mrv01-reasonable",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:reference-data--ReportingAssuranceType:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

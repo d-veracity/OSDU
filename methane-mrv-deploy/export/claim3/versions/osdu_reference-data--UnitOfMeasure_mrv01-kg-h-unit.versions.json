@@ -1,0 +1,74 @@
+{
+ "id": "osdu:reference-data--UnitOfMeasure:mrv01-kg-h-unit",
+ "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+ "versions": [
+  1788908918758516,
+  1788909497783960
+ ],
+ "bodies": [
+  {
+   "data": {
+    "code": "kg/h/unit",
+    "name": "Kilogram per hour per unit",
+    "symbol_code": "kg\u00b7h\u207b\u00b9\u00b7unit\u207b\u00b9",
+    "unit_of_measure_id": "kg/h/unit",
+    "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-mass-flow-rate"
+   },
+   "id": "osdu:reference-data--UnitOfMeasure:mrv01-kg-h-unit",
+   "version": 1788908918758516,
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  },
+  {
+   "data": {
+    "code": "kg/h/unit",
+    "name": "Kilogram per hour per unit",
+    "symbol_code": "kg\u00b7h\u207b\u00b9\u00b7unit\u207b\u00b9",
+    "unit_of_measure_id": "kg/h/unit",
+    "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-mass-flow-rate"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:18.201Z",
+   "id": "osdu:reference-data--UnitOfMeasure:mrv01-kg-h-unit",
+   "version": 1788909497783960,
+   "kind": "ofp:wks:reference-data--UnitOfMeasure:3.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  }
+ ]
+}

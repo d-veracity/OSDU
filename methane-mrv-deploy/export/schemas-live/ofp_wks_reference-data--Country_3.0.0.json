@@ -1,0 +1,156 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "reference-data--Country",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:reference-data--Country:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:03:13.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "x-dve-ofp-canonical-id": "ofp:wks:reference-data--Country:3.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Organizational Structure",
+  "x-osdu-schema-source": "ofp:wks:reference-data--Country:3.0.0",
+  "description": "DEPRECATED, Geopolitical Entity and Geopolitical Type should to replace Country. An area of land or territory of a nation or state.",
+  "title": "Country",
+  "type": "object",
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "x-dve-ofp-id-source": "dVE/backend/assets/downloads/hackolade/ofp-postgres.hck.json",
+  "x-dve-hackolade-source": "Common Entities.hck.json",
+  "additionalProperties": false,
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "name": {
+      "description": "The name assigned to the Country.",
+      "type": "string"
+     },
+     "parent_location_id": {
+      "description": "DEPRECATED",
+      "type": "string"
+     },
+     "termination_datetime": {
+      "format": "date-time",
+      "description": "The date and time when the country record ceases to be valid or active.",
+      "type": "string"
+     },
+     "effective_datetime": {
+      "format": "date-time",
+      "description": "The date and time when the country record becomes valid or active in the system",
+      "type": "string"
+     },
+     "country_id": {
+      "description": "The primary key assigned to the Country.",
+      "type": "string"
+     },
+     "iso_alpha_3_code": {
+      "description": "The ISO alpha-3 code assigned to the Country.",
+      "type": "string"
+     },
+     "location_id": {
+      "description": "DEPRECATED",
+      "type": "string"
+     },
+     "geopolitical_entity_type_id": {
+      "description": "DEPRECATED",
+      "type": "string"
+     }
+    },
+    "required": [
+     "iso_alpha_3_code",
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "$id": "https://schema.dveracity.com/ofp/reference-data--Country.3.0.0.json"
+ }
+}

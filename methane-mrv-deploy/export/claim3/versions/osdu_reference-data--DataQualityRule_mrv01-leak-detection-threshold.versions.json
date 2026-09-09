@@ -1,0 +1,86 @@
+{
+ "id": "osdu:reference-data--DataQualityRule:mrv01-leak-detection-threshold",
+ "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+ "versions": [
+  1788908921775429,
+  1788909500638023
+ ],
+ "bodies": [
+  {
+   "data": {
+    "entity_id": "leak-detection-threshold",
+    "name": "MethaneLeakDetectionThreshold",
+    "external_rule_id": "sysml:14_constraints:MethaneLeakDetectionThreshold",
+    "data_rule_statement": "Site-level rate \u2265 limit of quantification 0.5 kg/h",
+    "data_rule_revision": "1",
+    "data_rule_status": "osdu:reference-data--DataQualityRuleStatus:mrv01-published",
+    "data_rule_dimension_type_id": "osdu:reference-data--DataRuleDimensionType:mrv01-validity",
+    "data_rule_created_by": "dVeracity",
+    "data_rule_created_on": "2026-09-08T00:00:00Z",
+    "data_rule_published_on": "2026-09-08T00:00:00Z",
+    "description": "Purpose: osdu:reference-data--DataRulePurposeType:mrv01-regulatory-gate"
+   },
+   "id": "osdu:reference-data--DataQualityRule:mrv01-leak-detection-threshold",
+   "version": 1788908921775429,
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:41.780Z"
+  },
+  {
+   "data": {
+    "entity_id": "leak-detection-threshold",
+    "name": "MethaneLeakDetectionThreshold",
+    "external_rule_id": "sysml:14_constraints:MethaneLeakDetectionThreshold",
+    "data_rule_statement": "Site-level rate \u2265 limit of quantification 0.5 kg/h",
+    "data_rule_revision": "1",
+    "data_rule_status": "osdu:reference-data--DataQualityRuleStatus:mrv01-published",
+    "data_rule_dimension_type_id": "osdu:reference-data--DataRuleDimensionType:mrv01-validity",
+    "data_rule_created_by": "dVeracity",
+    "data_rule_created_on": "2026-09-08T00:00:00Z",
+    "data_rule_published_on": "2026-09-08T00:00:00Z",
+    "description": "Purpose: osdu:reference-data--DataRulePurposeType:mrv01-regulatory-gate"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:20.825Z",
+   "id": "osdu:reference-data--DataQualityRule:mrv01-leak-detection-threshold",
+   "version": 1788909500638023,
+   "kind": "ofp:wks:reference-data--DataQualityRule:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:41.780Z"
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--EmissionStatement",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--EmissionStatement:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:45:12.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+  "description": "A quantification of the release or removal of an emission into or from the atmosphere that is recorded.\n\nIt is an actual and objective declaration that provides the subject matter for the verification or validation.\n\nThe Emission Statement provided by the party responsible (i.e., an organization) should be clearly\nidentifiable, capable of consistent evaluation or measurement against suitable criteria by a verifier\n(organization with verifier role) or validator (organization with validator role).\n\nDefinition as per ISO 14064-1, but not constrained to GHG only. The corresponding ISO term is \u201cGHG\nStatement\u201d.\n\n",
+  "additionalProperties": false,
+  "title": "Emission Statement",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_reporting_boundary_id": {
+      "description": "DEPRECATED, ",
+      "type": "string"
+     },
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The point in time that the Emission Statement ends; e.g., the total emissions released up to the specified date.",
+      "type": "string"
+     },
+     "quantity": {
+      "description": "The quantity assigned to the Emission Statement.",
+      "type": "number"
+     },
+     "unit_of_measure_id": {
+      "description": "The Foreign Key of the Unit Of Measure assigned to the Emission Statement.",
+      "type": "string"
+     },
+     "emission_component_id": {
+      "description": "The Foreign Key of the Emission Component identifying the type of pollutant, or other environmentally significant substance, included by this statement.",
+      "type": "string"
+     },
+     "description": {
+      "description": "The text describing the Emission Statement.",
+      "type": "string"
+     },
+     "emission_report_id": {
+      "description": "DEPRECATED, now handled through the EmissionStatementPerReport many-to-many relationship ",
+      "type": "string"
+     },
+     "parent_emission_statement_id": {
+      "description": "The Foreign Key of the parent Emission Statement.",
+      "type": "string"
+     },
+     "emission_calculation_model_id": {
+      "description": "The Foreign Key of the Emission Calculation Model used to generate the Emission Statement.",
+      "type": "string"
+     },
+     "emission_report_period_id": {
+      "description": "DEPRECATED, to be identified through EmissionStatementPerReport. The period of a statement is now identified by ValidityPeriod reference, and may be a subset of the EmissionReportPeriod it is assigned to. E.g.,  quarterly statement assigned to annual report.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The point in time from which the Emission Statement starts; e.g., the total emissions released starting from the date specified.",
+      "type": "string"
+     },
+     "emission_inventory_category_id": {
+      "description": "DEPRECATED, to be replaced with broader Emission Activity Category.",
+      "type": "string"
+     },
+     "emission_activity_id": {
+      "description": "Foreign Key of the Emission Activity from which the Emission Statement was derived.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Emission Statement.",
+      "type": "string"
+     },
+     "emission_recording_method_type_id": {
+      "description": "The Foreign Key of the Emission Recording Method Type used to issue this statement: Measured, Calculated, and Estimated.",
+      "type": "string"
+     },
+     "emission_statement_id": {
+      "description": "The Primary Key of the Emission Statement.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_activity_id",
+     "emission_component_id",
+     "emission_recording_method_type_id",
+     "name",
+     "unit_of_measure_id",
+     "valid_from_datetime",
+     "valid_to_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionStatement.1.0.0.json"
+ }
+}

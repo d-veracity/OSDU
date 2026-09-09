@@ -1,0 +1,157 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--GeopoliticalEntity",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--GeopoliticalEntity:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:05:14.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--GeopoliticalEntity:3.0.0",
+  "description": "A named geographical area which is defined and administered by an official entity; e.g., countries,\nnature reserves, states, \u2026",
+  "additionalProperties": false,
+  "title": "Geopolitical Entity",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The point in time to which this Geopolitical Entity is valid.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The point in time from which this Geopolitical Entity is valid.",
+      "type": "string"
+     },
+     "code": {
+      "description": "The code assigned to this Geopolitical Entity, such as the ISO Alpha 3 code.",
+      "type": "string"
+     },
+     "geopolitical_entity_id": {
+      "description": "The Primary Key of the Geopolitical Entity.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Geopolitical Entity.",
+      "type": "string"
+     },
+     "parent_geopolitical_entity_id": {
+      "description": "The Foreign Key of the parent Geopolitical Entity.",
+      "type": "string"
+     },
+     "location_id": {
+      "description": "The Foreign Key of the Location.",
+      "type": "string"
+     },
+     "geopolitical_entity_type_id": {
+      "description": "The Foreign Key of the Geopolitical Entity Type.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "geopolitical_entity_type_id",
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--GeopoliticalEntity.3.0.0.json"
+ }
+}

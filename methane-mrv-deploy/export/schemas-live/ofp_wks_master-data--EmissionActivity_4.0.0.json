@@ -1,0 +1,187 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--EmissionActivity",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--EmissionActivity:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:05:10.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--EmissionActivity:4.0.0",
+  "description": "An activity executed by an organization. An activity is further classified by the Inventory Type defining\nthe activity as a Sink, Source, or a Credit, as well as the scope type, category, and activity type.\n\nNote: Emission Activities can also be grouped into inventories. In this document, however, Inventory\nType is defined by activity, allowing an Emission Inventory to consist of different types; for example, a\ncollection of Sinks, Sources, and Credits.",
+  "additionalProperties": false,
+  "title": "Emission Activity",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_inventory_id": {
+      "description": "Foreign Key of the Emission Inventory collection to which the activity belongs.",
+      "type": "string"
+     },
+     "corresponding_adjustment": {
+      "description": "Optional attribute to identify if an Emission Activity is associated with a Corresponding Adjustment as defined under the United Nations Framework Convention on Climate Change (UNFCCC) Paris Agreement Article 6; refer to: www.unfccc.int/process-and-meetings/the-paris- agreement/article6.",
+      "type": "boolean"
+     },
+     "emission_inventory_type_id": {
+      "description": "Optional part of a composite key for the Emission Activity Type.\nEmission Inventory Type.",
+      "type": "string"
+     },
+     "emission_component_id": {
+      "description": "An optional Foreign Key of the Emission Component identifying the type of pollutant or other environmentally significant substance covered by this activity.\n\nUseful when activity directly involves the product of interest; for example, vented or leaked methane or Perfluorocarbons (PFCs).",
+      "type": "string"
+     },
+     "parent_emission_activity_id": {
+      "description": "Foreign Key of the activity.",
+      "type": "string"
+     },
+     "description": {
+      "description": "A long-form description detailing the purpose of the activity.",
+      "type": "string"
+     },
+     "emission_inventory_sub_category_id": {
+      "description": "DEPRECATED, use EmissionActivityCategoryId",
+      "type": "string"
+     },
+     "product_life_cycle_stage_id": {
+      "description": "Foreign Key of the Product Life Cycle Stage to which this activity is assigned.",
+      "type": "string"
+     },
+     "product_life_cycle_id": {
+      "description": "Optional part of a composite key of the Product Life Cycle Stage. The Product Life Cycle.",
+      "type": "string"
+     },
+     "emission_activity_category_id": {
+      "description": "Optional part of a composite key for the Emission Activity Type. The Emission Activity Category.",
+      "type": "string"
+     },
+     "emission_inventory_category_id": {
+      "description": "DEPRECATED, use EmissionActivityCategoryId",
+      "type": "string"
+     },
+     "emission_activity_id": {
+      "description": "The Primary Key of the Emission Activity.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the activity.",
+      "type": "string"
+     },
+     "emission_scope_type_id": {
+      "description": "Optional part of a composite key for the Emission Activity Type.\nEmission Scope Type.",
+      "type": "string"
+     },
+     "organizational_boundary_id": {
+      "description": "Foreign Key of the Organizational Boundary ID.",
+      "type": "string"
+     },
+     "emission_activity_type_id": {
+      "description": "Foreign Key of the Emission Activity Type.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_activity_type_id",
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--EmissionActivity.4.0.0.json"
+ }
+}

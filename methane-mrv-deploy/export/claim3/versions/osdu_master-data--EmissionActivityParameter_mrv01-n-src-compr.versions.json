@@ -1,0 +1,76 @@
+{
+ "id": "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr",
+ "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "emission_activity_parameter_id": "n-src-compr",
+    "name": "N \u2014 number of units (SRC-COMPR)",
+    "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-count",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-compr",
+    "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-count",
+    "equipment_id": "osdu:master-data--Equipment:mrv01-eq-src-compr"
+   },
+   "id": "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "emission_activity_parameter_id": "n-src-compr",
+    "name": "N \u2014 number of units (SRC-COMPR)",
+    "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-count",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-compr",
+    "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-count",
+    "equipment_id": "osdu:master-data--Equipment:mrv01-eq-src-compr"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:master-data--EmissionActivityParameter:mrv01-n-src-compr",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

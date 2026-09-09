@@ -1,0 +1,183 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--SCEPAttestation",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--SCEPAttestation:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T01:38:43.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "x-dve-note": "dVeracity bridge: binds a VerifiableCredential to a certified SCEP snapshot by SHA256 hash (dVeracity types VerifiableCredential, AttestationRef, ConfidenceScore, SHA256Hash).",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-domain": "scep",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--SCEPAttestation:1.0.0",
+  "description": "dVeracity attestation over a SCEP certification, grounding the trust layer in a verifiable credential bound to the evidence-pack hash.",
+  "additionalProperties": false,
+  "title": "SCEPAttestation",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "attestationRef": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     },
+     "attestationStatus": {
+      "type": "string",
+      "enum": [
+       "issued",
+       "suspended",
+       "revoked"
+      ]
+     },
+     "confidenceScore": {
+      "type": "number"
+     },
+     "attestationId": {
+      "type": "string"
+     },
+     "scepSnapshotId": {
+      "type": "string"
+     },
+     "issuedBy": {
+      "type": "string"
+     },
+     "scepId": {
+      "type": "string"
+     },
+     "scepSnapshotHash": {
+      "type": "string"
+     },
+     "issuedAt": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "activityType": {
+      "type": "string"
+     },
+     "verifiableCredential": {
+      "additionalProperties": true,
+      "type": "object",
+      "properties": {
+       "proofValue": {
+        "type": "string"
+       },
+       "issuanceDate": {
+        "format": "date-time",
+        "type": "string"
+       },
+       "subject": {
+        "type": "string"
+       },
+       "proofType": {
+        "type": "string"
+       },
+       "type": {
+        "type": "string"
+       },
+       "issuer": {
+        "type": "string"
+       },
+       "credentialStatus": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/osdu/scep/SCEPAttestation.1.0.0.json"
+ }
+}

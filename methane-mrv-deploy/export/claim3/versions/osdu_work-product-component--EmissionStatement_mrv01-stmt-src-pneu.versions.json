@@ -1,0 +1,86 @@
+{
+ "id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-pneu",
+ "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+ "versions": [
+  1788908918758516,
+  1788909497783960
+ ],
+ "bodies": [
+  {
+   "data": {
+    "emission_statement_id": "stmt-src-pneu",
+    "name": "SRC-PNEU CH4 2025 (bottom-up, Formula 1)",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-pneu",
+    "emission_component_id": "osdu:reference-data--EmissionComponent:mrv01-ch4",
+    "quantity": 17520.0,
+    "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-kg",
+    "emission_recording_method_type_id": "osdu:reference-data--EmissionRecordingMethodType:mrv01-emission-factor",
+    "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-pneu",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z",
+    "description": "E = 0.05 \u00d7 40 \u00d7 8760 = 17,520 kg CH4; OGMP level4; grounds osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe"
+   },
+   "id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-pneu",
+   "version": 1788908918758516,
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  },
+  {
+   "data": {
+    "emission_statement_id": "stmt-src-pneu",
+    "name": "SRC-PNEU CH4 2025 (bottom-up, Formula 1)",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-pneu",
+    "emission_component_id": "osdu:reference-data--EmissionComponent:mrv01-ch4",
+    "quantity": 17520.0,
+    "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-kg",
+    "emission_recording_method_type_id": "osdu:reference-data--EmissionRecordingMethodType:mrv01-emission-factor",
+    "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-pneu",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z",
+    "description": "E = 0.05 \u00d7 40 \u00d7 8760 = 17,520 kg CH4; OGMP level4; grounds osdu:work-product-component--MethaneSourceInventory:4e7c8600f6ee4e42b80ac8e2dd8eefbe"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:18.201Z",
+   "id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-pneu",
+   "version": 1788909497783960,
+   "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  }
+ ]
+}

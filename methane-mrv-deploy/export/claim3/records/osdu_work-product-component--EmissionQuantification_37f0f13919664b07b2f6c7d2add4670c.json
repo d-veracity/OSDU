@@ -1,0 +1,39 @@
+{
+ "data": {
+  "activityType": "ch4_quantification",
+  "dataSource": "live-console",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "sourceId": "SITE",
+  "emissionRateKgPerHour": 22.7,
+  "quantificationMethod": "massBalance",
+  "uncertaintyPercent": 24,
+  "co2eKg": 5567856,
+  "ogmpLevel": "level5"
+ },
+ "id": "osdu:work-product-component--EmissionQuantification:37f0f13919664b07b2f6c7d2add4670c",
+ "version": 1788901903154921,
+ "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T21:11:43.156Z"
+}

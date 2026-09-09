@@ -1,0 +1,177 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--ContactPerson",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--ContactPerson:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:05:09.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--ContactPerson:3.0.0",
+  "description": "An individual acting as a organizational contact typically due to specific role/job responsibilities of the\nperson within their organization. Organizations may have multiple contacts depending on\norganizational needs.",
+  "additionalProperties": false,
+  "title": "Contact Person",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "address_id": {
+      "description": "The Foreign Key of the Address to which this Contact Person belongs.",
+      "type": "string"
+     },
+     "last_name": {
+      "description": "The family name or surname of the Contact Person.",
+      "type": "string"
+     },
+     "contact_person_id": {
+      "description": "The Primary Key assigned to the Contact Person.",
+      "type": "string"
+     },
+     "middle_name": {
+      "description": "The optional middle or additional given name of the Contact Person, used when needed to distinguish individuals with similar first and last names.",
+      "type": "string"
+     },
+     "full_name": {
+      "description": "The complete name of the individual Contact Person, typically combining given, middle, and family names in the order used for business communication.",
+      "type": "string"
+     },
+     "organization_id": {
+      "description": "The Foreign Key of the Organization the contact is associated with.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name of the individual Contact Person. Property may be left empty where it is inappropriate to provide PII.",
+      "type": "string"
+     },
+     "comment": {
+      "description": "Additional information about the Contact Person.",
+      "type": "string"
+     },
+     "phone_number": {
+      "description": "The phone number of the Contact Person. Property may be left empty where it is inappropriate to provide PII.",
+      "type": "string"
+     },
+     "title_name": {
+      "description": "The title assigned to the Contact Person; e.g., Mr., Mrs., Ms., Dr., \u2026",
+      "type": "string"
+     },
+     "person_organization_role_type_id": {
+      "description": "The Foreign Key of the Person Organization Role Type identifying the role of the contact within the associated organization, such as Account Owner, Sales Representative, Technical Support, Project Manager, Party Chief, Client Representative, Senior Observer.",
+      "type": "string"
+     },
+     "first_name": {
+      "description": "The first or given name of the Contact Person.",
+      "type": "string"
+     },
+     "email": {
+      "description": "The email address of the Contact Person. Property may be left empty where it is inappropriate to provide Personally Identifiable Information (PII).",
+      "type": "string"
+     }
+    },
+    "required": [
+     "first_name",
+     "full_name",
+     "last_name",
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--ContactPerson.3.0.0.json"
+ }
+}
