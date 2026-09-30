@@ -36,6 +36,30 @@ check("Schema bodies exported for every registered kind",
       len(glob.glob(os.path.join(EXPORT, "schemas-live", "ofp_wks_*.json"))) == man["counts"]["schemas"],
       f"{man['counts']['schemas']} kinds")
 
+# Every enum-constrained field in every record must hold a value its OWN registered schema
+# allows. OSDU Storage does not validate records against the schema on write, so a schema
+# whose enum is wrong accepts the data silently -- which is exactly how a generator bug that
+# dropped the first member of all 28 SysML enums survived a full proof run undetected.
+_schema_enums = {}
+for _f in glob.glob(os.path.join(EXPORT, "schemas-live", "ofp_wks_*.json")):
+    _b = json.load(open(_f))
+    if "schemaInfo" not in _b: continue
+    _props = (_b["schema"].get("properties", {}).get("data", {}) or {}).get("properties", {}) or {}
+    _schema_enums[_b["schemaInfo"]["schemaIdentity"]["id"]] = {
+        k: (v.get("enum") or (v.get("items", {}) or {}).get("enum"))
+        for k, v in _props.items() if v.get("enum") or (v.get("items", {}) or {}).get("enum")}
+_offenum = []
+for _r in records.values():
+    for _fld, _allowed in _schema_enums.get(_r["kind"], {}).items():
+        _val = data(_r).get(_fld)
+        for _v in (_val if isinstance(_val, list) else [_val]):
+            if _v is not None and _v not in _allowed:
+                _offenum.append(f"{_r['kind'].split('--')[-1]}.{_fld}={_v!r}")
+check("Every record value satisfies its registered schema's enum",
+      not _offenum,
+      f"{sum(len(v) for v in _schema_enums.values())} enum fields checked across {len(records)} records"
+      if not _offenum else f"{len(_offenum)} violations: " + ", ".join(sorted(set(_offenum))[:6]))
+
 # ---------- 2. bottom-up inventory re-computed from OFP EmissionStatements ----------
 stmts = {data(r).get("emission_statement_id"): r for r in of_kind("EmissionStatement") if ":mrv01-" in r["id"]}
 src = {k: v for k, v in stmts.items() if k and k.startswith("stmt-src-")}

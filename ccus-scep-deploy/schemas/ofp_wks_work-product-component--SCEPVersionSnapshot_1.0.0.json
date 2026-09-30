@@ -145,6 +145,7 @@
           "versionTrigger": {
             "type": "string",
             "enum": [
+              "periodic",
               "eventDriven",
               "regulatory",
               "corrective"
@@ -165,6 +166,7 @@
           "certificationStatusAtSnapshot": {
             "type": "string",
             "enum": [
+              "draft",
               "underReview",
               "certified",
               "suspended",

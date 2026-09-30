@@ -50,6 +50,7 @@
      "caprockSealingEffectiveness": {
       "type": "string",
       "enum": [
+       "effective",
        "conditionallyEffective",
        "ineffective",
        "undetermined"
@@ -58,6 +59,7 @@
      "faultSealingBehavior": {
       "type": "string",
       "enum": [
+       "sealing",
        "partiallySealing",
        "nonSealing",
        "unknown"

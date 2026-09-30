@@ -41,6 +41,7 @@
      "closurePhase": {
       "type": "string",
       "enum": [
+       "stabilization",
        "application",
        "review",
        "plugging",

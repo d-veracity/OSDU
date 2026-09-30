@@ -58,6 +58,7 @@
       "items": {
        "type": "string",
        "enum": [
+        "confirmationBias",
         "availabilityBias",
         "anchoringBias",
         "modelAssumption",

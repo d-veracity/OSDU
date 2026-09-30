@@ -38,6 +38,7 @@
      "ogmpLevel": {
       "type": "string",
       "enum": [
+       "level1",
        "level2",
        "level3",
        "level4",
@@ -53,6 +54,7 @@
      "technology": {
       "type": "string",
       "enum": [
+       "cems",
        "ogi",
        "drone",
        "satellite",

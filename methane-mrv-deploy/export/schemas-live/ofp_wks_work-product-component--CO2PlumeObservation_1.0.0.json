@@ -53,6 +53,7 @@
      "observationMethod": {
       "type": "string",
       "enum": [
+       "seismic",
        "pressure",
        "groundwater",
        "insar",

@@ -23,14 +23,25 @@ EXPORT = os.path.join(HERE, "export"); C3 = os.path.join(EXPORT, "claim3")
 SCH = os.path.join(EXPORT, "schemas-live"); RECS = os.path.join(C3, "records")
 DRY = "--dry-run" in sys.argv
 ORDER = ["reference-data", "master-data", "work-product-component"]
+
+# Orphan kinds are superseded schemas that only exist because the cimpl-stack was registered
+# twice; OSDU cannot delete a schema, so putting them on a NEW platform pollutes it forever.
+# Skip them and the stray records left sitting on them, unless --with-orphans is given.
+_orphan_file = os.path.join(SCH, "_orphan_kinds.json")
+if os.path.exists(_orphan_file) and "--with-orphans" not in sys.argv:
+    _o = json.load(open(_orphan_file))
+    ORPHAN_KINDS, ORPHAN_RECORDS = set(_o["kinds"]), set(_o.get("strayRecords", []))
+else:
+    ORPHAN_KINDS, ORPHAN_RECORDS = set(), set()
 LEGALTAG = os.environ.get("LEGALTAG"); OWNERS = os.environ.get("ACL_OWNERS"); VIEWERS = os.environ.get("ACL_VIEWERS")
 
 def phase_schemas():
     files = sorted(glob.glob(os.path.join(SCH, "ofp_wks_*.json")))
     files.sort(key=lambda f: next((i for i, g in enumerate(ORDER) if g in f), 9))
-    created = updated = skipped = failed = 0
+    created = updated = skipped = failed = orphaned = 0
     for f in files:
         body = json.load(open(f)); kid = body["schemaInfo"]["schemaIdentity"]["id"]
+        if kid in ORPHAN_KINDS: orphaned += 1; continue
         if DRY: print(f"  would POST {kid}"); continue
         s, txt = _req("POST", "/api/schema-service/v1/schema", body)
         if s in (200, 201): created += 1
@@ -39,7 +50,8 @@ def phase_schemas():
             if s2 in (200, 201): updated += 1
             else: skipped += 1
         else: failed += 1; print(f"  FAIL {s} {kid}")
-    print(f"  schemas: created={created} updated={updated} skipped={skipped} failed={failed} (of {len(files)})")
+    print(f"  schemas: created={created} updated={updated} skipped={skipped} failed={failed} "
+          f"(of {len(files) - orphaned}; {orphaned} orphan kinds NOT registered)")
     return failed == 0
 
 SRC_PART = json.load(open(os.path.join(C3, "_manifest.json")))["platform"]["partition"]
@@ -55,12 +67,16 @@ def phase_records():
     files = sorted(glob.glob(os.path.join(RECS, "*.json")))
     by_group = {g: [] for g in ORDER}
     if PART != SRC_PART: print(f"  remapping record ids: {SRC_PART}: -> {PART}:")
+    dropped = 0
     for f in files:
-        r = remap(json.load(open(f))); g = next((g for g in ORDER if f":{g}--" in r["kind"]), "work-product-component")
+        r0 = json.load(open(f))
+        if r0["kind"] in ORPHAN_KINDS or r0["id"] in ORPHAN_RECORDS: dropped += 1; continue
+        r = remap(r0); g = next((g for g in ORDER if f":{g}--" in r["kind"]), "work-product-component")
         rec = {"id": r["id"], "kind": r["kind"], "acl": r["acl"], "legal": r["legal"], "data": r["data"]}
         if LEGALTAG: rec["legal"] = {**rec["legal"], "legaltags": [LEGALTAG]}
         if OWNERS or VIEWERS: rec["acl"] = {"owners": [OWNERS or rec["acl"]["owners"][0]], "viewers": [VIEWERS or rec["acl"]["viewers"][0]]}
         by_group[g].append(rec)
+    if dropped: print(f"  skipping {dropped} stray record(s) on orphan kinds")
     total = ok = 0
     for g in ORDER:
         batch = by_group[g]; total += len(batch)

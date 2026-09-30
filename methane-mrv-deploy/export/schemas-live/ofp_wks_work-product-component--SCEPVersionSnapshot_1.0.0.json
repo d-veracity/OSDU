@@ -38,6 +38,7 @@
      "certificationStatusAtSnapshot": {
       "type": "string",
       "enum": [
+       "draft",
        "underReview",
        "certified",
        "suspended",
@@ -100,6 +101,7 @@
      "versionTrigger": {
       "type": "string",
       "enum": [
+       "periodic",
        "eventDriven",
        "regulatory",
        "corrective"

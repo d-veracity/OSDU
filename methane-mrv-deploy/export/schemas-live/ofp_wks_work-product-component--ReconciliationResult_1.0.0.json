@@ -41,6 +41,7 @@
      "reconciliationVerdict": {
       "type": "string",
       "enum": [
+       "passed",
        "marginal",
        "failed"
       ]

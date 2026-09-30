@@ -41,9 +41,10 @@ NUMBER = {"Real","MassTonnes","PressureMPa","LengthKm","FlowRateTPA","AreaKm2","
 def parse_enums(p):
     t=open(p).read(); out={}
     for m in re.finditer(r'enum def (\w+)\s*\{(.*?)\}', t, re.S):
+        # Strip the doc comment, then match members per line. Splitting on `;` leaves the
+        # bare `doc` keyword glued to the first member and drops it from every enum.
         body=re.sub(r'/\*.*?\*/','',m.group(2),flags=re.S)
-        mem=[x.strip().rstrip(';') for x in body.split(';') if re.match(r'^\s*\w+\s*;?$', x.strip()+';')]
-        mem=[x for x in mem if x]
+        mem=re.findall(r'^\s*(\w+)\s*;', body, re.M)
         if mem: out[m.group(1)]=mem
     return out
 

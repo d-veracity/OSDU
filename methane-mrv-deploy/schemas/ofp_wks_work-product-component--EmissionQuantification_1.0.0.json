@@ -145,6 +145,7 @@
           "quantificationMethod": {
             "type": "string",
             "enum": [
+              "directMeasurement",
               "massBalance",
               "emissionFactor",
               "modelBased"
@@ -159,6 +160,7 @@
           "ogmpLevel": {
             "type": "string",
             "enum": [
+              "level1",
               "level2",
               "level3",
               "level4",

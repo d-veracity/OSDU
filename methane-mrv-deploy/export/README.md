@@ -57,5 +57,18 @@ Prerequisites on the target: a legal tag matching `legal.legaltags` (default
   from earlier registration passes (see `../../ofp-schema-deploy/ORPHANED_KINDS.md`). They are
   exported for completeness; do not write records to them. The live graph is on the correct
   kinds.
+- **The exported schemas diverge from the platform, deliberately.** A defect in
+  `parse_enums()` (both schema generators) stripped the SysML doc comment but left the bare
+  `doc` keyword, which the split on `;` then glued to the first enum member and discarded —
+  so every enum generated from `01_types_enums.sysml` lost its first value, usually the
+  nominal one (`contained`, `pass`, `effective`, `sealing`, `classVI`, `seismic`, `passed`,
+  `level1`, `draft`). 28 record values across this bundle and the CCUS/SCEP proof therefore
+  held values their own registered schema forbade; OSDU Storage does not validate records
+  against the schema on write, so nothing surfaced it. The generators are fixed and
+  `schemas-live/` has been corrected from the SysML source — see
+  `schemas-live/_enum_correction.json`. **Register these corrected bodies, not the ones on
+  the cimpl-stack**: OSDU schemas cannot be deleted, so registering the defective bodies on
+  a platform where `1.0.0` is still unclaimed would burn that version permanently. Record
+  bodies are untouched; they were always right.
 - The site, its numbers and the LEI are synthetic, built to exercise ISO 25624-1's own worked
   anomaly. They are not measured data.

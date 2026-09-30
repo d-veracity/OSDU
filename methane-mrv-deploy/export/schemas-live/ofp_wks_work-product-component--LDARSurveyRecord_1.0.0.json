@@ -38,6 +38,7 @@
      "surveyType": {
       "type": "string",
       "enum": [
+       "ogi",
        "drone",
        "satellite",
        "aircraft"

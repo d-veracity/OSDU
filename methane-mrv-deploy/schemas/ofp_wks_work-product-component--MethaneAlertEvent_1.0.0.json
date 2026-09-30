@@ -139,6 +139,7 @@
           "alertType": {
             "type": "string",
             "enum": [
+              "superEmitter",
               "exceedance",
               "equipmentFailure"
             ]

@@ -2690,5 +2690,13 @@
    "kind": "ofp:wks:work-product-component--StructureMapRecord:1.0.0"
   }
  ],
- "restore": "Re-register schemas-live/*.json via Schema Service POST, then PUT claim3/records/*.json (strip id/version to let the platform assign, or keep ids to preserve them)."
+ "restore": "Re-register schemas-live/*.json via Schema Service POST, then PUT claim3/records/*.json (strip id/version to let the platform assign, or keep ids to preserve them).",
+ "schemaCorrection": {
+  "applies": "export/schemas-live/*.json",
+  "detail": "export/schemas-live/_enum_correction.json",
+  "summary": "24 enum fields across 18 schema bodies had lost their first member to a parse_enums() defect in the schema generators. The exported bodies have been corrected from the SysML source and cross-checked against regenerated schemas.",
+  "divergesFromPlatform": true,
+  "why": "The cimpl-stack platform carries the uncorrected 1.0.0 schemas and OSDU schemas cannot be deleted. On a platform where 1.0.0 is unclaimed these corrected bodies are what should be registered; registering the defective ones would burn 1.0.0 permanently. Record bodies are unchanged -- they were always right; the schemas forbade values the records legitimately used.",
+  "verifiedBy": "verify_export.py check \"Every record value satisfies its registered schema's enum\""
+ }
 }

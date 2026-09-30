@@ -139,6 +139,7 @@
           "sourceCategory": {
             "type": "string",
             "enum": [
+              "venting",
               "flaring",
               "fugitive",
               "combustion"

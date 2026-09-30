@@ -142,6 +142,7 @@
           "reportingLevel": {
             "type": "string",
             "enum": [
+              "level1",
               "level2",
               "level3",
               "level4",
@@ -160,6 +161,7 @@
           "submissionStatus": {
             "type": "string",
             "enum": [
+              "draft",
               "submitted",
               "accepted",
               "rejected"

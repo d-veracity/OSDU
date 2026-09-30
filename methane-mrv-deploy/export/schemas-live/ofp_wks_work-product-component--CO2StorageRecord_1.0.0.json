@@ -47,6 +47,7 @@
      "containmentStatus": {
       "type": "string",
       "enum": [
+       "contained",
        "migrating",
        "stabilized",
        "breached"

@@ -94,6 +94,7 @@
      "claimStatus": {
       "type": "string",
       "enum": [
+       "active",
        "adjusted",
        "suspended",
        "invalidated",
