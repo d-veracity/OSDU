@@ -139,6 +139,7 @@
           "assessmentType": {
             "type": "string",
             "enum": [
+              "seismic",
               "pressure",
               "groundwater",
               "insar",
@@ -158,6 +159,7 @@
           "verdict": {
             "type": "string",
             "enum": [
+              "pass",
               "warning",
               "fail"
             ]
