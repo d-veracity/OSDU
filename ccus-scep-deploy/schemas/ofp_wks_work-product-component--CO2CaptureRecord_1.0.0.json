@@ -139,6 +139,7 @@
           "captureSource": {
             "type": "string",
             "enum": [
+              "postCombustion",
               "preCombustion",
               "oxyfuel",
               "directAirCapture",

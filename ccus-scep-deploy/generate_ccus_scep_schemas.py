@@ -59,10 +59,11 @@ def parse_enums(path):
     enums = {}
     for m in re.finditer(r'enum def (\w+)\s*\{(.*?)\}', txt, re.S):
         name, body = m.group(1), m.group(2)
-        # members are bare identifiers ending in ; (skip doc comments)
+        # Members are bare identifiers ending in `;`, one per line. Strip the doc comment
+        # first, then match per line -- splitting on `;` instead leaves the bare `doc`
+        # keyword glued to the first member, which silently drops it from every enum.
         body = re.sub(r'/\*.*?\*/', '', body, flags=re.S)
-        members = [x.strip().rstrip(';') for x in re.split(r';', body) if x.strip() and re.match(r'^\w+$', x.strip().rstrip(';'))]
-        members = [x for x in members if x]
+        members = re.findall(r'^\s*(\w+)\s*;', body, re.M)
         if members: enums[name] = members
     return enums
 

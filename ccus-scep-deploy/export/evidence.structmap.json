@@ -1,15 +1,15 @@
 {
   "data": {
     "activityType": "structure_map_interpretation",
-    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "dataSource": "IBDP synthetic (Decatur-modeled) -- measurements are synthetic; identifiers reference real OSDU master data on opendes",
     "reportingPeriodStart": "2011-11-01T00:00:00Z",
     "reportingPeriodEnd": "2014-11-30T23:59:59Z",
-    "facilityId": "CCS1-Decatur-ClassVI",
+    "facilityId": "opendes:master-data--Well:121152341500",
     "recordingType": "measured",
     "sensitivity": "confidential",
     "mapId": "IBDP-Decatur-SM-01",
     "mapType": "depth_structure",
-    "seismicSurveyId": "3D-2010-Decatur",
+    "seismicSurveyId": "opendes:master-data--SeismicAcquisitionSurvey:2c00182dedba49a5ab0d7691caf1506e",
     "horizonName": "Top Mount Simon",
     "depthConversionMethod": "checkshot-calibrated",
     "spatialResolutionM": 25.0,
