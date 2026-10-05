@@ -1,10 +1,10 @@
 {
   "data": {
     "activityType": "ofp_adjustment",
-    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "dataSource": "IBDP synthetic (Decatur-modeled) -- measurements are synthetic; identifiers reference real OSDU master data on opendes",
     "reportingPeriodStart": "2011-11-01T00:00:00Z",
     "reportingPeriodEnd": "2014-11-30T23:59:59Z",
-    "facilityId": "CCS1-Decatur-ClassVI",
+    "facilityId": "opendes:master-data--Well:121152341500",
     "recordingType": "measured",
     "sensitivity": "confidential",
     "ofpActivityReferenceId": "IBDP-Decatur-OFP-REMOVAL-01",

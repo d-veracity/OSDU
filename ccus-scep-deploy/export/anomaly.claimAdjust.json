@@ -1,10 +1,10 @@
 {
   "data": {
     "activityType": "carbon_claim_adjustment",
-    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "dataSource": "IBDP synthetic (Decatur-modeled) -- measurements are synthetic; identifiers reference real OSDU master data on opendes",
     "reportingPeriodStart": "2011-11-01T00:00:00Z",
     "reportingPeriodEnd": "2014-11-30T23:59:59Z",
-    "facilityId": "CCS1-Decatur-ClassVI",
+    "facilityId": "opendes:master-data--Well:121152341500",
     "recordingType": "measured",
     "sensitivity": "confidential",
     "claimId": "IBDP-Decatur-CLAIM-01",
@@ -12,7 +12,7 @@
     "adjustedClaimTonnes": 950000,
     "claimStatus": "adjusted",
     "adjustmentReason": "AoR exceedance / containment breach \u2014 plume 34 km\u00b2 > 30 km\u00b2 permitted",
-    "leakageEvidenceId": "f734c5248a694a319a1895aa5c59206d",
+    "leakageEvidenceId": "opendes:work-product-component--CO2PlumeObservation:f734c5248a694a319a1895aa5c59206d",
     "scepVersionAffected": "1.0.1",
     "registryEntryId": "IBDP-Decatur-REG-01"
   },

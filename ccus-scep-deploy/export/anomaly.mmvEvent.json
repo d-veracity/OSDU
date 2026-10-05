@@ -1,14 +1,14 @@
 {
   "data": {
     "activityType": "mmv_event",
-    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "dataSource": "IBDP synthetic (Decatur-modeled) -- measurements are synthetic; identifiers reference real OSDU master data on opendes",
     "reportingPeriodStart": "2011-11-01T00:00:00Z",
     "reportingPeriodEnd": "2014-11-30T23:59:59Z",
-    "facilityId": "CCS1-Decatur-ClassVI",
+    "facilityId": "opendes:master-data--Well:121152341500",
     "recordingType": "measured",
     "sensitivity": "confidential",
     "eventType": "reassessment_trigger",
-    "triggeringAssessmentId": "f734c5248a694a319a1895aa5c59206d",
+    "triggeringAssessmentId": "opendes:work-product-component--CO2PlumeObservation:f734c5248a694a319a1895aa5c59206d",
     "deviationFromBaseline": 336.0,
     "correctiveActionRequired": true,
     "scepVersionAffected": "1.0.0"

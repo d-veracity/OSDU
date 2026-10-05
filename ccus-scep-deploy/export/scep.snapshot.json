@@ -15,10 +15,10 @@
     ],
     "certificationStatusAtSnapshot": "suspended",
     "activityType": "scep_version_snapshot",
-    "dataSource": "IBDP synthetic (Decatur-modeled)",
+    "dataSource": "IBDP synthetic (Decatur-modeled) -- measurements are synthetic; identifiers reference real OSDU master data on opendes",
     "reportingPeriodStart": "2011-11-01T00:00:00Z",
     "reportingPeriodEnd": "2014-11-30T23:59:59Z",
-    "facilityId": "CCS1-Decatur-ClassVI",
+    "facilityId": "opendes:master-data--Well:121152341500",
     "recordingType": "measured",
     "sensitivity": "confidential",
     "snapshotHash": "1240d738dce22de593f38c88db4a397c9021c9df1cad8fd4fea5cc6c194c14f0"
