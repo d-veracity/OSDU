@@ -1,0 +1,92 @@
+{
+ "id": "osdu:work-product-component--DataQuality:mrv01-dq-verify-goldstandardcoverage",
+ "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+ "versions": [
+  1788908921775429,
+  1788909500638023
+ ],
+ "bodies": [
+  {
+   "data": {
+    "entity_id": "dq-verify-goldstandardcoverage",
+    "evaluated_record_id": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+    "evaluated_kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+    "data_quality_rule_set_id": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "data_rules": [
+     "osdu:reference-data--DataQualityRule:mrv01-gold-standard-coverage"
+    ],
+    "method_id": "osdu:reference-data--QualityAssessmentMethod:mrv01-deterministic-constraint",
+    "start_date_time": "2025-12-15T09:00:00Z",
+    "total_score": 100.0,
+    "dimension_metrics": [
+     "GoldStandardCoverage=pass:97.2%",
+     "state=osdu:reference-data--QualityAssessmentState:mrv01-passed"
+    ]
+   },
+   "id": "osdu:work-product-component--DataQuality:mrv01-dq-verify-goldstandardcoverage",
+   "version": 1788908921775429,
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:41.780Z"
+  },
+  {
+   "data": {
+    "entity_id": "dq-verify-goldstandardcoverage",
+    "evaluated_record_id": "osdu:work-product-component--ReconciliationResult:7cd38eef0ba340748900380eccbbb944",
+    "evaluated_kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+    "data_quality_rule_set_id": "osdu:reference-data--DataQualityRuleSet:mrv01-iso-25624-1-gate",
+    "data_rules": [
+     "osdu:reference-data--DataQualityRule:mrv01-gold-standard-coverage"
+    ],
+    "method_id": "osdu:reference-data--QualityAssessmentMethod:mrv01-deterministic-constraint",
+    "start_date_time": "2025-12-15T09:00:00Z",
+    "total_score": 100.0,
+    "dimension_metrics": [
+     "GoldStandardCoverage=pass:97.2%",
+     "state=osdu:reference-data--QualityAssessmentState:mrv01-passed"
+    ]
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:20.825Z",
+   "id": "osdu:work-product-component--DataQuality:mrv01-dq-verify-goldstandardcoverage",
+   "version": 1788909500638023,
+   "kind": "ofp:wks:work-product-component--DataQuality:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:41.780Z"
+  }
+ ]
+}

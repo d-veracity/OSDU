@@ -1,0 +1,37 @@
+{
+ "data": {
+  "emission_argument_value_id": "val-src-flare-t",
+  "value": 8000,
+  "emission_argument_type": "Emission Activity Parameter",
+  "emission_argument_id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-flare",
+  "valid_from_datetime": "2025-01-01T00:00:00Z",
+  "valid_to_datetime": "2025-12-31T23:59:59Z",
+  "datetime": "2025-10-15T00:00:00Z",
+  "emission_activity_parameter_id": "osdu:master-data--EmissionActivityParameter:mrv01-t-src-flare",
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-flare"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-flare-t",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:work-product-component--EmissionArgumentValue:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

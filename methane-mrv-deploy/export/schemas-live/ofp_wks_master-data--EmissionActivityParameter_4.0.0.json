@@ -1,0 +1,160 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--EmissionActivityParameter",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--EmissionActivityParameter:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:05:10.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+  "description": "The identification of a particular Parameter Type for a particular Facility or Process.",
+  "additionalProperties": false,
+  "title": "Emission Activity Parameter",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_activity_parameter_id": {
+      "description": "The Primary Key of the Emission Activity Parameter.",
+      "type": "string"
+     },
+     "parent_emission_activity_parameter_id": {
+      "description": "Foreign Key of the Parent Emission Activity Parameter. This may be used to reference an Emission Activity Parameter converter from one Unit Of Measure to another.",
+      "type": "string"
+     },
+     "physical_quantity_type_id": {
+      "description": "Optional part of a composite Foreign Key of the parent Unit Of Measure. Identifies the Physical Quantity Type of the activity parameter; e.g., density (mass per volume) or equivalent Global Warming Potential (GWP) of a gas (mass per mass).",
+      "type": "string"
+     },
+     "emission_activity_id": {
+      "description": "The Foreign Key of the Emission Activity to which this Emission Activity Parameter is assigned.",
+      "type": "string"
+     },
+     "unit_of_measure_id": {
+      "description": "The Foreign Key of the Unit Of Measure assigned to the Emission Activity Parameter.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Emission Activity Parameter.",
+      "type": "string"
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility to which this Emission Activity Parameter is directly linked (if available).",
+      "type": "string"
+     },
+     "emission_parameter_type_id": {
+      "description": "DEPRECATED, to be replaced by Physical Quantity Type Id identified by the parent Unit Of Measure Id. Assigns a a reference type to the parameter.",
+      "type": "string"
+     },
+     "equipment_id": {
+      "description": "The Foreign Key of the Equipment to which this Emission Activity Parameter is directly linked (if available).",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_activity_parameter_id",
+     "name",
+     "unit_of_measure_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--EmissionActivityParameter.4.0.0.json"
+ }
+}

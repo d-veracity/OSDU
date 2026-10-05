@@ -1,0 +1,151 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--OrganizationControl",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--OrganizationControl:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:05:01.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--OrganizationControl:4.0.0",
+  "description": "Identifies the nature of controlling interest that an organization has over an Organizational Boundary (operational or financial control) for a given validity period\n",
+  "additionalProperties": false,
+  "title": "Organization Control",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time the Organizational Control is valid to",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time the Organizational Control is valid from",
+      "type": "string"
+     },
+     "organization_id": {
+      "description": "The foreign key of the Organization",
+      "type": "string"
+     },
+     "organizational_boundary_id": {
+      "description": "The foreign key of the Organizational Boundary",
+      "type": "string"
+     },
+     "id": {
+      "description": "The primary key assigned to the Organization Control",
+      "type": "string"
+     },
+     "control_type": {
+      "description": "The type assigned to the Organizational Control: Financial or Operational",
+      "type": "string"
+     }
+    },
+    "required": [
+     "control_type",
+     "organization_id",
+     "organizational_boundary_id",
+     "valid_from_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--OrganizationControl.4.0.0.json"
+ }
+}

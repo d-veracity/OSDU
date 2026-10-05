@@ -1,0 +1,37 @@
+{
+ "data": {
+  "activityType": "ch4_alert",
+  "dataSource": "live-console",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "alertType": "exceedance",
+  "thresholdValue": 27.2,
+  "measuredValue": 32,
+  "responseRequired": true
+ },
+ "id": "osdu:work-product-component--MethaneAlertEvent:5134b210beaa4468b0258694d5039455",
+ "version": 1788901874910432,
+ "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T21:11:14.915Z"
+}

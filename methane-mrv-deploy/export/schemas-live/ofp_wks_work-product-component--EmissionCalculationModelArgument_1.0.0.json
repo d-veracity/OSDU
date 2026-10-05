@@ -1,0 +1,180 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--EmissionCalculationModelArgument",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--EmissionCalculationModelArgument:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:05:43.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:transactional-data--EmissionCalculationModelArgument:4.0.0",
+  "description": "The assignment of an Emission Argument (Emission Activity Parameter or Emission Factor) as input or\noutput of a Calculation Model. An argument type is required to determine if the argument is an\nEmission Activity Parameter or Emission Factor.",
+  "additionalProperties": false,
+  "title": "Emission Calculation Model Argument",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_argument_id": {
+      "description": "The Foreign Key identifying the Emission Calculation Argument as either an Emission Activity Parameter or Emission Factor.",
+      "type": "string"
+     },
+     "emission_factor_id": {
+      "description": "The Foreign Key of the Emission Factor used by a Emission Calculation Model.",
+      "type": "string"
+     },
+     "emission_activity_parameter_type_id": {
+      "description": "DEPRECATED, Replace by Physical Quantity Type. Optional part of a composite foreign key used to identify the Emission Activity Parameter. The Emission Activity Parameter Type",
+      "type": "string"
+     },
+     "emission_calculation_model_id": {
+      "description": "The Foreign Key of the Emission Calculation Model.",
+      "type": "string"
+     },
+     "emission_calculation_component_line_id": {
+      "description": "The Foreign Key of the Emission Calculation Formula Component.",
+      "type": "string"
+     },
+     "emission_activity_parameter_id": {
+      "description": "The Foreign Key of the Emission Activity Parameter used by the Emission Calculation Model.",
+      "type": "string"
+     },
+     "emission_argument_type": {
+      "description": "The Emission Calculation Argument Type: Emission Activity Parameter or Emission Factor.",
+      "type": "string"
+     },
+     "physical_quantity_type_id": {
+      "description": "The optional part of a composite Foreign Key identifying the Emission Factor (the Physical Quantity Type).",
+      "type": "string"
+     },
+     "emission_calculation_formula_id": {
+      "description": "The optional part of a composite Foreign Key identifying the Emission Calculation Formula Component (the Emission Calculation Formula).",
+      "type": "string"
+     },
+     "emission_activity_id": {
+      "description": "The optional part of a composite Foreign Key used to identify the Emission Activity Parameter (the Emission Activity).",
+      "type": "string"
+     },
+     "emission_factor_type_id": {
+      "description": "The optional part of a composite foreign identifying the Emission Factor (the Emission Factor Type).",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key assigned to the Emission Calculation Model Argument.",
+      "type": "string"
+     },
+     "parameter_physical_quantity_type_id": {
+      "description": "The optional part of a composite Foreign Key identifying the Emission Activity Parameter (the Physical Quantity Type).",
+      "type": "string"
+     },
+     "emission_parameter_type_id": {
+      "description": "DEPRECATED, replace by Physical Quantity Type. Optional part of a composite foreign key for the Emission Factor. The Emission Parameter Type.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_argument_type",
+     "emission_calculation_component_line_id",
+     "emission_calculation_model_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionCalculationModelArgument.1.0.0.json"
+ }
+}

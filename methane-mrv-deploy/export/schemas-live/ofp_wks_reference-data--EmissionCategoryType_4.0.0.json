@@ -1,0 +1,140 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "reference-data--EmissionCategoryType",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:reference-data--EmissionCategoryType:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:04:39.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:reference-data--EmissionCategoryType:4.0.0",
+  "description": "A type used to further classify different Emission Inventory Types.\n* Source: Direct, indirect, biogenic\n* Sink: Nature-based removals, technology-based removals\n* Credit: Reduction, removal, avoidance",
+  "additionalProperties": false,
+  "title": "Emission Category Type",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_category_type_id": {
+      "description": "The Primary Key assigned to the category type.",
+      "type": "string"
+     },
+     "emission_inventory_type_id": {
+      "description": "Foreign Key of the Emission Inventory Type referenced by the category.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Emission Category Type.",
+      "type": "string"
+     },
+     "description": {
+      "description": "Long description of the Emission Category Type.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_category_type_id",
+     "emission_inventory_type_id",
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/reference-data--EmissionCategoryType.4.0.0.json"
+ }
+}

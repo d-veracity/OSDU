@@ -1,0 +1,17 @@
+{
+  "attestationId": "osdu:work-product-component--MethaneAttestation:58a521308e994120a426a22b714c7595",
+  "alertId": "osdu:work-product-component--MethaneAlertEvent:0657a24bed8546e59bb37ab8b3e2b89c",
+  "resurveyId": "osdu:work-product-component--MethaneDetectionEvent:8a9772f3d33444ac9e1e8c5bdc0134e3",
+  "topdownEventId": "osdu:work-product-component--EmissionQuantification:0ee17a1bd43342d09075554a8df083d9",
+  "unlitInventoryId": "osdu:work-product-component--MethaneSourceInventory:d0fcd58b47ad47179272fa0bdf4d41f7",
+  "unlitQuantId": "osdu:work-product-component--EmissionQuantification:1372b6baba794e9f8063a3ff2495b7b6",
+  "reconciliation2Id": "osdu:work-product-component--ReconciliationResult:9c53dc3d841e44ed9e1ac6ba815ed113",
+  "ogmpReport2Id": "osdu:work-product-component--OGMPReport:2ec71f4f231f40efa566926bbf3b78de",
+  "restated": {
+    "bottomUp": 198636.0,
+    "topDown": 213156.0,
+    "divergencePct": 6.811912402184316,
+    "restatementPct": 27.08637236084453,
+    "instantDivergencePct": 97.06296860025931
+  }
+}

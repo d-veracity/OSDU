@@ -1,0 +1,34 @@
+{
+ "data": {
+  "emission_report_id": "ogmp-2025",
+  "name": "OGMP 2.0 annual methane report 2025 \u2014 MRV-01",
+  "emission_report_period_id": "osdu:work-product-component--EmissionReportPeriod:mrv01-2025",
+  "emission_reporting_boundary_id": "osdu:work-product-component--EmissionReportingBoundary:mrv01-opctl-2025",
+  "organization_id": "osdu:master-data--Organization:mrv01-northfield",
+  "description": "Asset-level OGMP 2.0 report, ISO 25624-1 reconciled; grounds osdu:work-product-component--OGMPReport:2ec71f4f231f40efa566926bbf3b78de"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:work-product-component--EmissionReport:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

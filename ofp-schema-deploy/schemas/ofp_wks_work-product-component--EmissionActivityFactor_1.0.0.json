@@ -1,0 +1,147 @@
+{
+  "schemaInfo": {
+    "schemaIdentity": {
+      "authority": "ofp",
+      "source": "wks",
+      "entityType": "work-product-component--EmissionActivityFactor",
+      "schemaVersionMajor": 1,
+      "schemaVersionMinor": 0,
+      "schemaVersionPatch": 0,
+      "id": "ofp:wks:work-product-component--EmissionActivityFactor:1.0.0"
+    },
+    "status": "DEVELOPMENT",
+    "scope": "INTERNAL",
+    "createdBy": "dVeracity",
+    "dateCreated": "2026-09-08T00:00:00Z"
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionActivityFactor.1.0.0.json",
+    "x-osdu-schema-source": "ofp:wks:transactional-data--EmissionActivityFactor:4.0.0",
+    "title": "Emission Activity Factor",
+    "description": "Associates one or more Emission Factor to an Emission Activity; can be used to define a Factor for the\nactivity belonging to a specific Facility and its Equipment.\n\nNote: Another way to associate a Factor to an Activity is through the Activity Argument Value. This\nentity can have the argument type Emission Activity Parameter or Emission Factor. When defining\na value for an Emission Factor Argument Type, the Emission Activity Parameter ID can be used to\ndefine the foreign activity.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier of an OSDU record."
+      },
+      "kind": {
+        "type": "string",
+        "description": "Schema kind (authority:source:entityType:version)."
+      },
+      "version": {
+        "type": "integer",
+        "description": "Version number of this OSDU record."
+      },
+      "acl": {
+        "type": "object",
+        "description": "Access control list.",
+        "properties": {
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "viewers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "owners",
+          "viewers"
+        ]
+      },
+      "legal": {
+        "type": "object",
+        "description": "Legal compliance metadata.",
+        "properties": {
+          "legaltags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "otherRelevantDataCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "legaltags",
+          "otherRelevantDataCountries"
+        ]
+      },
+      "tags": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "createTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createUser": {
+        "type": "string"
+      },
+      "modifyTime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "modifyUser": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Primary Key assigned to the Emission Activity Factor."
+          },
+          "emission_activity_id": {
+            "type": "string",
+            "description": "Foreign Key of the Emission Activity joined to an Emission Factor."
+          },
+          "emission_factor_id": {
+            "type": "string",
+            "description": "The Foreign Key of the Emission Factor joined to an Emission Activity."
+          },
+          "emission_factor_type_id": {
+            "type": "string",
+            "description": "The optional part of a Foreign Key identifying the Emission Factor (the Emission Factor Type)."
+          },
+          "unit_of_measure_id": {
+            "type": "string",
+            "description": "DEPRECATED, the Unit Of Measure should be identified by the parent Emission Factor."
+          },
+          "emission_activity_type_id": {
+            "type": "string",
+            "description": "The optional part of a composite Foreign Key identifying the Emission Factor (the Emission Activity Type)."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "emission_activity_id",
+          "emission_factor_id"
+        ]
+      }
+    },
+    "required": [
+      "kind",
+      "acl",
+      "legal",
+      "data"
+    ],
+    "additionalProperties": false
+  }
+}

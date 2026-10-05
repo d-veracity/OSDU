@@ -1,0 +1,30 @@
+{
+ "data": {
+  "code": "flaring",
+  "name": "flare stack (98% DRE)",
+  "description": "ISO 25624-1 Clause 6 source category 'flaring'",
+  "isoClause": "6"
+ },
+ "id": "osdu:reference-data--MethaneSourceCategory:d7d4340de2f5450d82eeba47e5a9a46b",
+ "version": 1788895650376894,
+ "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:30.379Z"
+}

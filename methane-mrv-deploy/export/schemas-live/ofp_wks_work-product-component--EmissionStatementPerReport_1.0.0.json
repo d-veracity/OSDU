@@ -1,0 +1,167 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--EmissionStatementPerReport",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:45:11.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+  "description": "Describes the statements used in a report.",
+  "additionalProperties": false,
+  "title": "Emission Statement Per Report",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_reporting_boundary_id": {
+      "description": "The Foreign Key of the Reporting Boundary assigned to the Report.",
+      "type": "string"
+     },
+     "emission_allocation_kind": {
+      "description": "The optional type of emission allocation assigned to the Emission Statement used in a Report: Activity Emission Allocation, Facility Emission Allocation, Organization Emission Allocation, Organizational Boundary Share.",
+      "type": "string"
+     },
+     "emission_activity_category_id": {
+      "description": "Foreign Key for Emission Activity Category, assuming the statement has been reused under a different context from the original source activity data. For example, Scope 1 Emission Statement transferred to an investor or Joint Venture (JV) partner that interprets the statement as Scope 3, Category 15.\n\nFor example, an investor of JV partner requests Scope 1 and Scope 2 Emission Statement data from the asset controller and recasts this as Scope 3, Category 15 Investments based on some Emission Allocation percentage.",
+      "type": "string"
+     },
+     "emission_scope_type_id": {
+      "description": "Optional Scope Type assigned to the Emission Statement. An optional part of a composite key for the Emission Activity Category.\n\nThis can be used when an Emission Statement is applied with a different scope context by another organization; see Emission Activity Category ID attribute.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Emission Statement Per Report.",
+      "type": "string"
+     },
+     "facility_emission_allocation_id": {
+      "description": "The Foreign Key of the Facility Emission Allocation defining an optional percentage assigned to the Emission Statement used in the Report.",
+      "type": "string"
+     },
+     "emission_report_id": {
+      "description": "The Foreign Key of the Emission Report.",
+      "type": "string"
+     },
+     "organization_emission_allocation_id": {
+      "description": "The Foreign Key of the Organization Emission Allocation defining an optional percentage assigned to the Emission Statement used in the Report.",
+      "type": "string"
+     },
+     "organizational_boundary_share_id": {
+      "description": "The Foreign Key of the Organizational Boundary Share defining an optional emission allocation percentage assigned to the Emission Statement used in the Report.",
+      "type": "string"
+     },
+     "emission_statement_id": {
+      "description": "The Foreign Key of the Emission Statement.",
+      "type": "string"
+     },
+     "activity_emission_allocation_id": {
+      "description": "The Foreign Key of the Activity Emission Allocation defining an optional allocation percentage assigned to the Emission Statement used in the Report.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_report_id",
+     "emission_statement_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionStatementPerReport.1.0.0.json"
+ }
+}

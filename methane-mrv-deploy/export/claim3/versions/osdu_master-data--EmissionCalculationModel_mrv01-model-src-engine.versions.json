@@ -1,0 +1,74 @@
+{
+ "id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine",
+ "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "name": "Formula (1) applied to SRC-ENGINE",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-engine",
+    "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z"
+   },
+   "id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "name": "Formula (1) applied to SRC-ENGINE",
+    "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-engine",
+    "emission_calculation_formula_id": "osdu:master-data--EmissionCalculationFormula:mrv01-iso-formula-1",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-engine",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:master-data--EmissionCalculationModel:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

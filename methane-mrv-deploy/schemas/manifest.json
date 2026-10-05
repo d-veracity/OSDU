@@ -1,0 +1,52 @@
+{
+  "sysml-records": [
+    {
+      "id": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+      "file": "ofp_wks_work-product-component--EmissionQuantification_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:work-product-component--LDARSurveyRecord:1.0.0",
+      "file": "ofp_wks_work-product-component--LDARSurveyRecord_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+      "file": "ofp_wks_work-product-component--MethaneAlertEvent_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+      "file": "ofp_wks_work-product-component--MethaneDetectionEvent_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+      "file": "ofp_wks_work-product-component--MethaneSourceInventory_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+      "file": "ofp_wks_work-product-component--OGMPReport_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+      "file": "ofp_wks_work-product-component--ReconciliationResult_1.0.0.json"
+    }
+  ],
+  "iso-reference-data": [
+    {
+      "id": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+      "file": "ofp_wks_reference-data--MethaneSourceCategory_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:reference-data--MethaneQuantificationMethod:1.0.0",
+      "file": "ofp_wks_reference-data--MethaneQuantificationMethod_1.0.0.json"
+    },
+    {
+      "id": "ofp:wks:reference-data--MethaneMeasurementTechnology:1.0.0",
+      "file": "ofp_wks_reference-data--MethaneMeasurementTechnology_1.0.0.json"
+    }
+  ],
+  "monitoring-plan": [
+    {
+      "id": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+      "file": "ofp_wks_work-product-component--MethaneMonitoringPlan_1.0.0.json"
+    }
+  ]
+}

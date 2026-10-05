@@ -1,0 +1,41 @@
+{
+ "data": {
+  "reporting_assurance_id": "ogmp-2025",
+  "reporting_assurance_type_id": "osdu:reference-data--ReportingAssuranceType:mrv01-reasonable",
+  "issuer_id": "osdu:master-data--Organization:mrv01-dveracity-verification",
+  "organization_id": "osdu:master-data--Organization:mrv01-northfield",
+  "emission_report_id": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+  "facility_id": "osdu:master-data--Facility:mrv01-site",
+  "reviewers": [
+   "osdu:master-data--ContactPerson:mrv01-lead-verifier"
+  ],
+  "effective_date": "2026-03-01T00:00:00Z",
+  "valid_from_datetime": "2026-03-01T00:00:00Z",
+  "valid_to_datetime": "2027-03-01T00:00:00Z",
+  "comment": "Reasonable assurance after ISO 12.3 restatement; bound to attestation osdu:work-product-component--MethaneAttestation:58a521308e994120a426a22b714c7595"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:work-product-component--ReportingAssurance:mrv01-ogmp-2025",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:work-product-component--ReportingAssurance:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

@@ -1,0 +1,138 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--OrganizationPersonAssociation",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--OrganizationPersonAssociation:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T22:58:03.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Organizational Structure",
+  "x-osdu-schema-source": "ofp:wks:master-data--OrganizationPersonAssociation:1.0.0",
+  "description": "A person related to an Organization in a specific role.",
+  "additionalProperties": false,
+  "title": "Organization Person Association",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "organization_id": {
+      "description": "The Foreign Key of the Organization.",
+      "type": "string"
+     },
+     "contact_person_id": {
+      "description": "The Foreign Key of the Contact Person.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Organization Person Association.",
+      "type": "string"
+     },
+     "person_organization_role_type_id": {
+      "description": "The Foreign Key of the Person Organization Role Type.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "contact_person_id",
+     "id",
+     "organization_id",
+     "person_organization_role_type_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--OrganizationPersonAssociation.1.0.0.json",
+  "x-dve-hackolade-source": "Organizational Structure.hck.json"
+ }
+}

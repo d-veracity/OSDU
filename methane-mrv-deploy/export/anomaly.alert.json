@@ -1,0 +1,37 @@
+{
+  "data": {
+    "activityType": "ch4_alert",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "alertType": "superEmitter",
+    "thresholdValue": 100.0,
+    "measuredValue": 600.0,
+    "responseRequired": true
+  },
+  "id": "osdu:work-product-component--MethaneAlertEvent:0657a24bed8546e59bb37ab8b3e2b89c",
+  "version": 1788896587003716,
+  "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:43:07.005Z"
+}

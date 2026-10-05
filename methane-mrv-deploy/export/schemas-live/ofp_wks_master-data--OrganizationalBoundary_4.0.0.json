@@ -1,0 +1,149 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--OrganizationalBoundary",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--OrganizationalBoundary:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:05:15.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--OrganizationalBoundary:4.0.0",
+  "description": "A grouping of Processes/Activities in which an organization exercises operational or financial control\nor has a financial stake in the process (e.g., equity share). As per ISO 14064-1, and other standards.",
+  "additionalProperties": false,
+  "title": "Organizational Boundary",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date this Organizational Boundary ends; i.e., should no longer be used to define the ownership or shares in referenced Emission Activities or Facilities.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date this Organizational Boundary starts; i.e., the period over which Organization Controls and Organizational Boundary Shares may be assigned.",
+      "type": "string"
+     },
+     "organization_id": {
+      "description": "DEPRECATED, ID of organization with operational control to be defined by new Organization Control entity. This entity can be used as placeholder for current operator of the boundary, but should be validated against the Organization Control records.",
+      "type": "string"
+     },
+     "name": {
+      "description": "A name assigned to the Organizational Boundary.",
+      "type": "string"
+     },
+     "description": {
+      "description": "A longer description of the Organizational Boundary.",
+      "type": "string"
+     },
+     "organizational_boundary_id": {
+      "description": "Primary Key of the Organizational Boundary.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "valid_from_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--OrganizationalBoundary.4.0.0.json"
+ }
+}

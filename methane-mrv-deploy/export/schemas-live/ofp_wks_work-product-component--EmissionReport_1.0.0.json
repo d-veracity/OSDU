@@ -1,0 +1,146 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--EmissionReport",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--EmissionReport:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:45:09.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--EmissionReport:1.0.0",
+  "description": "A document that describes the organization Emission Inventory and emissions over a period of time.\n\nRecommended as per ISO 14064-1 GHG Report Content, and other standards.",
+  "additionalProperties": false,
+  "title": "Emission Report",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_reporting_boundary_id": {
+      "description": "The Foreign Key of the Reporting Boundary assigned to the Report.",
+      "type": "string"
+     },
+     "emission_report_period_id": {
+      "description": "The Foreign Key of the Emission Report Period used.",
+      "type": "string"
+     },
+     "organization_id": {
+      "description": "Foreign Key of the organization to which this report belongs.",
+      "type": "string"
+     },
+     "name": {
+      "description": "The name assigned to the Emission Report.",
+      "type": "string"
+     },
+     "description": {
+      "description": "A long description of the Emission Report.",
+      "type": "string"
+     },
+     "emission_report_id": {
+      "description": "The Primary Key assigned to the Emission Report.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_report_period_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--EmissionReport.1.0.0.json"
+ }
+}

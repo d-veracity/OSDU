@@ -1,0 +1,156 @@
+{
+ "correctedAt": "2026-09-24T03:17:25Z",
+ "defect": "parse_enums() in generate_ccus_scep_schemas.py / generate_methane_schemas.py stripped the SysML doc comment but left the bare `doc` keyword, which was then glued to the first enum member by the split on \";\" and discarded. Every enum generated from 01_types_enums.sysml lost its first member.",
+ "impact": "The lost member was the nominal value in most enums (contained, pass, effective, sealing, classVI, seismic, passed, draft, level1, critical). Records written during the proof therefore carry values their own registered schema forbids; OSDU Storage does not validate against the schema on write, so nothing surfaced it.",
+ "fix": "parse_enums now matches members per line: re.findall(r\"^\\s*(\\w+)\\s*;\", body, re.M). Verified to reproduce all 28 SysML enums exactly in both generators.",
+ "appliedTo": "export/schemas-live/*.json (the bodies restore_claim3.py replays) and the regenerated schemas/ in methane-mrv-deploy and ccus-scep-deploy.",
+ "rule": "A field enum was corrected only where its members equalled exactly a SysML enum minus that enum's first member. All other enums left untouched.",
+ "divergenceFromCimplStack": "The cimpl-stack platform carries the UNCORRECTED 1.0.0 schemas. These files intentionally differ from what was registered there. On a platform where 1.0.0 is unclaimed, register these instead: OSDU schemas cannot be deleted, so registering the defective bodies would burn 1.0.0 permanently.",
+ "correctedFields": [
+  {
+   "kind": "ofp:wks:work-product-component--ActivityLineageRecord:1.0.0",
+   "field": "interpretationBias",
+   "sysmlEnum": "InterpretationBiasType",
+   "restored": "confirmationBias"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--CO2CaptureRecord:1.0.0",
+   "field": "captureSource",
+   "sysmlEnum": "CaptureSource",
+   "restored": "postCombustion"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--CO2PlumeObservation:1.0.0",
+   "field": "observationMethod",
+   "sysmlEnum": "MonitoringTechnology",
+   "restored": "seismic"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--CO2StorageRecord:1.0.0",
+   "field": "containmentStatus",
+   "sysmlEnum": "ContainmentStatus",
+   "restored": "contained"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--CarbonClaimAdjustmentRecord:1.0.0",
+   "field": "claimStatus",
+   "sysmlEnum": "CarbonClaimStatus",
+   "restored": "active"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--ContainmentAssessment:1.0.0",
+   "field": "assessmentType",
+   "sysmlEnum": "MonitoringTechnology",
+   "restored": "seismic"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--ContainmentAssessment:1.0.0",
+   "field": "verdict",
+   "sysmlEnum": "AssessmentVerdict",
+   "restored": "pass"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--ContainmentIntegrityAssessment:1.0.0",
+   "field": "caprockSealingEffectiveness",
+   "sysmlEnum": "CaprockSealingEffectiveness",
+   "restored": "effective"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--ContainmentIntegrityAssessment:1.0.0",
+   "field": "faultSealingBehavior",
+   "sysmlEnum": "FaultSealingBehavior",
+   "restored": "sealing"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "field": "ogmpLevel",
+   "sysmlEnum": "OGMPLevel",
+   "restored": "level1"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+   "field": "quantificationMethod",
+   "sysmlEnum": "QuantificationMethod",
+   "restored": "directMeasurement"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--InterpretationActivity:1.0.0",
+   "field": "biasDeclarations",
+   "sysmlEnum": "InterpretationBiasType",
+   "restored": "confirmationBias"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--LDARSurveyRecord:1.0.0",
+   "field": "surveyType",
+   "sysmlEnum": "LDARSurveyType",
+   "restored": "ogi"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--MethaneAlertEvent:1.0.0",
+   "field": "alertType",
+   "sysmlEnum": "AlertType",
+   "restored": "superEmitter"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "field": "ogmpLevel",
+   "sysmlEnum": "OGMPLevel",
+   "restored": "level1"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+   "field": "technology",
+   "sysmlEnum": "MeasurementTechnology",
+   "restored": "cems"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--MethaneMonitoringPlan:1.0.0",
+   "field": "targetOgmpLevel",
+   "sysmlEnum": "OGMPLevel",
+   "restored": "level1"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+   "field": "sourceCategory",
+   "sysmlEnum": "EmissionSourceCategory",
+   "restored": "venting"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+   "field": "reportingLevel",
+   "sysmlEnum": "OGMPLevel",
+   "restored": "level1"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+   "field": "submissionStatus",
+   "sysmlEnum": "ReportSubmissionStatus",
+   "restored": "draft"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--ReconciliationResult:1.0.0",
+   "field": "reconciliationVerdict",
+   "sysmlEnum": "ReconciliationVerdict",
+   "restored": "passed"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--SCEPVersionSnapshot:1.0.0",
+   "field": "certificationStatusAtSnapshot",
+   "sysmlEnum": "SCEPCertificationStatus",
+   "restored": "draft"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--SCEPVersionSnapshot:1.0.0",
+   "field": "versionTrigger",
+   "sysmlEnum": "SCEPVersionTrigger",
+   "restored": "periodic"
+  },
+  {
+   "kind": "ofp:wks:work-product-component--SiteClosureRecord:1.0.0",
+   "field": "closurePhase",
+   "sysmlEnum": "ClosurePhase",
+   "restored": "stabilization"
+  }
+ ],
+ "crossCheckDisagreements": []
+}

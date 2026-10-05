@@ -1,0 +1,152 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "reference-data--EmissionActivityCategory",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:04:38.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+  "description": "A category to be used for reporting emissions specified for each Emission Scope Type within each Inventory Type and Category Type classification, based on existing standards:\n\n* Source: For example, direct/indirect categories from ISO 14064-1, Greenhouse Gas (GHG) Protocol\nCategories, Application Programming Interface (API) Compendium, \u2026\n\n* Sink: Specific technology and nature-based solutions (Direct Air Capture (DAC), Carbon Capture and\nStorage (CCS), Forestry, Marine, Soil, \u2026)\n\n* Credit: Allowance programs (e.g., Emissions Trading Systems (ETS)), technology and nature-based\ncredits, Low Carbon Fuel Standard (LCFS) categories",
+  "additionalProperties": false,
+  "title": "Emission Activity Category",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "emission_category_type_id": {
+      "description": "Optional part of a composite Foreign Key of the Emission Scope Type:\nThe Emission Category Type.",
+      "type": "string"
+     },
+     "emission_activity_category_id": {
+      "description": "Primary key for the Emission Activity Category.",
+      "type": "string"
+     },
+     "emission_inventory_type_id": {
+      "description": "Optional part of a composite Foreign Key identifying the Emission Scope Type. The Emission Inventory Type.",
+      "type": "string"
+     },
+     "name": {
+      "description": "Name assigned to the Activity Category.",
+      "type": "string"
+     },
+     "description": {
+      "description": "Description of the Activity Category.",
+      "type": "string"
+     },
+     "parent_emission_activity_category_id": {
+      "description": "Foreign Key of the Emission Inventory Type.",
+      "type": "string"
+     },
+     "emission_scope_type_id": {
+      "description": "Foreign Key of the Emission Scope Type assigned to the Emission Activity Category.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "emission_activity_category_id",
+     "emission_scope_type_id",
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/reference-data--EmissionActivityCategory.4.0.0.json"
+ }
+}

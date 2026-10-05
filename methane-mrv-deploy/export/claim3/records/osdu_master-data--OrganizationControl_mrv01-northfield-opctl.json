@@ -1,0 +1,33 @@
+{
+ "data": {
+  "organization_id": "osdu:master-data--Organization:mrv01-northfield",
+  "organizational_boundary_id": "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025",
+  "control_type": "Operational",
+  "valid_from_datetime": "2025-01-01T00:00:00Z",
+  "valid_to_datetime": "2025-12-31T23:59:59Z"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--OrganizationControl:mrv01-northfield-opctl",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--OrganizationControl:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

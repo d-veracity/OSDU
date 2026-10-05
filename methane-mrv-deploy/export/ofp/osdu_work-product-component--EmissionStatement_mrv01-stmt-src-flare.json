@@ -1,0 +1,39 @@
+{
+ "data": {
+  "emission_statement_id": "stmt-src-flare",
+  "name": "SRC-FLARE CH4 2025 (bottom-up, Formula 1)",
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-flare",
+  "emission_component_id": "osdu:reference-data--EmissionComponent:mrv01-ch4",
+  "quantity": 96000.0,
+  "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-kg",
+  "emission_recording_method_type_id": "osdu:reference-data--EmissionRecordingMethodType:mrv01-measured",
+  "emission_calculation_model_id": "osdu:master-data--EmissionCalculationModel:mrv01-model-src-flare",
+  "valid_from_datetime": "2025-01-01T00:00:00Z",
+  "valid_to_datetime": "2025-12-31T23:59:59Z",
+  "description": "E = 12.0 \u00d7 1 \u00d7 8000 = 96,000 kg CH4; OGMP level4; grounds osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-flare",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:work-product-component--EmissionStatement:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

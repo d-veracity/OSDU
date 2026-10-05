@@ -1,0 +1,34 @@
+{
+ "data": {
+  "emission_activity_parameter_id": "n-src-pneu",
+  "name": "N \u2014 number of units (SRC-PNEU)",
+  "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-count",
+  "emission_activity_id": "osdu:master-data--EmissionActivity:mrv01-act-src-pneu",
+  "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-count",
+  "equipment_id": "osdu:master-data--Equipment:mrv01-eq-src-pneu"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:master-data--EmissionActivityParameter:mrv01-n-src-pneu",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:master-data--EmissionActivityParameter:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

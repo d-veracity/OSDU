@@ -1,0 +1,27 @@
+[
+  {
+    "version": 1788895653433550,
+    "status": "draft",
+    "trigger": "periodic"
+  },
+  {
+    "version": 1788895653702915,
+    "status": "underReview",
+    "trigger": "periodic"
+  },
+  {
+    "version": 1788895653977801,
+    "status": "verified",
+    "trigger": "periodic"
+  },
+  {
+    "version": 1788896588021672,
+    "status": "suspended",
+    "trigger": "eventDriven"
+  },
+  {
+    "version": 1788896590424593,
+    "status": "restated",
+    "trigger": "corrective"
+  }
+]

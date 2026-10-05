@@ -1,0 +1,31 @@
+{
+ "data": {
+  "equipment_id": "osdu:master-data--Equipment:mrv01-eq-src-pneu",
+  "facility_id": "osdu:master-data--Facility:mrv01-unit-processing",
+  "valid_from_datetime": "2018-06-01T00:00:00Z"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:work-product-component--EquipmentInstallation:mrv01-inst-src-pneu",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:work-product-component--EquipmentInstallation:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

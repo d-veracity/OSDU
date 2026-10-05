@@ -1,0 +1,37 @@
+{
+  "data": {
+    "activityType": "ch4_source_inventory",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "sourceCategory": "fugitive",
+    "componentType": "leaking connectors (generic)",
+    "lastInspectionDate": "2025-10-15T00:00:00Z",
+    "emissionFactor": 0.02
+  },
+  "id": "osdu:work-product-component--MethaneSourceInventory:781d05f6c95a421db8b87ee91f589987",
+  "version": 1788895648330467,
+  "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:27:28.333Z"
+}

@@ -1,0 +1,170 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--DataQualityRule",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--DataQualityRule:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T22:58:02.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Data Verification",
+  "x-osdu-schema-source": "ofp:wks:master-data--DataQualityRule:1.0.0",
+  "description": "A reference value describing a Data Quality Rule.",
+  "additionalProperties": false,
+  "title": "Data Quality Rule",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "data_rule_updated_on": {
+      "format": "date-time",
+      "description": "Timestamp of the time when the data rule was updated.",
+      "type": "string"
+     },
+     "external_rule_id": {
+      "description": "Unique identifier to an external data rule; e.g., Professional Petroleum Data Management (PPDM) rule ID number as string.",
+      "type": "string"
+     },
+     "data_rule_revision": {
+      "description": "The data rule revision version (e.g., number) as string.",
+      "type": "string"
+     },
+     "data_rule_created_on": {
+      "format": "date-time",
+      "description": "Date of creation of data rule.",
+      "type": "string"
+     },
+     "data_rule_statement": {
+      "description": "The data rule\u2019s statement in natural language.",
+      "type": "string"
+     },
+     "name": {
+      "description": "Name assigned to the Workflow Usage Type.",
+      "type": "string"
+     },
+     "description": {
+      "description": "Description assigned to the Data Verification Source.",
+      "type": "string"
+     },
+     "data_rule_status": {
+      "description": "Status of the business rule such as Published.",
+      "type": "string"
+     },
+     "entity_id": {
+      "description": "Identifies this resource object.",
+      "type": "string"
+     },
+     "data_rule_dimension_type_id": {
+      "description": "Dimension of the Rule indicating the rule purpose like completeness, validity, etc.",
+      "type": "string"
+     },
+     "data_rule_created_by": {
+      "description": "User that created the rule.",
+      "type": "string"
+     },
+     "data_rule_published_on": {
+      "format": "date-time",
+      "description": "Timestamp of the time when the data rule was published.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--DataQualityRule.1.0.0.json",
+  "x-dve-hackolade-source": "Data Verification.hck.json"
+ }
+}

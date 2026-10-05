@@ -1,0 +1,39 @@
+{
+  "data": {
+    "activityType": "ogmp_report",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "reportingYear": 2025,
+    "reportingLevel": "level4",
+    "coveredEmissionsPercent": 97.2,
+    "goldStandardCompliant": true,
+    "submittedToIMEO": false,
+    "submissionStatus": "draft"
+  },
+  "id": "osdu:work-product-component--OGMPReport:fea2645aad5d4a3b8fb08a42aaa9acfc",
+  "version": 1788895653085267,
+  "kind": "ofp:wks:work-product-component--OGMPReport:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:27:33.087Z"
+}

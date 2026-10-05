@@ -1,0 +1,32 @@
+{
+ "data": {
+  "id": "alloc-src-pneu",
+  "emission_statement_id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-pneu",
+  "facility_id": "osdu:master-data--Facility:mrv01-unit-processing",
+  "facility_allocation_percentage": 100.0
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-pneu",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:work-product-component--FacilityEmissionAllocation:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

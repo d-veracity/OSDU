@@ -1,0 +1,70 @@
+{
+ "id": "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-n",
+ "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "id": "sav-src-engine-n",
+    "emission_statement_id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-engine",
+    "emission_argument_value_id": "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-n"
+   },
+   "id": "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-n",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "id": "sav-src-engine-n",
+    "emission_statement_id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-engine",
+    "emission_argument_value_id": "osdu:work-product-component--EmissionArgumentValue:mrv01-val-src-engine-n"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:work-product-component--EmissionStatementArgumentValue:mrv01-sav-src-engine-n",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:work-product-component--EmissionStatementArgumentValue:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

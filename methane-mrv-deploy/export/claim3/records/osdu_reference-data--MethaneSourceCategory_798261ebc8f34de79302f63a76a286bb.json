@@ -1,0 +1,30 @@
+{
+ "data": {
+  "code": "ventingPneumatic",
+  "name": "intermittent pneumatic ctrl",
+  "description": "ISO 25624-1 Clause 6 source category 'ventingPneumatic'",
+  "isoClause": "6"
+ },
+ "id": "osdu:reference-data--MethaneSourceCategory:798261ebc8f34de79302f63a76a286bb",
+ "version": 1788895650720171,
+ "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:30.722Z"
+}

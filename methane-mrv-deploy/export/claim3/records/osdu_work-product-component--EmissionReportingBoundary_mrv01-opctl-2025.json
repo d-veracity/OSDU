@@ -1,0 +1,31 @@
+{
+ "data": {
+  "emission_reporting_boundary_id": "opctl-2025",
+  "name": "MRV-01 operated assets (operational control)",
+  "description": "Reporting boundary derived from osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:work-product-component--EmissionReportingBoundary:mrv01-opctl-2025",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:work-product-component--EmissionReportingBoundary:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

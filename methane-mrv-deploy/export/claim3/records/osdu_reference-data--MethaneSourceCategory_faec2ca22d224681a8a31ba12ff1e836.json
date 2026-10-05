@@ -1,0 +1,30 @@
+{
+ "data": {
+  "code": "incompleteCombustion",
+  "name": "recip. engine slip (CEMS)",
+  "description": "ISO 25624-1 Clause 6 source category 'incompleteCombustion'",
+  "isoClause": "6"
+ },
+ "id": "osdu:reference-data--MethaneSourceCategory:faec2ca22d224681a8a31ba12ff1e836",
+ "version": 1788895651384563,
+ "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:31.387Z"
+}

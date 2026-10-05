@@ -1,0 +1,147 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--ComplianceRequirement",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--ComplianceRequirement:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:05:01.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:master-data--ComplianceRequirement:4.0.0",
+  "description": "The association of an entity; e.g., Facility or an Emission Activity, to a Compliance Requirement defined\nby a Standard.",
+  "additionalProperties": false,
+  "title": "Compliance Requirement",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "standard_id": {
+      "description": "Foreign Key of the standard that defines the Compliance Requirement.",
+      "type": "string"
+     },
+     "compliance_target_id": {
+      "description": "The Foreign Key identifying the entity that this compliance requirement applies to. \n\nNote, for RDBMS the Facility Id and Emission Activity Id foreign keys are provided to define a specific constraint for this compliance requirement. These constraints can be substituted by the Compliance Target Type and Compliance Target Id pair (if supported by your RDBMS).",
+      "type": "string"
+     },
+     "emission_activity_id": {
+      "description": "Foreign Key of the activity to which the parameter is assigned.",
+      "type": "string"
+     },
+     "compliance_target_type": {
+      "description": "The Compliance Target Type specifies the target entity associated with a compliance obligation, such as an emissions disclosure or carbon tax requirement. It is a string field that classifies the compliance target as either a Facility or an Emission Activity.\n\nThe field serves as an abstract linking mechanism to pair a Compliance Requirement with the appropriate operational entity:\n\n* When the target type is Facility, compliance applies to a particular physical site, plant, or installation\n\n* When the target type is Emission Activity, it applies to a specific process or activity contributing to emissions",
+      "type": "string"
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility to which this attribute is directly linked (if available).",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Compliance Requirement.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "compliance_target_type",
+     "standard_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--ComplianceRequirement.4.0.0.json"
+ }
+}

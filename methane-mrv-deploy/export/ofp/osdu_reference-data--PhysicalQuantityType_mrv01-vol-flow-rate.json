@@ -1,0 +1,29 @@
+{
+ "data": {
+  "name": "Volumetric flow rate"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:reference-data--PhysicalQuantityType:mrv01-vol-flow-rate",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:reference-data--PhysicalQuantityType:3.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

@@ -1,0 +1,148 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--OrganizationControl",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--OrganizationControl:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T22:58:04.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Organizational Boundary",
+  "x-osdu-schema-source": "ofp:wks:master-data--OrganizationControl:1.0.0",
+  "description": "Identifies the nature of controlling interest that an organization has over an Organizational Boundary (operational or financial control) for a given validity period\n",
+  "additionalProperties": false,
+  "title": "Organization Control",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time the Organizational Control is valid to",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time the Organizational Control is valid from",
+      "type": "string"
+     },
+     "organization_id": {
+      "description": "The foreign key of the Organization",
+      "type": "string"
+     },
+     "organizational_boundary_id": {
+      "description": "The foreign key of the Organizational Boundary",
+      "type": "string"
+     },
+     "id": {
+      "description": "The primary key assigned to the Organization Control",
+      "type": "string"
+     },
+     "control_type": {
+      "description": "The type assigned to the Organizational Control: Financial or Operational",
+      "type": "string"
+     }
+    },
+    "required": [
+     "control_type",
+     "organization_id",
+     "organizational_boundary_id",
+     "valid_from_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/master-data--OrganizationControl.1.0.0.json",
+  "x-dve-hackolade-source": "Organizational Boundary.hck.json"
+ }
+}

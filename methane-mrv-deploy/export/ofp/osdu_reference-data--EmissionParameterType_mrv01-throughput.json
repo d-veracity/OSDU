@@ -1,0 +1,28 @@
+{
+ "data": {
+  "name": "Throughput",
+  "description": "Facility gas throughput (deprecated parameter type, kept for FacilitySpecification FK)"
+ },
+ "id": "osdu:reference-data--EmissionParameterType:mrv01-throughput",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:reference-data--EmissionParameterType:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:18:18.201Z"
+}

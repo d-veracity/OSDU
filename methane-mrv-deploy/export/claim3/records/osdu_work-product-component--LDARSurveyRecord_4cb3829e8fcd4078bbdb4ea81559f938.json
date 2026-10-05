@@ -1,0 +1,38 @@
+{
+ "data": {
+  "activityType": "ldar_survey",
+  "dataSource": "synthetic (ISO 25624-1 worked site)",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "surveyType": "ogi",
+  "componentsSurveyed": 2400,
+  "leaksDetected": 25,
+  "leaksRepaired": 23,
+  "surveyDurationHours": 64.0
+ },
+ "id": "osdu:work-product-component--LDARSurveyRecord:4cb3829e8fcd4078bbdb4ea81559f938",
+ "version": 1788895652470455,
+ "kind": "ofp:wks:work-product-component--LDARSurveyRecord:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:32.473Z"
+}

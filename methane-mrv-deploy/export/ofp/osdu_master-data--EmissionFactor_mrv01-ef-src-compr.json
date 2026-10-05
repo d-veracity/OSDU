@@ -1,0 +1,39 @@
+{
+ "data": {
+  "emission_factor_id": "ef-src-compr",
+  "name": "EF SRC-COMPR (measured)",
+  "unit_of_measure_id": "osdu:reference-data--UnitOfMeasure:mrv01-kg-h-unit",
+  "emission_factor_type_id": "osdu:reference-data--EmissionFactorType:mrv01-site-specific-measured",
+  "emission_factor_source_id": "osdu:master-data--EmissionFactorSource:mrv01-iso-worked-site",
+  "emission_activity_type_id": "osdu:reference-data--EmissionActivityType:mrv01-type-src-compr",
+  "equipment_id": "osdu:master-data--Equipment:mrv01-eq-src-compr",
+  "facility_id": "osdu:master-data--Facility:mrv01-unit-compression",
+  "physical_quantity_type_id": "osdu:reference-data--PhysicalQuantityType:mrv01-mass-flow-rate",
+  "valid_from_datetime": "2025-01-01T00:00:00Z",
+  "valid_to_datetime": "2025-12-31T23:59:59Z"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:19.874Z",
+ "id": "osdu:master-data--EmissionFactor:mrv01-ef-src-compr",
+ "version": 1788909499426680,
+ "kind": "ofp:wks:master-data--EmissionFactor:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:40.766Z"
+}

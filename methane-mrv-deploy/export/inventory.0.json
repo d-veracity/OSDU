@@ -1,0 +1,37 @@
+{
+  "data": {
+    "activityType": "ch4_source_inventory",
+    "dataSource": "synthetic (ISO 25624-1 worked site)",
+    "reportingPeriodStart": "2025-01-01T00:00:00Z",
+    "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+    "facilityId": "MRV-01",
+    "recordingType": "measured",
+    "sensitivity": "confidential",
+    "sourceCategory": "flaring",
+    "componentType": "flare stack (98% DRE)",
+    "lastInspectionDate": "2025-10-15T00:00:00Z",
+    "emissionFactor": 12.0
+  },
+  "id": "osdu:work-product-component--MethaneSourceInventory:6dc88281902d49f19d3cb655d602d2b2",
+  "version": 1788895646469832,
+  "kind": "ofp:wks:work-product-component--MethaneSourceInventory:1.0.0",
+  "acl": {
+    "viewers": [
+      "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+      "data.default.owners@osdu.group"
+    ]
+  },
+  "legal": {
+    "legaltags": [
+      "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+      "US"
+    ],
+    "status": "compliant"
+  },
+  "createUser": "aj@dveracity.com",
+  "createTime": "2026-09-08T19:27:26.721Z"
+}

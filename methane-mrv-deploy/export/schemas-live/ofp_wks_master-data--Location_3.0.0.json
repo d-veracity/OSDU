@@ -1,0 +1,147 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "master-data--Location",
+   "schemaVersionMajor": 3,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:master-data--Location:3.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:03:15.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "x-dve-ofp-canonical-id": "ofp:wks:master-data--Location:3.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Facility Structure",
+  "x-osdu-schema-source": "ofp:wks:master-data--Location:3.0.0",
+  "description": "A place where a person or thing is located.",
+  "title": "Location",
+  "type": "object",
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "x-dve-ofp-id-source": "dVE/backend/assets/downloads/hackolade/ofp-postgres.hck.json",
+  "x-dve-hackolade-source": "Common Entities.hck.json",
+  "additionalProperties": false,
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and time to which this Location is valid.",
+      "type": "string"
+     },
+     "facility_location_type_id": {
+      "description": "The Foreign Key of the Facility Location Type.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and time from which this Location is valid.",
+      "type": "string"
+     },
+     "geopolitical_contexts": {
+      "description": "The Geopolitical Contexts attribute defines the geographical or jurisdictional area in which it applies.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "parent_location_id": {
+      "description": "The Foreign Key of the parent Location.",
+      "type": "string"
+     },
+     "location_id": {
+      "description": "The Location Primary Key.",
+      "type": "string"
+     }
+    }
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "$id": "https://schema.dveracity.com/ofp/master-data--Location.3.0.0.json"
+ }
+}

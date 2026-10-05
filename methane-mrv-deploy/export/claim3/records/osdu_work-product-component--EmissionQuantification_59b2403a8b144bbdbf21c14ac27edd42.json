@@ -1,0 +1,39 @@
+{
+ "data": {
+  "activityType": "ch4_quantification",
+  "dataSource": "synthetic (ISO 25624-1 worked site)",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "sourceId": "SRC-ENGINE",
+  "emissionRateKgPerHour": 2.1918,
+  "quantificationMethod": "directMeasurement",
+  "uncertaintyPercent": 10.0,
+  "co2eKg": 537600.0,
+  "ogmpLevel": "level4"
+ },
+ "id": "osdu:work-product-component--EmissionQuantification:59b2403a8b144bbdbf21c14ac27edd42",
+ "version": 1788895649696146,
+ "kind": "ofp:wks:work-product-component--EmissionQuantification:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:29.698Z"
+}

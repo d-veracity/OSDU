@@ -1,0 +1,151 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--OrganizationalBoundaryAssurance",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--OrganizationalBoundaryAssurance:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-08-25T20:45:13.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--OrganizationalBoundaryAssurance:1.0.0",
+  "description": "Describes the external assurance applied to an organization boundary.\n\nIt is used to communicate the assurance status of reporting data shared with organizations that have a\nnon-controlling stake in the Organizational Boundary (e.g., JV partners), and the associated facilities or\nactivities.",
+  "additionalProperties": false,
+  "title": "Organizational Boundary Assurance",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time to which the Organizational Boundary Assurance is valid, in ISO 8601 date time standardized format. This should be a duplicate of the associated Reporting Assurance record used for indexing; i.e., only query Organizational Boundary Assurance values assigned within a given period.",
+      "type": "string"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time from which the Organizational Boundary Assurance is valid, in ISO 8601 date time standardized format. This should be a duplicate of the associated Reporting Assurance record used for indexing; i.e., only query Organizational Boundary Assurance values assigned within a given period.",
+      "type": "string"
+     },
+     "organizational_boundary_id": {
+      "description": "The Foreign Key of the Organization Boundary to which the Reporting Assurance value has been assigned.",
+      "type": "string"
+     },
+     "reporting_assurance_id": {
+      "description": "The Foreign Key of the Reporting Assurance associated with the Organizational Boundary.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key assigned to the Organizational Boundary Assurance.",
+      "type": "string"
+     },
+     "status": {
+      "description": "The current status of the assurance process that applies to the Organizational Boundary: None, Started, Completed.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "organizational_boundary_id",
+     "reporting_assurance_id",
+     "valid_from_datetime",
+     "valid_to_datetime"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--OrganizationalBoundaryAssurance.1.0.0.json"
+ }
+}

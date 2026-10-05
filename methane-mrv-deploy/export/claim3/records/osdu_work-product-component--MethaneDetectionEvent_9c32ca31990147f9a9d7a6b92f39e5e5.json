@@ -1,0 +1,40 @@
+{
+ "data": {
+  "activityType": "ch4_detection",
+  "dataSource": "live-console",
+  "facilityId": "MRV-01",
+  "recordingType": "measured",
+  "sensitivity": "confidential",
+  "reportingPeriodStart": "2025-01-01T00:00:00Z",
+  "reportingPeriodEnd": "2025-12-31T23:59:59Z",
+  "deviceId": "DRONE-CRDS-07",
+  "technology": "drone",
+  "detectedConcentrationPPM": 30,
+  "windSpeedMPS": 3.8,
+  "windDirection": 248,
+  "ogmpLevel": "level5",
+  "plumeSizeM2": 8400
+ },
+ "id": "osdu:work-product-component--MethaneDetectionEvent:9c32ca31990147f9a9d7a6b92f39e5e5",
+ "version": 1788911606887790,
+ "kind": "ofp:wks:work-product-component--MethaneDetectionEvent:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:53:26.889Z"
+}

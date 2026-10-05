@@ -1,0 +1,30 @@
+{
+ "data": {
+  "code": "fugitive",
+  "name": "leaking connectors (generic)",
+  "description": "ISO 25624-1 Clause 6 source category 'fugitive'",
+  "isoClause": "6"
+ },
+ "id": "osdu:reference-data--MethaneSourceCategory:a4138cbed0bf40f0ab4e7b11fb3213a5",
+ "version": 1788895651666986,
+ "kind": "ofp:wks:reference-data--MethaneSourceCategory:1.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T19:27:31.668Z"
+}

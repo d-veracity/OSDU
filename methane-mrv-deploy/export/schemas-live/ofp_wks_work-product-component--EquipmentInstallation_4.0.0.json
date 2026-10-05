@@ -1,0 +1,159 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--EquipmentInstallation",
+   "schemaVersionMajor": 4,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--EquipmentInstallation:4.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:03:17.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "x-dve-ofp-canonical-id": "ofp:wks:work-product-component--EquipmentInstallation:4.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-dve-ofp-domain": "Facility Structure",
+  "x-osdu-schema-source": "ofp:wks:work-product-component--EquipmentInstallation:4.0.0",
+  "description": "The installation of a piece of Equipment at a Facility to perform activities. Equipment stored in a\nFacility (e.g., in a Warehouse) is not an installation.",
+  "title": "Equipment Installation",
+  "type": "object",
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "x-dve-ofp-id-source": "dVE/backend/assets/downloads/hackolade/ofp-postgres.hck.json",
+  "x-dve-hackolade-source": "Facility Structure.hck.json",
+  "additionalProperties": false,
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "valid_to_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time to which the Equipment Installation is valid.",
+      "type": "string"
+     },
+     "spatial_location": {
+      "description": "A geographic object which can be described by a set of points.",
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "valid_from_datetime": {
+      "format": "date-time",
+      "description": "The date and optional time from which the Equipment Installation is valid.",
+      "type": "string"
+     },
+     "facility_id": {
+      "description": "The Foreign Key of the Facility the Equipment Installation applies to.",
+      "type": "string"
+     },
+     "id": {
+      "description": "The Primary Key of the Equipment Installation.",
+      "type": "string"
+     },
+     "effective_datetime": {
+      "format": "date-time",
+      "description": "DEPRECATED, to be replaced by ValidityPeriod reference",
+      "type": "string"
+     },
+     "equipment_id": {
+      "description": "The Foreign Key of the Equipment the Equipment Installation points to.",
+      "type": "string"
+     },
+     "termintation_datetime": {
+      "format": "date-time",
+      "description": "DEPRECATED, to be replaced by ValidityPeriod reference",
+      "type": "string"
+     }
+    },
+    "required": [
+     "equipment_id",
+     "facility_id"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "type": "string"
+   },
+   "legal": {
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "type": "string"
+   },
+   "acl": {
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--EquipmentInstallation.4.0.0.json"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025",
+ "kind": "ofp:wks:master-data--OrganizationalBoundary:4.0.0",
+ "versions": [
+  1788908918758516,
+  1788909497783960
+ ],
+ "bodies": [
+  {
+   "data": {
+    "name": "NorthField 2025 Operational Control Boundary",
+    "organization_id": "osdu:master-data--Organization:mrv01-northfield",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z",
+    "description": "GHG Protocol operational-control consolidation; basis for the OGMP 2.0 asset-level boundary"
+   },
+   "id": "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025",
+   "version": 1788908918758516,
+   "kind": "ofp:wks:master-data--OrganizationalBoundary:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  },
+  {
+   "data": {
+    "name": "NorthField 2025 Operational Control Boundary",
+    "organization_id": "osdu:master-data--Organization:mrv01-northfield",
+    "valid_from_datetime": "2025-01-01T00:00:00Z",
+    "valid_to_datetime": "2025-12-31T23:59:59Z",
+    "description": "GHG Protocol operational-control consolidation; basis for the OGMP 2.0 asset-level boundary"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:18.201Z",
+   "id": "osdu:master-data--OrganizationalBoundary:mrv01-opctl-2025",
+   "version": 1788909497783960,
+   "kind": "ofp:wks:master-data--OrganizationalBoundary:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  }
+ ]
+}

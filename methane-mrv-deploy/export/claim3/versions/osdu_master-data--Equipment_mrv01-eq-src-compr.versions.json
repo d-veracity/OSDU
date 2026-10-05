@@ -1,0 +1,68 @@
+{
+ "id": "osdu:master-data--Equipment:mrv01-eq-src-compr",
+ "kind": "ofp:wks:master-data--Equipment:3.4.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "name": "rod-packing vent",
+    "description": "Emitting equipment for SRC-COMPR"
+   },
+   "id": "osdu:master-data--Equipment:mrv01-eq-src-compr",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "name": "rod-packing vent",
+    "description": "Emitting equipment for SRC-COMPR"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:master-data--Equipment:mrv01-eq-src-compr",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:master-data--Equipment:3.4.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

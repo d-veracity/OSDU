@@ -1,0 +1,72 @@
+{
+ "id": "osdu:reference-data--EmissionActivityCategory:mrv01-combustion",
+ "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+ "versions": [
+  1788908918758516,
+  1788909497783960
+ ],
+ "bodies": [
+  {
+   "data": {
+    "name": "Incomplete combustion",
+    "emission_activity_category_id": "combustion",
+    "emission_scope_type_id": "osdu:reference-data--EmissionScopeType:mrv01-scope1",
+    "description": "ISO 25624-1 Clause 6 source category: Incomplete combustion"
+   },
+   "id": "osdu:reference-data--EmissionActivityCategory:mrv01-combustion",
+   "version": 1788908918758516,
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  },
+  {
+   "data": {
+    "name": "Incomplete combustion",
+    "emission_activity_category_id": "combustion",
+    "emission_scope_type_id": "osdu:reference-data--EmissionScopeType:mrv01-scope1",
+    "description": "ISO 25624-1 Clause 6 source category: Incomplete combustion"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:18.201Z",
+   "id": "osdu:reference-data--EmissionActivityCategory:mrv01-combustion",
+   "version": 1788909497783960,
+   "kind": "ofp:wks:reference-data--EmissionActivityCategory:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  }
+ ]
+}

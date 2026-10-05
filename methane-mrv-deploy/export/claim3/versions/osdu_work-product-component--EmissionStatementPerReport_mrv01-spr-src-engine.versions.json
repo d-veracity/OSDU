@@ -1,0 +1,78 @@
+{
+ "id": "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-engine",
+ "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+ "versions": [
+  1788908920758997,
+  1788909499426680
+ ],
+ "bodies": [
+  {
+   "data": {
+    "id": "spr-src-engine",
+    "emission_report_id": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "emission_statement_id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-engine",
+    "emission_reporting_boundary_id": "osdu:work-product-component--EmissionReportingBoundary:mrv01-opctl-2025",
+    "emission_scope_type_id": "osdu:reference-data--EmissionScopeType:mrv01-scope1",
+    "facility_emission_allocation_id": "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-engine",
+    "emission_allocation_kind": "Facility"
+   },
+   "id": "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-engine",
+   "version": 1788908920758997,
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  },
+  {
+   "data": {
+    "id": "spr-src-engine",
+    "emission_report_id": "osdu:work-product-component--EmissionReport:mrv01-ogmp-2025",
+    "emission_statement_id": "osdu:work-product-component--EmissionStatement:mrv01-stmt-src-engine",
+    "emission_reporting_boundary_id": "osdu:work-product-component--EmissionReportingBoundary:mrv01-opctl-2025",
+    "emission_scope_type_id": "osdu:reference-data--EmissionScopeType:mrv01-scope1",
+    "facility_emission_allocation_id": "osdu:work-product-component--FacilityEmissionAllocation:mrv01-alloc-src-engine",
+    "emission_allocation_kind": "Facility"
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:19.874Z",
+   "id": "osdu:work-product-component--EmissionStatementPerReport:mrv01-spr-src-engine",
+   "version": 1788909499426680,
+   "kind": "ofp:wks:work-product-component--EmissionStatementPerReport:1.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:40.766Z"
+  }
+ ]
+}

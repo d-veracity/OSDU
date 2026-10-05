@@ -1,0 +1,31 @@
+{
+ "data": {
+  "iso_alpha_3_code": "USA",
+  "name": "United States",
+  "effective_datetime": "2000-01-01T00:00:00Z"
+ },
+ "modifyUser": "aj@dveracity.com",
+ "modifyTime": "2026-09-08T23:18:18.201Z",
+ "id": "osdu:reference-data--Country:mrv01-usa",
+ "version": 1788909497783960,
+ "kind": "ofp:wks:reference-data--Country:4.0.0",
+ "acl": {
+  "viewers": [
+   "data.default.viewers@osdu.group"
+  ],
+  "owners": [
+   "data.default.owners@osdu.group"
+  ]
+ },
+ "legal": {
+  "legaltags": [
+   "osdu-demo-legaltag"
+  ],
+  "otherRelevantDataCountries": [
+   "US"
+  ],
+  "status": "compliant"
+ },
+ "createUser": "aj@dveracity.com",
+ "createTime": "2026-09-08T23:08:39.007Z"
+}

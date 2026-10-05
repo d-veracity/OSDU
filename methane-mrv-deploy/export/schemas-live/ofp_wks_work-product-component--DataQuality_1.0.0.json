@@ -1,0 +1,171 @@
+{
+ "schemaInfo": {
+  "schemaIdentity": {
+   "authority": "ofp",
+   "source": "wks",
+   "entityType": "work-product-component--DataQuality",
+   "schemaVersionMajor": 1,
+   "schemaVersionMinor": 0,
+   "schemaVersionPatch": 0,
+   "id": "ofp:wks:work-product-component--DataQuality:1.0.0"
+  },
+  "createdBy": "aj@dveracity.com",
+  "dateCreated": "2026-09-08T23:05:02.000+00:00",
+  "status": "DEVELOPMENT",
+  "scope": "INTERNAL"
+ },
+ "schema": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "x-osdu-schema-source": "ofp:wks:transactional-data--DataQuality:4.0.0",
+  "description": "This is used to store the result from a run of a Data Quality Metric Evaluation engine. Captures\nsummary information, such as which rule set(s) and rule(s) have been used, when this was run, and by\nwhom. Detailed results may be associated with a dataset.",
+  "additionalProperties": false,
+  "title": "Data Quality",
+  "type": "object",
+  "properties": {
+   "modifyUser": {
+    "type": "string"
+   },
+   "modifyTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "data": {
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "dimension_metrics": {
+      "description": "The individual scores per dimension.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "data_quality_rule_set_id": {
+      "description": "The Data Quality Rule Set aggregating other rule sets and/or individual Data Quality Rule instances, individually weighted in the context of the Data Quality Rule Set.",
+      "type": "string"
+     },
+     "evaluated_ddms_datasets": {
+      "description": "If the quality assessment dealt with dataset content, then this array of URIs will contain the references to the optimized DDMS content used in the assessment. The reference is expected to be a member of the Evaluated Record ID's list of URIs.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "evaluated_kind": {
+      "description": "The Evaluated Record ID\u2019s kind.",
+      "type": "string"
+     },
+     "method_id": {
+      "description": "The reference to the assessment calculation method.",
+      "type": "string"
+     },
+     "evaluated_record_id": {
+      "description": "The reference to the evaluated data record. The record version number is required.",
+      "type": "string"
+     },
+     "total_score": {
+      "description": "The assessment score in % aggregated for all dimension types.",
+      "type": "number"
+     },
+     "entity_id": {
+      "description": "Identifies this resource object.",
+      "type": "string"
+     },
+     "start_date_time": {
+      "description": "The date and time at which the quality assessment started.",
+      "type": "string"
+     },
+     "data_rules": {
+      "description": "The data rules part of this assessment.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "data_rules"
+    ]
+   },
+   "createTime": {
+    "format": "date-time",
+    "type": "string"
+   },
+   "kind": {
+    "description": "Schema kind (authority:source:entityType:version).",
+    "type": "string"
+   },
+   "legal": {
+    "description": "Legal compliance metadata.",
+    "type": "object",
+    "properties": {
+     "legaltags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "otherRelevantDataCountries": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "status": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "legaltags",
+     "otherRelevantDataCountries"
+    ]
+   },
+   "createUser": {
+    "type": "string"
+   },
+   "id": {
+    "description": "Unique identifier of an OSDU record.",
+    "type": "string"
+   },
+   "acl": {
+    "description": "Access control list.",
+    "type": "object",
+    "properties": {
+     "viewers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "owners": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "owners",
+     "viewers"
+    ]
+   },
+   "version": {
+    "description": "Version number of this OSDU record.",
+    "type": "integer"
+   },
+   "tags": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "type": "object"
+   }
+  },
+  "required": [
+   "kind",
+   "acl",
+   "legal",
+   "data"
+  ],
+  "$id": "https://schema.dveracity.com/ofp/work-product-component--DataQuality.1.0.0.json"
+ }
+}

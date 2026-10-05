@@ -1,0 +1,74 @@
+{
+ "id": "osdu:master-data--Location:mrv01-site",
+ "kind": "ofp:wks:master-data--Location:4.0.0",
+ "versions": [
+  1788908918758516,
+  1788909497783960
+ ],
+ "bodies": [
+  {
+   "data": {
+    "facility_location_type_id": "osdu:reference-data--FacilityLocationType:mrv01-site-location",
+    "valid_from_datetime": "2010-01-01T00:00:00Z",
+    "geopolitical_contexts": [
+     "osdu:reference-data--Country:mrv01-usa"
+    ]
+   },
+   "id": "osdu:master-data--Location:mrv01-site",
+   "version": 1788908918758516,
+   "kind": "ofp:wks:master-data--Location:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  },
+  {
+   "data": {
+    "facility_location_type_id": "osdu:reference-data--FacilityLocationType:mrv01-site-location",
+    "valid_from_datetime": "2010-01-01T00:00:00Z",
+    "geopolitical_contexts": [
+     "osdu:reference-data--Country:mrv01-usa"
+    ]
+   },
+   "modifyUser": "aj@dveracity.com",
+   "modifyTime": "2026-09-08T23:18:18.201Z",
+   "id": "osdu:master-data--Location:mrv01-site",
+   "version": 1788909497783960,
+   "kind": "ofp:wks:master-data--Location:4.0.0",
+   "acl": {
+    "viewers": [
+     "data.default.viewers@osdu.group"
+    ],
+    "owners": [
+     "data.default.owners@osdu.group"
+    ]
+   },
+   "legal": {
+    "legaltags": [
+     "osdu-demo-legaltag"
+    ],
+    "otherRelevantDataCountries": [
+     "US"
+    ],
+    "status": "compliant"
+   },
+   "createUser": "aj@dveracity.com",
+   "createTime": "2026-09-08T23:08:39.007Z"
+  }
+ ]
+}
